@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Mariya Turmasova](https://up.htmlacademy.ru/adaptive/19/user/1067017).
-* Наставник: `Неизвестно`.
+* Студент: [Мария Турмасова](https://up.htmlacademy.ru/adaptive/19/user/1067017).
+* Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
 
 ---
 
