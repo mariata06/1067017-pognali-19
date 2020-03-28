@@ -16,17 +16,9 @@
     <h1 class="page-header__intro">
       В путешествие с крутыми попутчиками!
     </h1>
-    <ul class="page-header__user-nav">
-      <li class="user-nav__item">
-        <button class="user-nav__phone"></button>
-      </li>
-      <li class="user-nav__item">
-        <button class="user-nav__email"></button>
-      </li>
-      <li class="user-nav__item">
-        <a href="login.html" class="user-nav__login">Авторизация</a>
-      </li>
-    </ul>
+    <a class="page-header__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
+    <a class="page-header__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+    <a href="login.html" class="page-header__login-link">Авторизация</a>
   </header>
 
   <main class="page-main">
@@ -45,9 +37,13 @@
         <li class="tips-list__item">Путешествуйте вместе!</li>
       </ul>
       <h2 class="page-about__title">О сервисе</h2>
-      <p class="page-about__description">Любое путешествие веселее с попутчиками, которые на одной волнe с тобой!
-        Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-      <p class="page-about__description">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+      <p class="page-about__description">
+        Любое путешествие веселее с попутчиками, которые на одной волнe с тобой!
+        Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+      </p>
+      <p class="page-about__description">
+        А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
+      </p>
     </section>
 
     <section class="travel-destinations">
@@ -57,16 +53,19 @@
         Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
       </p>
       <div class="travel-destinations__item">
+        <img src="https://via.placeholder.com/150x150" alt="Таиланд" class="travel-destinations__country">
         <h3 class="travel-destinations__title">Таиланд</h3>
         <p class="travel-destinations__slogan">Джунгли зовут!</p>
         <span class="travel-destinations__companions-number">18321</span>
       </div>
       <div class="travel-destinations__item">
+        <img src="https://via.placeholder.com/150x150" alt="Франция" class="travel-destinations__country">
         <h3 class="travel-destinations__title">Франция</h3>
         <p class="travel-destinations__slogan">Трэ бьен манифик!</p>
         <span class="travel-destinations__companions-number">12518</span>
       </div>
       <div class="travel-destinations__item">
+        <img src="https://via.placeholder.com/150x150" alt="Чехия" class="travel-destinations__country">
         <h3 class="travel-destinations__title">Чехия</h3>
         <p class="travel-destinations__slogan">Закоулки старой Европы</p>
         <span class="travel-destinations__companions-number">5326</span>
@@ -76,8 +75,9 @@
 
     <section class="companions">
       <h2 class="companions__title">Попутчики</h2>
-      <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен
-        пляж и коктейль, а другому маршрут для хайкинга.</p>
+      <p class="companions__description">
+        Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+        Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
       <p class="companions__description">Теперь можно легко найти единомышленников!</p>
       <ul class="companions__list">
         <li class="companions__item">
@@ -85,9 +85,16 @@
           <ul class="companions__countries-list">
             <li class="companions__countries-item">Шри-Ланка</li>
             <li class="companions__countries-item">Таиланд</li>
-            <li class="companions__countries-item">Сейшельские острова</li>
+            <li class="companions__countries-item">Сейшелы</li>
           </ul>
-          <h3 class="companions__name">Таня Фирсова</h3>
+          <a href="#">
+            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+          </a>
+          <h3 class="companions__name">
+            <a href="#">
+              Таня Фирсова
+            </a>
+          </h3>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#ЗОЖ</li>
             <li class="companions__hashtag-item">#ПП</li>
@@ -109,7 +116,14 @@
             <li class="companions__countries-item">Германия</li>
             <li class="companions__countries-item">Чехия</li>
           </ul>
-          <h3 class="companions__name">Петя Дёмин</h3>
+          <a href="#">
+            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+          </a>
+          <h3 class="companions__name">
+            <a href="#">
+              Петя Дёмин
+            </a>
+          </h3>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#бургер</li>
             <li class="companions__hashtag-item">#бар</li>
@@ -132,16 +146,19 @@
       <h3 class="profile__title">Добавьте свой профиль</h3>
       <ul class="profile__tariff-list">
         <li class="profile__tariff-item">
-          <p class="profile__tariff-description">Базовое размещение<span class="profile__tariff-cost">Бесплатно</span>
+          <p class="profile__tariff-description">Базовое размещение
+            <span class="profile__tariff-cost">Бесплатно</span>
           </p>
         </li>
         <li class="profile__tariff-item">
-          <p class="profile__tariff-description">Вывод на первых позицияx<span class="profile__tariff-cost">99
-              руб./мес</span></p>
+          <p class="profile__tariff-description">Вывод на первых позицияx
+            <span class="profile__tariff-cost">99 руб./мес</span>
+          </p>
         </li>
         <li class="profile__tariff-item">
-          <p class="profile__tariff-description">Кастомный цвет карточки<span class="profile__tariff-cost">59
-              руб./мес</span></p>
+          <p class="profile__tariff-description">Кастомный цвет карточки
+            <span class="profile__tariff-cost">59 руб./мес</span>
+          </p>
         </li>
       </ul>
       <a href="#" class="profile__tariff-button">Показать тарифы для бизнеса</a>
@@ -150,31 +167,32 @@
     <section class="interesting">
       <h3 class="interesting__title">Заинтересовались?</h3>
       <p class="interesting__description">
-        Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее<a href="#"
-          class="interesting__login-link">авторизуйтесь.</a>
+        Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+        <a href="#" class="interesting__login-link">
+          авторизуйтесь.
+        </a>
       </p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <div class="interesting__login-form">
+        <div class="interesting__login-form login-form">
           <input type="email" name="login" placeholder="E-mail">
           <button type="button" class="login-form__button">Войти</button>
         </div>
       </form>
       <p class="interesting__description">Остались вопросы?</p>
       <p class="interesting__description">Мы с радостью на них ответим!</p>
-      <ul class="interesting__contacts-list">
-        <li class="contacts-list__item">8 800 555-86-28</li>
-        <li class="contacts-list__item">mail@htmlacademy.ru</li>
-      </ul>
+      <a class="interesting__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
+      <a class="interesting__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
     </section>
 
     <section class="address">
       <h2 class="visually-hidden">Как нас найти</h2>
       <p class="address__description">ул. Большая Конюшенная, 19/8</p>
-      <button type="button" class="address__button">Проложить маршрут</button>
+      <a href="#">Проложить маршрут</a>
       <div class="address__map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4326645986766!2d30.324025639833913!3d59.938950160497924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1582551754712!5m2!1sru!2sru"
-          allowfullscreen=""></iframe>
+          allowfullscreen="">
+        </iframe>
       </div>
     </section>
   </main>
@@ -194,8 +212,10 @@
         <a href="https://instagram.com/" aria-label="instagram" class="social-list__item-icon"></a>
       </li>
     </ul>
-    <p class="page-footer__copyright">
-      Разработано<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo"></a> 
+    <p class="page-footer__copyright">Разработано
+      <a href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo">
+      </a>
     </p>
   </footer>
 
