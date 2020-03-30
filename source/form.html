@@ -13,16 +13,216 @@
         <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
       </a>
     </div>
-    <div class="page-header__menu">
+    <div class="page-header__menu mobile-menu">
+      <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
+      <button><span class="visually-hidden">Х</span></button>
+      <a href="#" class="mobile-menu__link">О сервисе</a>
+      <a href="#" class="mobile-menu__link">Направления</a>
+      <a href="#" class="mobile-menu__link">Попутчики</a>
+      <a href="login.html" class="mobile-menu__login-link">Авторизация</a>
+      <a class="mobile-menu__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
+      <a class="mobile-menu__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <ul class="mobile-menu__social-list social-list">
+        <li class="social-list__item">
+          <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon"></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://vk.com/" aria-label="vkontakte" class="social-list__item-icon"></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://instagram.com/" aria-label="instagram" class="social-list__item-icon"></a>
+        </li>
+      </ul>
     </div>
     <h1 class="page-header__intro">Направления</h1>
   </header>
 
   <main class="page-main">
 
-    <section class="filter">
-      <h2 class="visually-hidden">Фильтр</h2>
-    </section>
+    <form action="https://echo.htmlacademy.ru" method="post">
+
+      <section class="companions">
+        <h2 class="visually-hidden">Выбор попутчика</h2>
+        <div class="companions__travel-mates">80 / level</div>
+        <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+        <a class="companions__new-item" href="https://via.placeholder.com/150x150">Сменить фото</a>
+        <h2 class="companions__hashtag">ТЭГИ</h2>
+        <textarea class="companions__hashtag" name="hashtag-list" id="" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
+
+        <fieldset>
+          <legend class="companions__transport-type">Транспорт</legend>
+          <ul class="companions__transport-list">
+            <li class="companions__transport-item">самолетом</li>
+            <li class="companions__transport-item">автобусом</li>
+            <li class="companions__transport-item">на велосипеде</li>
+            <li class="companions__transport-item">пешком</li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section class="user-destinations">
+        <h2 class="user-destinations__title">Мои планы:</h2>
+        <div class="user-destinations__country">
+          <p>1. Франция, Италия</p>
+          <p>3 Попутчика</p>
+          <div class="user-destinations__trip-dates trip-dates">
+            <span class="trip-dates__start-date">26 мар</span>&nbsp;-&nbsp;<span class="trip-dates__return-date">29 мар</span>
+          </div>
+          <!--
+          <input type="date" id="start" name="trip-start" value="" min="2020-01-01" max="2018-12-31">
+          <input type="date" id="return" name="trip-return" value="" min="2018-01-01" max="2018-12-31">-->
+          <a href="#">Изменить</a>
+        </div>
+
+        <div class="user-destinations__country">
+          <p>2. Таиланд, Индонезия</p>
+          <p>1 Попутчик</p>
+          <div class="user-destinations__trip-dates trip-dates">
+            <span class="trip-dates__start-date">1 июл</span>&nbsp;-&nbsp;<span class="trip-dates__return-date">15 июл</span>
+          </div>
+          <!--
+          <input type="date" id="start" name="trip-start" value="1 июл" min="2020-01-01" max="2020-12-31">
+          <input type="date" id="return" name="trip-return" value="15 июл" min="2020-01-01" max="2020-12-31">-->
+          <a href="#">Изменить</a>
+        </div>
+      </section>
+
+      <section class="new-destinations">
+        <h2 class="new-destinations__title">Добавить план:</h2>
+        <div class="new-destinations__step-1 step-1">
+          <h3 class="step-1__title">Шаг 1.</h3>
+          <a id="dates" href="#route"> Даты пребывания</a>
+          <p class="step-1__description">Укажите предпочтительное количество попутчиков, которых
+            вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+          <label for="companions">Ищу попутчиков:</label>
+          <span>чел.</span>
+          <button type="button" aria-label="Уменьшить попутчиков"></button>
+          <input type="number" id="companions" name="companions-number" value="2">
+          <button type="button" aria-label="Увеличить попутчиков"></button>
+          <label for="duration">Длительность:</label>
+          <span>дн.</span>
+          <button type="button" aria-label="Уменьшить дни"></button>
+          <input type="number" id="duration" name="days-number" value="2">
+          <button type="button" aria-label="Увеличить дни"></button>
+          <input type="checkbox" id="children" name="children" checked>
+          <label for="children">Можно с детьми</label>
+          <div class="step-1__calendar calendar">
+            <a href="#" class="calendar__previous"></a>
+            <p class="calendar__month">Март 2019</p>
+            <a href="#" class="calendar__next"></a>
+          </div>
+        </div>
+        <a href="#route" class="new-destinations__next-step">Следующий шаг</a>
+
+        <div class="new-destinations__step-2 step-2">
+          <h3 class="step-2__title">Шаг 2.</h3>
+          <a id="route" href="#entertainment">Маршрут</a>
+          <p class="step-2__description">
+            Укажите страны, которые вы хотели посетить.
+            Это может быть одна или сразу
+          </p>
+          <select>
+            <option value="выберите страну" selected>Босния и Герцеговина</option>
+          </select>
+          <select>
+            <option value="выберите cтрану">Чехия</option>
+          </select>
+
+          <a href="#">Выберите страну</a>
+          <button><span class="visually-hidden">Х</span></button>
+        
+            <ul class="filter-country__alphabet alphabet-list">     <!--Дублирование скрытого блока из страницы Каталог-->
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">А</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Б</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">В</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Г</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Д</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Е</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">З</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">И</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">К</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Л</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">М</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Н</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">О</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">П</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Р</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">С</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Т</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">У</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Ф</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Х</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Ч</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Ш</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Э</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Ю</a></li>
+              <li class="alphabet-list__item">
+                <a href="#" class="alphabet-list__link">Я</a></li>
+            </ul>
+            <ul class="filter-country__country-a country-a">
+              <li class="country-a-item">Австралия</li>
+              <li class="country-a-item">Австрия</li>
+              <li class="country-a-item">Азербайджан</li>
+              <li class="country-a-item">Албания</li>
+              <li class="country-a-item">Алжир</li>
+              <li class="country-a-item">Ангола</li>
+              <li class="country-a-item">Андорра</li>
+              <li class="country-a-item">Антигуа и Барбуда</li>
+              <li class="country-a-item">Аргентина</li>
+              <li class="country-a-item">Армения</li>
+              <li class="country-a-item">Афганистан</li>
+            </ul>
+       
+          <input type="text" id="country" name="country" value="Добавить страну">
+          <button type="button" aria-label="Добавить страну"></button>
+        </div>
+        <a href="#" class="new-destinations__next-step">Следующий шаг</a>
+        <a href="#dates" class="new-destinations__previous-step">На шаг назад</a>
+
+        <div class="new-destinations__step-3 step-3">
+          <h3 class="step-3__title">Шаг 3.</h3>
+          <a id="entertainment" href="#">Развлечения</a>
+          <p class="step-3__description">
+            Наконец, расскажите о своих планах времяпровождения.
+            Можно писать в свободной форме и ставить тэги.
+          </p>
+          <p>Босния и Герцеговина</p>
+          <textarea name="action" cols="30" rows="10">План действий</textarea>
+          <p>Чехия</p>
+          <textarea name="action" cols="30" rows="10">
+            Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+          </textarea>
+        </div>
+      </section>
+
+      <input type="submit" value="Отправить">
+      <a href="#route" class="new-destinations__previous-step">На шаг назад</a>
+
+    </form>
 
   </main>
 
@@ -32,7 +232,7 @@
         <img src="https://via.placeholder.com/150x150" alt="Лого Погнали" class="logo-image">
       </a>
     </div>
-    <ul class="page-footer__social-list">
+    <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
         <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon"></a>
       </li>

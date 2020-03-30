@@ -11,7 +11,26 @@
     <div class="page-header__logo">
       <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
     </div>
-    <div class="page-header__menu">
+    <div class="page-header__menu mobile-menu">
+      <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
+      <button><span class="visually-hidden">Х</span></button>
+      <a href="#" class="mobile-menu__link">О сервисе</a>
+      <a href="#" class="mobile-menu__link">Направления</a>
+      <a href="#" class="mobile-menu__link">Попутчики</a>
+      <a href="login.html" class="mobile-menu__login-link">Авторизация</a>
+      <a class="mobile-menu__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
+      <a class="mobile-menu__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <ul class="mobile-menu__social-list social-list">
+        <li class="social-list__item">
+          <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon"></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://vk.com/" aria-label="vkontakte" class="social-list__item-icon"></a>
+        </li>
+        <li class="social-list__item">
+          <a href="https://instagram.com/" aria-label="instagram" class="social-list__item-icon"></a>
+        </li>
+      </ul>
     </div>
     <h1 class="page-header__intro">
       В путешествие с крутыми попутчиками!
@@ -47,7 +66,7 @@
     </section>
 
     <section class="travel-destinations">
-      <h2 class="travel-destinations__title">Направления</h2>
+      <h2 class="travel-destinations__title"><a href="form.html">Направления</a></h2>
       <p class="travel-destinations__description">
         Мы не продаем туры и ничего не рекламируем.
         Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
@@ -70,11 +89,11 @@
         <p class="travel-destinations__slogan">Закоулки старой Европы</p>
         <span class="travel-destinations__companions-number">5326</span>
       </div>
-      <a href="#" class="travel-destinations__button">Показать все</a>
+      <a href="form.html" class="travel-destinations__button">Показать все</a>
     </section>
 
     <section class="companions">
-      <h2 class="companions__title">Попутчики</h2>
+      <h2 class="companions__title"><a href="catalog.html">Попутчики</a></h2>
       <p class="companions__description">
         Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
         Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
@@ -91,9 +110,7 @@
             <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
           </a>
           <h3 class="companions__name">
-            <a href="#">
-              Таня Фирсова
-            </a>
+            <a href="#">Таня Фирсова</a>
           </h3>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#ЗОЖ</li>
@@ -120,9 +137,7 @@
             <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
           </a>
           <h3 class="companions__name">
-            <a href="#">
-              Петя Дёмин
-            </a>
+            <a href="#">Петя Дёмин</a>
           </h3>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#бургер</li>
@@ -139,7 +154,7 @@
           </ul>
         </li>
       </ul>
-      <a href="#" class="companions__button">Показать всех</a>
+      <a href="catalog.html" class="companions__button">Показать всех</a>
     </section>
 
     <section class="profile">
@@ -164,18 +179,28 @@
       <a href="#" class="profile__tariff-button">Показать тарифы для бизнеса</a>
     </section>
 
+    <section class="business-tariff modal-dialog">
+      <h2 class="business-tariff__title">Бизнес-тарифы</h2>
+      <ul class="business-tariff__list">
+        <li class="business-tariff__item">Реклама у блоггера 300 000 руб./пост</li>
+        <li class="business-tariff__item">Накрутка подписчиков от 1 руб./шт.</li>
+        <li class="business-tariff__item">Лайки от ботов от 20 коп./лайк</li>
+        <li class="business-tariff__item">Ваш продакт-плейсмент Индивидуально</li>
+      </ul>
+      <button type="button">Закрыть окно</button>
+    </section>
+
     <section class="interesting">
       <h3 class="interesting__title">Заинтересовались?</h3>
       <p class="interesting__description">
         Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-        <a href="#" class="interesting__login-link">
-          авторизуйтесь.
-        </a>
+        <a href="#" class="interesting__login-link">авторизуйтесь.</a>
       </p>
       <form action="https://echo.htmlacademy.ru" method="post">
+        <h4 class="visually-hidden">Регистрация</h4>
         <div class="interesting__login-form login-form">
           <input type="email" name="login" placeholder="E-mail">
-          <button type="button" class="login-form__button">Войти</button>
+          <button type="submit" class="login-form__button"></button>
         </div>
       </form>
       <p class="interesting__description">Остались вопросы?</p>
@@ -201,7 +226,7 @@
     <div class="page-footer__logo">
       <img src="https://via.placeholder.com/150x150" alt="Лого Погнали" class="logo-image">
     </div>
-    <ul class="page-footer__social-list">
+    <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
         <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon"></a>
       </li>
