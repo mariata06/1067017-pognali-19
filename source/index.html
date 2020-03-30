@@ -12,8 +12,7 @@
       <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
     </div>
     <div class="page-header__menu mobile-menu">
-      <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
-      <button><span class="visually-hidden">Х</span></button>
+      <button><span class="visually-hidden">Закрыть меню</span></button>
       <a href="#" class="mobile-menu__link">О сервисе</a>
       <a href="#" class="mobile-menu__link">Направления</a>
       <a href="#" class="mobile-menu__link">Попутчики</a>
@@ -32,15 +31,18 @@
         </li>
       </ul>
     </div>
-    <h1 class="page-header__intro">
-      В путешествие с крутыми попутчиками!
-    </h1>
-    <a class="page-header__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
-    <a class="page-header__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    <a href="login.html" class="page-header__login-link">Авторизация</a>
   </header>
 
   <main class="page-main">
+
+    <section class="intro">
+      <h1 class="intro__title">
+        В путешествие с крутыми попутчиками!
+      </h1>
+      <a class="intro__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
+      <a class="intro__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <a href="login.html" class="intro__login-link">Авторизация</a>
+    </section>
 
     <section class="page-about">
       <p class="page-about__review">
@@ -110,7 +112,7 @@
             <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
           </a>
           <h3 class="companions__name">
-            <a href="#">Таня Фирсова</a>
+            <a href="#"><span class="visually-hidden">имя попутчика</span>Таня Фирсова</a>
           </h3>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#ЗОЖ</li>
@@ -137,7 +139,7 @@
             <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
           </a>
           <h3 class="companions__name">
-            <a href="#">Петя Дёмин</a>
+            <a href="#"><span class="visually-hidden">имя попутчика</span>Петя Дёмин</a>
           </h3>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#бургер</li>
@@ -224,11 +226,13 @@
 
   <footer class="page-footer">
     <div class="page-footer__logo">
-      <img src="https://via.placeholder.com/150x150" alt="Лого Погнали" class="logo-image">
+      <a href="index.html">
+        <img src="https://via.placeholder.com/150x150" alt="Лого Погнали" class="logo-image">
+      </a>
     </div>
     <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
-        <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon"></a>
+        <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon"></a>      
       </li>
       <li class="social-list__item">
         <a href="https://vk.com/" aria-label="vkontakte" class="social-list__item-icon"></a>

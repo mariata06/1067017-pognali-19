@@ -14,8 +14,7 @@
       </a>
     </div>
     <div class="page-header__menu mobile-menu">
-      <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
-      <button><span class="visually-hidden">Х</span></button>
+      <button><span class="visually-hidden">Закрыть меню</span></button>
       <a href="#" class="mobile-menu__link">О сервисе</a>
       <a href="#" class="mobile-menu__link">Направления</a>
       <a href="#" class="mobile-menu__link">Попутчики</a>
@@ -41,8 +40,8 @@
 
     <section class="filter-country">
       <h2 class="visually-hidden">Фильтрация по странам</h2>
-      <a href="#" class="filter-country__link">Фильтрация по странам</a>
-      <button><span class="visually-hidden">Х</span></button>
+      <button class="filter-country__button">Фильтрация по странам</button>
+      <button><span class="visually-hidden">Закрыть меню</span></button>
 
       <ul class="filter-country__list">
         <li class="filter-country__item">
@@ -123,53 +122,73 @@
         <li class="country-a-item">Армения</li>
         <li class="country-a-item">Афганистан</li>
       </ul>
-      <button><span class="visually-hidden">Х</span>Свернуть</button>
+      <button><span class="visually-hidden">Закрыть окно</span>Свернуть</button>
     </section>
 
     <section class="filter-companions">
       <h2 class="filter-companions__title">Подберите идеального попутчика</h2>
 
       <form action="https://echo.htmlacademy.ru" method="post">
-      <fieldset>
-        <legend>Хобби</legend>
-      </fieldset>
 
-      <fieldset>
-        <legend>Музыка</legend>
-        <label for="rock">Тяжелый рок</label>
-        <input id="rock" type="checkbox" value="rock" class="visually-hidden" checked>
+        <div class="filter-companions__hobby hobby-block">
+          <h3 class="hobby-block__title">
+            <a href="#">Хобби</a>
+          </h3>
+          <div class="hobby-block__content"></div>
+        </div>
 
-        <label for="rap">Русский рэп</label>
-        <input id="rap" type="checkbox" value="rap" class="visually-hidden">
+        <div class="filter-companions__music music-block">
+          <h3 class="music-block__title">
+            <a href="#">Музыка</a>
+          </h3>
+          <div class="music-block__content">
+            <label for="rock">Тяжелый рок</label>
+            <input id="rock" type="checkbox" value="rock" class="visually-hidden" checked>
 
-        <label for="eurodance">Тяжелый рок</label>
-        <input id="eurodance" type="checkbox" value="eurodance" class="visually-hidden">
+            <label for="rap">Русский рэп</label>
+            <input id="rap" type="checkbox" value="rap" class="visually-hidden">
 
-      </fieldset>
+            <label for="eurodance">Тяжелый рок</label>
+            <input id="eurodance" type="checkbox" value="eurodance" class="visually-hidden">
+          </div>
+        </div>
 
-      <fieldset>
-        <legend>Еда</legend>
-      </fieldset>
+        <div class="filter-companions__food food-block">
+          <h3 class="food-block__title">
+            <a href="#">Еда</a>
+          </h3>
+          <div class="food-block__content"></div>
+        </div>
 
-      <fieldset>
-        <legend>Транспорт</legend>
-        <ul class="companions__transport-list">
-          <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
-          <li class="companions__transport-item">самолетом</li>
-          <li class="companions__transport-item">автобусом</li>
-          <li class="companions__transport-item">на велосипеде</li>
-          <li class="companions__transport-item">пешком</li>
-        </ul>
-      </fieldset>
+        <div class="filter-companions__transport transport-block">
+          <h3 class="transport-block__title">
+            <a href="#">Транспорт</a>
+          </h3>
+          <div class="transport-block__content">
+            <ul class="transport-block__list">
+              <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
+              <li class="transport-block__item">самолетом</li>
+              <li class="transport-block__item">автобусом</li>
+              <li class="transport-block__item">на велосипеде</li>
+              <li class="transport-block__item">пешком</li>
+            </ul>
+          </div>
+        </div>
 
-      <label for="level">Левел 30 - 100</label>
-      <input type="range" min="0" max="100" step="1" value="100" id="level" class="visually-hidden">
-      <div class="filter-companions__input-type-range">
-        <div class="filter-companions__range-button-left"></div>
-        <div class="filter-companions__range-button-right"></div>
-      </div>
+        <div class="filter-companions__level level-block">
+          <h3 class="level-block__title">
+            <label for="level"><a href="#">Левел 30 - 100</a></label>
+          </h3>
+          <div class="level-block__content">
+            <input type="range" min="0" max="100" step="1" value="100" id="level" class="visually-hidden">
+            <div class="level-block__input-type-range">
+              <div class="level-block__range-button-left"></div>
+              <div class="level-block__range-button-right"></div>
+            </div>
+          </div>
+        </div>
 
-      <input type="submit">Показать</input>
+        <button type="submit">Показать</button>
       </form>
     </section>
 
@@ -178,10 +197,11 @@
       <ul class="companion__list">
         <li class="companions__list-item">
           <h3 class="companions__name">
-            <a href="#">Таня Фирсова</a>
+            <a href="#"><span class="visually-hidden">имя попутчика</span>Таня Фирсова</a>
           </h3>
           <a href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo"></a>
+            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+          </a>
           <span class="companions__likes">1,5 M</span>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#ЗОЖ</li>
@@ -209,10 +229,11 @@
         </li>
         <li class="companions__list-item">
           <h3 class="companions__name">
-            <a href="#">Павел Демин</a>
+            <a href="#"><span class="visually-hidden">имя попутчика</span>Павел Демин</a>
           </h3>
           <a href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo"></a>
+            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+          </a>
           <span class="companions__likes">1500</span>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#бургер</li>
@@ -238,10 +259,11 @@
         </li>
         <li class="companions__list-item">
           <h3 class="companions__name">
-            <a href="#">Марк Смолов</a>
+            <a href="#"><span class="visually-hidden">имя попутчика</span>Марк Смолов</a>
           </h3>
           <a href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo"></a>
+            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+          </a>
           <span class="companions__likes">170</span>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#рэп</li>
@@ -268,10 +290,11 @@
         </li>
         <li class="companions__list-item">
           <h3 class="companions__name">
-            <a href="#">Лариса Роговая</a>
+            <a href="#"><span class="visually-hidden">имя попутчика</span>Лариса Роговая</a>
           </h3>
           <a href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo"></a>
+            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+          </a>
           <span class="companions__likes">23</span>
           <ul class="companions__hashtag-list">
             <li class="companions__hashtag-item">#образование</li>
@@ -297,10 +320,14 @@
       </ul>
       <a href="#" class="companions__button companions__button--more">Показать еще</a>
       <div class="companions__pager-list pager-list">
-        <a href="#" class="pager-list__button pager-list__button--previous"></a>
-        <a href="#" class="pager-list__button pager-list__button--next"></a>
+        <a href="#" class="pager-list__button pager-list__button--previous">
+          <span class="visually-hidden">на предыдущую страницу</span>
+        </a>
+        <a href="#" class="pager-list__button pager-list__button--next">
+          <span class="visually-hidden">на следующую страницу</span>
+        </a>
       </div>
-      
+
     </section>
   </main>
 
