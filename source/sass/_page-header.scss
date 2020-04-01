@@ -1,0 +1,35 @@
+.page-header {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $color-blue-black;
+  padding: 25px;
+
+  .mobile-menu {
+    background-color: $color-white;
+
+    &__link {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      color: $color-dark-blue-1;
+      text-transform: uppercase;
+    }
+
+    &__login-link {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $color-blue-black-2;
+      text-transform: uppercase;
+      background-color: $color-yellow-1;
+    }
+
+    &__phone-link,
+    &__email-link {
+      color: $color-dark-blue-1;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+}

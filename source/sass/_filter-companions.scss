@@ -1,0 +1,37 @@
+.filter-companions {
+  background-color: $color-yellow-1;
+
+  &__title {
+    @include margintb0;
+    font-size: 22, 49px;
+    font-weight: 700;
+    line-height: 22, 49px;
+    color: $color-dark-blue-2;
+  }
+
+  .hobby-block__link,
+  .music-block__link,
+  .food-block__link,
+  .transport-block__link,
+  .level-block__link {
+    @include blue-link-caption;
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: $color-grey-dark;
+    display: block;
+  }
+
+  &__view-button {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $color-blue-black;
+    text-transform: uppercase;
+    background-color: $color-white;
+  }
+}

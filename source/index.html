@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
     <div class="page-header__logo">
-      <img src="https://via.placeholder.com/150x150" alt="Лого Погнали">
+      <img src="img/logo-mobile-white@1x.png" width="100" heiht="19" alt="Лого Погнали">
     </div>
     <div class="page-header__menu mobile-menu">
       <button type="button"><span class="visually-hidden">Закрыть меню</span></button>
@@ -45,26 +47,32 @@
     </section>
 
     <section class="page-about">
-      <p class="page-about__review">
-        «Лучшее приложение, что я видел в жизни!»
-      </p>
-      <p class="page-about__review-author">
-        Мурат Эльтазин главный редактор газеты «гаджетлайф»
-      </p>
-      <ul class="page-about__list tips-list">
-        <li class="tips-list__item">Выберите направление</li>
-        <li class="tips-list__item">Изучите идеи путешественников</li>
-        <li class="tips-list__item">Находите тех, кто похож на вас</li>
-        <li class="tips-list__item">Путешествуйте вместе!</li>
+      <div class="page-about__review-box">
+        <p class="page-about__review">
+          «Лучшее приложение, что я видел в жизни!»
+        </p>
+        <p class="page-about__review-author">
+          Мурат Эльтазин главный редактор газеты «гаджетлайф»
+        </p>
+      </div>
+
+      <ul class="page-about__list">
+        <li class="page-about__item">Выберите направление</li>
+        <li class="page-about__item">Изучите идеи путешественников</li>
+        <li class="page-about__item">Находите тех, кто похож на вас</li>
+        <li class="page-about__item">Путешествуйте вместе!</li>
       </ul>
-      <h2 class="page-about__title">О сервисе</h2>
-      <p class="page-about__description">
-        Любое путешествие веселее с попутчиками, которые на одной волнe с тобой!
-        Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
-      </p>
-      <p class="page-about__description">
-        А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
-      </p>
+
+      <div class="page-about__service">
+        <h2 class="page-about__title">О сервисе</h2>
+        <p class="page-about__description">
+          Любое путешествие веселее с попутчиками, которые на одной волнe с тобой!
+          Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+        </p>
+        <p class="page-about__description">
+          А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
+        </p>
+      </div>
     </section>
 
     <section class="travel-destinations">
@@ -74,22 +82,29 @@
         Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
       </p>
       <div class="travel-destinations__item">
-        <img src="https://via.placeholder.com/150x150" alt="Таиланд" class="travel-destinations__country">
-        <h3 class="travel-destinations__title">Таиланд</h3>
-        <p class="travel-destinations__slogan">Джунгли зовут!</p>
-        <span class="travel-destinations__companions-number">18321</span>
+        <img src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Таиланд"
+          class="travel-destinations__country">
+          <div class="travel-destinations__item-description">
+            <h3 class="travel-destinations__country">Таиланд</h3>
+            <p class="travel-destinations__slogan">Джунгли зовут!</p>
+            <span class="travel-destinations__companions-number">18321</span>
+          </div>
       </div>
       <div class="travel-destinations__item">
-        <img src="https://via.placeholder.com/150x150" alt="Франция" class="travel-destinations__country">
-        <h3 class="travel-destinations__title">Франция</h3>
-        <p class="travel-destinations__slogan">Трэ бьен манифик!</p>
-        <span class="travel-destinations__companions-number">12518</span>
+        <img src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция" class="travel-destinations__country">
+        <div class="travel-destinations__item-description">
+          <h3 class="travel-destinations__country">Франция</h3>
+          <p class="travel-destinations__slogan">Трэ бьен манифик!</p>
+          <span class="travel-destinations__companions-number">12518</span>
+        </div>
       </div>
       <div class="travel-destinations__item">
-        <img src="https://via.placeholder.com/150x150" alt="Чехия" class="travel-destinations__country">
-        <h3 class="travel-destinations__title">Чехия</h3>
+        <img src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия" class="travel-destinations__country">
+        <div class="travel-destinations__item-description">
+        <h3 class="travel-destinations__country">Чехия</h3>
         <p class="travel-destinations__slogan">Закоулки старой Европы</p>
         <span class="travel-destinations__companions-number">5326</span>
+        </div>
       </div>
       <a href="form.html" class="travel-destinations__button">Показать все</a>
     </section>
@@ -109,26 +124,29 @@
             <li class="companions__countries-item">Сейшелы</li>
           </ul>
           <a href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+            <img src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика" class="companions__photo">
           </a>
-          <h3 class="companions__name">
-            <a href="#"><span class="visually-hidden">имя попутчика</span>Таня Фирсова</a>
-          </h3>
-          <ul class="companions__hashtag-list">
-            <li class="companions__hashtag-item">#ЗОЖ</li>
-            <li class="companions__hashtag-item">#ПП</li>
-            <li class="companions__hashtag-item">#Фитнес</li>
-            <li class="companions__hashtag-item">#пляж</li>
-            <li class="companions__hashtag-item">#авокадо</li>
-            <li class="companions__hashtag-item">#смузи</li>
-          </ul>
-          <ul class="companions__transport-list">
-            <li class="companions__transport-item">самолетом</li>
-            <li class="companions__transport-item">автобусом</li>
-            <li class="companions__transport-item">на велосипеде</li>
-            <li class="companions__transport-item">пешком</li>
-          </ul>
+          <div class="companions__content">
+            <h3 class="companions__name">
+              <a href="#"><span class="visually-hidden">имя попутчика</span>Таня Фирсова</a>
+            </h3>
+            <ul class="companions__hashtag-list">
+              <li class="companions__hashtag-item">#ЗОЖ</li>
+              <li class="companions__hashtag-item">#ПП</li>
+              <li class="companions__hashtag-item">#Фитнес</li>
+              <li class="companions__hashtag-item">#пляж</li>
+              <li class="companions__hashtag-item">#авокадо</li>
+              <li class="companions__hashtag-item">#смузи</li>
+            </ul>
+            <ul class="companions__transport-list">
+              <li class="companions__transport-item">самолетом</li>
+              <li class="companions__transport-item">автобусом</li>
+              <li class="companions__transport-item">на велосипеде</li>
+              <li class="companions__transport-item">пешком</li>
+            </ul>
+          </div>
         </li>
+
         <li class="companions__item">
           <div class="companions__travel-mates">80 / level</div>
           <ul class="companions__countries-list">
@@ -136,8 +154,10 @@
             <li class="companions__countries-item">Чехия</li>
           </ul>
           <a href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Фото попутчика" class="companions__photo">
+            <img src="img/photo-account-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
+              class="companions__photo">
           </a>
+          <div class="companions__content">
           <h3 class="companions__name">
             <a href="#"><span class="visually-hidden">имя попутчика</span>Петя Дёмин</a>
           </h3>
@@ -154,6 +174,7 @@
             <li class="companions__transport-item">на велосипеде</li>
             <li class="companions__transport-item">пешком</li>
           </ul>
+        </div>
         </li>
       </ul>
       <a href="catalog.html" class="companions__button">Показать всех</a>
@@ -202,7 +223,8 @@
         <h4 class="visually-hidden">Регистрация</h4>
         <div class="interesting__login-form login-form">
           <input type="email" name="login" placeholder="E-mail">
-          <button type="submit" class="login-form__button"><span class="visually-hidden">Зарегистрироваться</span></button>
+          <button type="submit" class="login-form__button"><span
+              class="visually-hidden">Зарегистрироваться</span></button>
         </div>
       </form>
       <p class="interesting__description">Остались вопросы?</p>
@@ -213,8 +235,10 @@
 
     <section class="address">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <p class="address__description">ул. Большая Конюшенная, 19/8</p>
-      <a href="#">Проложить маршрут</a>
+      <div class="address__content">
+        <p class="address__description">ул. Большая Конюшенная, 19/8</p>
+        <a href="#">Проложить маршрут</a>
+      </div>
       <div class="address__map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4326645986766!2d30.324025639833913!3d59.938950160497924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1582551754712!5m2!1sru!2sru"
@@ -227,7 +251,7 @@
   <footer class="page-footer">
     <div class="page-footer__logo">
       <a href="index.html">
-        <img src="https://via.placeholder.com/150x150" alt="Лого Погнали" class="logo-image">
+        <img src="img/logo-mobile-blue@1x.png" width="100" heiht="19" alt="Лого Погнали" class="logo-image">
       </a>
     </div>
     <ul class="page-footer__social-list social-list">
@@ -243,7 +267,12 @@
     </ul>
     <p class="page-footer__copyright">Разработано
       <a href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34" width="27" height="34" alt="Лого HTMLacademy"
+          class="page-footer__copyright-logo">
+          <path
+            d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"
+            fill="#231f20" />
+        </svg>
       </a>
     </p>
   </footer>

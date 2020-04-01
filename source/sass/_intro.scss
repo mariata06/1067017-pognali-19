@@ -1,0 +1,26 @@
+.intro {
+  background: url("../img/traveller-illustration-mobile@1x.png") center bottom no-repeat,
+    url("../img/globe-back-mobile@1x.jpg") no-repeat center center;
+  height: 405px;
+
+  a {
+    display: inline;
+  }
+
+  &__title {
+    @include margintb0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  &__login-link {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $color-blue-black-2;
+    background-color: $color-yellow-1;
+    padding: 0 37px 0 37px;
+  }
+}

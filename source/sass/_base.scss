@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  color: $color-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mobile-menu__social-list,
+.page-about__list,
+.companions__countries-list,
+.companions__hashtag-list,
+.companions__transport-list,
+.companions__list,
+.profile__tariff-list,
+.business-tariff__list,
+.page-footer__social-list,
+.filter-country__list,
+.filter-country__alphabet,
+.filter-country__country-a,
+.transport-block__list {
+  list-style: none;
+}
+
+.page-main {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.catalog-main {
+  padding: 0 25px;
+
+  .companions {
+    background-color: $color-grey-light-1;
+  }
+}
+
+.form-main {
+  padding: 0 25px;
+
+  .companions {
+    background-color: $color-grey-light-1;
+  }
+}

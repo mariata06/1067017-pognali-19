@@ -1,0 +1,47 @@
+@mixin margintb0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin orange-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-orange-1;
+}
+
+@mixin blue-country-name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: $color-blue-black-2;
+}
+
+@mixin blue-user-name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: $color-dark-blue-2;
+}
+
+@mixin blue-link-caption {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+}
+
+@mixin light-grey-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $color-grey-light-6;
+}
+
+@mixin blue-link-style {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: $color-dark-blue-1;
+  text-transform: uppercase;
+}

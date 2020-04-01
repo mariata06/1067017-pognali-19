@@ -1,0 +1,43 @@
+.travel-destinations {
+  background-color: $color-grey-light-1;
+  padding: 0 25px 0 25px;
+
+  &__item {
+    background: url("../img/thailand-mobile@1x.jpg") no-repeat,
+  }
+
+  &__item-description {
+    background-color: $color-white;
+  }
+
+  &__title {
+    @include margintb0;
+  }
+
+  &__title a {
+    @include margintb0;
+    @include orange-title;
+  }
+
+  &__description {
+    color: $color-grey-dark;
+  }
+
+  &__country {
+    @include blue-country-name;
+    @include margintb0;
+  }
+
+  &__slogan {
+    @include light-grey-text;
+  }
+
+  &__companions-number {
+    @include light-grey-text;
+    line-height: 30px;
+  }
+
+  &__button {
+    @include blue-link-caption;
+  }
+}
