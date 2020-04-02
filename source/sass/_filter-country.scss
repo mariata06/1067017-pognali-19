@@ -13,21 +13,4 @@
   &__link--active {
     color: $color-dark-blue-1;
   }
-
-  .alphabet-list__link {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 18px;
-    color: $color-dark-blue-1;
-    text-transform: uppercase;
-  }
-
-  .alphabet-list__link--active {
-    color: $color-white;
-    background-color: $color-dark-blue-1;
-  }
-
-  .country-a-item {
-    color: $color-grey-dark;
-  }
 }

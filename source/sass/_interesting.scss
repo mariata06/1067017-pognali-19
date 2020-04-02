@@ -5,19 +5,4 @@
   &__title {
     @include orange-title;
   }
-
-  &__login-link {
-    color: $color-yellow-1;
-    text-decoration: underline;
-  }
-
-  &__phone-link,
-  &__email-link {
-    color: $color-yellow-1;
-    font-weight: 700;
-  }
-
-  &__email-link {
-    text-transform: uppercase;
-  }
 }
