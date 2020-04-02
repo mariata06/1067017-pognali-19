@@ -1,8 +1,8 @@
 .social-list {
   @include margintb0;
-  padding-left: 0;
+  @include list-style;
 
-  &__item-icon {
+  &__item {
     display: inline-block;
   }
 }

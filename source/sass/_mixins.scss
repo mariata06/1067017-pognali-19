@@ -1,6 +1,10 @@
 @mixin margintb0 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@mixin list-style {
+  list-style: none;
   padding-left: 0;
 }
 

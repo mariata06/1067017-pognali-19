@@ -4,6 +4,7 @@
 
   &__title {
     color: $color-orange-1;
+
     @include margintb0;
   }
 
@@ -16,5 +17,4 @@
     font-size: 16px;
     line-height: 16px;
   }
-
 }
