@@ -4,6 +4,11 @@
   background-color: $color-dark-blue-1;
   padding: 25px;
 
+  &--catalog,
+  &--form {
+    background-color: $color-grey-light-1;
+  }
+
   &__list {
     padding-left: 0;
   }
