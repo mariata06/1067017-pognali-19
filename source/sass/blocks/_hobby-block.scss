@@ -1,0 +1,6 @@
+.hobby-block {
+  &__link {
+    @include blue-link-caption;
+    font-size: 16px;
+  }
+}

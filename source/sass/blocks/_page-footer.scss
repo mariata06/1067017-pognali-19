@@ -1,0 +1,10 @@
+.page-footer {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $color-white;
+  padding: 25px;
+
+  &__copyright {
+    color: $color-grey-dark;
+  }
+}

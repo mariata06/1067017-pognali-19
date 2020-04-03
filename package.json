@@ -37,5 +37,9 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "browserslist": "^4.11.1",
+    "caniuse-lite": "^1.0.30001038"
   }
 }
