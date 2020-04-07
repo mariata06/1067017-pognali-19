@@ -1,12 +1,17 @@
 .business-tariff {
   background-color: $color-white;
   color: $color-grey-dark;
-  width: 269px;
+  min-width: 269px;
   margin: 0 auto;
+  padding: 0 25px 0 25px;
+}
 
-  &__title {
-    color: $color-orange-1;
+.business-tariff__title {
+  color: $color-orange-1;
 
-    @include margintb0;
-  }
+  @include margintb0;
+}
+
+.business-tariff__list {
+  @include list-style;
 }

@@ -1,28 +1,96 @@
 .mobile-menu {
   background-color: $color-white;
+  width: 320px;
+  //position: fixed;
+  height: 494px;
+  z-index: 1;
+  padding-left: 25px;
+  padding-right: 25px;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
 
-  &__link {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36px;
-    color: $color-dark-blue-1;
-    text-transform: uppercase;
-  }
+.mobile-menu__link {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: $color-dark-blue-1;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
 
-  &__login-link {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 30px;
-    color: $color-blue-black-2;
-    text-transform: uppercase;
-    background-color: $color-yellow-1;
+  &:first-child {
+    margin-top: 55px;
   }
+}
 
-  &__phone-link,
-  &__email-link {
-    color: $color-dark-blue-1;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
-  }
+.mobile-menu__login-link {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black-2;
+  text-transform: uppercase;
+  background-color: $color-yellow-1;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 50px;
+  margin-top: 60px;
+}
+
+.mobile-menu__phone-box,
+.mobile-menu__email-box {
+  display: flex;
+  height: 45px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.mobile-menu__email-box {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.mobile-menu__icon-phone,
+.mobile-menu__icon-email {
+  display: block;
+  margin-right: 15px;
+  width: 45px;
+  height: 45px;
+  background-color: $color-dark-blue-3;
+  border-radius: 50px;
+  position: relative;
+}
+
+.mobile-menu__icon-phone svg {
+  transform: scale(0.5);
+  position: absolute;
+  top: 12%;
+  left: 12%;
+}
+
+.mobile-menu__icon-email svg {
+  transform: scale(0.5);
+  position: absolute;
+  top: 22%;
+  left: 12%;
+}
+
+.mobile-menu__phone-link,
+.mobile-menu__email-link {
+  display: block;
+  color: $color-dark-blue-1;
+  font-weight: 700;
+  //text-transform: uppercase;
+}
+
+.mobile-menu__social-list {
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }

@@ -3,6 +3,7 @@
 @import "mixins";
 @import "typography";
 @import "blocks/page-header";
+@import "blocks/burger-menu";
 @import "blocks/mobile-menu";
 @import "blocks/social-list";
 @import "blocks/login-form";
@@ -15,12 +16,12 @@
 @import "blocks/level-block";
 @import "blocks/pager-list";
 @import "blocks/intro";
-@import "blocks/page-about";
+@import "blocks/about-service";
 @import "blocks/travel-destinations";
 @import "blocks/companions";
 @import "blocks/profile";
 @import "blocks/business-tariff";
-@import "blocks/interesting";
+@import "blocks/contacts";
 @import "blocks/address";
 @import "blocks/page-footer";
 @import "blocks/filter-country";

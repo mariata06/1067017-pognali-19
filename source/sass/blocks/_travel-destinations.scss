@@ -1,43 +1,88 @@
 .travel-destinations {
   background-color: $color-grey-light-1;
-  padding: 0 25px 0 25px;
+  padding: 0 25px 30px 25px;
 
-  &__item {
-    background: url("../img/thailand-mobile@1x.jpg") no-repeat;
+  @media (min-width: $tablet-width) {
+    padding: 0 40px 80px 40px;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 70px;
   }
 
-  &__item-description {
-    background-color: $color-white;
+  @media (min-width: $desktop-width) {
+    padding: 0 60px;
   }
+}
 
-  &__title {
-    @include margintb0;
+.travel-destinations__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
   }
+}
 
-  &__title a {
-    @include margintb0;
-    @include orange-title;
+.travel-destinations__item-description {
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
   }
+}
 
-  &__description {
-    color: $color-grey-dark;
+.travel-destinations__title {
+  @include margintb0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
   }
+}
 
-  &__country {
-    @include blue-country-name;
-    @include margintb0;
+.travel-destinations__title a {
+  @include margintb0;
+  @include orange-title;
+
+  @media (min-width: $tablet-width) {
+    @include orange-title-tabdesc;
+    margin-top: 75px;
   }
+}
 
-  &__slogan {
-    @include light-grey-text;
+.travel-destinations__description {
+  color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 60px;
+    width: 340px;
+    display: block;
   }
+}
 
-  &__companions-number {
-    @include light-grey-text;
-    line-height: 30px;
-  }
+.travel-destinations__country {
+  @include blue-country-name;
+  @include margintb0;
+}
 
-  &__button {
-    @include blue-link-caption;
+.travel-destinations__slogan {
+  @include light-grey-text;
+}
+
+.travel-destinations__companions-number {
+  @include light-grey-text;
+  line-height: 30px;
+}
+
+.travel-destinations__button {
+  @include blue-link-caption;
+  padding: 30px 0 30px 30px;
+  margin-top: 30px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    border-radius: 15px;
   }
 }

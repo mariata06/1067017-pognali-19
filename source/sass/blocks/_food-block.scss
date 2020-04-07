@@ -1,6 +1,4 @@
-.food-block {
-  .food-block__link {
-    @include blue-link-caption;
-    font-size: 16px;
-  }
+.food-block__link {
+  @include blue-link-caption;
+  font-size: 16px;
 }

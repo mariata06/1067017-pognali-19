@@ -1,20 +1,20 @@
 .filter-companions {
   background-color: $color-yellow-1;
+}
 
-  &__title {
-    @include margintb0;
-    font-size: 22, 49px;
-    font-weight: 700;
-    line-height: 22, 49px;
-    color: $color-dark-blue-2;
-  }
+.filter-companions__title {
+  @include margintb0;
+  font-size: 22, 49px;
+  font-weight: 700;
+  line-height: 22, 49px;
+  color: $color-dark-blue-2;
+}
 
-  &__view-button {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 30px;
-    color: $color-blue-black;
-    text-transform: uppercase;
-    background-color: $color-white;
-  }
+.filter-companions__view-button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+  background-color: $color-white;
 }

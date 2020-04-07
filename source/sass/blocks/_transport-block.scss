@@ -1,6 +1,4 @@
-.transport-block {
-  .transport-block__link {
-    @include blue-link-caption;
-    font-size: 16px;
-  }
+.transport-block__link {
+  @include blue-link-caption;
+  font-size: 16px;
 }

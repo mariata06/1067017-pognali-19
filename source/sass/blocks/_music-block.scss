@@ -1,11 +1,9 @@
-.music-block {
-  .music-block__link {
-    @include blue-link-caption;
-    font-size: 16px;
-  }
+.music-block__link {
+  @include blue-link-caption;
+  font-size: 16px;
 }
 
-label {
+.music-block label {
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;

@@ -1,8 +1,14 @@
 .social-list {
   @include margintb0;
   @include list-style;
-
-  &__item {
-    display: inline-block;
-  }
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
+
+.social-list__item {
+  display: inline-block;
+}
+

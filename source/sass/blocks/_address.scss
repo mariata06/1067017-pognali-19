@@ -1,27 +1,27 @@
 .address {
   background-color: $color-yellow-1;
+}
 
-  &__description {
-    @include margintb0;
-    color: $color-dark-blue-1;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+.address__description {
+  @include margintb0;
+  color: $color-dark-blue-1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-  &__content {
-    padding: 25px;
+.address__content {
+  padding: 25px;
+}
 
-    a {
-      @include blue-link-caption;
-    }
-  }
+.address__content a {
+  @include blue-link-caption;
+}
 
-  &__map {
-    width: 100%;
+.address__map {
+  width: 100%;
+}
 
-    iframe {
-      width: 100%;
-      border: none;
-    }
-  }
+.address iframe {
+  width: 100%;
+  border: none;
 }

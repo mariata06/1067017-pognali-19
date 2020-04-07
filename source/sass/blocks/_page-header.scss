@@ -1,6 +1,24 @@
 .page-header {
-  width: 320px;
+  min-width: 320px;
+  min-height: 75px;
   margin: 0 auto;
   background-color: $color-blue-black;
-  padding: 25px;
+  padding: 0 25px;
+  display: flex;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+    padding: 0 60px;
+  }
+}
+
+.page-header__logo {
+  align-self: center;
+  //padding-left: 25px;
 }

@@ -15,6 +15,11 @@
   color: $color-orange-1;
 }
 
+@mixin orange-title-tabdesc {
+  font-size: 45px;
+  line-height: 45px;
+}
+
 @mixin blue-country-name {
   font-size: 21px;
   font-weight: 700;

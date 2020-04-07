@@ -1,16 +1,21 @@
 .filter-country {
   background-color: $color-grey-light-1;
+}
 
-  &__button {
-    @include blue-link-style;
-  }
+.filter-country__button {
+  @include blue-link-style;
+}
 
-  &__link {
-    @include blue-link-style;
-    color: $color-grey-light-7;
-  }
+.filter-country__link {
+  @include blue-link-style;
+  color: $color-grey-light-7;
 
-  &__link--active {
+  &--active {
     color: $color-dark-blue-1;
   }
 }
+
+.filter-country .country-a-item {
+  color: $color-grey-dark;
+}
+

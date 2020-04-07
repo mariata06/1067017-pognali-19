@@ -2,115 +2,150 @@
   background: url("../img/smolov-mobile@1x.jpg") no-repeat top right,
     url("../img/rogovaya-back-mobile@1x.png") no-repeat left bottom;
   background-color: $color-dark-blue-1;
-  padding: 25px;
+  padding: 50px 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 40px 80px 40px;
+    background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 60px 80px 60px;
+  }
 
   &--catalog,
   &--form {
     background-color: $color-grey-light-1;
   }
+}
 
-  &__list {
-    padding-left: 0;
+.companions__list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.companions__hashtag-item,
+.companions__transport-item {
+  display: inline;
+}
+
+.companions__title {
+  @include margintb0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
   }
+}
 
-  &__hashtag-item,
-  &__transport-item {
-    display: inline;
+.companions__title a {
+  @include margintb0;
+  @include orange-title;
+
+  @media (min-width: $tablet-width) {
+    @include orange-title-tabdesc;
+    margin-top: 75px;
   }
+}
 
-  &__title a {
-    @include orange-title;
-  }
-
-  &__description:last-of-type {
+.companions__description {
+  &:last-of-type {
     font-weight: 700;
   }
+}
 
-  &__content {
-    background-color: $color-white;
-  }
+.companions__content {
+  background-color: $color-white;
+}
 
-  &__name a {
-    @include blue-country-name;
-  }
+.companions__name a {
+  @include blue-country-name;
+}
 
-  &__hashtag-item {
-    @include light-grey-text;
-    color: $color-grey-dark;
-    font-weight: 400;
-  }
+.companions__hashtag-item {
+  @include light-grey-text;
+  color: $color-grey-dark;
+  font-weight: 400;
+}
 
-  &__button {
-    @include blue-link-caption;
-    background-color: $color-yellow-1;
-  }
+.companions__button {
+  @include blue-link-caption;
+  background-color: $color-yellow-1;
+  padding: 30px 0 30px 30px;
+  display: block;
 
-  &__countries-to-visit,
-  &__transport-type,
-  &__travel-mates {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
-    color: $color-grey-dark;
-  }
-
-  &__travel-mates span {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 18px;
-    color: $color-dark-blue-2;
-    text-transform: uppercase;
-  }
-
-  &__form-level {
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 38px;
-    color: $color-blue-black-2;
-  }
-
-  &__countries-item {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18px;
-    color: $color-dark-blue-2;
-    text-transform: uppercase;
-  }
-
-  &__likes {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 21px;
-    color: $color-blue-black;
-    text-transform: uppercase;
-  }
-
-  &__view-button {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 30px;
-    color: $color-blue-black;
-    text-transform: uppercase;
-    background-color: $color-yellow-1;
-  }
-
-  &__button--more {
+  &--more {
     text-transform: uppercase;
     background-color: $color-grey-light-1;
   }
 
-  &__hashtag-title {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-    color: $color-dark-blue-2;
-  }
-
-  &__transport-type {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-    color: $color-dark-blue-2;
-    text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
   }
 }
+
+.companions__countries-to-visit,
+.companions__transport-type,
+.companions__travel-mates {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $color-grey-dark;
+}
+
+.companions__travel-mates span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+}
+
+.companions__form-level {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 38px;
+  color: $color-blue-black-2;
+}
+
+.companions__countries-item {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+}
+
+.companions__likes {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+}
+
+.companions__view-button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+  background-color: $color-yellow-1;
+}
+
+.companions__hashtag-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+}
+
+.companions__transport-type {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+}
+
