@@ -7,14 +7,40 @@
   color: $color-dark-blue-1;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 145px;
+  }
 }
 
 .address__content {
   padding: 25px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    //width: 100%;
+    //align-content: flex-end;
+    justify-content: flex-end;
+  }
 }
 
 .address__content a {
   @include blue-link-caption;
+  border: 1px solid $color-blue-black;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 322px;
+  }
 }
 
 .address__map {

@@ -1,3 +1,13 @@
+.burger-menu {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    justify-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
 /* скрываем чекбокс */
 .burger-menu__toggle {
   opacity: 0;

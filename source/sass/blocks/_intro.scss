@@ -5,14 +5,14 @@
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: center 150px, bottom left;
+  background-position: center 170px, bottom left;
   background-clip: border-box;
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: center bottom, center center;
+    background-position: center 350px, center center;
     padding: 0 40px;
   }
 
@@ -21,7 +21,14 @@
       url("../img/globe-back-desktop@1x.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom, center center;
-    padding: 0 60px;
+    padding: 0 60px 125px 60px;
+  }
+}
+
+.intro__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -39,6 +46,19 @@
   line-height: 40px;
   padding: 25px 30px 0 30px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+  }
+}
+
+.intro__contacts {
+  justify-content: center;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .intro__login-link {
@@ -66,6 +86,14 @@
   display: block;
   border-radius: 50px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .intro__email-link {
@@ -93,10 +121,26 @@
   //background-color: $color-blue-black;
   color: white;
   padding: 0 25px 0 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    padding: 0 395px 0 25px;
+  }
+}
+
+.intro__quote blockquote {
+  margin: 0;
 }
 
 .intro__quote-author {
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 215px;
+  }
 }
 
 .intro__tips-list {
@@ -144,8 +188,8 @@
     background-color: $color-orange-1;
 
     @media (min-width: $tablet-width) {
-      width: 345px;
-      padding: 20px 95px 60px 20px;
+      width: 344px;
+      padding: 32px 95px 60px 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -161,8 +205,8 @@
     background-color: $color-yellow-3;
 
     @media (min-width: $tablet-width) {
-      width: 345px;
-      padding: 20px 95px 60px 20px;
+      width: 344px;
+      padding: 32px 95px 60px 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -178,8 +222,8 @@
     background-color: $color-yellow-2;
 
     @media (min-width: $tablet-width) {
-      width: 345px;
-      padding: 20px 95px 60px 20px;
+      width: 344px;
+      padding: 32px 95px 60px 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -195,8 +239,8 @@
     background-color: $color-yellow-1;
 
     @media (min-width: $tablet-width) {
-      width: 345px;
-      padding: 20px 95px 60px 20px;
+      width: 344px;
+      padding: 32px 95px 60px 20px;
     }
 
     @media (min-width: $desktop-width) {

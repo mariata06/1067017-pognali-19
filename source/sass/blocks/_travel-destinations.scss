@@ -10,7 +10,29 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 60px;
+    display: flex;
+    padding: 163px 60px;
+    flex-direction: row-reverse;
+  }
+}
+
+.travel-destinations__text-box {
+  @media (min-width: $desktop-width) {
+    order: 1;
+    align-self: start;
+  }
+}
+
+.travel-destinations__box {
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
+}
+
+.travel-destinations__text-box,
+.travel-destinations__box {
+  @media (min-width: $desktop-width) {
+    width: 50%;
   }
 }
 
@@ -29,6 +51,10 @@
   @media (min-width: $tablet-width) {
     width: 100%;
   }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
 }
 
 .travel-destinations__title {
@@ -36,6 +62,10 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -84,5 +114,11 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     border-radius: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 270px;
+    border-radius: 15px;
+    align-self: flex-end;
   }
 }

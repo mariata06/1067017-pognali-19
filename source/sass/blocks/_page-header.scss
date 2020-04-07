@@ -8,17 +8,57 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    width: 688px;
-    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    padding: 25px 40px;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1320px;
-    padding: 0 60px;
+    width: 1440px;
+    padding: 25px 60px;
+    justify-content: first baseline;
+  }
+}
+
+.page-header__burger-menu {
+  @media (min-width: $desktop-width) {
+    align-self: center;
   }
 }
 
 .page-header__logo {
   align-self: center;
   //padding-left: 25px;
+}
+
+.intro__contacts {
+  align-self: end;
+
+  @media (min-width: $tablet-width) {
+    align-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: end;
+  }
+}
+
+.page-header__site-nav {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-right: auto;
+  }
+}
+
+.page-header__site-nav a {
+  display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    color: white;
+  }
 }

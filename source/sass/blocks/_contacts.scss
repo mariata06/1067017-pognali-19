@@ -1,15 +1,73 @@
 .contacts {
   background-color: $color-dark-blue-1;
   padding: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px;
+  }
+}
+
+.contacts form {
+  @media (min-width: $tablet-width) {
+    padding: 34px;
+  }
+}
+
+.contacts__login-form {
+  display: flex;
+}
+
+.contacts input {
+  width: 100%;
 }
 
 .contacts__title {
   @include orange-title;
+
+  @media (min-width: $tablet-width) {
+    @include orange-title-tabdesc;
+    text-align: center;
+  }
+}
+
+.contacts__text-box {
+  text-align: center;
+}
+
+.contacts__text-box p {
+  @media (min-width: $tablet-width) {
+    @include margintb0;
+    @include grey-text-tabdesc;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.contacts__description {
+  @include margintb0;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    @include grey-text-tabdesc;
+    text-align: center;
+    display: block;
+  }
 }
 
 .contacts__login-link {
   color: $color-yellow-1;
   text-decoration: underline;
+}
+
+.contacts__box {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .contacts__phone-box,
@@ -18,11 +76,33 @@
   height: 45px;
   margin-top: 50px;
   align-items: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 50%;
+  }
+}
+
+.contacts__phone-box {
+  @media (min-width: $desktop-width) {
+    padding-left: 150px;
+  }
 }
 
 .contacts__email-box {
   margin-top: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__icon-phone,

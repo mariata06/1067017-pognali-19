@@ -7,18 +7,52 @@
   color: $color-orange-1;
 
   @include margintb0;
+
+  @media (min-width: $tablet-width) {
+    @include orange-title-tabdesc;
+    text-align: center;
+  }
+}
+
+.profile__tariff-list {
+  @include list-style;
+}
+
+.profile__tariff-item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    //width: 1440px;
+    //padding: 0 60px;
+  }
 }
 
 .profile__tariff-description {
   color: $color-grey-dark;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.profile__tariff-cost {
+  color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    min-width: 140px;
+    align-self: center;
+    align-content: flex-end;
+    text-align: right;
+  }
 }
 
 .profile__tariff-button {
   @include blue-link-caption;
   font-size: 16px;
   line-height: 16px;
-}
-
-.profile__tariff-list {
-  @include list-style;
 }

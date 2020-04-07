@@ -5,12 +5,14 @@
   padding: 50px 25px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 40px 80px 40px;
+    padding: 0 74px 80px 74px;
     background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
+    background-color: $color-dark-blue-1;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 60px 80px 60px;
+    display: flex;
+    padding: 80px 60px 80px 60px;
   }
 
   &--catalog,
@@ -22,6 +24,34 @@
 .companions__list {
   padding-left: 0;
   list-style: none;
+  background-color: lightgreen;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgreen;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+    width: 50%;
+    //display: flex;
+    //justify-content: space-between;
+    //background-color: lightgreen;
+  }
+}
+
+.companions__item {
+  @media (min-width: $tablet-width) {
+    //padding: 0 40px 80px 40px;
+    //background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
+    width: 285px;
+    background-color: pink;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 60px 80px 60px;
+  }
 }
 
 .companions__hashtag-item,
@@ -34,6 +64,10 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -50,6 +84,11 @@
 .companions__description {
   &:last-of-type {
     font-weight: 700;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
   }
 }
 
@@ -82,6 +121,12 @@
     display: block;
     width: 100%;
     border-radius: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 280px;
+    align-self: flex-end;
+    flex-direction: column-reverse;
   }
 }
 

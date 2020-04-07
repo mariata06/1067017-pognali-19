@@ -20,6 +20,11 @@
   line-height: 45px;
 }
 
+@mixin grey-text-tabdesc {
+  font-size: 28px;
+  line-height: 33px;
+}
+
 @mixin blue-country-name {
   font-size: 21px;
   font-weight: 700;
