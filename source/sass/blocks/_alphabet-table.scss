@@ -1,5 +1,23 @@
 .alphabet-table {
   text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.alphabet-table td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid $color-greyborder;
+}
+
+.alphabet-list__item {
+  &--active {
+    background-color: $color-dark-blue-1;
+  }
 }
 
 .alphabet-list__link {

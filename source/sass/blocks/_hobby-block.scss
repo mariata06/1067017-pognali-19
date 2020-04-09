@@ -1,4 +1,41 @@
+.hobby-block {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .hobby-block__link {
   @include blue-link-caption;
   font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color-macaroni-and-cheese;
+  display: block;
+  padding-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    border-bottom: none;
+  }
+}
+
+.hobby-block input {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.hobby-block label {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: $color-grey-dark;
+    display: block;
+  }
 }

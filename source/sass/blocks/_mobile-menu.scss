@@ -2,13 +2,17 @@
   background-color: $color-white;
   width: 320px;
   //position: fixed;
-  height: 494px;
+  height: 300px;
   z-index: 1;
   padding-left: 25px;
   padding-right: 25px;
   position: relative;
   margin: 0 auto;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .mobile-menu__link {
@@ -38,7 +42,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 50px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .mobile-menu__phone-box,

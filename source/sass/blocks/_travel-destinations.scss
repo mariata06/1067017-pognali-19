@@ -12,12 +12,14 @@
   @media (min-width: $desktop-width) {
     display: flex;
     padding: 163px 60px;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .travel-destinations__text-box {
   @media (min-width: $desktop-width) {
+    width: 447px;
     order: 1;
     align-self: start;
   }
@@ -25,13 +27,7 @@
 
 .travel-destinations__box {
   @media (min-width: $desktop-width) {
-    order: 2;
-  }
-}
-
-.travel-destinations__text-box,
-.travel-destinations__box {
-  @media (min-width: $desktop-width) {
+    order: -1;
     width: 50%;
   }
 }
@@ -86,7 +82,7 @@
     font-size: 28px;
     line-height: 33px;
     margin-top: 60px;
-    width: 340px;
+    width: 447px;
     display: block;
   }
 }
@@ -120,5 +116,8 @@
     max-width: 270px;
     border-radius: 15px;
     align-self: flex-end;
+    margin-left: auto;
+    margin-right: 173px;
+    margin-top: -100px;
   }
 }

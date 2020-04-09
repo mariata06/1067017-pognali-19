@@ -1,6 +1,18 @@
+.music-block {
+  padding-bottom: 13px;
+  border-bottom: 1px solid $color-macaroni-and-cheese;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    border-bottom: none;
+  }
+}
+
 .music-block__link {
   @include blue-link-caption;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 .music-block label {

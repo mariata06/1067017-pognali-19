@@ -1,4 +1,5 @@
-.companions {
+//***********************COMPANIONS CATALOG**********************//
+.companions-index {
   background: url("../img/smolov-mobile@1x.jpg") no-repeat top right,
     url("../img/rogovaya-back-mobile@1x.png") no-repeat left bottom;
   background-color: $color-dark-blue-1;
@@ -13,15 +14,12 @@
   @media (min-width: $desktop-width) {
     display: flex;
     padding: 80px 60px 80px 60px;
-  }
-
-  &--catalog,
-  &--form {
-    background-color: $color-grey-light-1;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
-.companions__list {
+.companions-index__list {
   padding-left: 0;
   list-style: none;
   background-color: lightgreen;
@@ -41,7 +39,13 @@
   }
 }
 
-.companions__item {
+.companions-index__text-box {
+  @media (min-width: $desktop-width) {
+    width: 400px;
+  }
+}
+
+.companions-index__item {
   @media (min-width: $tablet-width) {
     //padding: 0 40px 80px 40px;
     //background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
@@ -54,12 +58,12 @@
   }
 }
 
-.companions__hashtag-item,
-.companions__transport-item {
+.companions-index__hashtag-item,
+.companions-index__transport-item {
   display: inline;
 }
 
-.companions__title {
+.companions-index__title {
   @include margintb0;
 
   @media (min-width: $tablet-width) {
@@ -71,7 +75,7 @@
   }
 }
 
-.companions__title a {
+.companions-index__title a {
   @include margintb0;
   @include orange-title;
 
@@ -81,7 +85,7 @@
   }
 }
 
-.companions__description {
+.companions-index__description {
   &:last-of-type {
     font-weight: 700;
   }
@@ -92,21 +96,21 @@
   }
 }
 
-.companions__content {
+.companions-index__content {
   background-color: $color-white;
 }
 
-.companions__name a {
+.companions-index__name a {
   @include blue-country-name;
 }
 
-.companions__hashtag-item {
+.companions-index__hashtag-item {
   @include light-grey-text;
   color: $color-grey-dark;
   font-weight: 400;
 }
 
-.companions__button {
+.companions-index__button {
   @include blue-link-caption;
   background-color: $color-yellow-1;
   padding: 30px 0 30px 30px;
@@ -127,19 +131,18 @@
     max-width: 280px;
     align-self: flex-end;
     flex-direction: column-reverse;
+    margin-top: -80px;
   }
 }
 
-.companions__countries-to-visit,
-.companions__transport-type,
-.companions__travel-mates {
+.companions-index__travel-mates {
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   color: $color-grey-dark;
 }
 
-.companions__travel-mates span {
+.companions-index__travel-mates span {
   font-size: 24px;
   font-weight: 700;
   line-height: 18px;
@@ -147,14 +150,14 @@
   text-transform: uppercase;
 }
 
-.companions__form-level {
+.companions-index__form-level {
   font-size: 38px;
   font-weight: 700;
   line-height: 38px;
   color: $color-blue-black-2;
 }
 
-.companions__countries-item {
+.companions-index__countries-item {
   font-size: 15px;
   font-weight: 500;
   line-height: 18px;
@@ -162,7 +165,7 @@
   text-transform: uppercase;
 }
 
-.companions__likes {
+.companions-index__likes {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
@@ -170,7 +173,7 @@
   text-transform: uppercase;
 }
 
-.companions__view-button {
+.companions-index__view-button {
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -179,17 +182,244 @@
   background-color: $color-yellow-1;
 }
 
-.companions__hashtag-title {
+.companions-index__hashtag-title {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   color: $color-dark-blue-2;
 }
 
-.companions__transport-type {
+.companions-index__transport-type {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   color: $color-dark-blue-2;
   text-transform: uppercase;
 }
+
+//***********************COMPANIONS CATALOG**********************//
+.companions-catalog {
+  color: $color-grey-dark;
+  padding: 0 25px 25px 25px;
+  background-color: $color-pale-grey;
+}
+
+.companions-catalog__view-button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+  background-color: $color-yellow-1;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -300px;
+    order: -1;
+    align-self: flex-end;
+    max-width: 148px;
+    margin-bottom: 50px;
+  }
+}
+
+.companions-catalog__list,
+.companions-catalog__hashtag-list,
+.companions-catalog__countries-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.companions-catalog__countries-list {
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.companions-catalog__list {
+  margin-top: 0;
+  border-radius: 20px;
+}
+
+.companions-catalog__list-item {
+  display: block;
+  padding: 25px 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.companions-catalog__user-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 18px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    order: -1;
+    align-items: flex-start;
+    margin-right: 0;
+  }
+}
+
+.companions-catalog__photo {
+  border-radius: 100px;
+  margin-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 50px;
+  }
+}
+
+.companions-catalog__name {
+  @include margintb0;
+  max-width: 110px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 100px;
+    max-width: 150px;
+  }
+}
+
+.companions-catalog__name a {
+  color: $color-dark-slate-blue;
+}
+
+.companions-catalog__likes {
+  @include margintb0;
+  align-self: flex-end;
+  margin-left: -110px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-blue-black-2;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+    margin-top: 0;
+    align-self: flex-end;
+    margin-right: 0;
+    margin-left: 450px;
+  }
+}
+
+.companions-catalog__hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 160px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    min-width: 225px;
+    align-content: center;
+    order: 0;
+    margin-left: -150px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.companions-catalog__hashtag-item {
+  display: inline;
+}
+
+fieldset {
+  margin: 0;
+  border: none;
+  border-top: 1px solid $color-pale-grey;
+}
+
+.companions-catalog__countries-fieldset {
+  @media (min-width: $tablet-width) {
+    align-self: flex-end;
+    margin-left: 0;
+    margin-right: 50px;
+  }
+}
+
+.companions-catalog__transport-level {
+  display: flex;
+  flex-direction: row;
+}
+
+.companions-catalog__transport-fieldset {
+  width: 70%;
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-end;
+    margin-left: 0;
+    margin-right: 0;
+    border: none;
+  }
+}
+
+.companions-catalog__level-fieldset {
+  width: 30%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    align-self: flex-end;
+    margin-left: 30px;
+    margin-right: -20px;
+    order: -1;
+    border: none;
+  }
+}
+
+.companions-catalog__countries-to-visit,
+.companions-catalog__transport-type,
+.companions-catalog__travel-mates {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $color-grey-dark;
+}
+
+.companions-catalog__transport-type,
+.companions-catalog__travel-mates {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.companions-catalog__button {
+  &--more {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-dark-slate-blue;
+    text-align: center;
+    display: block;
+    margin-bottom: 27px;
+  }
+}
+/*
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 280px;
+    align-self: flex-end;
+    flex-direction: column-reverse;
+  }
+  */
+
+/*
+@include blue-link-caption;
+background-color: $color-yellow-1;
+padding: 30px 0 30px 30px;
+display: block;
+*/

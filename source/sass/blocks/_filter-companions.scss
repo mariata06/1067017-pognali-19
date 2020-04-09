@@ -1,13 +1,25 @@
 .filter-companions {
+  padding: 27px 25px;
+}
+
+.filter-companions__container {
+  border-radius: 20px;
   background-color: $color-yellow-1;
+  padding: 26px;
 }
 
 .filter-companions__title {
   @include margintb0;
-  font-size: 22, 49px;
+  font-size: 22.49px;
   font-weight: 700;
-  line-height: 22, 49px;
+  line-height: 22.49px;
   color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    border-bottom: 1px solid $color-macaroni-and-cheese;
+    padding-bottom: 25px;
+  }
 }
 
 .filter-companions__view-button {
@@ -17,4 +29,14 @@
   color: $color-blue-black;
   text-transform: uppercase;
   background-color: $color-white;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+.filter-companions__transport {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }

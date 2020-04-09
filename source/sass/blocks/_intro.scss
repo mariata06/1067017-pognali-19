@@ -48,16 +48,16 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
+    padding: 10px 170px 30px 170px;
   }
 }
 
 .intro__contacts {
   justify-content: center;
-  display: none;
+  display: flex;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: none;
   }
 }
 

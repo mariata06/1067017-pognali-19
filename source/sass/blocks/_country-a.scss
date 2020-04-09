@@ -1,6 +1,14 @@
 .country-a {
   display: block;
   color: $color-grey-dark;
+  padding: 0 25px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
 }
 
 .country-a__item {

@@ -1,4 +1,56 @@
+.transport-block {
+  &--filter {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row;
+      border-bottom: none;
+    }
+  }
+}
+
+.transport-block__list {
+  @include margintb0;
+  border-bottom: 1px solid $color-macaroni-and-cheese;
+  padding-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
+  &--profile {
+    border-bottom: none;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.transport-block__item {
+  width: 33px;
+  height: 33px;
+  background-color: $color-white;
+  border-radius: 50px;
+  position: relative;
+
+  &--profile {
+    background-color: $color-pale-grey;
+  }
+}
+
+.transport-block__item-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .transport-block__link {
   @include blue-link-caption;
   font-size: 16px;
+  text-transform: uppercase;
 }

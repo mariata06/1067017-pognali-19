@@ -1,4 +1,95 @@
+.level-block {
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .level-block__link {
   @include blue-link-caption;
   font-size: 16px;
+  text-transform: uppercase;
+}
+
+.level-block__container {
+  width: 220px;
+  height: 35px;
+  border: 1px solid $color-greyborder;
+  position: relative;
+  background-color: $color-white;
+  justify-content: space-around;
+  display: flex;
+  margin-bottom: 26px;
+
+  &::before {
+    content: "";
+    width: 1px;
+    height: 11px;
+    background-color: $color-greyborder;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100px;
+  }
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 11px;
+    background-color: $color-greyborder;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+  }
+}
+
+.level-block__container .min-level,
+.level-block__container .max-level {
+  color: $color-dark-slate-blue;
+}
+
+.level-block__input-type-range {
+  content: "";
+  width: 220px;
+  height: 2px;
+  background-color: $color-dark-slate-blue;
+  opacity: 20%;
+  border-radius: 1px;
+  position: relative;
+  display: block;
+}
+
+.level-block__bar {
+  width: 80%;
+  height: 2px;
+  background-color: $color-dark-slate-blue;
+}
+
+.level-block__range-button-left::before {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: -4px;
+  left: 50px;
+  cursor: pointer;
+  background-color: $color-dark-slate-blue;
+}
+
+.level-block__range-button-right::before {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: -4px;
+  left: 215px;
+  cursor: pointer;
+  background-color: $color-dark-slate-blue;
 }
