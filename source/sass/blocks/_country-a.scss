@@ -5,12 +5,20 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 50px;
-    right: 50px;
+    //position: absolute;
+    //top: 50px;
+    //right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
 .country-a__item {
   color: $color-grey-dark;
+}
+
+.country-a__close-button {
+  display: none;
 }

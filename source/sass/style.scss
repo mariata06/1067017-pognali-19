@@ -5,7 +5,7 @@
 @import "blocks/page-header";
 @import "blocks/burger-menu";
 @import "blocks/mobile-menu";
-@import "blocks/social-list";
+@import "blocks/header-social";
 @import "blocks/login-form";
 @import "blocks/alphabet-table";
 @import "blocks/country-a";
@@ -18,7 +18,9 @@
 @import "blocks/intro";
 @import "blocks/about-service";
 @import "blocks/travel-destinations";
-@import "blocks/companions";
+@import "blocks/companions-index";
+@import "blocks/companions-catalog";
+@import "blocks/companions-form";
 @import "blocks/profile";
 @import "blocks/business-tariff";
 @import "blocks/contacts";
@@ -28,3 +30,5 @@
 @import "blocks/filter-companions";
 @import "blocks/user-destinations";
 @import "blocks/filter-all";
+@import "blocks/user-nav";
+@import "blocks/site-nav";

@@ -58,8 +58,16 @@ a {
   }
 }
 
-.catalog-main {
+.catalog-main,
+.form-main {
   background-color: $color-pale-grey;
+}
+
+.catalog-main {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .button {

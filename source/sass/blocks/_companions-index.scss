@@ -1,0 +1,198 @@
+//***********************COMPANIONS CATALOG**********************//
+.companions-index {
+  background: url("../img/smolov-mobile@1x.jpg") no-repeat top right,
+    url("../img/rogovaya-back-mobile@1x.png") no-repeat left bottom;
+  background-color: $color-dark-blue-1;
+  padding: 50px 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 74px 80px 74px;
+    background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
+    background-color: $color-dark-blue-1;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 80px 60px 80px 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.companions-index__list {
+  padding-left: 0;
+  list-style: none;
+  background-color: lightgreen;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgreen;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+    width: 50%;
+    //display: flex;
+    //justify-content: space-between;
+    //background-color: lightgreen;
+  }
+}
+
+.companions-index__text-box {
+  @media (min-width: $desktop-width) {
+    width: 400px;
+  }
+}
+
+.companions-index__item {
+  @media (min-width: $tablet-width) {
+    //padding: 0 40px 80px 40px;
+    //background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
+    width: 285px;
+    background-color: pink;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 60px 80px 60px;
+  }
+}
+
+.companions-index__hashtag-item,
+.companions-index__transport-item {
+  display: inline;
+}
+
+.companions-index__title {
+  @include margintb0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.companions-index__title a {
+  @include margintb0;
+  @include orange-title;
+
+  @media (min-width: $tablet-width) {
+    @include orange-title-tabdesc;
+    margin-top: 75px;
+  }
+}
+
+.companions-index__description {
+  &:last-of-type {
+    font-weight: 700;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.companions-index__content {
+  background-color: $color-white;
+}
+
+.companions-index__name a {
+  @include blue-country-name;
+}
+
+.companions-index__hashtag-item {
+  @include light-grey-text;
+  color: $color-grey-dark;
+  font-weight: 400;
+}
+
+.companions-index__button {
+  @include blue-link-caption;
+  background-color: $color-yellow-1;
+  padding: 30px 0 30px 30px;
+  display: block;
+
+  &--more {
+    text-transform: uppercase;
+    background-color: $color-grey-light-1;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 280px;
+    align-self: flex-end;
+    flex-direction: column-reverse;
+    margin-top: -80px;
+  }
+}
+
+.companions-index__travel-mates {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $color-grey-dark;
+}
+
+.companions-index__travel-mates span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+}
+
+.companions-index__form-level {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 38px;
+  color: $color-blue-black-2;
+}
+
+.companions-index__countries-item {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+}
+
+.companions-index__likes {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+}
+
+.companions-index__view-button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+  background-color: $color-yellow-1;
+}
+
+.companions-index__hashtag-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+}
+
+.companions-index__transport-type {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+}

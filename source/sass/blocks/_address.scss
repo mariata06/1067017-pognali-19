@@ -7,6 +7,9 @@
   color: $color-dark-blue-1;
   font-weight: 700;
   text-transform: uppercase;
+  padding-right: 70px;
+  margin-bottom: 35px;
+
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -19,7 +22,9 @@
 }
 
 .address__content {
-  padding: 25px;
+  padding: 35px 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -31,7 +36,11 @@
 
 .address__content a {
   @include blue-link-caption;
-  border: 1px solid $color-blue-black;
+  border: 2px solid $color-blue-black;
+  padding: 20px 0 20px 24px;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
 
   @media (min-width: $tablet-width) {
     display: block;

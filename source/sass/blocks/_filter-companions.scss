@@ -1,5 +1,11 @@
 .filter-companions {
   padding: 27px 25px;
+
+  @media (min-width: $desktop-width) {
+    //display: flex;
+    order: -1;
+    width: 285px;
+  }
 }
 
 .filter-companions__container {

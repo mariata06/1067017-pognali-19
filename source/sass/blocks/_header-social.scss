@@ -1,13 +1,12 @@
-.social-list {
-  @include margintb0;
+.header-social__list {
   @include list-style;
   width: 105px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 42px auto 0 auto;
 }
 
-.social-list__item {
+.header-social__item {
   display: inline-block;
 }

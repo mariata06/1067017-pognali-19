@@ -23,6 +23,7 @@
 
 .contacts__title {
   @include orange-title;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     @include orange-title-tabdesc;
@@ -32,9 +33,12 @@
 
 .contacts__text-box {
   text-align: center;
+  margin-top: 32px;
 }
 
 .contacts__text-box p {
+  @include margintb0;
+
   @media (min-width: $tablet-width) {
     @include margintb0;
     @include grey-text-tabdesc;
@@ -48,8 +52,9 @@
 .contacts__description {
   @include margintb0;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 32px auto;
   display: block;
+  padding: 0 53px;
 
   @media (min-width: $tablet-width) {
     @include grey-text-tabdesc;
@@ -74,7 +79,7 @@
 .contacts__email-box {
   display: flex;
   height: 45px;
-  margin-top: 50px;
+  margin-top: 16px;
   align-items: center;
   text-transform: uppercase;
 
