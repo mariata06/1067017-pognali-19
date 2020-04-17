@@ -65,8 +65,9 @@ a {
 
 .catalog-main {
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: column-reverse;
+    //display: flex;
+    //flex-direction: column-reverse;
+    //flex-direction: column;
   }
 }
 

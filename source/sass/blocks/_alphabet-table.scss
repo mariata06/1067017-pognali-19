@@ -2,9 +2,11 @@
   text-align: center;
   margin: 0 auto;
   border-collapse: collapse;
+  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
+    background-color: $color-pale-grey-four;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,11 +18,21 @@
   width: 50px;
   height: 50px;
   border: 1px solid $color-greyborder;
+
+  @media (min-width: $tablet-width) {
+    width: 71px;
+    height: 76px;
+    border: none;
+  }
 }
 
 .alphabet-list__item {
   &--active {
     background-color: $color-dark-blue-1;
+
+    @media (min-width: $tablet-width) {
+      background-color: $color-pale-grey-four;
+    }
   }
 }
 
@@ -30,9 +42,21 @@
   line-height: 18px;
   color: $color-dark-blue-1;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-pale-grey-3;
+  }
 }
 
 .alphabet-list__link--active {
   color: $color-white;
   background-color: $color-dark-blue-1;
+
+  @media (min-width: $tablet-width) {
+    color: $color-dark-blue-1;
+    background-color: $color-pale-grey-four;
+  }
 }

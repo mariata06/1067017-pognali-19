@@ -1,0 +1,37 @@
+.country-global-list {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 95px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.country-list {
+  @media (min-width: $desktop-width) {
+    padding: 5px 0 50px 0;
+    width: 250px;
+    max-height: 600px;
+  }
+}
+
+.country-global-list__lit-link {
+  @media (min-width: $desktop-width) {
+    font-size: 60px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $color-dark-blue-1;
+  }
+}
+
+.country-list a:not(.country-global-list__lit-link) {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-grey-dark;
+}

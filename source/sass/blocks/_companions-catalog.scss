@@ -156,7 +156,7 @@
 .companions-catalog__hashtag-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 160px;
+  width: 160px;
 
   @media (min-width: $tablet-width) {
     order: 3;
@@ -164,7 +164,7 @@
     margin-left: 227px;
     margin-top: -153px;
     margin-bottom: 100px;
-    width: 262px;
+    width: 220px;
     //flex-direction: row;
     //min-width: 225px;
     //align-content: center;
@@ -176,7 +176,7 @@
 
   @media (min-width: $desktop-width) {
     display: inline-block;
-    width: 100%;
+    width: 245px;
     margin-top: -192px;
     margin-bottom: 48px;
     order: 3;
@@ -199,11 +199,12 @@ fieldset {
     margin-left: 42px;
     padding-left: 15px;
     display: block;
-    order: 5;
-    margin-top: 14px;
+    order: 2;
+    margin-top: 46px;
+    margin-bottom: 111px;
     background-color: #ffffff;
     z-index: 1;
-    width: 300px;
+    width: 210px;
     //align-self: flex-end;
     //margin-left: 0;
     //margin-right: 50px;

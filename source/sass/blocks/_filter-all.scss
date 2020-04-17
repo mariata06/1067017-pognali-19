@@ -14,6 +14,13 @@
   }
 }
 
+.filter-all__button,
+.filter-all__close {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+}
+
 .filter-all__title {
   @media (min-width: $tablet-width) {
     margin-left: 200px;
@@ -22,5 +29,22 @@
     font-weight: 700;
     color: $color-dark-blue-1;
     text-transform: uppercase;
+  }
+}
+
+.filter-all__label {
+  color: $color-dark-blue-1;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
