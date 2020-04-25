@@ -8,3 +8,31 @@
   line-height: 24px;
   color: $color-dark-blue-2;
 }
+
+.user-destinations__plan {
+  background-color: $color-white;
+}
+
+.user-destinations__mates,
+.user-destinations__dates {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+}
+
+.user-destinations__country {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $color-dark-blue-2;
+}
+
+.user-destinations__change-plan {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.302);
+  text-transform: uppercase;
+}

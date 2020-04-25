@@ -27,6 +27,10 @@
     @media (min-width: $tablet-width) {
       flex-direction: column;
     }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+    }
   }
 
   @media (min-width: $tablet-width) {

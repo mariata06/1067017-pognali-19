@@ -42,13 +42,15 @@
   }
 }
 
-/*
+
 .companions-catalog__countries-list {
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
+/*
 .companions-catalog__list {
   margin-top: 0;
   border-radius: 20px;
@@ -146,7 +148,7 @@
     //margin-left: 450px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     order: 4;
     margin-top: -144px;
     width: 187px;
@@ -175,12 +177,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: inline-block;
-    width: 245px;
+    //flex-direction: row;
+    width: 200px;
     margin-top: -192px;
     margin-bottom: 48px;
     order: 3;
     padding-right: 305px;
+    //flex-wrap: nowrap;
   }
 }
 
@@ -249,6 +252,7 @@ fieldset {
     margin-left: auto;
     justify-content: space-between;
     margin-top: -144px;
+    flex-direction: row-reverse;
   }
 }
 

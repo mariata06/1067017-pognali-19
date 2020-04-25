@@ -1,0 +1,47 @@
+.calendar {
+  background-color: $color-white;
+}
+
+.calendar__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $color-dark-blue-2;
+}
+
+.calendar__table {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $color-grey-light-5;
+  text-align: center;
+  border-collapse: collapse;
+
+  td {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $color-greyborder;
+  }
+
+  th {
+    color: $color-grey-dark;
+  }
+
+  .calendar__weekday {
+    color: $color-orange-3;
+  }
+
+  .calendar__active-day {
+    color: $color-white;
+    background-color: $color-dark-slate-blue;
+
+    &--checked {
+      border: 1px solid $color-orange-3;
+    }
+  }
+
+  .calendar__free-day {
+    color: $color-grey-dark;
+    background-color: $color-pale-grey;
+  }
+}
