@@ -7,12 +7,30 @@
   font-weight: 700;
   line-height: 24px;
   color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .new-destinations__dates,
 .new-destinations__direction,
 .new-destinations__intertainment {
   background-color: $color-white;
+}
+
+.new-destinations__direction {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.new-destinations__intertainment {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .new-destinations__dates-title {
@@ -30,12 +48,40 @@
   margin: 0;
 }
 
+.new-destinations__search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.new-destinations__input-container {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  border: 1px solid green;
+
+  &--duration {
+    @media (min-width: $tablet-width) {
+      order: 5;
+    }
+  }
+
+  &--children {
+    @media (min-width: $tablet-width) {
+      order: 3;
+    }
+  }
+}
+
 .new-destinations__label {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 16px;
   color: $color-dark-blue-2;
   text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid tomato;
 
   span {
     color: $color-grey-light-5;
@@ -47,6 +93,26 @@
     line-height: 15px;
     color: $color-grey-dark;
   }
+
+  &--duration {
+    @media (min-width: $tablet-width) {
+      order: 4;
+    }
+  }
+}
+
+.new-destinations__selection-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.new-destinations__country-button {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .new-destinations__button {
@@ -63,8 +129,21 @@
   text-align: center;
   text-transform: uppercase;
 
+  &--next-step {
+    @media (min-width: $tablet-width) {
+      display: inline;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
   &--submit {
     border: none;
+
+    @media (min-width: $tablet-width) {
+      width: 30%;
+      display: inline-block;
+    }
   }
 
   &--plus-country {
@@ -81,6 +160,13 @@
   &--previous-step {
     background-color: $color-white;
     border: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-left: 300px;
+    }
   }
 }
 
@@ -89,6 +175,12 @@
   font-weight: 500;
   line-height: 18px;
   color: $color-dark-blue-2;
+  width: 100%;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .new-destinations__textarea-plan {
@@ -97,6 +189,10 @@
   font-weight: 400;
   line-height: 22px;
   color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 
   &--empty {
     color: rgba(68, 68, 68, 0.302);

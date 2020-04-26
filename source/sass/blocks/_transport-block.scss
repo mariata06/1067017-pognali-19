@@ -36,6 +36,14 @@
   @media (min-width: $tablet-width) {
     border-bottom: none;
   }
+
+  &--form {
+    border-bottom: none;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+    }
+  }
 }
 
 .transport-block__item {

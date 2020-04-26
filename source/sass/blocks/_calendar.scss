@@ -1,5 +1,12 @@
 .calendar {
   background-color: $color-white;
+  margin: 0 auto;
+  display: table;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    display: table;
+  }
 }
 
 .calendar__title {

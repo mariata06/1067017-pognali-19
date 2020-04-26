@@ -3,6 +3,17 @@
 ***************************************************************************************/
 .companions-form {
   padding: 25px 25px 33px 25px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /*
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+  */
 }
 
 .companions-form__travel-mates {
@@ -12,6 +23,7 @@
   border: 2px solid $color-orange-1;
   display: flex;
   flex-direction: column;
+  //background-color: lightgreen;
 }
 
 .companions-form__level-photo-box {
@@ -21,6 +33,16 @@
   padding-left: 19px;
   padding-right: 19px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+    margin-top: -100px;
+    z-index: 100;
+  }
 }
 
 .companions-form__level {
@@ -61,6 +83,15 @@
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    order: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .companions-form__hashtag-title,
@@ -71,4 +102,43 @@
   text-transform: uppercase;
   color: $color-dark-slate-blue;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    //transform: rotate(180deg);
+  }
+}
+
+.companions-form__hashtag {
+  color: $color-grey-dark;
+  border: 1px solid $color-grey-light-3;
+  border-radius: 5px;
+
+  @media (min-width: $tablet-width) {
+    order: 5;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    order: unset;
+    width: auto;
+  }
+}
+
+.companions-form__transport {
+  color: $color-grey-dark;
+  border: 1px solid $color-grey-light-3;
+  border-radius: 5px;
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+    margin: 0 auto;
+    margin-top: -120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-right: auto;
+  }
 }
