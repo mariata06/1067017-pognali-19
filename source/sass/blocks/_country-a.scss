@@ -13,6 +13,12 @@
   @media (min-width: $desktop-width) {
     //display: none;
   }
+
+  &--form {
+    @media (min-width: $desktop-width) {
+      margin-left: auto;
+    }
+  }
 }
 
 .country-a__item {
