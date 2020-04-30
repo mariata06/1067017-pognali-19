@@ -20,7 +20,7 @@
 
 .about-service__title,
 .about-service__description {
-  @include margintb0;
+  margin: 0;
 }
 
 .about-service__title {
@@ -43,12 +43,12 @@
     @media (min-width: $tablet-width) {
       padding-top: 30px;
       max-width: 300px;
+      font-size: 21px;
+      line-height: 25px;
     }
 
     @media (min-width: $desktop-width) {
       max-width: 415px;
-      font-size: 21px;
-      line-height: 25px;
     }
   }
 
@@ -56,6 +56,8 @@
     @media (min-width: $tablet-width) {
       padding-top: 50px;
       max-width: 300px;
+      font-size: 28px;
+      line-height: 33px;
     }
 
     @media (min-width: $desktop-width) {

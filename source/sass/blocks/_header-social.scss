@@ -1,3 +1,13 @@
+.header-social {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .header-social__list {
   @include list-style;
   width: 105px;

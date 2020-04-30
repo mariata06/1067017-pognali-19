@@ -8,8 +8,7 @@
 
 .business-tariff__title {
   color: $color-orange-1;
-
-  @include margintb0;
+  margin: 0;
 }
 
 .business-tariff__list {

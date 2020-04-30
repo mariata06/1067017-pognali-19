@@ -17,10 +17,14 @@
   border-radius: 20px;
   background-color: $color-yellow-1;
   padding: 26px;
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
 }
 
 .filter-companions__title {
-  @include margintb0;
+  margin: 0;
   font-size: 22.49px;
   font-weight: 700;
   line-height: 22.49px;
@@ -30,6 +34,8 @@
     display: block;
     border-bottom: 1px solid $color-macaroni-and-cheese;
     padding-bottom: 25px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
@@ -43,6 +49,10 @@
   width: 100%;
   border: none;
   border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .filter-companions__transport {

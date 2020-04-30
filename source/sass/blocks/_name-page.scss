@@ -61,11 +61,13 @@
   align-self: flex-end;
   padding-bottom: 12px;
   margin-bottom: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 70px;
-    font-weight: 700;
   }
 
   @media (min-width: $desktop-width) {

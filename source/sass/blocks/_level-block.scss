@@ -12,9 +12,19 @@
 }
 
 .level-block__link {
-  @include blue-link-caption;
   font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
   text-transform: uppercase;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    //display: flex;
+    //flex-direction: row;
+    //border-bottom: none;
+  }
 }
 
 .level-block__container {
@@ -53,6 +63,14 @@
 .level-block__container .min-level,
 .level-block__container .max-level {
   color: $color-dark-slate-blue;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+  }
 }
 
 .level-block__input-type-range {

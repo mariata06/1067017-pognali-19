@@ -40,7 +40,7 @@
 }
 
 .intro__title {
-  @include margintb0;
+  margin: 0;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
@@ -48,7 +48,9 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 10px 170px 30px 170px;
+    padding: 10px 120px 30px 120px;
+    font-size: 60px;
+    line-height: 70px;
   }
 }
 
@@ -129,7 +131,7 @@
   }
 }
 
-.intro__quote .blockquote {
+.intro__quote-text {
   margin: 0;
 }
 

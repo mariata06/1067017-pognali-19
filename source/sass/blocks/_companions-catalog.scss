@@ -1,9 +1,10 @@
 /**************************************************************************************
 ***************************************COMPANIONS CATALOG******************************
 ***************************************************************************************/
+
 .companions-catalog {
   color: $color-grey-dark;
-  padding: 0 25px 25px 25px;
+  padding: 25px;
   background-color: $color-pale-grey;
 
   @media (min-width: $desktop-width) {
@@ -13,75 +14,81 @@
   }
 }
 
-.card {
+.companions-catalog__card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
   @media (min-width: $tablet-width) {
-    width: 688px;
-    position: relative;
+    //width: 688px;
+    //position: relative;
     flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    //background: lightcoral;
   }
 
   @media (min-width: $desktop-width) {
     width: 950px;
+    height: 285px;
   }
 }
 
+.companions-catalog__personal-box {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid tomato;
 
-.companions-catalog__list,
-.companions-catalog__hashtag-list,
-.companions-catalog__countries-list {
-  list-style: none;
-  padding-left: 0;
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    order: 1;
+    height: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70%;
+    order: 1;
+    height: 100%;
+  }
+}
+
+.companions-catalog__hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-style;
+  //width: 160px;
+  border: 2px solid lightgreen;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    margin-left: -100px;
+    padding-left: 0;
+    //margin-top: 30px;
+  }
+}
+
+.companions-catalog__hashtag-item {
+  display: inline;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .companions-catalog__countries-item {
   @media (min-width: $tablet-width) {
     display: inline;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $color-dark-blue-2;
+    text-transform: uppercase;
   }
 }
-
-
-.companions-catalog__countries-list {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/*
-.companions-catalog__list {
-  margin-top: 0;
-  border-radius: 20px;
-}
-
-.companions-catalog__list-item {
-  display: block;
-  padding: 25px 0;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  border-radius: 20px;
-  background-color: $color-white;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
-}
-
-.companions-catalog__user-box {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 18px;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    order: -1;
-    align-items: flex-start;
-    margin-right: 0;
-  }
-}
-*/
 
 .companions-catalog__photo {
   border-radius: 100px;
@@ -90,35 +97,24 @@
   @media (min-width: $tablet-width) {
     display: block;
     width: 190px;
-    height: 190px;
     margin-left: 7px;
     margin-top: 3px;
-    //background: lightgreen;
-    //margin-right: 50px;
+    height: 100%;
   }
 }
 
 .companions-catalog__name {
-  @include margintb0;
-  max-width: 110px;
+  margin: 0;
+  //width: 110px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $color-dark-blue-2;
 
   @media (min-width: $tablet-width) {
-    width: auto;
-    max-width: 335px;
-    order: 1;
-    padding-right: 30px;
-    margin-left: 34px;
-    margin-bottom: 167px;
-    //margin-left: 100px;
-    //max-width: 150px;
-  }
-
-  @media (min-width: $desktop-width) {
-    order: 1;
-    margin-left: 60px;
-    margin-top: 46px;
-    margin-bottom: 209px;
-    width: 331px;
+    //width: 200px;
+    align-self: baseline;
+    margin-left: 50px;
   }
 }
 
@@ -127,132 +123,108 @@
 }
 
 .companions-catalog__likes {
-  @include margintb0;
-  align-self: flex-end;
-  margin-left: -110px;
+  //align-self: flex-end;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
   color: $color-blue-black-2;
+  //margin-left: 100px;
+  //margin-top: -30px;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    align-items: center;
-    order: 4;
-    padding-left: 0;
-    margin: -63px 50px 0 0;
-    //margin-bottom: 50px;
-    //margin-top: 0;
-    //align-self: flex-end;
-    //margin-right: 0;
-    //margin-left: 450px;
+    //order: 4; отодвигает к правому краю лайк
+    align-self: flex-end;
   }
-
-  @media (min-width: $desktop-width) {
-    order: 4;
-    margin-top: -144px;
-    width: 187px;
-  }
-}
-
-.companions-catalog__hashtag-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 160px;
-
-  @media (min-width: $tablet-width) {
-    order: 3;
-    padding-right: 0;
-    margin-left: 227px;
-    margin-top: -153px;
-    margin-bottom: 100px;
-    width: 220px;
-    //flex-direction: row;
-    //min-width: 225px;
-    //align-content: center;
-    //order: 0;
-    //margin-left: -150px;
-    //margin-right: 50px;
-    //margin-bottom: 50px;
-  }
-
-  @media (min-width: $desktop-width) {
-    //flex-direction: row;
-    width: 200px;
-    margin-top: -192px;
-    margin-bottom: 48px;
-    order: 3;
-    padding-right: 305px;
-    //flex-wrap: nowrap;
-  }
-}
-
-.companions-catalog__hashtag-item {
-  display: inline;
 }
 
 .companions-catalog fieldset {
   margin: 0;
-  border: none;
+  //border: none;
   border-top: 1px solid $color-pale-grey;
 }
 
-.companions-catalog__countries-fieldset {
+.companions-catalog__countries-list {
+  @include list-style;
+
   @media (min-width: $tablet-width) {
-    margin-left: 42px;
-    padding-left: 15px;
-    display: block;
-    order: 2;
-    margin-top: 46px;
-    margin-bottom: 111px;
-    background-color: #ffffff;
-    z-index: 1;
-    width: 210px;
-    //align-self: flex-end;
-    //margin-left: 0;
-    //margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.companions-catalog__countries-fieldset {
+  border: 2px solid lightblue;
+
+  @media (min-width: $tablet-width) {
+    //order: 4;
+    //width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    width: 30%;
+    margin-left: auto;
+    align-self: baseline;
   }
 }
 
 .companions-catalog__countries-to-visit {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
   @media (min-width: $desktop-width) {
     display: none;
   }
 }
 
+
 .country {
+  border: 2px solid blueviolet;
+
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    order: 5;
+    //display: flex;
+    //flex-wrap: wrap;
+    //margin-top: 15px;
+    order: 4;
     width: 100%;
   }
 
   @media (min-width: $desktop-width) {
-    width: 210px;
-    flex-direction: column;
+    width: 30%;
+    //flex-direction: column;
     padding: 0;
-    order: 2;
-    margin-top: 46px;
-    margin-bottom: 111px;
+    order: 1;
+    margin-left: auto;
+    //margin-top: 46px;
+    //margin-bottom: 111px;
   }
 }
 
 .companions-catalog__item-wrapper {
-  align-items: center;
-  order: 2;
-  margin-left: auto;
-  width: auto;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid aqua;
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+    order: 2;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    order: 5;
-    width: 239px;
+    width: 30%;
+    order: 3;
     margin-left: auto;
-    justify-content: space-between;
-    margin-top: -144px;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    margin-top: -170px;
   }
 }
 
@@ -271,27 +243,23 @@
   padding: 5px 0;
 
   @media (min-width: $tablet-width) {
-    order: 3;
-    width: 148px;
-    margin-top: -57px;
-    margin-left: 227px;
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: normal;
     height: 50px;
-    //margin-left: -300px;
-    //order: -1;
-    //align-self: flex-end;
-    //max-width: 148px;
-    //margin-bottom: 50px;
+    display: inline;
+    width: 100px;
+    order: 3;
+    margin-left: 250px;
+    margin-top: -50px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 145px;
-    height: 50px;
-    margin-left: 252px;
-    align-self: center;
-    margin-top: -144px;
+    display: inline;
+    order: 2;
+    margin-left: 100px;
+    margin-top: -50px;
+    align-self: end;
   }
 }
 
@@ -301,27 +269,26 @@
 }
 
 .companions-catalog__transport-fieldset {
-  width: 70%;
-
-  @media (min-width: $tablet-width) {
-    align-self: flex-end;
-    margin-left: 0;
-    margin-right: 0;
-    border: none;
-    z-index: 100;
-  }
+  border: 2px solid magenta;
 }
 
 .companions-catalog__level-fieldset {
-  width: 30%;
+  border: 2px solid gold;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
-    align-self: flex-end;
-    margin-left: 30px;
-    margin-right: -20px;
-    order: -1;
-    border: none;
+    display: flex;
+  }
+}
+
+.companions-catalog__level-fieldset span {
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    line-height: 24px;
+    text-align: right;
   }
 }
 

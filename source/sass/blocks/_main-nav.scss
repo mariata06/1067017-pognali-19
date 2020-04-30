@@ -1,0 +1,46 @@
+.main-nav__login-link {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 16px 0;
+  border-radius: 100px;
+  margin-bottom: 51px;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__icon-phone,
+.main-nav__icon-email {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #121936;
+  position: relative;
+  margin-right: 16px;
+}
+
+.main-nav__phone-link,
+.main-nav__email-link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #192144;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.main-nav__icon-phone svg,
+.main-nav__icon-email svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%) scale(0.5);
+}

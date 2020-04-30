@@ -13,7 +13,7 @@
 }
 
 .transport-block__list {
-  @include margintb0;
+  margin: 0;
   border-bottom: 1px solid $color-macaroni-and-cheese;
   padding-bottom: 20px;
   padding-left: 0;
@@ -21,20 +21,23 @@
   display: flex;
   flex-direction: row;
 
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+
   &--profile {
     border-bottom: none;
+    display: flex;
+    flex-direction: row;
 
     @media (min-width: $tablet-width) {
       flex-direction: column;
+      align-items: flex-end;
     }
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    border-bottom: none;
   }
 
   &--form {
@@ -66,7 +69,17 @@
 }
 
 .transport-block__link {
-  @include blue-link-caption;
   font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
   text-transform: uppercase;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    //display: flex;
+    //flex-direction: row;
+    //border-bottom: none;
+  }
 }

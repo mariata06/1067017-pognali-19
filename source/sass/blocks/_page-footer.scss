@@ -34,6 +34,9 @@
 .page-footer__caption {
   @media (min-width: $tablet-width) {
     margin-right: 25px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
   }
 }
 

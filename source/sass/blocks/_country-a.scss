@@ -23,6 +23,11 @@
 
 .country-a__item {
   color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .country-a__close-button {

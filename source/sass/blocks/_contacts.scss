@@ -37,10 +37,11 @@
 }
 
 .contacts__text-box p {
-  @include margintb0;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
-    @include margintb0;
+    margin: 0;
+
     @include grey-text-tabdesc;
   }
 
@@ -50,7 +51,6 @@
 }
 
 .contacts__description {
-  @include margintb0;
   text-align: center;
   margin: 0 auto 32px auto;
   display: block;
