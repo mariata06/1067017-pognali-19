@@ -1,0 +1,104 @@
+.burger-menu {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.burger-menu__close {
+  border: none;
+  background-color: transparent;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.burger-menu__button {
+  width: 25px;
+  height: 11px;
+  cursor: pointer;
+  //z-index: 1;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.burger-menu__button > span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: $color-white;
+  border-radius: 1px;
+}
+
+.burger-menu__button > span::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  position: absolute;
+  top: 8px;
+  background-color: $color-white;
+}
+
+/*
+.burger-menu {
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    align-self: center;
+    justify-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+/* стилизуем кнопку
+.burger-menu__button {
+  //display: flex; /* используем flex для центрирования содержимого
+  align-self: center;
+  /* центрируем содержимое кнопки
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 25px;
+  height: 11px;
+  cursor: pointer;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    left: 50%;
+  }
+}
+
+/* добавляем "гамбургер"
+.burger-menu__button > span,
+.burger-menu__button > span::after {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: $color-white;
+  border-radius: 1px;
+}
+
+.burger-menu__button > span::after {
+  content: "";
+  top: 8px;
+}
+
+.burger-menu__close {
+  border: none;
+  background-color: transparent;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+*/

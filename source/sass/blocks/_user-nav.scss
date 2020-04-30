@@ -1,0 +1,114 @@
+.user-nav {
+  display: none;
+  order: 2;
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    right: 60px;
+    top: 49px;
+  }
+}
+
+.user-nav__login-link {
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    background-color: #ffd74b;
+    padding: 10px 28px;
+    border-radius: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    background-color: #ffd74b;
+    padding: 10px 28px;
+    border-radius: 50px;
+  }
+}
+
+.user-nav__phone-link,
+.user-nav__email-link {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffbd30;
+    border-radius: 100px;
+  }
+}
+
+.user-nav__phone-link {
+  @media (min-width: $desktop-width) {
+    background-color: #ff8d30;
+  }
+}
+
+/*
+.user-nav {
+  display: none;
+  order: 2;
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    right: 60px;
+    top: 49px;
+  }
+}
+
+.user-nav__phone-link,
+.user-nav__email-link {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.user-nav__icon-phone,
+.user-nav__icon-email {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+*/

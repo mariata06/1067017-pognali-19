@@ -1,12 +1,49 @@
 .business-tariff {
-  background-color: $color-white;
+  background-color: #edeff6;
   color: $color-grey-dark;
-  width: 269px;
+  min-width: 269px;
   margin: 0 auto;
+  padding: 25px;
+}
 
-  &__title {
-    color: $color-orange-1;
+.business-tariff__title {
+  color: $color-orange-1;
+  margin: 0;
+}
 
-    @include margintb0;
+.business-tariff__list {
+  @include list-style;
+}
+
+.business-tariff button {
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-dark-slate-blue;
+  text-transform: uppercase;
+  padding: 17px 0;
+  background-color: #f3f4f8;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.business-tariff__table {
+  padding: 33px 25px;
+  //border-collapse: collapse;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: $color-white;
+
+  @include side-shadow;
+}
+
+.business-tariff__table td {
+  border-top: 1px solid #edeff6;
+  padding: 10px 60px 10px 0;
+
+  &:last-of-type {
+    border-bottom: 1px solid #edeff6;
   }
 }

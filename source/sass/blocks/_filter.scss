@@ -1,0 +1,30 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-pale-grey-four;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.filter__button-close {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-dark-blue-2;
+    display: block;
+    background-color: $color-pale-grey-2;
+    width: 100%;
+    padding: 35px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}

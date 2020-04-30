@@ -4,6 +4,7 @@ $color-blue-black-2: #161c35; // основной цвет заголовков
 $color-dark-blue-1: #192144; // основной синий цвет блоков
 $color-dark-blue-2: #1d2e5b; // основной синий цвет сайта
 $color-primary-medium-2: #132576; // основной синий цвет текста
+$color-dark-blue-3: #121936;  // фоновый цвет иконок
 
 $color-white: #ffffff; // белый цвет отдельных блоков, текста
 $color-grey-light-1: #edeff6; // светлый фоновый цвет отдельных блоков
@@ -30,3 +31,21 @@ $color-green-1: #81e31e; // цвет маркера
 
 $color-pink-1: #f9eaea; // цвет фона иконки в карточках попутчиков
 $color-pink-2: #f97676; // цвет маркера в карточках попутчиков
+
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+$border-topleft-radius: 30px;
+$border-topright-radius: 30px;
+$border-bottomright-radius: 30px;
+$border-bottomleft-radius: 30px;
+
+$color-greyborder: #cbced9;  // cерый цвет обводки инпутов
+$color-pale-grey-four: #e2e5f2; // cерый цвет больших блоков
+$color-pale-grey: #edeff6;  // основной цвет страницы
+$color-pale-grey-2: #d6daed; //цвет кнопки в фильтре
+$color-pale-grey-3: #babecf;
+$color-macaroni-and-cheese: #f3c72b;  //цвет border
+$color-macaroni-and-cheese: #f3c72b;  //цвет border
+$color-dark-slate-blue: #1d2e5b;

@@ -1,8 +1,35 @@
 .country-a {
   display: block;
   color: $color-grey-dark;
+  padding: 0 25px;
+  list-style: none;
 
-  &__item {
-    color: $color-grey-dark;
+  @media (min-width: $tablet-width) {
+    //position: absolute;
+    //top: 50px;
+    //right: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    //display: none;
+  }
+
+  &--form {
+    @media (min-width: $desktop-width) {
+      margin-left: auto;
+    }
+  }
+}
+
+.country-a__item {
+  color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.country-a__close-button {
+  display: none;
 }

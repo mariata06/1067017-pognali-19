@@ -1,26 +1,256 @@
 .intro {
-  background: url("../img/traveller-illustration-mobile@1x.png") center bottom no-repeat,
-    url("../img/globe-back-mobile@1x.jpg") no-repeat center center;
-  height: 405px;
+  min-height: 610px;
+  padding: 50px 0 0 0;
+  background-color: $color-blue-black;
+  background-image: url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 170px, bottom left;
+  background-clip: border-box;
 
-  a {
-    display: inline;
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/traveller-illustration-tablet@1x.png"),
+      url("../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 350px, center center;
+    padding: 0 40px;
   }
 
-  &__title {
-    @include margintb0;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 40px;
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/traveller-illustration-desktop@1x.png"),
+      url("../img/globe-back-desktop@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center bottom, center center;
+    padding: 0 60px 125px 60px;
+  }
+}
+
+.intro__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.intro a {
+  display: inline-block;
+  text-align: center;
+  align-self: center;
+  margin-top: 245px;
+}
+
+.intro__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  padding: 25px 30px 0 30px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 120px 30px 120px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+.intro__contacts {
+  justify-content: center;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.intro__login-link {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $color-blue-black-2;
+  background-color: $color-yellow-1;
+  padding: 5px 40px;
+  border-radius: 50px;
+
+  @media (min-width: $tablet-width) {
+    //position: absolute;
+    top: 25px;
+    right: 25px;
+    margin-top: 0;
+  }
+}
+
+.intro__email-link,
+.intro__phone-link {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 
-  &__login-link {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: $color-blue-black-2;
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.intro__email-link {
+  background-color: $color-yellow-2;
+}
+
+.intro__phone-link {
+  background-color: $color-orange-1;
+}
+
+.intro__email-link svg,
+.intro__phone-link svg {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  display: block;
+}
+
+.intro__quote,
+.intro__quote-author {
+  margin-top: 30px;
+}
+
+.intro__quote {
+  //background-color: $color-blue-black;
+  color: white;
+  padding: 0 25px 0 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    padding: 0 395px 0 25px;
+  }
+}
+
+.intro__quote-text {
+  margin: 0;
+}
+
+.intro__quote-author {
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 215px;
+  }
+}
+
+.intro__tips-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 25px 0 25px;
+  background-color: $color-dark-blue-1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+  }
+}
+
+.intro__tips-item {
+  @include blue-link-caption;
+  color: $color-blue-black-2;
+  padding: 20px 95px 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &:first-child {
+    background-color: $color-orange-1;
+
+    @media (min-width: $tablet-width) {
+      width: 344px;
+      padding: 32px 95px 60px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 300px;
+      height: 100px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 296px;
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $color-yellow-3;
+
+    @media (min-width: $tablet-width) {
+      width: 344px;
+      padding: 32px 95px 60px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 300px;
+      height: 100px;
+      flex-grow: 2;
+      flex-shrink: 0;
+      flex-basis: 296px;
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $color-yellow-2;
+
+    @media (min-width: $tablet-width) {
+      width: 344px;
+      padding: 32px 95px 60px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 300px;
+      height: 100px;
+      flex-grow: 2;
+      flex-shrink: 0;
+      flex-basis: 296px;
+    }
+  }
+
+  &:nth-child(4) {
     background-color: $color-yellow-1;
-    padding: 0 37px 0 37px;
+
+    @media (min-width: $tablet-width) {
+      width: 344px;
+      padding: 32px 95px 60px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 300px;
+      height: 100px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 296px;
+    }
   }
 }

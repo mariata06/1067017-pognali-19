@@ -1,0 +1,22 @@
+.header-social {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.header-social__list {
+  @include list-style;
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 42px auto 0 auto;
+}
+
+.header-social__item {
+  display: inline-block;
+}

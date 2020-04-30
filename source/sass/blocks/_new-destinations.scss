@@ -1,0 +1,377 @@
+.new-destinations {
+  background-color: $color-grey-light-2;
+}
+
+.new-destinations__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+.new-destinations__dates,
+.new-destinations__direction,
+.new-destinations__intertainment {
+  background-color: $color-white;
+}
+
+.new-destinations__direction {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.new-destinations__intertainment {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.new-destinations__dates-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+.new-destinations__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-grey-dark;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.new-destinations__steps-box {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.new-destinations__search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.new-destinations__search-mates,
+.new-destinations__duration {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: lightblue;
+  height: 100px;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
+}
+
+.new-destinations__search-mates {
+  order: 1;
+}
+
+.new-destinations__duration {
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
+}
+
+.new-destinations__input-container {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  border: 2px solid green;
+  align-self: flex-end;
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-start;
+    width: auto;
+  }
+
+  &--duration {
+    @media (min-width: $tablet-width) {
+      order: 5;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 2;
+    }
+  }
+
+  &--children {
+    order: 3;
+
+    @media (min-width: $tablet-width) {
+      order: 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 50%;
+      align-self: stretch;
+      order: 2;
+    }
+  }
+}
+
+.new-destinations__label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid tomato;
+  align-self: flex-start;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &--children {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: $color-grey-dark;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $color-dark-blue-2;
+    }
+  }
+
+  &--duration {
+    @media (min-width: $tablet-width) {
+      //order: 4;
+    }
+  }
+}
+
+.new-destinations__span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: $color-grey-light-5;
+  width: 50%;
+  align-self: flex-start;
+  border: 2px solid gold;
+  text-align: right;
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+    width: auto;
+  }
+}
+
+.new-destinations__selection-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.new-destinations__country-button {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.new-destinations__button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black-2;
+  background-color: $color-yellow-1;
+  border-radius: 100px;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--next-step {
+    @media (min-width: $tablet-width) {
+      display: inline;
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &--submit {
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      width: 30%;
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: none;
+    }
+  }
+
+  &--plus-country {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: $color-dark-blue-2;
+    background-color: $color-grey-light-1;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
+  }
+
+  &--previous-step {
+    background-color: $color-white;
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-left: 200px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-left: 700px;
+    }
+  }
+}
+
+.new-destinations__label-country {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $color-dark-blue-2;
+  width: 100%;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.new-destinations__textarea-plan {
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &--empty {
+    color: rgba(68, 68, 68, 0.302);
+  }
+}
+
+.new-destinations .alphabet-table {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.new-destinations .country-a {
+  @media (min-width: $desktop-width) {
+    margin-right: auto;
+  }
+}
+
+.new-destinations__step-definition-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.new-destinations__direction .new-destinations__step-number-box,
+.new-destinations__intertainment .new-destinations__step-number-box {
+  @media (min-width: $desktop-width) {
+    margin-right: auto;
+  }
+}
+
+.new-destinations__steps-list {
+  display: none;
+  //list-style: square outside;
+  list-style-type: disc;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.new-destinations__steps-list .new-destinations__steps-link {
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 13px;
+    color: $color-grey-dark;
+    text-transform: uppercase;
+  }
+
+  &--active {
+    color: $color-dark-blue-2;
+  }
+}

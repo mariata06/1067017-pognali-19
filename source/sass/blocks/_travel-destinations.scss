@@ -1,43 +1,132 @@
 .travel-destinations {
   background-color: $color-grey-light-1;
-  padding: 0 25px 0 25px;
+  padding: 0 25px 30px 25px;
 
-  &__item {
-    background: url("../img/thailand-mobile@1x.jpg") no-repeat;
+  @media (min-width: $tablet-width) {
+    padding: 0 40px 80px 40px;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 70px;
   }
 
-  &__item-description {
-    background-color: $color-white;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 163px 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.travel-destinations__text-box {
+  @media (min-width: $desktop-width) {
+    width: 447px;
+    order: 1;
+    align-self: start;
+  }
+}
+
+.travel-destinations__box {
+  @media (min-width: $desktop-width) {
+    order: -1;
+    width: 50%;
+  }
+}
+
+.travel-destinations__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+  }
+}
+
+.travel-destinations__item-description {
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
   }
 
-  &__title {
-    @include margintb0;
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.travel-destinations__title {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
   }
 
-  &__title a {
-    @include margintb0;
-    @include orange-title;
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.travel-destinations__title a {
+  margin: 0;
+
+  @include orange-title;
+
+  @media (min-width: $tablet-width) {
+    @include orange-title-tabdesc;
+    margin-top: 75px;
+  }
+}
+
+.travel-destinations__description {
+  color: $color-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 60px;
+    width: 447px;
+    display: block;
+  }
+}
+
+.travel-destinations__country {
+  margin: 0;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-blue-black-2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.travel-destinations__slogan {
+  @include light-grey-text;
+}
+
+.travel-destinations__companions-number {
+  @include light-grey-text;
+  line-height: 30px;
+}
+
+.travel-destinations__button {
+  @include blue-link-caption;
+  padding: 30px 0 30px 30px;
+  margin-top: 30px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    border-radius: 15px;
   }
 
-  &__description {
-    color: $color-grey-dark;
-  }
-
-  &__country {
-    @include blue-country-name;
-    @include margintb0;
-  }
-
-  &__slogan {
-    @include light-grey-text;
-  }
-
-  &__companions-number {
-    @include light-grey-text;
-    line-height: 30px;
-  }
-
-  &__button {
-    @include blue-link-caption;
+  @media (min-width: $desktop-width) {
+    max-width: 270px;
+    border-radius: 15px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 173px;
+    margin-top: -100px;
   }
 }

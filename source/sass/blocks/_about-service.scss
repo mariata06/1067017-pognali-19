@@ -1,0 +1,87 @@
+.about-service {
+  background: url("../img/about-mobile@1x.png") no-repeat;
+  background-color: $color-dark-blue-1;
+  padding: 40px 25px 60px 25px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 780px;
+    background: $color-dark-blue-1 url("../img/about-tablet@1x.png") no-repeat
+      right top 50%;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 660px;
+    background: $color-dark-blue-1 url("../img/about-desktop@1x.png") no-repeat
+      right top 50%;
+    padding: 0 60px;
+  }
+}
+
+.about-service__title,
+.about-service__description {
+  margin: 0;
+}
+
+.about-service__title {
+  @include orange-title;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 130px;
+
+    @include orange-title-tabdesc;
+  }
+}
+
+.about-service__description {
+  padding-bottom: 30px;
+
+  &:last-of-type {
+    font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 30px;
+      max-width: 300px;
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 415px;
+    }
+  }
+
+  &:first-of-type {
+    @media (min-width: $tablet-width) {
+      padding-top: 50px;
+      max-width: 300px;
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 50px;
+      max-width: 620px;
+      font-size: 28px;
+      line-height: 33px;
+    }
+  }
+}
+
+.about-service__button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 55px;
+    padding: 30px 120px 30px 30px;
+    background-color: $color-yellow-1;
+    color: $color-dark-blue-2;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    max-width: 275px;
+    border-radius: 15px;
+  }
+}

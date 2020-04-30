@@ -1,20 +1,63 @@
+.filter-companions__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .filter-companions {
-  background-color: $color-yellow-1;
+  padding: 27px 25px;
 
-  &__title {
-    @include margintb0;
-    font-size: 22, 49px;
-    font-weight: 700;
-    line-height: 22, 49px;
-    color: $color-dark-blue-2;
+  @media (min-width: $desktop-width) {
+    //display: flex;
+    order: 0;
+    width: 285px;
   }
+}
 
-  &__view-button {
-    font-size: 17px;
-    font-weight: 700;
+.filter-companions__container {
+  border-radius: 20px;
+  background-color: $color-yellow-1;
+  padding: 26px;
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
+}
+
+.filter-companions__title {
+  margin: 0;
+  font-size: 22.49px;
+  font-weight: 700;
+  line-height: 22.49px;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    border-bottom: 1px solid $color-macaroni-and-cheese;
+    padding-bottom: 25px;
+    font-size: 30px;
     line-height: 30px;
-    color: $color-blue-black;
-    text-transform: uppercase;
-    background-color: $color-white;
+  }
+}
+
+.filter-companions__view-button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+  background-color: $color-white;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.filter-companions__transport {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
   }
 }

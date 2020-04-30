@@ -19,15 +19,18 @@ html {
   overflow: hidden;
 }
 
+// от 320px мобильная версия
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  //padding: 0 25px;
 
   font-family: "BloggerSans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
   color: $color-white;
+
+  min-width: 320px;
 }
 
 img {
@@ -40,6 +43,50 @@ a {
 }
 
 .page-main {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
+  //background-color: $color-blue-black;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    //padding: 0 40px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    //padding: 0 60px;
+  }
+}
+
+.catalog-main,
+.form-main {
+  //width: 320px;
+  //margin: 0 auto;
+  background-color: $color-pale-grey;
+}
+
+.catalog-main {
+  @media (min-width: $desktop-width) {
+    //display: flex;
+    //flex-direction: column-reverse;
+    //flex-direction: column;
+  }
+}
+
+.button {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-dark-blue-2;
+  border-radius: 5px;
+  background-color: $color-yellow-1;
+
+  &:hover {
+    background-color: $color-yellow-2;
+  }
+
+  &:active {
+    background-color: $color-yellow-2;
+    color: rgba(29, 46, 91, 0.302);
+  }
 }

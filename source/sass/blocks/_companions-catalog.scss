@@ -1,0 +1,322 @@
+/**************************************************************************************
+***************************************COMPANIONS CATALOG******************************
+***************************************************************************************/
+
+.companions-catalog {
+  color: $color-grey-dark;
+  padding: 25px;
+  background-color: $color-pale-grey;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    order: -1;
+  }
+}
+
+.companions-catalog__card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    //width: 688px;
+    //position: relative;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 950px;
+    height: 285px;
+  }
+}
+
+.companions-catalog__personal-box {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid tomato;
+
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    order: 1;
+    height: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70%;
+    order: 1;
+    height: 100%;
+  }
+}
+
+.companions-catalog__hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-style;
+  //width: 160px;
+  border: 2px solid lightgreen;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    margin-left: -100px;
+    padding-left: 0;
+    //margin-top: 30px;
+  }
+}
+
+.companions-catalog__hashtag-item {
+  display: inline;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.companions-catalog__countries-item {
+  @media (min-width: $tablet-width) {
+    display: inline;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $color-dark-blue-2;
+    text-transform: uppercase;
+  }
+}
+
+.companions-catalog__photo {
+  border-radius: 100px;
+  margin-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 190px;
+    margin-left: 7px;
+    margin-top: 3px;
+    height: 100%;
+  }
+}
+
+.companions-catalog__name {
+  margin: 0;
+  //width: 110px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    //width: 200px;
+    align-self: baseline;
+    margin-left: 50px;
+  }
+}
+
+.companions-catalog__name a {
+  color: $color-dark-slate-blue;
+}
+
+.companions-catalog__likes {
+  //align-self: flex-end;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-blue-black-2;
+  //margin-left: 100px;
+  //margin-top: -30px;
+
+  @media (min-width: $tablet-width) {
+    //order: 4; отодвигает к правому краю лайк
+    align-self: flex-end;
+  }
+}
+
+.companions-catalog fieldset {
+  margin: 0;
+  //border: none;
+  border-top: 1px solid $color-pale-grey;
+}
+
+.companions-catalog__countries-list {
+  @include list-style;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.companions-catalog__countries-fieldset {
+  border: 2px solid lightblue;
+
+  @media (min-width: $tablet-width) {
+    //order: 4;
+    //width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    width: 30%;
+    margin-left: auto;
+    align-self: baseline;
+  }
+}
+
+.companions-catalog__countries-to-visit {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+
+.country {
+  border: 2px solid blueviolet;
+
+  @media (min-width: $tablet-width) {
+    //display: flex;
+    //flex-wrap: wrap;
+    //margin-top: 15px;
+    order: 4;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30%;
+    //flex-direction: column;
+    padding: 0;
+    order: 1;
+    margin-left: auto;
+    //margin-top: 46px;
+    //margin-bottom: 111px;
+  }
+}
+
+.companions-catalog__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid aqua;
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+    order: 2;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30%;
+    order: 3;
+    margin-left: auto;
+    flex-direction: row;
+    margin-top: -170px;
+  }
+}
+
+.companions-catalog__view-button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-blue-black;
+  text-transform: uppercase;
+  background-color: $color-yellow-1;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    height: 50px;
+    display: inline;
+    width: 100px;
+    order: 3;
+    margin-left: 250px;
+    margin-top: -50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    order: 2;
+    margin-left: 100px;
+    margin-top: -50px;
+    align-self: end;
+  }
+}
+
+.companions-catalog__transport-level {
+  display: flex;
+  flex-direction: row;
+}
+
+.companions-catalog__transport-fieldset {
+  border: 2px solid magenta;
+}
+
+.companions-catalog__level-fieldset {
+  border: 2px solid gold;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.companions-catalog__level-fieldset span {
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $color-dark-blue-2;
+
+  @media (min-width: $tablet-width) {
+    line-height: 24px;
+    text-align: right;
+  }
+}
+
+.companions-catalog__countries-to-visit,
+.companions-catalog__transport-type,
+.companions-catalog__travel-mates {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $color-grey-dark;
+}
+
+.companions-catalog__transport-type,
+.companions-catalog__travel-mates {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.companions-catalog__button {
+  &--more {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-dark-slate-blue;
+    text-align: center;
+    display: block;
+    margin-bottom: 27px;
+  }
+}
