@@ -38,6 +38,7 @@
 }
 
 .page-header__main-nav {
+  display: none;
   margin-top: 70px;
 
   @media (min-width: $tablet-width) {

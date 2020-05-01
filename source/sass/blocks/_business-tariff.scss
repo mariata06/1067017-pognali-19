@@ -4,15 +4,31 @@
   min-width: 269px;
   margin: 0 auto;
   padding: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.business-tariff__content {
+  padding: 30px 25px 20px;
+  background-color: $color-white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .business-tariff__title {
   color: $color-orange-1;
   margin: 0;
+  text-align: center;
 }
 
 .business-tariff__list {
   @include list-style;
+}
+
+.business-tariff__item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid $color-pale-grey-4;
 }
 
 .business-tariff button {

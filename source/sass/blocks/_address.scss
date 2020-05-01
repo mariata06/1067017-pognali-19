@@ -1,7 +1,8 @@
+/*
 .address {
-  background-color: $color-yellow-1;
+  //background-color: $color-yellow-1;
 }
-
+*/
 .address__description {
   margin: 0;
   color: $color-dark-blue-1;
@@ -22,6 +23,7 @@
 }
 
 .address__content {
+  background-color: $color-yellow-1;
   padding: 35px 25px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -56,9 +58,11 @@
 
 .address__map {
   width: 100%;
+  height: 330px;
 }
 
 .address iframe {
   width: 100%;
   border: none;
+  height: 330px;
 }

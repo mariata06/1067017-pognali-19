@@ -16,8 +16,13 @@
 
     <div class="page-header__wrapper">
 
-      <a href="index.html" class="page-header__logo"><img src="img/logo-mobile-white@1x.png" width="100" heiht="19"
-          alt="Лого Погнали"></a>
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
+          <img src="img/logo-mobile-white@1x.png" alt="Лого Погнали" class="page-header__logo" width="100" heiht="19">
+        </picture>
+      </a>
 
       <div class="page-header__burger-menu burger-menu">
         <div class="burger-menu__button">
@@ -158,8 +163,13 @@
           <div class="companions-form__travel-mates"><span class="companions-form__level-value">80</span><span
               class="companions-form__level">level</span></div>
           <a href="#">
-            <img src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
-              class="companions-form__photo">
+
+            <picture>
+              <source srcset="img/demin-tablet@1x.jpg" media="(min-width: 1440px)">
+              <source srcset="img/photo-account-tablet@1x.jpg" media="(min-width: 768px)">
+              <img src="img/photo-account-mobile@1x.jpg" alt="Фото попутчика" class="companions-catalog__photo">
+            </picture>
+
           </a>
         </div>
 

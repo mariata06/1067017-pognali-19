@@ -47,6 +47,12 @@
       flex-direction: row;
     }
   }
+
+  &--index-card {
+    border-bottom: none;
+    padding-bottom: 0;
+    justify-content: center;
+  }
 }
 
 .transport-block__item {

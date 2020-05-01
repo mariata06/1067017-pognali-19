@@ -1,14 +1,16 @@
 //***********************COMPANIONS CATALOG**********************//
 .companions-index {
-  background: url("../img/smolov-mobile@1x.jpg") no-repeat top right,
-    url("../img/rogovaya-back-mobile@1x.png") no-repeat left bottom;
-  background-color: $color-dark-blue-1;
-  padding: 50px 25px;
+  //background-color: $color-dark-blue-1;
+  background: url("../img/smolov-back-desktop@1x.png") no-repeat 150px 50px,
+    url("../img/rogovaya-back-mobile@1x.png") no-repeat left 330px $color-dark-blue-1;
+  padding: 100px 25px 50px 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0 74px 80px 74px;
-    background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
-    background-color: $color-dark-blue-1;
+    background: url("../img/rogovaya-back-desktop@1x.png") no-repeat top right, url("../img/smolov-back-desktop@1x.png") no-repeat top left $color-dark-blue-1;
+    //background-color: $color-dark-blue-1;
   }
 
   @media (min-width: $desktop-width) {
@@ -22,7 +24,8 @@
 .companions-index__list {
   padding-left: 0;
   list-style: none;
-  background-color: lightgreen;
+  //background-color: lightgreen;
+  padding-top: 50px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -40,12 +43,19 @@
 }
 
 .companions-index__text-box {
+  padding-left: 25px;
+  padding-right: 25px;
+
   @media (min-width: $desktop-width) {
     width: 400px;
   }
 }
 
 .companions-index__item {
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 10px;
+
   @media (min-width: $tablet-width) {
     //padding: 0 40px 80px 40px;
     //background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
@@ -54,8 +64,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 60px 80px 60px;
+    //padding: 0 60px 80px 60px;
   }
+}
+
+.companions-index__photo {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .companions-index__hashtag-item,
@@ -87,21 +102,33 @@
 }
 
 .companions-index__description {
-  &:last-of-type {
-    font-weight: 700;
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
   }
 
-  @media (min-width: $tablet-width) {
-    font-size: 21px;
-    line-height: 25px;
+  &:last-of-type {
+    font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      line-height: 25px;
+    }
   }
 }
 
 .companions-index__content {
   background-color: $color-white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 25px;
 }
 
-.companions-index__name a {
+.companions-index__name {
+  margin: 0;
+  display: block;
+  text-align: center;
+
   @include blue-country-name;
 
   @media (min-width: $tablet-width) {
@@ -114,6 +141,11 @@
   @include light-grey-text;
   color: $color-grey-dark;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .companions-index__button {
@@ -148,6 +180,7 @@
   font-weight: 400;
   line-height: 18px;
   color: $color-white;
+  position: absolute;
 }
 
 .companions-index__level {
@@ -161,6 +194,18 @@
   font-weight: 700;
   line-height: 38px;
   color: $color-blue-black-2;
+}
+
+.companions-index__countries-list {
+  position: absolute;
+  list-style: none;
+}
+
+.companions-index__hashtag-list {
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .companions-index__countries-item {

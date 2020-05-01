@@ -16,8 +16,11 @@
 
     <div class="page-header__wrapper">
 
-      <a href="#" class="page-header__logo"><img src="img/logo-mobile-white@1x.png" width="100" heiht="19"
-          alt="Лого Погнали"></a>
+      <picture>
+        <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+        <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
+        <img src="img/logo-mobile-white@1x.png" alt="Лого Погнали" width="100" heiht="19">
+      </picture>
 
       <div class="page-header__burger-menu burger-menu">
         <div class="burger-menu__button">
@@ -181,10 +184,10 @@
       </div>
 
       <ul class="intro__tips-list">
-        <li class="intro__tips-item">Выберите направление</li>
-        <li class="intro__tips-item">Изучите идеи путешественников</li>
-        <li class="intro__tips-item">Находите тех, кто похож на вас</li>
-        <li class="intro__tips-item">Путешествуйте вместе!</li>
+        <li class="intro__tips-item">Выберите<br>направление</li>
+        <li class="intro__tips-item">Изучите идеи<br>путешественников</li>
+        <li class="intro__tips-item">Находите тех,<br>кто похож на вас</li>
+        <li class="intro__tips-item">Путешествуйте<br>вместе!</li>
       </ul>
     </section>
 
@@ -209,32 +212,58 @@
         </p>
       </div>
       <div class="travel-destinations__box">
-        <div class="travel-destinations__item">
-          <img src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Таиланд"
-            class="travel-destinations__country">
+
+        <div class="travel-destinations__item travel-destinations__item--thailand">
+
+          <picture class="travel-destinations__picture">
+            <source srcset="img/thailand-desktop@1x.jpg" media="(min-width: 1440px)">
+            <!--<source srcset="img/thailand-tablet@1x.jpg" media="(min-width: 768px)">-->
+            <img class="travel-destinations__country" src="img/thailand-mobile@1x.jpg" alt="Таиланд">
+          </picture>
+
           <div class="travel-destinations__item-description">
-            <h3 class="travel-destinations__country">Таиланд</h3>
-            <p class="travel-destinations__slogan">Джунгли зовут!</p>
+            <div class="travel-destinations__country-box">
+              <h3 class="travel-destinations__country">Таиланд</h3>
+              <p class="travel-destinations__slogan">Джунгли зовут!</p>
+            </div>
             <span class="travel-destinations__companions-number">18321</span>
           </div>
         </div>
-        <div class="travel-destinations__item">
-          <img src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция"
-            class="travel-destinations__country">
+
+        <div class="travel-destinations__item travel-destinations__item--france">
+
+          <picture class="travel-destinations__picture">
+            <source srcset="img/france-desktop@1x.jpg" media="(min-width: 1440px)">
+            <!--<source srcset="img/france-tablet@1x.jpg" media="(min-width: 768px)">-->
+            <img class="travel-destinations__country" src="img/france-mobile@1x.jpg" alt="Франция">
+          </picture>
+
           <div class="travel-destinations__item-description">
-            <h3 class="travel-destinations__country">Франция</h3>
-            <p class="travel-destinations__slogan">Трэ бьен манифик!</p>
+            <div class="travel-destinations__country-box">
+              <h3 class="travel-destinations__country">Франция</h3>
+              <p class="travel-destinations__slogan">Трэ бьен манифик!</p>
+            </div>
             <span class="travel-destinations__companions-number">12518</span>
           </div>
         </div>
-        <div class="travel-destinations__item">
-          <img src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия" class="travel-destinations__country">
+
+        <div class="travel-destinations__item travel-destinations__item--czech">
+
+          <picture class="travel-destinations__picture">
+            <source srcset="img/czech-desktop@1x.jpg" media="(min-width: 1440px)">
+            <!--<source srcset="img/czech-tablet@1x.jpg" media="(min-width: 768px)">-->
+            <img class="travel-destinations__country" src="img/czech-mobile@1x.jpg" alt="Чехия">
+          </picture>
+
           <div class="travel-destinations__item-description">
-            <h3 class="travel-destinations__country">Чехия</h3>
-            <p class="travel-destinations__slogan">Закоулки старой Европы</p>
+            <div class="travel-destinations__country-box">
+              <h3 class="travel-destinations__country">Чехия</h3>
+              <p class="travel-destinations__slogan">Закоулки старой Европы</p>
+            </div>
             <span class="travel-destinations__companions-number">5326</span>
           </div>
         </div>
+
       </div>
 
       <a href="form.html" class="travel-destinations__button button">Показать все</a>
@@ -258,13 +287,12 @@
             <li class="companions-index__countries-item">Сейшелы</li>
           </ul>
           <a href="#">
-            <img src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
+            <img src="img/firsova-desktop@1x.jpg" width="285" height="285" alt="Фото попутчика"
               class="companions-index__photo">
           </a>
           <div class="companions-index__content">
-            <h3 class="companions-index__name">
-              <a href="#"><span class="visually-hidden">имя попутчика</span>Таня Фирсова</a>
-            </h3>
+
+              <a href="#" class="companions-index__name"><span class="visually-hidden">имя попутчика</span>Таня Фирсова</a>
             <ul class="companions-index__hashtag-list">
               <li class="companions-index__hashtag-item">#ЗОЖ</li>
               <li class="companions-index__hashtag-item">#ПП</li>
@@ -274,7 +302,7 @@
               <li class="companions-index__hashtag-item">#смузи</li>
             </ul>
 
-            <ul class="transport-block__list">
+            <ul class="transport-block__list transport-block__list--index-card">
               <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
               <li class="transport-block__item">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#1d2e5b" width="14" height="16" viewBox="0 0 19 21"
@@ -316,13 +344,11 @@
             <li class="companions-index__countries-item">Чехия</li>
           </ul>
           <a href="#">
-            <img src="img/photo-account-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
+            <img src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото попутчика"
               class="companions-index__photo">
           </a>
           <div class="companions-index__content">
-            <h3 class="companions-index__name">
-              <a href="#"><span class="visually-hidden">имя попутчика</span>Петя Дёмин</a>
-            </h3>
+            <a href="#" class="companions-index__name"><span class="visually-hidden">имя попутчика</span>Петя Демин</a>
             <ul class="companions-index__hashtag-list">
               <li class="companions-index__hashtag-item">#бургер</li>
               <li class="companions-index__hashtag-item">#бар</li>
@@ -330,7 +356,7 @@
               <li class="companions-index__hashtag-item">#концерт</li>
               <li class="companions-index__hashtag-item">#крафт</li>
             </ul>
-            <ul class="transport-block__list">
+            <ul class="transport-block__list transport-block__list--index-card">
               <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
               <li class="transport-block__item">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#1d2e5b" width="14" height="16" viewBox="0 0 19 21"
@@ -503,15 +529,18 @@
   </footer>
 
   <section class="business-tariff modal-dialog">
-    <!--<h2 class="business-tariff__title">Бизнес-тарифы</h2>
-    <ul class="business-tariff__list">
-      <li class="business-tariff__item">Реклама у блоггера 300 000 руб./пост</li>
-      <li class="business-tariff__item">Накрутка подписчиков от 1 руб./шт.</li>
-      <li class="business-tariff__item">Лайки от ботов от 20 коп./лайк</li>
-      <li class="business-tariff__item">Ваш продакт-плейсмент Индивидуально</li>
-    </ul>-->
+    <div class="business-tariff__content">
+      <h2 class="business-tariff__title">Бизнес-тарифы</h2>
+      <ul class="business-tariff__list">
+        <li class="business-tariff__item">Реклама у блоггера<br>300 000 руб./пост</li>
+        <li class="business-tariff__item">Накрутка подписчиков<br>от 1 руб./шт.</li>
+        <li class="business-tariff__item">Лайки от ботов<br>от 20 коп./лайк</li>
+        <li class="business-tariff__item">Ваш продакт-плейсмент<br>Индивидуально</li>
+      </ul>
+    </div>
 
-    <table class="business-tariff__table">
+    <!--
+<table class="business-tariff__table">
       <caption>Бизнес-тарифы</caption>
       <tr>
         <td>Реклама у блоггера 300 000 руб./пост</td>
@@ -526,6 +555,8 @@
         <td>Ваш продакт-плейсмент Индивидуально</td>
       </tr>
     </table>
+    -->
+
     <button class="business-tariff__button" type="button">Закрыть окно</button>
   </section>
 

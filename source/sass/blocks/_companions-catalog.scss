@@ -95,11 +95,17 @@
   margin-right: 16px;
 
   @media (min-width: $tablet-width) {
+    border-radius: 20px;
     display: block;
     width: 190px;
     margin-left: 7px;
     margin-top: 3px;
     height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 

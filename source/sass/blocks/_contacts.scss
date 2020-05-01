@@ -1,6 +1,8 @@
 .contacts {
   background-color: $color-dark-blue-1;
   padding: 25px;
+  //margin-top: -15px;
+  //z-index: 5;
 
   @media (min-width: $tablet-width) {
     padding: 40px;
