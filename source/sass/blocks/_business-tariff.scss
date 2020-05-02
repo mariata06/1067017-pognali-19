@@ -6,6 +6,10 @@
   padding: 25px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+  }
 }
 
 .business-tariff__content {
@@ -13,6 +17,10 @@
   background-color: $color-white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 60px;
+  }
 }
 
 .business-tariff__title {
@@ -29,6 +37,21 @@
   padding-top: 15px;
   padding-bottom: 15px;
   border-top: 1px solid $color-pale-grey-4;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+    justify-content: space-between;
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .business-tariff button {
@@ -43,6 +66,12 @@
   background-color: #f3f4f8;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
 }
 
 .business-tariff__table {

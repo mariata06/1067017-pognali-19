@@ -4,18 +4,22 @@
   background: url("../img/smolov-back-desktop@1x.png") no-repeat 150px 50px,
     url("../img/rogovaya-back-mobile@1x.png") no-repeat left 330px $color-dark-blue-1;
   padding: 100px 25px 50px 25px;
+  position: relative;
+  z-index: 8;
+  top: -40px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 74px 80px 74px;
-    background: url("../img/rogovaya-back-desktop@1x.png") no-repeat top right, url("../img/smolov-back-desktop@1x.png") no-repeat top left $color-dark-blue-1;
+    padding: 0 74px 88px 74px;
+    background: url("../img/rogovaya-back-desktop@1x.png") no-repeat top 70px right 45px, url("../img/smolov-back-desktop@1x.png") no-repeat top 425px left 45px $color-dark-blue-1;
     //background-color: $color-dark-blue-1;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding: 80px 60px 80px 60px;
+    padding: 134px;
+    padding-right: 60px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -24,13 +28,12 @@
 .companions-index__list {
   padding-left: 0;
   list-style: none;
-  //background-color: lightgreen;
   padding-top: 50px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    background-color: lightgreen;
+    margin-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,8 +49,13 @@
   padding-left: 25px;
   padding-right: 25px;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 400px;
+    width: 500px;
   }
 }
 
@@ -60,7 +68,7 @@
     //padding: 0 40px 80px 40px;
     //background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
     width: 285px;
-    background-color: pink;
+    //background-color: pink;
   }
 
   @media (min-width: $desktop-width) {
@@ -71,6 +79,7 @@
 .companions-index__photo {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  display: block;
 }
 
 .companions-index__hashtag-item,
@@ -105,6 +114,11 @@
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 33px;
+    padding-right: 150px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 20px;
   }
 
   &:last-of-type {
@@ -113,6 +127,12 @@
     @media (min-width: $tablet-width) {
       font-size: 21px;
       line-height: 25px;
+      margin-top: 50px;
+      padding-right: 360px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 120px;
     }
   }
 }
@@ -206,6 +226,11 @@
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }
 
 .companions-index__countries-item {

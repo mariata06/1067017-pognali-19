@@ -37,6 +37,11 @@
   display: flex;
   margin-bottom: 26px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    order: 3;
+  }
+
   &::before {
     content: "";
     width: 1px;

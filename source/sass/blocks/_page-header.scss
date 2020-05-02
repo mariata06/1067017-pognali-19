@@ -1,23 +1,24 @@
 .page-header {
-  background-color: #161c36;
+  //background-color: #161c36;
+  background-color: $color-medium-blue;
   padding-top: 27px;
   padding-bottom: 27px;
   position: relative;
   min-width: 320px;
 
   @media (min-width: $desktop-width) {
-    background: #161c34;
+    background: $color-medium-blue;
     display: flex;
     min-height: 90px;
     align-items: center;
-    padding-top: 48px;
+    //padding-top: 48px;
   }
 }
 
 .page-header__logo {
   display: block;
-  width: 100px;
-  height: 30px;
+  //width: 100px;
+  //height: 30px;
   //background: lightblue;
 }
 
@@ -34,6 +35,7 @@
   @media (min-width: $desktop-width) {
     position: relative;
     width: 200px;
+    margin-top: 75px;
   }
 }
 

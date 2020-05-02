@@ -24,7 +24,9 @@
 
       <div class="page-header__burger-menu burger-menu">
         <div class="burger-menu__button">
-          <span></span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 11">
+            <path d="M1.5 3h22c.8 0 1.5-.7 1.5-1.5S24.3 0 23.5 0h-22C.7 0 0 .7 0 1.5S.7 3 1.5 3zM23.5 8h-22C.7 8 0 8.7 0 9.5S.7 11 1.5 11h22c.8 0 1.5-.7 1.5-1.5S24.3 8 23.5 8z"/>
+          </svg>
         </div>
         <button class="burger-menu__close" type="button"><span>Закрыть меню</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="cccccc" width="18" height="18" viewBox="0 0 18 18">
@@ -217,8 +219,8 @@
 
           <picture class="travel-destinations__picture">
             <source srcset="img/thailand-desktop@1x.jpg" media="(min-width: 1440px)">
-            <!--<source srcset="img/thailand-tablet@1x.jpg" media="(min-width: 768px)">-->
-            <img class="travel-destinations__country" src="img/thailand-mobile@1x.jpg" alt="Таиланд">
+            <source srcset="img/thailand-desktop@1x.jpg" media="(min-width: 768px)">
+            <img class="travel-destinations__img" src="img/thailand-mobile@1x.jpg" alt="Таиланд">
           </picture>
 
           <div class="travel-destinations__item-description">
@@ -234,8 +236,8 @@
 
           <picture class="travel-destinations__picture">
             <source srcset="img/france-desktop@1x.jpg" media="(min-width: 1440px)">
-            <!--<source srcset="img/france-tablet@1x.jpg" media="(min-width: 768px)">-->
-            <img class="travel-destinations__country" src="img/france-mobile@1x.jpg" alt="Франция">
+            <source srcset="img/france-desktop@1x.jpg" media="(min-width: 768px)">
+            <img class="travel-destinations__img" src="img/france-mobile@1x.jpg" alt="Франция">
           </picture>
 
           <div class="travel-destinations__item-description">
@@ -251,8 +253,8 @@
 
           <picture class="travel-destinations__picture">
             <source srcset="img/czech-desktop@1x.jpg" media="(min-width: 1440px)">
-            <!--<source srcset="img/czech-tablet@1x.jpg" media="(min-width: 768px)">-->
-            <img class="travel-destinations__country" src="img/czech-mobile@1x.jpg" alt="Чехия">
+            <source srcset="img/czech-desktop@1x.jpg" media="(min-width: 768px)">
+            <img class="travel-destinations__img" src="img/czech-mobile@1x.jpg" alt="Чехия">
           </picture>
 
           <div class="travel-destinations__item-description">
@@ -286,13 +288,13 @@
             <li class="companions-index__countries-item">Таиланд</li>
             <li class="companions-index__countries-item">Сейшелы</li>
           </ul>
-          <a href="#">
+          <!--<a href="#">-->
             <img src="img/firsova-desktop@1x.jpg" width="285" height="285" alt="Фото попутчика"
               class="companions-index__photo">
-          </a>
+          <!--</a>-->
           <div class="companions-index__content">
 
-              <a href="#" class="companions-index__name"><span class="visually-hidden">имя попутчика</span>Таня Фирсова</a>
+              <h3 class="companions-index__name">Таня Фирсова</h3>
             <ul class="companions-index__hashtag-list">
               <li class="companions-index__hashtag-item">#ЗОЖ</li>
               <li class="companions-index__hashtag-item">#ПП</li>
@@ -476,9 +478,13 @@
 
   <footer class="page-footer">
     <div class="page-footer__logo">
-      <a href="index.html">
-        <img src="img/logo-mobile-blue@1x.png" width="100" heiht="19" alt="Лого Погнали" class="logo-image">
-      </a>
+
+      <picture>
+        <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+        <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
+        <img class="logo-image" src="img/logo-mobile-blue@1x.png" alt="Лого Погнали">
+      </picture>
+
     </div>
 
     <ul class="page-footer__social-list">
@@ -532,10 +538,10 @@
     <div class="business-tariff__content">
       <h2 class="business-tariff__title">Бизнес-тарифы</h2>
       <ul class="business-tariff__list">
-        <li class="business-tariff__item">Реклама у блоггера<br>300 000 руб./пост</li>
-        <li class="business-tariff__item">Накрутка подписчиков<br>от 1 руб./шт.</li>
-        <li class="business-tariff__item">Лайки от ботов<br>от 20 коп./лайк</li>
-        <li class="business-tariff__item">Ваш продакт-плейсмент<br>Индивидуально</li>
+        <li class="business-tariff__item">Реклама у блоггера<span>300 000 руб./пост</span></li>
+        <li class="business-tariff__item">Накрутка подписчиков<span>от 1 руб./шт.</span></li>
+        <li class="business-tariff__item">Лайки от ботов<span>от 20 коп./лайк</span></li>
+        <li class="business-tariff__item">Ваш продакт-плейсмент<span>Индивидуально</span></li>
       </ul>
     </div>
 

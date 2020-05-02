@@ -1,11 +1,18 @@
 .contacts {
   background-color: $color-dark-blue-1;
   padding: 25px;
-  //margin-top: -15px;
-  //z-index: 5;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 6;
+  position: relative;
+  top: -80px;
 
   @media (min-width: $tablet-width) {
     padding: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 132px;
   }
 }
 
@@ -43,6 +50,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    display: inline;
 
     @include grey-text-tabdesc;
   }
@@ -62,6 +70,7 @@
     @include grey-text-tabdesc;
     text-align: center;
     display: block;
+    padding: 0;
   }
 }
 
@@ -71,6 +80,11 @@
 }
 
 .contacts__box {
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-left: 40px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     width: 100%;

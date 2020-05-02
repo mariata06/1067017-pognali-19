@@ -33,4 +33,10 @@
   border: none;
   border-radius: 10px;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 325px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }

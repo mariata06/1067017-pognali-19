@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   background-color: $color-pale-grey-four;
+  margin-top: -20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 25px;
 
   @media (min-width: $tablet-width) {
     flex-wrap: wrap;
@@ -26,5 +30,17 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
+  }
+}
+
+.filter__alphabet {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.filter__country-a {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }

@@ -1,9 +1,13 @@
 .name-page {
-  padding: 50px 20px 0 20px;
-  background-color: $color-blue-black-2;
+  padding: 20px 20px 0 20px;
+  background-color: $color-medium-blue;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 75px 0 75px;
+    padding: 5px 75px 0 75px;
     position: relative;
   }
 
