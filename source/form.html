@@ -27,7 +27,8 @@
       <div class="page-header__burger-menu burger-menu">
         <div class="burger-menu__button">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 11">
-            <path d="M1.5 3h22c.8 0 1.5-.7 1.5-1.5S24.3 0 23.5 0h-22C.7 0 0 .7 0 1.5S.7 3 1.5 3zM23.5 8h-22C.7 8 0 8.7 0 9.5S.7 11 1.5 11h22c.8 0 1.5-.7 1.5-1.5S24.3 8 23.5 8z"/>
+            <path
+              d="M1.5 3h22c.8 0 1.5-.7 1.5-1.5S24.3 0 23.5 0h-22C.7 0 0 .7 0 1.5S.7 3 1.5 3zM23.5 8h-22C.7 8 0 8.7 0 9.5S.7 11 1.5 11h22c.8 0 1.5-.7 1.5-1.5S24.3 8 23.5 8z" />
           </svg>
         </div>
         <button class="burger-menu__close" type="button"><span class="visually-hidden">Закрыть меню</span>
@@ -163,12 +164,13 @@
         <h2 class="visually-hidden">Выбор попутчика</h2>
         <div class="companions-form__level-photo-box">
           <div class="companions-form__travel-mates"><span class="companions-form__level-value">80</span><span
-              class="companions-form__level">level</span></div>
+              class="companions-form__level">level</span>
+          </div>
           <a href="#">
             <picture>
               <source srcset="img/demin-tablet@1x.jpg" media="(min-width: 1440px)">
               <source srcset="img/photo-account-tablet@1x.jpg" media="(min-width: 768px)">
-              <img src="img/photo-account-mobile@1x.jpg" alt="Фото попутчика" class="companions-catalog__photo">
+              <img src="img/photo-account-mobile@1x.jpg" alt="Фото попутчика" class="companions-form__photo">
             </picture>
           </a>
         </div>
@@ -179,7 +181,7 @@
         <!--<div class="companions-form__hashtag-transport__wrapper">-->
         <fieldset class="companions-form__hashtag">
           <legend class="companions-form__hashtag-title">ТЭГИ</legend>
-          #бургер #бар #футбол #концерт #крафт
+          <p>#бургер #бар #футбол #концерт #крафт </p>
         </fieldset>
         <h2></h2>
 
@@ -271,7 +273,8 @@
 
           <div class="new-destinations__step-definition-wrapper">
             <div class="new-destinations__step-number-box">
-              <h3 class="new-destinations__dates-title">Шаг 1. Даты пребывания</h3>
+              <h3 class="new-destinations__dates-title">Шаг 1.</h3>
+              <h3 class="new-destinations__dates-title">Даты пребывания</h3>
               <p class="new-destinations__description">Укажите предпочтительное количество попутчиков, которых вы хотели
                 бы
                 позвать в поездку и ее предполагаемую длительность.</p>
@@ -296,9 +299,17 @@
               <label class="new-destinations__label" for="companions">Ищу попутчиков:</label>
               <span class="new-destinations__span">чел.</span>
               <div class="new-destinations__input-container">
-                <button type="button" aria-label="Уменьшить попутчиков"></button>
+                <button type="button" aria-label="Уменьшить попутчиков">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 2" width="14" height="2">
+                    <path fill="#606161" d="M0 0h14v2H0z" />
+                  </svg>
+                </button>
                 <input type="text" id="companions" name="companions-number" value="2">
-                <button type="button" aria-label="Увеличить попутчиков"></button>
+                <button type="button" aria-label="Увеличить попутчиков">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+                    <path fill="#606161" d="M8 6V0H6v6H0v2h6v6h2V8h6V6z" />
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -307,9 +318,17 @@
                 for="duration">Длительность:</label>
               <span class="new-destinations__span">дн.</span>
               <div class="new-destinations__input-container new-destinations__input-container--duration">
-                <button type="button" aria-label="Уменьшить дни"></button>
+                <button type="button" aria-label="Уменьшить дни">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 2" width="14" height="2">
+                    <path fill="#606161" d="M0 0h14v2H0z" />
+                  </svg>
+                </button>
                 <input type="text" id="duration" name="days-number" value="2">
-                <button type="button" aria-label="Увеличить дни"></button>
+                <button type="button" aria-label="Увеличить дни">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+                    <path fill="#606161" d="M8 6V0H6v6H0v2h6v6h2V8h6V6z" />
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -327,13 +346,13 @@
 
             <table class="calendar__table">
               <tr>
-                <th>П</th>
-                <th>В</th>
-                <th>С</th>
-                <th>Ч</th>
-                <th>П</th>
-                <th class="calendar__weekday">С</th>
-                <th class="calendar__weekday">В</th>
+                <th>П<span class="calendar-table__span">н</span></th>
+                <th>В<span class="calendar-table__span">т</span></th>
+                <th>С<span class="calendar-table__span">р</span></th>
+                <th>Ч<span class="calendar-table__span">т</span></th>
+                <th>П<span class="calendar-table__span">т</span></th>
+                <th class="calendar__weekday">С<span class="calendar-table__span">б</span></th>
+                <th class="calendar__weekday">В<span class="calendar-table__span">с</span></th>
               </tr>
               <tr>
                 <td>23</td>
@@ -375,15 +394,15 @@
                 <td>23</td>
                 <td>24</td>
                 <td>25</td>
-                <td class="calendar__active-day calendar__active-day--checked">26</td>
+                <td class="calendar__active-day calendar__active-day--checked">26<span class="calendar__active-day-span">Заезд</span></td>
                 <td class="calendar__active-day">27</td>
-                <td class="calendar__active-day">28</td>
+                <td class="calendar__active-day">28<span class="calendar__active-day-span">Выезд</span></td>
                 <td class="calendar__free-day">29</td>
               </tr>
               <tr class="calendar__free-day">
                 <td>30</td>
                 <td>31</td>
-                <td>1</td>
+                <td>1<span class="calendar__active-day-april">апр</span></td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
@@ -392,125 +411,178 @@
             </table>
           </div>
 
-        </div>
+          <a href="#direction" class="new-destinations__button new-destinations__button--next-step">Следующий шаг</a>
 
-        <a href="#direction" class="new-destinations__button new-destinations__button--next-step">Следующий шаг</a>
+        </div>
 
         <div class="new-destinations__direction" id="direction">
 
-          <div class="new-destinations__step-number-box">
-            <h3 class="new-destinations__title">Шаг 2. Маршрут</h3>
-            <p class="new-destinations__description">Укажите страны, которые вы хотели посетить. Это может быть одна или
-              сразу</p>
+          <div class="new-destinations__step-definition-wrapper">
+            <div class="new-destinations__step-number-box">
+              <h3 class="new-destinations__steps-title">Шаг 2.</h3>
+              <h3 class="new-destinations__steps-title">Маршрут</h3>
+              <p class="new-destinations__description">Укажите страны, которые вы хотели посетить. Это может быть одна
+                или
+                сразу</p>
+            </div>
+
+            <ul class="new-destinations__steps-list">
+              <li class="new-destinations__steps-item">
+                <a href="#" class="new-destinations__steps-link">Даты</a>
+              </li>
+              <li class="new-destinations__steps-item">
+                <a href="#" class="new-destinations__steps-link  new-destinations__steps-link--active">Маршрут</a>
+              </li>
+              <li class="new-destinations__steps-item">
+                <a href="#" class="new-destinations__steps-link">Развлечения</a>
+              </li>
+            </ul>
           </div>
-
-          <ul class="new-destinations__steps-list">
-            <li class="new-destinations__steps-item">
-              <a href="#" class="new-destinations__steps-link">Даты</a>
-            </li>
-            <li class="new-destinations__steps-item">
-              <a href="#" class="new-destinations__steps-link  new-destinations__steps-link--active">Маршрут</a>
-            </li>
-            <li class="new-destinations__steps-item">
-              <a href="#" class="new-destinations__steps-link">Развлечения</a>
-            </li>
-          </ul>
-
 
           <div class="new-destinations__selection-wrapper">
-            <button type="button" class="new-destinations__country-button">Босния и Герцеговина</button>
-            <button type="button"><span class="visually-hidden">Закрыть меню</span></button>
 
-            <button type="button" class="new-destinations__country-button">Чехия</button>
-            <button type="button"><span class="visually-hidden">Закрыть меню</span></button>
+            <div class="new-destinations__country-selection">
+              <p class="new-destinations__action">Босния и Герцеговина</p>
+              <button type="button" class="new-destinations__country-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
+                  <path
+                    d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
+                </svg>
+              </button>
+              <div class="new-destinations__country-flag">
+                флаг
+              </div>
+            </div>
 
-            <button type="button" class="new-destinations__country-button">Выберите страну</button>
-            <button type="button"><span class="visually-hidden">Закрыть окно</span></button>
+            <div class="new-destinations__country-selection">
+              <p class="new-destinations__action">Чехия</p>
+              <button type="button" class="new-destinations__country-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
+                  <path
+                    d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
+                </svg>
+              </button>
+              <div class="new-destinations__country-flag">
+                флаг
+              </div>
+            </div>
+
+            <div class="new-destinations__country-selection new-destinations__country-selection--select">
+              <p class="new-destinations__action new-destinations__action--select">Выберите страну</p>
+              <button type="button" class="new-destinations__country-button new-destinations__country-button--select">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
+                  <path
+                    d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="new-destinations__alphabet-country-block">
+
+
+              <div class="new-destinations__country-selection new-destinations__country-selection--select">
+                <p class="new-destinations__action new-destinations__action--select">Выберите страну</p>
+                <button type="button" class="new-destinations__country-button new-destinations__country-button--close">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" width="9" height="9">
+                    <path
+                      d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z" />
+                  </svg>
+                </button>
+              </div>
+
+              <table class="new-destinations__form-table form-table">
+                <tr>
+                  <td class="form-table__item--active"><a href="#"
+                      class="form-table__link form-table__link--active">А</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Б</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">В</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Г</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Д</a></td>
+                </tr>
+                <tr>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Е</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">З</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">И</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">К</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Л</a></td>
+                </tr>
+                <tr>
+                  <td class="form-table__item"><a href="#" class="form-table__link">М</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Н</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">О</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">П</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Р</a></td>
+                </tr>
+                <tr>
+                  <td class="form-table__item"><a href="#" class="form-table__link">С</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Т</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">У</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Х</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Ц</a></td>
+                </tr>
+                <tr>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Ч</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Ш</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Э</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Ю</a></td>
+                  <td class="form-table__item"><a href="#" class="form-table__link">Я</a></td>
+                </tr>
+              </table>
+
+              <ul class="new-destinations__country-a country-a">
+                <li class="country-a-item">Австралия</li>
+                <li class="country-a-item">Австрия</li>
+                <li class="country-a-item">Азербайджан</li>
+                <li class="country-a-item">Албания</li>
+                <li class="country-a-item">Алжир</li>
+                <li class="country-a-item">Ангола</li>
+                <li class="country-a-item">Андорра</li>
+                <li class="country-a-item">Антигуа и Барбуда</li>
+                <li class="country-a-item">Аргентина</li>
+                <li class="country-a-item">Армения</li>
+                <li class="country-a-item">Афганистан</li>
+              </ul>
+            </div>
+
+            <div class="new-destinations__country-selection new-destinations__country-selection--plus">
+              <p class="new-destinations__action new-destinations__action--plus">Добавить страну</p>
+              <button type="button" class="new-destinations__country-button new-destinations__country-button--plus">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+                  <path fill="#606161" d="M8 6V0H6v6H0v2h6v6h2V8h6V6z" />
+                </svg>
+              </button>
+            </div>
+
           </div>
 
-          <div class="new-destinations__alphabet alphabet-table">
-            <table class="alphabet-table">
-              <tr>
-                <td class="alphabet-table__item--active"><a href="#"
-                    class="alphabet-table__link alphabet-table__link--active">А</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Б</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">В</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Г</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Д</a></td>
-              </tr>
-              <tr>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Е</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">З</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">И</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">К</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Л</a></td>
-              </tr>
-              <tr>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">М</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Н</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">О</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">П</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Р</a></td>
-              </tr>
-              <tr>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">С</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Т</a</td> <td
-                      class="alphabet-table__item"><a href="#" class="alphabet-table__link">У</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ф</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Х</a></td>
-              </tr>
-              <tr>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ч</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ш</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Э</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ю</a></td>
-                <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Я</a></td>
-              </tr>
-            </table>
-          </div>
-
-          <ul class="new-destinations__country-a country-a">
-            <li class="country-a-item">Австралия</li>
-            <li class="country-a-item">Австрия</li>
-            <li class="country-a-item">Азербайджан</li>
-            <li class="country-a-item">Албания</li>
-            <li class="country-a-item">Алжир</li>
-            <li class="country-a-item">Ангола</li>
-            <li class="country-a-item">Андорра</li>
-            <li class="country-a-item">Антигуа и Барбуда</li>
-            <li class="country-a-item">Аргентина</li>
-            <li class="country-a-item">Армения</li>
-            <li class="country-a-item">Афганистан</li>
-          </ul>
-
-          <button type="button" class="new-destinations__button new-destinations__button--plus-country">Добавить
-            страну</a>
+          <a href="#" class="new-destinations__button new-destinations__button--next-step">Следующий шаг</a>
+          <a href="#" class="new-destinations__button new-destinations__button--previous-step">На шаг назад</a>
 
         </div>
-        <a href="#" class="new-destinations__button new-destinations__button--next-step">Следующий шаг</a>
-        <a href="#" class="new-destinations__button new-destinations__button--previous-step">На шаг назад</a>
 
         <div class="new-destinations__intertainment" id="intertainment">
 
-          <div class="new-destinations__step-number-box">
-            <h3 class="new-destinations__title">Шаг 3. Развлечения</h3>
-            <p class="new-destinations__description">
-              Наконец, расскажите о своих планах времяпровождения.
-              Можно писать в свободной форме и ставить тэги.
-            </p>
-          </div>
+          <div class="new-destinations__step-definition-wrapper">
+            <div class="new-destinations__step-number-box">
+              <h3 class="new-destinations__title">Шаг 3. Развлечения</h3>
+              <p class="new-destinations__description">
+                Наконец, расскажите о своих планах времяпровождения.
+                Можно писать в свободной форме и ставить тэги.
+              </p>
+            </div>
 
-          <ul class="new-destinations__steps-list">
-            <li class="new-destinations__steps-item">
-              <a href="#" class="new-destinations__steps-link">Даты</a>
-            </li>
-            <li class="new-destinations__steps-item">
-              <a href="#" class="new-destinations__steps-link">Маршрут</a>
-            </li>
-            <li class="new-destinations__steps-item">
-              <a href="#" class="new-destinations__steps-link new-destinations__steps-link--active">Развлечения</a>
-            </li>
-          </ul>
+            <ul class="new-destinations__steps-list">
+              <li class="new-destinations__steps-item">
+                <a href="#" class="new-destinations__steps-link">Даты</a>
+              </li>
+              <li class="new-destinations__steps-item">
+                <a href="#" class="new-destinations__steps-link">Маршрут</a>
+              </li>
+              <li class="new-destinations__steps-item">
+                <a href="#" class="new-destinations__steps-link new-destinations__steps-link--active">Развлечения</a>
+              </li>
+            </ul>
+          </div>
 
           <label class="new-destinations__label-country">Босния и Герцеговина</label>
           <textarea class="new-destinations__textarea-plan new-destinations__textarea-plan--empty" name="action"
@@ -519,11 +591,12 @@
           <textarea class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action"
             cols="30" rows="5">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
           </textarea>
-        </div>
 
-        <button type="submit" value="Отправить"
-          class="new-destinations__button new-destinations__button--submit">Отправить</button>
-        <a href="#" class="new-destinations__button new-destinations__button--previous-step">На шаг назад</a>
+          <button type="submit" value="Отправить"
+            class="new-destinations__button new-destinations__button--submit">Отправить</button>
+          <a href="#" class="new-destinations__button new-destinations__button--previous-step">На шаг назад</a>
+
+        </div>
 
       </form>
     </section>
@@ -532,9 +605,13 @@
 
   <footer class="page-footer">
     <div class="page-footer__logo">
-      <a href="index.html">
-        <img src="img/logo-mobile-blue@1x.png" width="100" heiht="19" alt="Лого Погнали" class="logo-image">
-      </a>
+
+      <picture>
+        <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+        <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
+        <img class="logo-image" src="img/logo-mobile-blue@1x.png" alt="Лого Погнали">
+      </picture>
+
     </div>
     <ul class="page-footer__social-list">
       <li class="page-footer__social-item">

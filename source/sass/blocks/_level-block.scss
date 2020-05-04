@@ -42,6 +42,11 @@
     order: 3;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+    order: 2;
+  }
+
   &::before {
     content: "";
     width: 1px;
@@ -87,6 +92,10 @@
   border-radius: 1px;
   position: relative;
   display: block;
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+  }
 }
 
 .level-block__bar {

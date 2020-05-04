@@ -1,5 +1,5 @@
 .travel-destinations {
-  background-color: $color-grey-light-1;
+  background-color: $color-pale-grey;
   padding: 70px 25px 30px 25px;
   position: relative;
   z-index: 9;
@@ -17,9 +17,8 @@
   @media (min-width: $desktop-width) {
     display: flex;
     padding: 163px 90px 163px 132px;
-    //flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
   }
 }
 
@@ -30,7 +29,6 @@
 
   @media (min-width: $desktop-width) {
     //width: 447px;
-    order: -1;
     align-self: start;
   }
 }
@@ -153,6 +151,7 @@
 .travel-destinations__img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     width: 186px;

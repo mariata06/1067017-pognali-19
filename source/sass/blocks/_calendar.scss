@@ -2,10 +2,13 @@
   background-color: $color-white;
   margin: 0 auto;
   display: table;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
     display: table;
+    margin-bottom: 20px;
+    margin-top: 60px;
   }
 }
 
@@ -14,6 +17,19 @@
   font-weight: 700;
   line-height: 20px;
   color: $color-dark-blue-2;
+  text-align: center;
+  border-top: 1px solid $color-greyborder;
+  border-bottom: 1px solid $color-greyborder;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+
+  @media (min-width: $tablet-width) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    font-size: 36px;
+  }
 }
 
 .calendar__table {
@@ -23,15 +39,47 @@
   color: $color-grey-light-5;
   text-align: center;
   border-collapse: collapse;
+  margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    font-weight: 400;
+  }
 
   td {
     width: 32px;
     height: 32px;
     border: 1px solid $color-greyborder;
+
+    @media (min-width: $tablet-width) {
+      width: 75px;
+      height: 68px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 141px;
+      height: 70px;
+      padding-top: 10px;
+      padding-left: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
   }
 
   th {
     color: $color-grey-dark;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 400;
+    }
   }
 
   .calendar__weekday {
@@ -44,11 +92,32 @@
 
     &--checked {
       border: 1px solid $color-orange-3;
+
+      @media (min-width: $tablet-width) {
+        border: 4px solid $color-orange-3;
+      }
     }
   }
 
   .calendar__free-day {
     color: $color-grey-dark;
     background-color: $color-pale-grey;
+  }
+
+  .calendar-table__span {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+  }
+
+  .calendar__active-day-span {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 10px;
+      display: block;
+    }
   }
 }

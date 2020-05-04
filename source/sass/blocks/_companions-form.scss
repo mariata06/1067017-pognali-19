@@ -40,8 +40,23 @@
 
   @media (min-width: $desktop-width) {
     justify-content: flex-end;
-    margin-top: -100px;
+    margin-top: -180px;
     z-index: 100;
+  }
+}
+
+.companions-form__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 192px;
+    height: 192px;
   }
 }
 
@@ -87,6 +102,9 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     order: 4;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -111,7 +129,8 @@
 .companions-form__hashtag {
   color: $color-grey-dark;
   border: 1px solid $color-grey-light-3;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-top: 25px;
 
   @media (min-width: $tablet-width) {
     order: 5;
@@ -129,7 +148,7 @@
 .companions-form__transport {
   color: $color-grey-dark;
   border: 1px solid $color-grey-light-3;
-  border-radius: 5px;
+  border-radius: 10px;
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;

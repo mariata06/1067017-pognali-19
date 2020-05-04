@@ -44,6 +44,8 @@
 
   &--form {
     border-bottom: none;
+    justify-content: center;
+    padding-bottom: 0;
 
     @media (min-width: $tablet-width) {
       flex-direction: row;

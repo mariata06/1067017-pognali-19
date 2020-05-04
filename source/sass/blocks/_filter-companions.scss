@@ -5,6 +5,10 @@
   position: relative;
   margin-top: -30px;
   padding: 35px 25px;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .filter-companions {
@@ -27,7 +31,7 @@
   padding: 26px;
 
   @media (min-width: $desktop-width) {
-    width: 288px;
+    width: 286px;
   }
 }
 
@@ -75,5 +79,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
   }
 }
