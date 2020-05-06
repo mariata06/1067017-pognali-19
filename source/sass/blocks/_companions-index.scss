@@ -6,7 +6,7 @@
   padding: 100px 25px 50px 25px;
   position: relative;
   z-index: 8;
-  top: -40px;
+  margin-top: -40px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
@@ -63,10 +63,9 @@
   border-radius: 20px;
   position: relative;
   margin-bottom: 10px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    //padding: 0 40px 80px 40px;
-    //background: url("../img/rogovaya-tablet@1x.jpg") no-repeat top right;
     width: 285px;
     //background-color: pink;
   }
@@ -77,8 +76,6 @@
 }
 
 .companions-index__photo {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   display: block;
   width: 100%;
 }
@@ -140,8 +137,6 @@
 
 .companions-index__content {
   background-color: $color-white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   padding: 25px;
 }
 

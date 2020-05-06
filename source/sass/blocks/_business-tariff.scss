@@ -1,11 +1,15 @@
 .business-tariff {
   background-color: #edeff6;
   color: $color-grey-dark;
-  min-width: 269px;
+  width: 320px;
   margin: 0 auto;
   padding: 25px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 752px;
@@ -27,6 +31,11 @@
   color: $color-orange-1;
   margin: 0;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .business-tariff__list {
@@ -68,7 +77,7 @@
   border-bottom-right-radius: 20px;
 
   @media (min-width: $tablet-width) {
-
+    font-size: 24px;
     padding-top: 38px;
     padding-bottom: 38px;
   }
