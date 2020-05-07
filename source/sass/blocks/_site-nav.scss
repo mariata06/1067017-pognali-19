@@ -5,7 +5,7 @@
   //min-width: 320px;
   list-style: none;
   padding-left: 0;
-  margin-bottom: 76px;
+  margin-bottom: 52px;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -49,7 +49,7 @@
 
 .site-nav__item {
   position: relative;
-  margin-right: 25px;
+  //margin-right: 25px;
 
   &:first-child {
     @media (min-width: $desktop-width) {
