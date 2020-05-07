@@ -174,6 +174,8 @@
               <source srcset="img/photo-account-tablet@1x.jpg" media="(min-width: 768px)">
               <img src="img/photo-account-mobile@1x.jpg" alt="Фото попутчика" class="companions-form__photo">
             </picture>
+            <input type="file" name="file" id="file" class="companions-form__inputfile" />
+            <label for="file">Фото</label>
           </a>
         </div>
 
@@ -183,7 +185,7 @@
         <!--<div class="companions-form__hashtag-transport__wrapper">-->
         <fieldset class="companions-form__hashtag">
           <legend class="companions-form__hashtag-title">ТЭГИ</legend>
-          <textarea class="companions-form__hashtag-textarea" name="hashtag"
+          <textarea tabindex="0" class="companions-form__hashtag-textarea" name="hashtag"
             id="hashtag">#бургер #бар #футбол #концерт #крафт</textarea>
         </fieldset>
         <h2></h2>
@@ -609,12 +611,13 @@
             </ul>
           </div>
 
-          <label class="new-destinations__label-country">Босния и Герцеговина</label>
-          <textarea class="new-destinations__textarea-plan new-destinations__textarea-plan--empty" name="action"
-            cols="30" rows="5">План действий</textarea>
-          <label class="new-destinations__label-country">Чехия</label>
-          <textarea class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action"
-            cols="30" rows="5">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+          <label for="plan" class="new-destinations__label-country">Босния и Герцеговина</label>
+          <textarea tabindex="0" id="paln"
+            class="new-destinations__textarea-plan new-destinations__textarea-plan--empty"
+            name="action">План действий</textarea>
+          <label for="plan2" class="new-destinations__label-country">Чехия</label>
+          <textarea tabindex="0" id="plan2"
+            class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
           </textarea>
 
           <button type="submit" value="Отправить"
@@ -697,8 +700,7 @@
 
     <table class="new-destinations__form-table form-table">
       <tr>
-        <td class="form-table__item--active"><a href="#"
-            class="form-table__link form-table__link--active">А</a></td>
+        <td class="form-table__item--active"><a href="#" class="form-table__link form-table__link--active">А</a></td>
         <td class="form-table__item"><a href="#" class="form-table__link">Б</a></td>
         <td class="form-table__item"><a href="#" class="form-table__link">В</a></td>
         <td class="form-table__item"><a href="#" class="form-table__link">Г</a></td>
