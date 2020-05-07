@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 95px;
+    //padding: 0 95px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -15,7 +15,7 @@
 .country-list {
   @media (min-width: $desktop-width) {
     padding: 5px 0 50px 0;
-    width: 250px;
+    width: 240px;
     max-height: 600px;
   }
 }

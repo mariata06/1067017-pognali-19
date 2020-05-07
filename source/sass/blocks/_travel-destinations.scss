@@ -1,55 +1,116 @@
 .travel-destinations {
-  background-color: $color-grey-light-1;
-  padding: 0 25px 30px 25px;
+  background-color: $color-pale-grey;
+  padding: 70px 25px 30px 25px;
+  position: relative;
+  z-index: 9;
+  margin-top: -20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0 40px 80px 40px;
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position: right 70px;
+    background-position: right 40px top 70px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding: 163px 60px;
-    flex-wrap: wrap;
+    padding: 163px 90px 163px 132px;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
-.travel-destinations__text-box {
+.travel-destination__text-box {
+  padding-left: 25px;
+  padding-right: 45px;
+  padding-bottom: 40px;
+
   @media (min-width: $desktop-width) {
-    width: 447px;
-    order: 1;
+    //width: 447px;
     align-self: start;
   }
 }
 
 .travel-destinations__box {
+  position: relative;
+
   @media (min-width: $desktop-width) {
     order: -1;
-    width: 50%;
+    width: 558px;
   }
 }
 
 .travel-destinations__item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &--thailand {
+    z-index: 3;
+  }
+
+  &--france {
+    z-index: 2;
+    //margin-top: -15px;
+  }
+
+  &--czech {
+    z-index: 1;
+    //margin-top: -15px;
+    top: 25px;
+  }
 
   @media (min-width: $tablet-width) {
     flex-direction: row-reverse;
+    width: 616px;
+    height: 140px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
   }
 }
 
 .travel-destinations__item-description {
   background-color: $color-white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  margin-top: -15px;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
+    padding: 25px;
+    //width: 100%;
+    width: 432px;
+    height: 140px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    //flex-wrap: wrap;
+    flex-direction: column;
   }
 
   @media (min-width: $desktop-width) {
     display: inline;
+    width: 374px;
+  }
+}
+
+.travel-destinations__picture {
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -15px;
   }
 }
 
@@ -88,12 +149,26 @@
   }
 }
 
+.travel-destinations__img {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 186px;
+    height: 140px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 20px;
+  }
+}
+
 .travel-destinations__country {
   margin: 0;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   color: $color-blue-black-2;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -119,6 +194,8 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     border-radius: 15px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -126,7 +203,7 @@
     border-radius: 15px;
     align-self: flex-end;
     margin-left: auto;
-    margin-right: 173px;
+    margin-right: 213px;
     margin-top: -100px;
   }
 }

@@ -4,7 +4,8 @@
 
 .companions-catalog {
   color: $color-grey-dark;
-  padding: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: $color-pale-grey;
 
   @media (min-width: $desktop-width) {
@@ -18,28 +19,35 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  background-color: $color-white;
+  border-radius: 20px;
+  padding: 15px 20px 22px 18px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     //width: 688px;
     //position: relative;
     flex-direction: row;
+    padding: 36px 25px 25px 36px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
     width: 950px;
     height: 285px;
+    padding: 0;
   }
 }
 
 .companions-catalog__personal-box {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid tomato;
+  //border: 2px solid tomato;
 
   @media (min-width: $tablet-width) {
     width: 80%;
     order: 1;
-    height: 220px;
+    height: 190px;
   }
 
   @media (min-width: $desktop-width) {
@@ -55,15 +63,21 @@
 
   @include list-style;
   //width: 160px;
-  border: 2px solid lightgreen;
+  //border: 2px solid lightgreen;
 
   @media (min-width: $tablet-width) {
     width: 220px;
     flex-wrap: wrap;
     align-self: flex-start;
-    margin-left: -100px;
+    margin-left: 250px;
+    margin-top: -150px;
     padding-left: 0;
     //margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 350px;
+    margin-top: -200px;
   }
 }
 
@@ -87,6 +101,7 @@
     font-weight: 500;
     color: $color-dark-blue-2;
     text-transform: uppercase;
+    margin-right: 70px;
   }
 }
 
@@ -95,11 +110,18 @@
   margin-right: 16px;
 
   @media (min-width: $tablet-width) {
+    border-radius: 20px;
     display: block;
-    width: 190px;
-    margin-left: 7px;
-    margin-top: 3px;
-    height: 100%;
+    //width: 190px;
+    //margin-left: 7px;
+    //margin-top: 3px;
+    margin-right: 0;
+    //height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -115,6 +137,10 @@
     //width: 200px;
     align-self: baseline;
     margin-left: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 45px;
   }
 }
 
@@ -134,12 +160,17 @@
   @media (min-width: $tablet-width) {
     //order: 4; отодвигает к правому краю лайк
     align-self: flex-end;
+    margin-left: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
   }
 }
 
 .companions-catalog fieldset {
   margin: 0;
-  //border: none;
+  border: none;
   border-top: 1px solid $color-pale-grey;
 }
 
@@ -149,16 +180,18 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
+    padding-top: 49px;
   }
 }
 
 .companions-catalog__countries-fieldset {
-  border: 2px solid lightblue;
+  //border: 2px solid lightblue;
 
   @media (min-width: $tablet-width) {
     //order: 4;
@@ -183,9 +216,8 @@
   }
 }
 
-
 .country {
-  border: 2px solid blueviolet;
+  //border: 2px solid blueviolet;
 
   @media (min-width: $tablet-width) {
     //display: flex;
@@ -209,7 +241,7 @@
 .companions-catalog__item-wrapper {
   display: flex;
   justify-content: space-between;
-  border: 2px solid aqua;
+  //border: 2px solid aqua;
 
   @media (min-width: $tablet-width) {
     width: 20%;
@@ -225,6 +257,8 @@
     margin-left: auto;
     flex-direction: row;
     margin-top: -170px;
+    padding-bottom: 40px;
+    padding-right: 44px;
   }
 }
 
@@ -247,18 +281,20 @@
     line-height: 1.5;
     letter-spacing: normal;
     height: 50px;
-    display: inline;
-    width: 100px;
+    //display: inline;
+    width: 147px;
     order: 3;
-    margin-left: 250px;
-    margin-top: -50px;
+    margin-left: 240px;
+    margin-top: -80px;
+    padding: 15px 20px;
+    border-radius: 100px;
   }
 
   @media (min-width: $desktop-width) {
     display: inline;
     order: 2;
-    margin-left: 100px;
-    margin-top: -50px;
+    margin-left: 350px;
+    margin-top: -100px;
     align-self: end;
   }
 }
@@ -268,15 +304,10 @@
   flex-direction: row;
 }
 
-.companions-catalog__transport-fieldset {
-  border: 2px solid magenta;
-}
-
 .companions-catalog__level-fieldset {
-  border: 2px solid gold;
-
   @media (min-width: $tablet-width) {
     display: flex;
+    border-bottom: 1px solid $color-pale-grey;
   }
 }
 
@@ -319,4 +350,8 @@
     display: block;
     margin-bottom: 27px;
   }
+}
+
+.companions-catalog__transport-fieldset {
+  border: none;
 }

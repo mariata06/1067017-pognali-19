@@ -1,20 +1,26 @@
 .about-service {
   background: url("../img/about-mobile@1x.png") no-repeat;
   background-color: $color-dark-blue-1;
-  padding: 40px 25px 60px 25px;
+  background-position: 20px 270px;
+  padding: 70px 25px 50px 25px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-top: 300px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
     min-height: 780px;
     background: $color-dark-blue-1 url("../img/about-tablet@1x.png") no-repeat
-      right top 50%;
-    padding: 0 40px;
+      right 5% top 60%;
+    padding: 0 40px 70px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 660px;
     background: $color-dark-blue-1 url("../img/about-desktop@1x.png") no-repeat
-      right top 50%;
-    padding: 0 60px;
+      right 50px top 100px;
+    padding: 60px 0 110px 90px;
   }
 }
 
@@ -25,17 +31,25 @@
 
 .about-service__title {
   @include orange-title;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 130px;
+    padding-top: 170px;
 
     @include orange-title-tabdesc;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
   }
 }
 
 .about-service__description {
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
 
   &:last-of-type {
     font-weight: 700;
@@ -55,7 +69,7 @@
   &:first-of-type {
     @media (min-width: $tablet-width) {
       padding-top: 50px;
-      max-width: 300px;
+      max-width: 360px;
       font-size: 28px;
       line-height: 33px;
     }
@@ -83,5 +97,6 @@
     line-height: 24px;
     max-width: 275px;
     border-radius: 15px;
+    margin-left: 30px;
   }
 }

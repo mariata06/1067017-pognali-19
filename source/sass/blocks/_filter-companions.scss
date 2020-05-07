@@ -1,10 +1,22 @@
 .filter-companions__wrapper {
   display: flex;
   flex-wrap: wrap;
+  background-color: $color-pale-grey;
+  position: relative;
+  margin-top: -15px;
+  padding: 35px 25px;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .filter-companions {
-  padding: 27px 25px;
+  //padding: 24px 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 
   @media (min-width: $desktop-width) {
     //display: flex;
@@ -19,7 +31,7 @@
   padding: 26px;
 
   @media (min-width: $desktop-width) {
-    width: 288px;
+    width: 286px;
   }
 }
 
@@ -33,7 +45,7 @@
   @media (min-width: $tablet-width) {
     display: block;
     border-bottom: 1px solid $color-macaroni-and-cheese;
-    padding-bottom: 25px;
+    padding-bottom: 44px;
     font-size: 30px;
     line-height: 30px;
   }
@@ -59,5 +71,18 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
+  }
+}
+
+.filter-companions__level {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
   }
 }

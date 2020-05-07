@@ -2,6 +2,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,7 +26,7 @@
     line-height: 30px;
     //display: flex;
     //flex-direction: row;
-    //border-bottom: none;
+    border-bottom: none;
   }
 }
 

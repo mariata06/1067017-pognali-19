@@ -16,13 +16,20 @@
 
     <div class="page-header__wrapper">
 
-      <a href="index.html" class="page-header__logo"><img src="img/logo-mobile-white@1x.png" width="100" heiht="19"
-          alt="Лого Погнали"></a>
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source srcset="img/logo-desktop-white@1x.png" media="(min-width: 1440px)">
+          <source srcset="img/logo-tablet-white@1x.png" media="(min-width: 768px)">
+          <img src="img/logo-mobile-white@1x.png" alt="Лого Погнали" class="page-header__logo">
+        </picture>
+      </a>
 
       <div class="page-header__burger-menu burger-menu">
-        <div class="burger-menu__button">
-          <span></span>
-        </div>
+        <button type="button" class="burger-menu__button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 11" width="25" height="11">
+            <path d="M1.5 3h22c.8 0 1.5-.7 1.5-1.5S24.3 0 23.5 0h-22C.7 0 0 .7 0 1.5S.7 3 1.5 3zM23.5 8h-22C.7 8 0 8.7 0 9.5S.7 11 1.5 11h22c.8 0 1.5-.7 1.5-1.5S24.3 8 23.5 8z"/>
+          </svg>
+        </button>
         <button class="burger-menu__close" type="button"><span class="visually-hidden">Закрыть меню</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="cccccc" width="18" height="18" viewBox="0 0 18 18">
             <path
@@ -83,23 +90,23 @@
       <a href="login.html" class="main-nav__login-link button">Авторизация</a>
 
       <div class="main-nav__phone-box">
-        <a class="main-nav__icon-phone" href="tel:+78005558628">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#ffd74b" width="36" height="36" viewBox="0 0 36 36">
-            <path
-              d="M18 0C11.6 0 5.2 1.1 2.8 3.4.9 5.3.2 8.7 0 10.8v.3c0 .8.7 1.5 1.5 1.5.1 0 3.7-.3 5.9-.5h.2c.8 0 1.5-.7 1.5-1.5v-3C9 6.7 9.7 6 10.7 6h14.7c.8 0 1.6.7 1.6 1.7v3c0 .8.7 1.5 1.5 1.5h.2c2.2.2 5.8.5 5.9.5.8 0 1.5-.7 1.5-1.5v-.3c-.2-2.1-.9-5.5-2.8-7.4C30.8 1.1 24.4 0 18 0zm0 19.5c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-2.3-6.8v-1.9c0-1-.8-1.9-1.9-1.9s-1.8.9-1.8 2v1.9L1.9 23.6c-.7.7-1.1 1.6-1.1 2.7v3c0 1.7 1.3 3 3 3h.8v1.9c0 1 .8 1.9 1.9 1.9s1.9-.8 1.9-1.9v-1.9h19.5v1.9c0 1 .8 1.9 1.9 1.9 1 0 1.9-.8 1.9-1.9v-1.9h.8c1.7 0 3-1.3 3-3v-3c0-1.1-.4-2-1.1-2.7L24 12.7v-1.9c0-1-.8-1.9-1.9-1.9s-1.9.8-1.9 1.9v1.9h-4.5zm2.3 3.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" />
-          </svg>
-        </a>
-        <a class="main-nav__phone-link" href="tel:+78005558628">8 800 555-86-28</a>
+        <a class="main-nav__phone-link" href="tel:+78005558628">
+          <div class="main-nav__icon-phone">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffd74b" width="36" height="36" viewBox="0 0 36 36">
+              <path
+                d="M18 0C11.6 0 5.2 1.1 2.8 3.4.9 5.3.2 8.7 0 10.8v.3c0 .8.7 1.5 1.5 1.5.1 0 3.7-.3 5.9-.5h.2c.8 0 1.5-.7 1.5-1.5v-3C9 6.7 9.7 6 10.7 6h14.7c.8 0 1.6.7 1.6 1.7v3c0 .8.7 1.5 1.5 1.5h.2c2.2.2 5.8.5 5.9.5.8 0 1.5-.7 1.5-1.5v-.3c-.2-2.1-.9-5.5-2.8-7.4C30.8 1.1 24.4 0 18 0zm0 19.5c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-2.3-6.8v-1.9c0-1-.8-1.9-1.9-1.9s-1.8.9-1.8 2v1.9L1.9 23.6c-.7.7-1.1 1.6-1.1 2.7v3c0 1.7 1.3 3 3 3h.8v1.9c0 1 .8 1.9 1.9 1.9s1.9-.8 1.9-1.9v-1.9h19.5v1.9c0 1 .8 1.9 1.9 1.9 1 0 1.9-.8 1.9-1.9v-1.9h.8c1.7 0 3-1.3 3-3v-3c0-1.1-.4-2-1.1-2.7L24 12.7v-1.9c0-1-.8-1.9-1.9-1.9s-1.9.8-1.9 1.9v1.9h-4.5zm2.3 3.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" />
+            </svg>
+          </div>8 800 555-86-28</a>
       </div>
 
       <div class="main-nav__email-box">
-        <a class="main-nav__icon-email" href="mailto:mail@htmlacademy.ru">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#ffd74b" width="36" height="26" viewBox="0 0 36 26">
-            <path
-              d="M0 23c0 1.6 1.3 3 3 3h30c1.7 0 3-1.3 3-3V3c0-1.6-1.3-3-3-3H3C1.3 0 0 1.3 0 3v20zm11-10L4.2 6.2c-.6-.6-.6-1.5 0-2 .6-.6 1.5-.6 2.1 0l11 10.9c.4.4 1.2.4 1.6 0l11-10.9c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2L25 13l6.9 6.8c.6.6.6 1.5 0 2-.6.6-1.5.6-2.1 0L22.9 15s-2.1 2.2-2.5 2.5c-.6.6-1.4 1-2.4 1-.9 0-1.8-.4-2.4-1L13.1 15l-6.9 6.8c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2L11 13z" />
-          </svg>
-        </a>
-        <a class="main-nav__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a class="main-nav__email-link" href="mailto:mail@htmlacademy.ru">
+          <div class="main-nav__icon-email">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffd74b" width="36" height="26" viewBox="0 0 36 26">
+              <path
+                d="M0 23c0 1.6 1.3 3 3 3h30c1.7 0 3-1.3 3-3V3c0-1.6-1.3-3-3-3H3C1.3 0 0 1.3 0 3v20zm11-10L4.2 6.2c-.6-.6-.6-1.5 0-2 .6-.6 1.5-.6 2.1 0l11 10.9c.4.4 1.2.4 1.6 0l11-10.9c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2L25 13l6.9 6.8c.6.6.6 1.5 0 2-.6.6-1.5.6-2.1 0L22.9 15s-2.1 2.2-2.5 2.5c-.6.6-1.4 1-2.4 1-.9 0-1.8-.4-2.4-1L13.1 15l-6.9 6.8c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2L11 13z" />
+            </svg>
+          </div>mail@htmlacademy.ru</a>
       </div>
 
       <div class="page-header__social header-social">
@@ -150,17 +157,20 @@
       </div>
     </section>
 
+
     <div class="filter-country__wrapper">
 
       <div class="filter-country">
-        <button type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#192144" width="15" height="10" viewBox="0 0 15 10">
-            <path
-              d="M4 0h2v2H4zM0 0h3v2H0zM7 0h8v2H7zM4 8h2v2H4zM0 8h3v2H0zM7 8h8v2H7zM9 4h2v2H9zM12 4h3v2h-3zM0 4h8v2H0z" />
-          </svg>
-        </button>
-        <p class="filter-country__title">Фильтрация по странам</h3>
-          <button type="button">
+
+        <div class="filter-country__buttons">
+          <button type="button" class="filter-country__button filter-country__button--left">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#192144" width="15" height="10" viewBox="0 0 15 10">
+              <path
+                d="M4 0h2v2H4zM0 0h3v2H0zM7 0h8v2H7zM4 8h2v2H4zM0 8h3v2H0zM7 8h8v2H7zM9 4h2v2H9zM12 4h3v2h-3zM0 4h8v2H0z" />
+            </svg>
+          </button>
+          <h3 class="filter-country__title">Фильтрация по странам</h3>
+          <button type="button" class="filter-country__button filter-country__button--right">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" fill="#192144" width="17" height="3"
               x="0" y="0" viewBox="0 0 27 5" xml:space="preserve">
               <circle class="st0" cx="2.5" cy="2.5" r="2.5" />
@@ -168,13 +178,37 @@
               <circle class="st0" cx="24.5" cy="2.5" r="2.5" />
             </svg>
           </button>
-          <button class="filter-country__close" type="button"><span class="visually-hidden">Закрыть меню</span>
+          <button class="filter-country__button filter-country__button--close" type="button"><span
+              class="visually-hidden">Закрыть меню</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="#192144" width="12" height="12" viewBox="0 0 12 12">
               <path
                 d="M6.9 6l4.9-4.9c.2-.2.2-.6 0-.9s-.6-.2-.9 0L6 5.1 1.1.2C.9 0 .5 0 .2.2s-.2.6 0 .9L5.1 6 .2 10.9c-.2.2-.2.6 0 .9.2.2.6.2.9 0L6 6.9l4.9 4.9c.2.2.6.2.9 0 .2-.2.2-.6 0-.9L6.9 6z"
                 fill="#606161" />
             </svg>
           </button>
+        </div>
+
+        <div class="filter-country__filter-all">
+          <button type="button" class="filter-country__button filter-country__button--show-all">Показать все
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" fill="#192144" width="17" height="3"
+              x="0" y="0" viewBox="0 0 27 5" xml:space="preserve">
+              <circle class="st0" cx="2.5" cy="2.5" r="2.5" />
+              <circle class="st0" cx="13.5" cy="2.5" r="2.5" />
+              <circle class="st0" cx="24.5" cy="2.5" r="2.5" />
+            </svg>
+          </button>
+
+          <button class="filter-country__button filter-country__button--close" type="button"><span
+              class="visually-hidden">Закрыть меню</span>
+            Свернуть
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#192144" width="12" height="12" viewBox="0 0 12 12">
+              <path
+                d="M6.9 6l4.9-4.9c.2-.2.2-.6 0-.9s-.6-.2-.9 0L6 5.1 1.1.2C.9 0 .5 0 .2.2s-.2.6 0 .9L5.1 6 .2 10.9c-.2.2-.2.6 0 .9.2.2.6.2.9 0L6 6.9l4.9 4.9c.2.2.6.2.9 0 .2-.2.2-.6 0-.9L6.9 6z"
+                fill="#606161" />
+            </svg>
+          </button>
+        </div>
+
       </div>
 
       <div class="filter-country__continent">
@@ -194,417 +228,412 @@
         </ul>
       </div>
 
-      <div class="filter-country__filter-all filter-all">
-        <div class="filter-all">
-          <p class="filter-all__label">Показать все</p>
-          <button type="button" class="filter-all__button">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" fill="#192144" width="17" height="3"
-              x="0" y="0" viewBox="0 0 27 5" xml:space="preserve">
-              <circle class="st0" cx="2.5" cy="2.5" r="2.5" />
-              <circle class="st0" cx="13.5" cy="2.5" r="2.5" />
-              <circle class="st0" cx="24.5" cy="2.5" r="2.5" />
-            </svg>
-          </button>
-          <p class="filter-all__label">Свернуть</p>
-          <button type="button" class="filter-all__close">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#192144" width="12" height="12" viewBox="0 0 12 12">
-              <path
-                d="M6.9 6l4.9-4.9c.2-.2.2-.6 0-.9s-.6-.2-.9 0L6 5.1 1.1.2C.9 0 .5 0 .2.2s-.2.6 0 .9L5.1 6 .2 10.9c-.2.2-.2.6 0 .9.2.2.6.2.9 0L6 6.9l4.9 4.9c.2.2.6.2.9 0 .2-.2.2-.6 0-.9L6.9 6z"
-                fill="#606161" />
-            </svg>
-          </button>
+      <section class="filter">
+
+        <div class="filter__alphabet alphabet-table">
+          <table class="alphabet-table alphabet-table--catalog">
+            <tr>
+              <td class="alphabet-table__item--active"><a href="#"
+                  class="alphabet-table__link alphabet-table__link--active">А</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Б</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">В</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Г</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Д</a></td>
+            </tr>
+            <tr>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Е</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">З</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">И</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">К</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Л</a></td>
+            </tr>
+            <tr>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">М</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Н</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">О</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">П</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Р</a></td>
+            </tr>
+            <tr>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">С</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Т</a</td> <td
+                    class="alphabet-table__item"><a href="#" class="alphabet-table__link">У</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ф</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Х</a></td>
+            </tr>
+            <tr>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ч</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ш</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Э</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ю</a></td>
+              <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Я</a></td>
+            </tr>
+          </table>
         </div>
-      </div>
+
+        <div class="filter__country-a">
+          <ul class="filter__country-a-list country-a">
+            <li class="country-a__item">Австралия</li>
+            <li class="country-a__item">Австрия</li>
+            <li class="country-a__item">Азербайджан</li>
+            <li class="country-a__item">Албания</li>
+            <li class="country-a__item">Алжир</li>
+            <li class="country-a__item">Ангола</li>
+            <li class="country-a__item">Андорра</li>
+            <li class="country-a__item">Антигуа и Барбуда</li>
+            <li class="country-a__item">Аргентина</li>
+            <li class="country-a__item">Армения</li>
+            <li class="country-a__item">Афганистан</li>
+          </ul>
+        </div>
+
+        <button class="country-a__close-button" type="button">X</button>
+        <button type="button" class="filter-country__button--collapse"><span class="visually-hidden">Закрыть
+            окно</span>Свернуть</button>
+
+        <div class="filter__country-global-list country-global-list">
+
+          <div class="country-global-list__a-list country-list">
+            <span class="country-global-list__a-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">А</a></span>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Австралия</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Австрия</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Азербайджан</a>
+            </div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Албания</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Алжир</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Ангола</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Андорра</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Антигуа и
+                Барбуда</a>
+            </div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Аргентина</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Армения</a></div>
+            <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Афганистан</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__b-list country-list">
+            <span class="country-global-list__b-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Б</a></span>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бангладеш</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Барбадос</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бахрейн</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Белоруссия</a>
+            </div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Белиз</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бельгия</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бенин</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Болгария</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Боливия</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Босния и
+                Герцеговина</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Ботсвана</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бразилия</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бруней</a></div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Буркина-Фасо</a>
+            </div>
+            <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бурунди</a></div>
+          </div>
+
+          <div class="country-global-list__v-list country-list">
+            <span class="country-global-list__v-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">В</a></span>
+            <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Вануату</a></div>
+            <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Великобритания</a>
+            </div>
+            <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Венгрия</a></div>
+            <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Венесуэла</a></div>
+            <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Восточный Тимор</a>
+            </div>
+            <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Вьетнам</a></div>
+          </div>
+
+          <div class="country-global-list__g-list country-list">
+            <span class="country-global-list__g-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Г</a></span>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Габон</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гаити</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гайана</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гамбия</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гана</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гватемала</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гвинея</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гвинея-Бисау</a>
+            </div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Германия</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гондурас</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гренада</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Греция</a></div>
+            <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Грузия</a></div>
+          </div>
+
+          <div class="country-global-list__d-list country-list">
+            <span class="country-global-list__d-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Д</a></span>
+            <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Дания</a></div>
+            <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Джибути</a></div>
+            <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Доминика</a></div>
+            <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Доминикана</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__e-list country-list">
+            <span class="country-global-list__e-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Е</a></span>
+            <div class="country-global-list__e-item"><a href="#" class="country-global-list__e-link">Египет</a></div>
+          </div>
+
+          <div class="country-global-list__z-list country-list">
+            <span class="country-global-list__z-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">З</a></span>
+            <div class="country-global-list__z-item"><a href="#" class="country-global-list__z-link">Замбия</a></div>
+            <div class="country-global-list__z-item"><a href="#" class="country-global-list__z-link">Зимбабве</a></div>
+          </div>
+
+          <div class="country-global-list__i-list country-list">
+            <span class="country-global-list__i-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">И</a></span>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Израиль</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Индия</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Индонезия</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Иордания</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Ирак</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Иран</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Ирландия</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Исландия</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Испания</a></div>
+            <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Италия</a></div>
+          </div>
+
+          <div class="country-global-list__k-list country-list">
+            <span class="country-global-list__k-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">К</a></span>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кабо-Верде</a>
+            </div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Казахстан</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Камбоджа</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Камерун</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Канада</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Катар</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кения</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кипр</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Киргизия</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кирибати</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Китай</a></div>
+            <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Колумбия</a></div>
+          </div>
+
+          <div class="country-global-list__l-list country-list">
+            <span class="country-global-list__l-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Л</a></span>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Лаос</a></div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Латвия</a></div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Лесото</a></div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Либерия</a></div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Ливан</a></div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Ливия</a></div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Литва</a></div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Лихтенштейн</a>
+            </div>
+            <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Люксембург</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__m-list country-list">
+            <span class="country-global-list__m-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">М</a></span>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Маврикий</a></div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мавритания</a>
+            </div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мадагаскар</a>
+            </div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Малави</a></div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Малайзия</a></div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мали</a></div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мальдивы</a></div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мальта</a></div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Марокко</a></div>
+            <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мексика</a></div>
+          </div>
+
+          <div class="country-global-list__n-list country-list">
+            <span class="country-global-list__n-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Н</a></span>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Намибия</a></div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Науру</a></div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Непал</a></div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Нигер</a></div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Нигерия</a></div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Нидерланды</a>
+            </div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Никарагуа</a></div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Новая Зеландия</a>
+            </div>
+            <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Норвегия</a></div>
+          </div>
+
+          <div class="country-global-list__o-list country-list">
+            <span class="country-global-list__o-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">О</a></span>
+            <div class="country-global-list__o-item"><a href="#" class="country-global-list__o-link">ОАЭ</a></div>
+            <div class="country-global-list__o-item"><a href="#" class="country-global-list__o-link">Оман</a></div>
+          </div>
+
+          <div class="country-global-list__p-list country-list">
+            <span class="country-global-list__p-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">П</a></span>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Пакистан</a></div>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Палау</a></div>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Панама</a></div>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Папуа — Новая
+                Гвинея</a></div>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Парагвай</a></div>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Перу</a></div>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Польша</a></div>
+            <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Португалия</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__r-list country-list">
+            <span class="country-global-list__r-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Р</a></span>
+            <div class="country-global-list__r-item"><a href="#" class="country-global-list__r-link">Руанда</a></div>
+            <div class="country-global-list__r-item"><a href="#" class="country-global-list__r-link">Румыния</a></div>
+            <div class="country-global-list__r-item"><a href="#" class="country-global-list__r-link">Россия</a></div>
+          </div>
+
+          <div class="country-global-list__s-list country-list">
+            <span class="country-global-list__s-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">С</a></span>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сальвадор</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Самоа</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сан-Марино</a>
+            </div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Саудовская
+                Аравия</a>
+            </div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сейшелы</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сенегал</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сербия</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сингапур</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сирия</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Словакия</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Словения</a></div>
+            <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">США</a></div>
+          </div>
+
+          <div class="country-global-list__t-list country-list">
+            <span class="country-global-list__t-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Т</a></span>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Таджикистан</a>
+            </div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Таиланд</a></div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Танзания</a></div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Того</a></div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тонга</a></div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тринидад и
+                Тобаго</a>
+            </div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тувалу</a></div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тунис</a></div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Туркмения</a></div>
+            <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Турция</a></div>
+          </div>
+
+          <div class="country-global-list__u-list country-list">
+            <span class="country-global-list__u-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">У</a></span>
+            <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Уганда</a></div>
+            <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Узбекистан</a>
+            </div>
+            <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Украина</a></div>
+            <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Уругвай</a></div>
+          </div>
+
+          <div class="country-global-list__f-list country-list">
+            <span class="country-global-list__f-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Ф</a></span>
+            <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Фиджи</a></div>
+            <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Филиппины</a>
+            </div>
+            <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Финляндия</a>
+            </div>
+            <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Франция</a></div>
+          </div>
+
+          <div class="country-global-list__h-list country-list">
+            <span class="country-global-list__h-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Х</a></span>
+            <div class="country-global-list__h-item"><a href="#" class="country-global-list__h-link">Хорватия</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__ch-list country-list">
+            <span class="country-global-list__ch-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Ч</a></span>
+            <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Чад</a></div>
+            <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Черногория</a>
+            </div>
+            <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Чехия</a></div>
+            <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Чили</a></div>
+          </div>
+
+          <div class="country-global-list__sh-list country-list">
+            <span class="country-global-list__sh-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Ш</a></span>
+            <div class="country-global-list__sh-item"><a href="#" class="country-global-list__sh-link">Швейцария</a>
+            </div>
+            <div class="country-global-list__sh-item"><a href="#" class="country-global-list__sh-link">Швеция</a>
+            </div>
+            <div class="country-global-list__sh-item"><a href="#" class="country-global-list__sh-link">Шри-Ланка</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__eh-list country-list">
+            <span class="country-global-list__eh-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Э</a></span>
+            <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эквадор</a>
+            </div>
+            <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эритрея</a>
+            </div>
+            <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эсватини</a>
+            </div>
+            <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эстония</a>
+            </div>
+            <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эфиопия</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__ju-list country-list">
+            <span class="country-global-list__ju-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Ю</a></span>
+            <div class="country-global-list__ju-item"><a href="#" class="country-global-list__ju-link">ЮАР</a></div>
+            <div class="country-global-list__ju-item"><a href="#" class="country-global-list__ju-link">Южный Судан</a>
+            </div>
+          </div>
+
+          <div class="country-global-list__ja-list country-list">
+            <span class="country-global-list__ja-lit country-global-list__lit"><a class="country-global-list__lit-link"
+                href="#">Я</a></span>
+            <div class="country-global-list__ja-item"><a href="#" class="country-global-list__ja-link">Ямайка</a>
+            </div>
+            <div class="country-global-list__ja-item"><a href="#" class="country-global-list__ja-link">Япония</a>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="button" class="filter__button-close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#192144" width="12" height="12" viewBox="0 0 12 12">
+            <path
+              d="M6.9 6l4.9-4.9c.2-.2.2-.6 0-.9s-.6-.2-.9 0L6 5.1 1.1.2C.9 0 .5 0 .2.2s-.2.6 0 .9L5.1 6 .2 10.9c-.2.2-.2.6 0 .9.2.2.6.2.9 0L6 6.9l4.9 4.9c.2.2.6.2.9 0 .2-.2.2-.6 0-.9L6.9 6z"
+              fill="#606161" />
+          </svg>Свернуть</button>
+
+      </section>
 
     </div>
-
-    <section class="filter">
-
-      <div class="filter__alphabet alphabet-table">
-        <table class="alphabet-table alphabet-table--catalog">
-          <tr>
-            <td class="alphabet-table__item--active"><a href="#"
-                class="alphabet-table__link alphabet-table__link--active">А</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Б</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">В</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Г</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Д</a></td>
-          </tr>
-          <tr>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Е</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">З</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">И</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">К</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Л</a></td>
-          </tr>
-          <tr>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">М</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Н</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">О</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">П</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Р</a></td>
-          </tr>
-          <tr>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">С</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Т</a</td> <td
-                  class="alphabet-table__item"><a href="#" class="alphabet-table__link">У</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ф</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Х</a></td>
-          </tr>
-          <tr>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ч</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ш</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Э</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Ю</a></td>
-            <td class="alphabet-table__item"><a href="#" class="alphabet-table__link">Я</a></td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="filter__country-a">
-        <ul class="filter__country-a-list country-a">
-          <li class="country-a__item">Австралия</li>
-          <li class="country-a__item">Австрия</li>
-          <li class="country-a__item">Азербайджан</li>
-          <li class="country-a__item">Албания</li>
-          <li class="country-a__item">Алжир</li>
-          <li class="country-a__item">Ангола</li>
-          <li class="country-a__item">Андорра</li>
-          <li class="country-a__item">Антигуа и Барбуда</li>
-          <li class="country-a__item">Аргентина</li>
-          <li class="country-a__item">Армения</li>
-          <li class="country-a__item">Афганистан</li>
-        </ul>
-      </div>
-
-      <button class="country-a__close-button" type="button">X</button>
-      <button type="button" class="filter-country__button--collapse"><span class="visually-hidden">Закрыть
-          окно</span>Свернуть</button>
-
-      <div class="filter__country-global-list country-global-list">
-
-        <div class="country-global-list__a-list country-list">
-          <span class="country-global-list__a-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">А</a></span>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Австралия</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Австрия</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Азербайджан</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Албания</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Алжир</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Ангола</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Андорра</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Антигуа и Барбуда</a>
-          </div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Аргентина</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Армения</a></div>
-          <div class="country-global-list__a-item"><a href="#" class="country-global-list__a-link">Афганистан</a></div>
-        </div>
-
-        <div class="country-global-list__b-list country-list">
-          <span class="country-global-list__b-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Б</a></span>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бангладеш</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Барбадос</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бахрейн</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Белоруссия</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Белиз</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бельгия</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бенин</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Болгария</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Боливия</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Босния и
-              Герцеговина</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Ботсвана</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бразилия</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бруней</a></div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Буркина-Фасо</a>
-          </div>
-          <div class="country-global-list__b-item"><a href="#" class="country-global-list__b-link">Бурунди</a></div>
-        </div>
-
-        <div class="country-global-list__v-list country-list">
-          <span class="country-global-list__v-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">В</a></span>
-          <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Вануату</a></div>
-          <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Великобритания</a>
-          </div>
-          <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Венгрия</a></div>
-          <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Венесуэла</a></div>
-          <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Восточный Тимор</a>
-          </div>
-          <div class="country-global-list__v-item"><a href="#" class="country-global-list__v-link">Вьетнам</a></div>
-        </div>
-
-        <div class="country-global-list__g-list country-list">
-          <span class="country-global-list__g-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Г</a></span>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Габон</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гаити</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гайана</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гамбия</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гана</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гватемала</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гвинея</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гвинея-Бисау</a>
-          </div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Германия</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гондурас</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Гренада</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Греция</a></div>
-          <div class="country-global-list__g-item"><a href="#" class="country-global-list__g-link">Грузия</a></div>
-        </div>
-
-        <div class="country-global-list__d-list country-list">
-          <span class="country-global-list__d-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Д</a></span>
-          <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Дания</a></div>
-          <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Джибути</a></div>
-          <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Доминика</a></div>
-          <div class="country-global-list__d-item"><a href="#" class="country-global-list__d-link">Доминикана</a></div>
-        </div>
-
-        <div class="country-global-list__e-list country-list">
-          <span class="country-global-list__e-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Е</a></span>
-          <div class="country-global-list__e-item"><a href="#" class="country-global-list__e-link">Египет</a></div>
-        </div>
-
-        <div class="country-global-list__z-list country-list">
-          <span class="country-global-list__z-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">З</a></span>
-          <div class="country-global-list__z-item"><a href="#" class="country-global-list__z-link">Замбия</a></div>
-          <div class="country-global-list__z-item"><a href="#" class="country-global-list__z-link">Зимбабве</a></div>
-        </div>
-
-        <div class="country-global-list__i-list country-list">
-          <span class="country-global-list__i-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">И</a></span>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Израиль</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Индия</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Индонезия</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Иордания</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Ирак</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Иран</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Ирландия</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Исландия</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Испания</a></div>
-          <div class="country-global-list__i-item"><a href="#" class="country-global-list__i-link">Италия</a></div>
-        </div>
-
-        <div class="country-global-list__k-list country-list">
-          <span class="country-global-list__k-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">К</a></span>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кабо-Верде</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Казахстан</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Камбоджа</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Камерун</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Канада</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Катар</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кения</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кипр</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Киргизия</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Кирибати</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Китай</a></div>
-          <div class="country-global-list__k-item"><a href="#" class="country-global-list__k-link">Колумбия</a></div>
-        </div>
-
-        <div class="country-global-list__l-list country-list">
-          <span class="country-global-list__l-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Л</a></span>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Лаос</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Латвия</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Лесото</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Либерия</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Ливан</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Ливия</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Литва</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Лихтенштейн</a></div>
-          <div class="country-global-list__l-item"><a href="#" class="country-global-list__l-link">Люксембург</a></div>
-        </div>
-
-        <div class="country-global-list__m-list country-list">
-          <span class="country-global-list__m-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">М</a></span>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Маврикий</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мавритания</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мадагаскар</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Малави</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Малайзия</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мали</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мальдивы</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мальта</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Марокко</a></div>
-          <div class="country-global-list__m-item"><a href="#" class="country-global-list__m-link">Мексика</a></div>
-        </div>
-
-        <div class="country-global-list__n-list country-list">
-          <span class="country-global-list__n-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Н</a></span>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Намибия</a></div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Науру</a></div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Непал</a></div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Нигер</a></div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Нигерия</a></div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Нидерланды</a></div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Никарагуа</a></div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Новая Зеландия</a>
-          </div>
-          <div class="country-global-list__n-item"><a href="#" class="country-global-list__n-link">Норвегия</a></div>
-        </div>
-
-        <div class="country-global-list__o-list country-list">
-          <span class="country-global-list__o-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">О</a></span>
-          <div class="country-global-list__o-item"><a href="#" class="country-global-list__o-link">ОАЭ</a></div>
-          <div class="country-global-list__o-item"><a href="#" class="country-global-list__o-link">Оман</a></div>
-        </div>
-
-        <div class="country-global-list__p-list country-list">
-          <span class="country-global-list__p-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">П</a></span>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Пакистан</a></div>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Палау</a></div>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Панама</a></div>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Папуа — Новая
-              Гвинея</a></div>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Парагвай</a></div>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Перу</a></div>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Польша</a></div>
-          <div class="country-global-list__p-item"><a href="#" class="country-global-list__p-link">Португалия</a></div>
-        </div>
-
-        <div class="country-global-list__r-list country-list">
-          <span class="country-global-list__r-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Р</a></span>
-          <div class="country-global-list__r-item"><a href="#" class="country-global-list__r-link">Руанда</a></div>
-          <div class="country-global-list__r-item"><a href="#" class="country-global-list__r-link">Румыния</a></div>
-          <div class="country-global-list__r-item"><a href="#" class="country-global-list__r-link">Россия</a></div>
-        </div>
-
-        <div class="country-global-list__s-list country-list">
-          <span class="country-global-list__s-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">С</a></span>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сальвадор</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Самоа</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сан-Марино</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Саудовская Аравия</a>
-          </div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сейшелы</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сенегал</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сербия</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сингапур</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Сирия</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Словакия</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">Словения</a></div>
-          <div class="country-global-list__s-item"><a href="#" class="country-global-list__s-link">США</a></div>
-        </div>
-
-        <div class="country-global-list__t-list country-list">
-          <span class="country-global-list__t-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Т</a></span>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Таджикистан</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Таиланд</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Танзания</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Того</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тонга</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тринидад и Тобаго</a>
-          </div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тувалу</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Тунис</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Туркмения</a></div>
-          <div class="country-global-list__t-item"><a href="#" class="country-global-list__t-link">Турция</a></div>
-        </div>
-
-        <div class="country-global-list__u-list country-list">
-          <span class="country-global-list__u-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">У</a></span>
-          <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Уганда</a></div>
-          <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Узбекистан</a></div>
-          <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Украина</a></div>
-          <div class="country-global-list__u-item"><a href="#" class="country-global-list__u-link">Уругвай</a></div>
-        </div>
-
-        <div class="country-global-list__f-list country-list">
-          <span class="country-global-list__f-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Ф</a></span>
-          <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Фиджи</a></div>
-          <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Филиппины</a>
-          </div>
-          <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Финляндия</a>
-          </div>
-          <div class="country-global-list__f-item"><a href="#" class="country-global-list__f-link">Франция</a></div>
-        </div>
-
-        <div class="country-global-list__h-list country-list">
-          <span class="country-global-list__h-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Х</a></span>
-          <div class="country-global-list__h-item"><a href="#" class="country-global-list__h-link">Хорватия</a>
-          </div>
-        </div>
-
-        <div class="country-global-list__ch-list country-list">
-          <span class="country-global-list__ch-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Ч</a></span>
-          <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Чад</a></div>
-          <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Черногория</a>
-          </div>
-          <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Чехия</a></div>
-          <div class="country-global-list__ch-item"><a href="#" class="country-global-list__ch-link">Чили</a></div>
-        </div>
-
-        <div class="country-global-list__sh-list country-list">
-          <span class="country-global-list__sh-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Ш</a></span>
-          <div class="country-global-list__sh-item"><a href="#" class="country-global-list__sh-link">Швейцария</a>
-          </div>
-          <div class="country-global-list__sh-item"><a href="#" class="country-global-list__sh-link">Швеция</a>
-          </div>
-          <div class="country-global-list__sh-item"><a href="#" class="country-global-list__sh-link">Шри-Ланка</a>
-          </div>
-        </div>
-
-        <div class="country-global-list__eh-list country-list">
-          <span class="country-global-list__eh-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Э</a></span>
-          <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эквадор</a>
-          </div>
-          <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эритрея</a>
-          </div>
-          <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эсватини</a>
-          </div>
-          <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эстония</a>
-          </div>
-          <div class="country-global-list__eh-item"><a href="#" class="country-global-list__eh-link">Эфиопия</a>
-          </div>
-        </div>
-
-        <div class="country-global-list__ju-list country-list">
-          <span class="country-global-list__ju-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Ю</a></span>
-          <div class="country-global-list__ju-item"><a href="#" class="country-global-list__ju-link">ЮАР</a></div>
-          <div class="country-global-list__ju-item"><a href="#" class="country-global-list__ju-link">Южный Судан</a>
-          </div>
-        </div>
-
-        <div class="country-global-list__ja-list country-list">
-          <span class="country-global-list__ja-lit country-global-list__lit"><a class="country-global-list__lit-link"
-              href="#">Я</a></span>
-          <div class="country-global-list__ja-item"><a href="#" class="country-global-list__ja-link">Ямайка</a>
-          </div>
-          <div class="country-global-list__ja-item"><a href="#" class="country-global-list__ja-link">Япония</a>
-          </div>
-        </div>
-
-      </div>
-
-      <button type="button" class="filter__button-close">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#192144" width="12" height="12" viewBox="0 0 12 12">
-          <path
-            d="M6.9 6l4.9-4.9c.2-.2.2-.6 0-.9s-.6-.2-.9 0L6 5.1 1.1.2C.9 0 .5 0 .2.2s-.2.6 0 .9L5.1 6 .2 10.9c-.2.2-.2.6 0 .9.2.2.6.2.9 0L6 6.9l4.9 4.9c.2.2.6.2.9 0 .2-.2.2-.6 0-.9L6.9 6z"
-            fill="#606161" />
-        </svg>Свернуть</button>
-
-    </section>
 
     <div class="filter-companions__wrapper">
 
@@ -616,7 +645,7 @@
 
             <div class="filter-companions__hobby hobby-block">
               <h3 class="hobby-block__title">
-                <a href="#" class="hobby-block__link">Хобби</a>
+                <a href="#" class="hobby-block__link">Хобби:</a>
               </h3>
               <!--<div class="hobby-block__content">-->
               <label for="gym">Спортзал</label>
@@ -632,7 +661,7 @@
 
             <div class="filter-companions__music music-block">
               <h3 class="music-block__title">
-                <a href="#" class="music-block__link">Музыка</a>
+                <a href="#" class="music-block__link">Музыка:</a>
               </h3>
               <!--<div class="music-block__content">-->
               <label for="rock">Тяжелый рок</label>
@@ -648,7 +677,7 @@
 
             <div class="filter-companions__food food-block">
               <h3 class="food-block__title">
-                <a href="#" class="food-block__link">Еда</a>
+                <a href="#" class="food-block__link">Еда:</a>
               </h3>
               <!--<div class="food-block__content">-->
               <label for="meat">Мясоед</label>
@@ -664,7 +693,7 @@
 
             <div class="filter-companions__transport transport-block transport-block--filter">
               <h3 class="transport-block__title">
-                <a href="#" class="transport-block__link">Транспорт</a>
+                <a href="#" class="transport-block__link">Транспорт:</a>
               </h3>
               <div class="transport-block__content">
                 <ul class="transport-block__list">
@@ -706,16 +735,19 @@
               <h3 class="level-block__title">
                 <label for="level"><a href="#" class="level-block__link">Левел</a></label>
               </h3>
-              <!--<div class="level-block__content">-->
-              <div class="level-block__container"><span class="min-level">30</span><span class="max-level">100</span>
+
+
+              <div class="level-block__container">
+                <label><input type="text" class="min-level" name="minlevel" value="30"></label>
+                <label><input type="text" class="max-level" name="maxlevel" value="100"></label>
               </div>
-              <input type="range" min="0" max="100" step="1" value="100" id="level" class="visually-hidden">
+
               <div class="level-block__input-type-range">
                 <div class="level-block__bar"></div>
                 <div class="level-block__range-button-left"></div>
                 <div class="level-block__range-button-right"></div>
               </div>
-              <!--</div>-->
+
             </div>
 
             <button type="submit" class="filter-companions__view-button">Показать</button>
@@ -731,12 +763,14 @@
 
           <div class="companions-catalog__personal-box">
             <a href="#">
-              <img src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
-                class="companions-catalog__photo">
+              <picture>
+                <source srcset="img/firsova-desktop@1x.jpg" media="(min-width: 1440px)">
+                <source srcset="img/firsova-tablet@1x.jpg" media="(min-width: 768px)">
+                <img src="img/firsova-mobile@1x.jpg" alt="Фирсова" class="companions-catalog__photo">
+              </picture>
             </a>
             <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Таня
               Фирсова</a>
-
             <p class="companions-catalog__likes">1,5 M</p>
 
             <ul class="companions-catalog__hashtag-list">
@@ -794,6 +828,7 @@
                 </li>
               </ul>
             </fieldset>
+
             <fieldset class="companions-catalog__level-fieldset">
               <legend class="companions-catalog__travel-mates">левел:</legend>
               <span>99</span>
@@ -808,10 +843,15 @@
         <div class="companions-catalog__card">
 
           <div class="companions-catalog__personal-box">
+
             <a href="#">
-              <img src="img/photo-account-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
-                class="companions-catalog__photo">
+              <picture>
+                <source srcset="img/demin-desktop@1x.jpg" media="(min-width: 1440px)">
+                <source srcset="img/demin-tablet@1x.jpg" media="(min-width: 768px)">
+                <img src="img/demin-mobile@1x.jpg" alt="Демин" class="companions-catalog__photo">
+              </picture>
             </a>
+
             <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Павел
               Демин</a>
             <p class="companions-catalog__likes">1500</p>
@@ -882,8 +922,11 @@
 
           <div class="companions-catalog__personal-box">
             <a href="#">
-              <img src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
-                class="companions-catalog__photo">
+              <picture>
+                <source srcset="img/smolov-desktop@1x.jpg" media="(min-width: 1440px)">
+                <source srcset="img/smolov-tablet@1x.jpg" media="(min-width: 768px)">
+                <img src="img/smolov-mobile@1x.jpg" alt="Смолов" class="companions-catalog__photo">
+              </picture>
             </a>
             <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Марк
               Смолов</a>
@@ -959,8 +1002,11 @@
 
           <div class="companions-catalog__personal-box">
             <a href="#">
-              <img src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика"
-                class="companions-catalog__photo">
+              <picture>
+                <source srcset="img/rogovaya-desktop@1x.jpg" media="(min-width: 1440px)">
+                <source srcset="img/rogovaya-tablet@1x.jpg" media="(min-width: 768px)">
+                <img src="img/rogovaya-mobile@1x.jpg" alt="Роговая" class="companions-catalog__photo">
+              </picture>
             </a>
             <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Лариса
               Роговая</a>
@@ -1061,8 +1107,13 @@
 
   <footer class="page-footer">
     <div class="page-footer__logo">
-      <a href="index.html"><img src="img/logo-mobile-blue@1x.png" width="100" heiht="19" alt="Лого Погнали"
-          class="logo-image"></a>
+
+      <picture>
+        <source srcset="img/logo-desktop-blue@1x.png" media="(min-width: 1440px)">
+        <source srcset="img/logo-tablet-blue@1x.png" media="(min-width: 768px)">
+        <img class="logo-image" src="img/logo-mobile-blue@1x.png" alt="Лого Погнали">
+      </picture>
+
     </div>
     <ul class="page-footer__social-list">
       <li class="page-footer__social-item">

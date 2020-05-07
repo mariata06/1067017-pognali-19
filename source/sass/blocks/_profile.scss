@@ -1,8 +1,23 @@
 .profile {
-  background-color: $color-grey-light-1;
+  background: url("../img/rates@1x.png") no-repeat 170px 25px $color-pale-grey;
+  background-size: 40%;
   padding: 70px 26px 38px 50px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 7;
+  margin-top: -15px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 15%;
+    background-position: bottom 50px right 90px;
+    padding: 70px 40px 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 104px 131px 162px;
+    background-position: top 284px right 132px;
+  }
 }
 
 .profile__title {
@@ -22,6 +37,14 @@
 .profile__tariff-list {
   @include list-style;
   margin-right: 44px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 274px;
+  }
 }
 
 .profile__tariff-item {
@@ -32,11 +55,20 @@
   @media (min-width: $tablet-width) {
     display: flex;
     width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid $color-pale-grey-5;
   }
 
   @media (min-width: $desktop-width) {
     //width: 1440px;
     //padding: 0 60px;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+      border-bottom: 1px solid $color-pale-grey-5;
+    }
   }
 }
 
@@ -78,5 +110,8 @@
     font-size: 20px;
     line-height: 20px;
     font-weight: 700;
+    margin-top: 57px;
+    display: block;
+    background-color: transparent;
   }
 }

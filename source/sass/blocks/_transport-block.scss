@@ -4,6 +4,8 @@
       display: flex;
       flex-direction: row;
       border-bottom: none;
+      align-items: center;
+      //justify-content: space-between;
     }
 
     @media (min-width: $desktop-width) {
@@ -42,10 +44,36 @@
 
   &--form {
     border-bottom: none;
+    justify-content: center;
+    padding-bottom: 0;
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
 
     @media (min-width: $tablet-width) {
       flex-direction: row;
     }
+  }
+
+  &--index-card {
+    border-bottom: none;
+    padding-bottom: 0;
+    justify-content: center;
+  }
+}
+
+.transport-block__button + label {
+  svg {
+    fill: $color-grey-light-4;
+  }
+}
+
+.transport-block__button:checked + label {
+  svg {
+    fill: $color-dark-blue-2;
   }
 }
 
