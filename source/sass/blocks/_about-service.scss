@@ -11,15 +11,13 @@
 
   @media (min-width: $tablet-width) {
     min-height: 780px;
-    background: $color-dark-blue-1 url("../img/about-tablet@1x.png") no-repeat
-      right 5% top 60%;
+    background: $color-dark-blue-1 url("../img/about-tablet@1x.png") no-repeat right 5% top 60%;
     padding: 0 40px 70px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 660px;
-    background: $color-dark-blue-1 url("../img/about-desktop@1x.png") no-repeat
-      right 50px top 100px;
+    background: $color-dark-blue-1 url("../img/about-desktop@1x.png") no-repeat right 50px top 100px;
     padding: 60px 0 110px 90px;
   }
 }
@@ -85,6 +83,7 @@
 
 .about-service__button {
   display: none;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -99,4 +98,25 @@
     border-radius: 15px;
     margin-left: 30px;
   }
+
+  svg {
+    position: absolute;
+    fill: $color-dark-blue-2;
+    margin-left: 50px;
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
 }
+
+/*
+.about-service__bg-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: $color-blue-figure;
+  display: block;
+  z-index: 1;
+}
+*/

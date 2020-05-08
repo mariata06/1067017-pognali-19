@@ -80,6 +80,10 @@
 
   span {
     display: block;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
   }
 }
 
@@ -163,8 +167,27 @@
 
 .contacts__phone-link,
 .contacts__email-link {
-  display: block;
+  display: flex;
   color: $color-yellow-1;
   font-weight: 700;
   //text-transform: uppercase;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow-2;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $color-yellow-2;
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
 }

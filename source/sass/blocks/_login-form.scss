@@ -33,10 +33,39 @@
   border: none;
   border-radius: 10px;
   padding: 0;
+  position: relative;
+  margin-left: -15px;
+
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-yellow-2;
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
+
+  svg {
+    fill: $color-dark-blue-2;
+  }
 
   @media (min-width: $desktop-width) {
     width: 325px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+  }
+}
+
+.login-form__button-span {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
   }
 }

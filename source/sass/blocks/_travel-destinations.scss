@@ -86,6 +86,7 @@
   justify-content: space-between;
   z-index: 2;
   margin-top: -15px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 25px;
@@ -102,6 +103,18 @@
   @media (min-width: $desktop-width) {
     display: inline;
     width: 374px;
+  }
+}
+
+.travel-destinations__country-flag {
+  position: absolute;
+  top: -10px;
+
+  @media (min-width: $tablet-width) {
+    top: 60px;
+    right: -40px;
+    width: 70px;
+    height: 47px;
   }
 }
 
@@ -183,13 +196,62 @@
 .travel-destinations__companions-number {
   @include light-grey-text;
   line-height: 30px;
+  position: relative;
+  //display: inline;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
+
+  &::before {
+    content: url("../img/user.svg");
+    fill: $color-dark-blue-1;
+    width: 11px;
+    height: 11px;
+    opacity: 10%;
+    position: absolute;
+    left: -15px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+    }
+  }
 }
 
 .travel-destinations__button {
   @include blue-link-caption;
-  padding: 30px 0 30px 30px;
+  padding: 30px;
   margin-top: 30px;
   display: block;
+  //position: relative;
+  width: 100%;
+
+  svg {
+    fill: $color-dark-blue-2;
+    margin-left: 50px;
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
+
+  /*
+  &::after {
+    content: url("../img/triangle-arrow-right.svg");
+    display: block;
+    fill: $color-dark-blue-2;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 10px;
+    height: 14px;
+    cursor: pointer;
+
+    &:active {
+      opacity: 30%;
+    }
+  }
+  */
 
   @media (min-width: $tablet-width) {
     width: 100%;

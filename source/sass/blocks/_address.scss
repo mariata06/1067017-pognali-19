@@ -1,4 +1,3 @@
-
 .address {
   z-index: 5;
   position: relative;
@@ -12,6 +11,26 @@
   text-transform: uppercase;
   padding-right: 70px;
   margin-bottom: 35px;
+  position: relative;
+
+  &::before {
+    content: url("../img/contacts-location.svg");
+    display: block;
+    width: 14px;
+    height: 22px;
+    position: absolute;
+    left: 20px;
+    fill: $color-yellow-1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: $color-dark-blue-3;
+  }
 
 
   @media (min-width: $tablet-width) {
@@ -69,14 +88,53 @@
 
 .address__map {
   width: 100%;
-  height: 330px;
+  height: 546px;
+  background-image: url("../img/map-marker.svg"), url("../img/map-mobile@1x.jpg");
+  background-position: 50% 30%, bottom center;
+  background-size: 41px 41px, auto;
+  background-repeat: no-repeat, no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/map-marker.svg"), url("../img/map-tablet@1x.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/map-marker.svg"), url("../img/map-desktop@1x.jpg");
+  }
 }
 
 .address iframe {
   width: 100%;
   border: none;
-  height: 330px;
+  height: 546px;
   position: relative;
   z-index: 4;
   top: -15px;
+}
+
+.address__route-link {
+  color: $color-dark-blue-1;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-dark-blue-1;
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-dark-blue-1;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
+
+  svg {
+    fill: $color-dark-blue-1;
+  }
 }

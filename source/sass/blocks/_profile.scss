@@ -31,12 +31,13 @@
   @media (min-width: $tablet-width) {
     @include orange-title-tabdesc;
     text-align: center;
+    padding-right: 0;
   }
 }
 
 .profile__tariff-list {
   @include list-style;
-  margin-right: 44px;
+  //margin-right: 44px;
 
   @media (min-width: $tablet-width) {
     margin-top: 75px;
@@ -49,15 +50,20 @@
 
 .profile__tariff-item {
   padding-bottom: 10px;
-  border-top: 1px solid $color-pale-grey;
-  border-bottom: 1px solid $color-pale-grey;
+  border-top: 1px solid $color-pale-grey-5;
+  border-bottom: 1px solid $color-pale-grey-5;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     display: flex;
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    //padding-top: 25px;
+    //padding-bottom: 25px;
     border-top: 1px solid $color-pale-grey-5;
+    flex-direction: row-reverse;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -74,7 +80,7 @@
 
 .profile__tariff-description {
   color: $color-grey-dark;
-  width: 100%;
+  //width: 100%;
   margin: 0;
 
   @media (min-width: $tablet-width) {
@@ -83,11 +89,14 @@
     font-size: 28px;
     line-height: 33px;
     font-weight: 300;
+    justify-content: space-between;
+    align-self: center;
   }
 }
 
 .profile__tariff-cost {
   color: $color-grey-dark;
+  display: block;
 
   @media (min-width: $tablet-width) {
     min-width: 140px;
@@ -100,11 +109,41 @@
   }
 }
 
+.profile__tariff-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  background-color: $color-yellow-3;
+  text-align: center;
+  padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 67px;
+    height: 67px;
+    font-size: 28px;
+    line-height: 28px;
+    padding-top: 20px;
+  }
+
+  &--first {
+    background-color: $color-yellow-3;
+  }
+
+  &--second {
+    background-color: $color-yellow-2;
+  }
+
+  &--third {
+    background-color: $color-yellow-1;
+  }
+}
+
 .profile__tariff-button {
   @include blue-link-caption;
   font-size: 16px;
   line-height: 16px;
   background-color: $color-pale-grey;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -113,5 +152,47 @@
     margin-top: 57px;
     display: block;
     background-color: transparent;
+    padding-left: 100px;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(19, 37, 118, 0.7);
+    background-color: $color-pale-grey;
+
+    &::before {
+      opacity: 70%;
+    }
+  }
+
+  &:active {
+    color: rgba(19, 37, 118, 0.3);
+
+    &::before {
+      opacity: 30%;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 67px;
+    background-color: $color-pale-grey-four;
+    border-radius: 100px;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    z-index: 10;
+  }
+
+  &::before {
+    content: url("../img/business.svg");
+    display: block;
+    width: 19px;
+    height: 21px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
   }
 }

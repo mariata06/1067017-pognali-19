@@ -1,11 +1,12 @@
 .business-tariff {
   background-color: #edeff6;
   color: $color-grey-dark;
-  width: 320px;
+  width: 270px;
   margin: 0 auto;
-  padding: 25px;
+  //padding: 25px;
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
 
   @media (min-width: $tablet-width) {
     width: 688px;
@@ -63,7 +64,7 @@
   }
 }
 
-.business-tariff button {
+.business-tariff__button {
   border: none;
   width: 100%;
   font-size: 16px;
@@ -75,6 +76,15 @@
   background-color: #f3f4f8;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-pale-grey;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;

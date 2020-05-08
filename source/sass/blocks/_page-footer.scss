@@ -60,6 +60,14 @@
   border-radius: 50px;
   position: relative;
   background-color: $color-yellow-1;
+
+  svg {
+    fill: $color-dark-blue-2;
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
 }
 
 .page-footer__social-icon {
@@ -76,5 +84,20 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+}
+
+.page-footer__link {
+  svg {
+    fill: $color-dark-blue-1;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }

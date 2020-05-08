@@ -1,8 +1,4 @@
 .header-social {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -15,8 +11,38 @@
   justify-content: space-between;
   align-items: center;
   margin: 42px auto 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: 42px;
+  }
 }
 
 .header-social__item {
   display: inline-block;
+}
+
+.header-social__link {
+  svg {
+    fill: $color-dark-blue-1;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 60%;
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
+
+  &--instagram {
+    &--active svg {
+      opacity: 50%;
+
+      @media (min-width: $tablet-width) {
+        opacity: 100%;
+      }
+    }
+  }
 }
