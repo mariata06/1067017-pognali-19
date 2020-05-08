@@ -190,6 +190,14 @@
   margin-top: 25px;
   padding: 0;
 
+  &:hover {
+    border: 1px solid $color-grey-input-hvr;
+  }
+
+  &:active {
+    border: 1px solid $color-blue-black-2;
+  }
+
   @media (min-width: $tablet-width) {
     order: 5;
     width: 100%;
@@ -211,6 +219,14 @@
   background-color: $color-pale-grey;
   text-align: left;
   padding: 20px 24px;
+
+  &::placeholder {
+    color: $color-grey-input;
+  }
+
+  &:active {
+    color: $color-grey-dark;
+  }
 }
 
 .companions-form__transport {
