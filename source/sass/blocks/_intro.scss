@@ -85,6 +85,15 @@
   padding: 5px 40px;
   border-radius: 50px;
 
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-2;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     //position: absolute;
     top: 25px;
@@ -112,10 +121,32 @@
 
 .intro__email-link {
   background-color: $color-yellow-2;
+
+  &:hover,
+  &:focus {
+    background-color: $color-orange-1;
+  }
+
+  &:active {
+    svg {
+      opacity: 30%;
+    }
+  }
 }
 
 .intro__phone-link {
   background-color: $color-orange-1;
+
+  &:hover,
+  &:focus {
+    background-color: $color-orange-2;
+  }
+
+  &:active {
+    svg {
+      opacity: 30%;
+    }
+  }
 }
 
 .intro__email-link svg,

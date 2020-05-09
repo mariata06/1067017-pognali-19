@@ -52,18 +52,22 @@
       transform: translate(-50%, -50%);
     }
   }
-}
 
-.pager-item a {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-    color: $color-blue-black-2;
+  a {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700;
+      color: $color-blue-black-2;
+    }
+  }
+
+  a:hover {
+    color: rgba(22, 28, 53, 0.6);
   }
 }
 
@@ -75,6 +79,32 @@
     border-bottom-left-radius: 20px;
     display: block;
     height: 50px;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      svg {
+        opacity: 60%;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: $color-dark-blue-1;
+
+      @media (min-width: $tablet-width) {
+        left: 90%;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       width: 90%;
@@ -90,6 +120,28 @@
     border-bottom-right-radius: 20px;
     display: block;
     height: 50px;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      svg {
+        opacity: 60%;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: $color-dark-blue-1;
+    }
 
     @media (min-width: $tablet-width) {
       width: 10%;

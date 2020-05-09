@@ -39,6 +39,7 @@
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
+      padding-bottom: 0;
     }
   }
 
@@ -84,6 +85,10 @@
   border-radius: 50px;
   position: relative;
 
+  &:hover .transport-block__item-tooltip {
+    visibility: visible;
+  }
+
   &--profile {
     background-color: $color-pale-grey;
   }
@@ -110,4 +115,29 @@
     //flex-direction: row;
     //border-bottom: none;
   }
+}
+
+.transport-block__item .transport-block__item-tooltip {
+  visibility: hidden;
+  //width: 120px;
+  background-color: $color-tooltip;
+  color: $color-white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  left: -40px;
+  top: 30px;
+}
+
+.transport-block__item .transport-block__item-tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $color-tooltip transparent;
 }

@@ -75,6 +75,23 @@
     background-color: transparent;
     display: none;
 
+    &:hover,
+    &:focus {
+      color: rgba(25, 33, 68, 0.6);
+
+      svg {
+        opacity: 60%;
+      }
+    }
+
+    &:active {
+      color: rgba(25, 33, 68, 0.3);
+
+      svg {
+        opacity: 30%;
+      }
+    }
+
     svg {
       margin-left: 20px;
     }
@@ -92,6 +109,23 @@
     text-transform: uppercase;
     color: $color-dark-blue-1;
     display: none;
+
+    &:hover,
+    &:focus {
+      color: rgba(25, 33, 68, 0.6);
+
+      svg {
+        opacity: 60%;
+      }
+    }
+
+    &:active {
+      color: rgba(25, 33, 68, 0.3);
+
+      svg {
+        opacity: 30%;
+      }
+    }
 
     svg {
       margin-left: 20px;
@@ -114,6 +148,15 @@
     border-radius: 20px;
     padding: 6px 0 5px 0;
     background-color: $color-pale-grey-2;
+
+    &:hover,
+    &:focus {
+      background-color: $color-light-blue-grey-four;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
@@ -140,7 +183,17 @@
 
 .filter-country__continent-link {
   @include blue-link-style;
-  color: $color-grey-light-7;
+  //color: $color-grey-light-7;
+  color: rgba(25, 33, 68, 0.3);
+
+  &:hover,
+  &:focus {
+    color: rgba(25, 33, 68, 0.6);
+  }
+
+  &:active {
+    color: $color-dark-blue-1;
+  }
 
   &--active {
     color: $color-dark-blue-1;

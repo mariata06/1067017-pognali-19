@@ -26,8 +26,18 @@
   display: flex;
 }
 
-.contacts input {
+.contacts__input {
   width: 100%;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover {
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.5);
+    }
+  }
 }
 
 .contacts__title {
@@ -91,6 +101,15 @@
   color: $color-yellow-1;
   text-decoration: underline;
   display: inline;
+
+  &:hover,
+  &:focus {
+    color: $color-orange-1;
+  }
+
+  &:active {
+    color: rgba(255, 141, 48, 0.3);
+  }
 }
 
 .contacts__box {

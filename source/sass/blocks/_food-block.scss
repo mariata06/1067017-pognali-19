@@ -1,4 +1,6 @@
 .food-block {
+  border-bottom: 1px solid $color-macaroni-and-cheese;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
@@ -11,15 +13,50 @@
   }
 }
 
+
+.food-block__container-checkbox {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
+}
+
+.food-block__title {
+  display: flex;
+
+  button {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
 .food-block__link {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
   color: $color-dark-blue-2;
-  border-bottom: 1px solid $color-macaroni-and-cheese;
-  display: block;
+  //display: block;
   padding-bottom: 13px;
+  position: relative;
+
+  /*
+  &::after {
+    content: url("../img/dropdown.svg");
+    width: 8px;
+    height: 4px;
+    position: absolute;
+    left: 200px;
+  }
+  */
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -30,24 +67,51 @@
   }
 }
 
-.food-block input {
-  display: none;
+.food-block__input {
+  //display: none;
 
   @media (min-width: $tablet-width) {
     display: block;
   }
 }
 
-.food-block label {
-  display: none;
+.food-block__label {
+  //display: none;
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;
   color: $color-grey-dark;
+  position: relative;
+  display: block;
+  padding-left: 25px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     display: block;
+    width: 168px;
   }
+}
+
+.food-block__input + label::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background-color: $color-white;
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+.food-block__input:checked + label::after {
+  content: url("../img/tick.svg");
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

@@ -86,6 +86,24 @@
   justify-self: end;
   color: $color-white;
   text-transform: uppercase;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 0.6);
+
+    svg {
+      opacity: 60%;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    svg {
+      opacity: 30%;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: block;

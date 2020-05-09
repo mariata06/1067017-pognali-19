@@ -94,13 +94,20 @@
 }
 
 .companions-catalog__countries-item {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+  //padding-left: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
-    display: inline;
+    display: flex;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 500;
-    color: $color-dark-blue-2;
-    text-transform: uppercase;
     margin-right: 70px;
   }
 }
@@ -127,14 +134,22 @@
 
 .companions-catalog__name {
   margin: 0;
-  //width: 110px;
+  width: 110px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   color: $color-dark-blue-2;
 
+  &:hover {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
-    //width: 200px;
+    width: auto;
     align-self: baseline;
     margin-left: 50px;
   }
@@ -154,8 +169,50 @@
   line-height: 21px;
   font-weight: 700;
   color: $color-blue-black-2;
-  //margin-left: 100px;
-  //margin-top: -30px;
+  margin-left: 50px;
+  margin-top: -30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px;
+
+  span {
+    display: block;
+    width: 31px;
+    height: 31px;
+    border-radius: 100%;
+    background-color: $color-very-light-pink-two;
+    position: relative;
+
+    &:hover {
+      background-color: $color-light-tan;
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
+  }
+
+  svg {
+    fill: $color-tomato;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    content: url("../heart-active.svg");
+    display: block;
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    left: -10px;
+    //fill: $color-tomato;
+  }
 
   @media (min-width: $tablet-width) {
     //order: 4; отодвигает к правому краю лайк
@@ -276,6 +333,16 @@
   text-align: center;
   padding: 5px 0;
 
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-2;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
+
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1.5;
@@ -349,6 +416,15 @@
     text-align: center;
     display: block;
     margin-bottom: 27px;
+
+    &:hover,
+    &:focus {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 }
 
