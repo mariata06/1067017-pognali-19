@@ -166,6 +166,35 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
+  svg {
+    opacity: 20%;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-blue-grey;
+
+    svg {
+      fill: $color-blue-grey;
+    }
+  }
+
+  &:active {
+    border: 1px solid $color-blue-black-2;
+
+    svg {
+      fill: $color-blue-black-2;
+    }
+  }
+
+  svg:hover {
+    opacity: 40%;
+  }
+
+  svg:active {
+    opacity: 10%;
+  }
+
   @media (min-width: $desktop-width) {
     align-self: flex-start;
     width: auto;
@@ -182,8 +211,14 @@
   }
 
   &--children {
-    order: 3;
     border: none;
+    order: 3;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: none;
+    }
 
     @media (min-width: $tablet-width) {
       order: 2;
@@ -229,6 +264,33 @@
     font-weight: 400;
     line-height: 15px;
     color: $color-grey-dark;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+      position: absolute;
+      border: 1px solid $color-grey-light-3;
+      left: -15px;
+      top: -5px;
+    }
+
+    &:hover {
+      &::before {
+        border: 1px solid $color-blue-grey;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: $color-pale-grey-three;
+        border: none;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
@@ -244,6 +306,14 @@
       //order: 4;
     }
   }
+}
+
+.new-destinations__input-checkbox:checked + label::after {
+  content: url("../img/tick.svg");
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  left: -10px;
 }
 
 .new-destinations__span {
@@ -283,9 +353,11 @@
   color: $color-dark-blue-2;
   text-transform: uppercase;
   display: flex;
-  border: 1px solid $color-grey-light-3;
+  //border: 1px solid $color-grey-light-3;
   border-radius: 5px;
   margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -342,7 +414,14 @@
 }
 
 .new-destinations__action {
-  width: 60%;
+  //width: 60%;
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid $color-grey-light-3;
+  border-radius: 5px;
+  width: 167px;
 
   &--select,
   &--plus {
@@ -364,10 +443,17 @@
   }
 }
 
-.new-destinations__country-flag {
-  //border: 1px solid $color-grey-light-3;
+.new-destinations__country-flag-box {
+  padding: 5px;
+  border: 1px solid $color-grey-light-3;
   border-radius: 5px;
-  width: 25%;
+  width: 53px;
+  z-index: 2;
+}
+
+.new-destinations__country-flag {
+  display: block;
+  z-index: 1;
 }
 
 .new-destinations__button {
@@ -385,14 +471,36 @@
   text-transform: uppercase;
 
   &--next-step {
+    svg {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $color-yellow-2;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+
+      svg {
+        opacity: 30%;
+      }
+    }
+
     @media (min-width: $tablet-width) {
-      //display: inline;
-      padding: 30px 50px;
+      display: flex;
+      padding: 30px 36px;
       font-size: 24px;
       line-height: 24px;
       border-radius: 20px;
       width: 284px;
       text-transform: none;
+      justify-content: space-between;
+      align-items: center;
+
+      svg {
+        display: block;
+      }
     }
   }
 
@@ -463,13 +571,28 @@
   line-height: 18px;
   color: $color-dark-blue-2;
   width: 100%;
-  display: block;
+  display: flex;
   margin-bottom: 20px;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     width: 100%;
     font-size: 30px;
     font-weight: 700;
+  }
+
+  &--bosnia {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to left, $color-white 70px, transparent 100px);
+    }
   }
 }
 

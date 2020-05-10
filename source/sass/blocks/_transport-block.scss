@@ -85,6 +85,19 @@
   border-radius: 50px;
   position: relative;
 
+  &:hover svg,
+  &:focus svg {
+    opacity: 70%;
+  }
+
+  &:active {
+    background-color: $color-pale-grey-three;
+
+    svg {
+      opacity: 30%;
+    }
+  }
+
   &:hover .transport-block__item-tooltip {
     visibility: visible;
   }
@@ -134,7 +147,8 @@
 .transport-block__item .transport-block__item-tooltip::after {
   content: " ";
   position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
+  bottom: 100%;
+  /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;

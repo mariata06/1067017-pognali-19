@@ -23,12 +23,37 @@
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  p {
+    margin: 0;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 36px;
     padding-bottom: 36px;
     font-size: 36px;
+  }
+}
+
+.calendar__previous-month,
+.calendar__next-month {
+  svg {
+    opacity: 30%;
+  }
+
+  &:hover {
+    svg {
+      opacity: 50%;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 10%;
+    }
   }
 }
 
@@ -67,8 +92,8 @@
       padding: 0;
       width: 144px;
       height: 70px;
-      padding-top: 10px;
-      padding-left: 10px;
+      //padding-top: 10px;
+      //padding-left: 10px;
       text-align: left;
       vertical-align: top;
     }
@@ -92,16 +117,12 @@
     color: $color-white;
     background-color: $color-dark-slate-blue;
 
-    &--checked {
-      border: 1px solid $color-orange-3;
-
-      @media (min-width: $tablet-width) {
-        border: 4px solid $color-orange-3;
-      }
+    @media (min-width: $tablet-width) {
+      border: 4px solid $color-orange-3;
     }
   }
 
-  .calendar__free-day {
+  .calendar__free-day button {
     color: $color-grey-dark;
     background-color: $color-pale-grey;
   }
@@ -122,6 +143,14 @@
       display: block;
     }
   }
+
+  .calendar__active-day-april {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
 }
 
 .calendar-table__date {
@@ -131,10 +160,11 @@
     background-color: $color-white;
     border: none;
     color: $color-grey-light-5;
-    text-align: left;
+    text-align: center;
     padding: 0;
     display: block;
     padding-top: 0;
+    cursor: pointer;
   }
 }
 
@@ -157,7 +187,7 @@
   left: 0;
 }
 
-.calendar__input:checked + label::before {
+.calendar__input:checked+label::before {
   background-color: blue;
 }
 
@@ -167,4 +197,8 @@
 
 .calendar__active-day button {
   background-color: $color-dark-slate-blue;
+
+  &:hover {
+    border: 1px solid $color-orange-3;
+  }
 }
