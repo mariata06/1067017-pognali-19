@@ -187,7 +187,7 @@
   left: 0;
 }
 
-.calendar__input:checked+label::before {
+.calendar__input:checked + label::before {
   background-color: blue;
 }
 
