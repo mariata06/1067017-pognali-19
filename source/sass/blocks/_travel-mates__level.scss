@@ -1,0 +1,108 @@
+.travel-mates__level {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(00, 00, 00, 0.6);
+  //opacity: 60%;
+  display: block;
+  top: 16px;
+  left: 16px;
+  border-radius: 100%;
+  z-index: 100;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 100%;
+  }
+
+  &--card {
+    background-color: transparent;
+
+    .travel-mates__level-index {
+      display: none;
+    }
+
+    .travel-mates__level-value::after {
+      display: none;
+    }
+
+    .travel-mates__level-value {
+      font-size: 24px;
+      line-height: 18px;
+      top: 20px;
+    }
+  }
+
+  &--form {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+
+    .travel-mates__level-value {
+      font-size: 38px;
+      line-height: 38px;
+      top: 20px;
+      font-weight: 700;
+      color: $color-blue-black-2;
+
+      &::after {
+        content: "";
+        width: 49px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        left: -5px;
+        background-color: $color-grey-light-3;
+      }
+    }
+
+    .travel-mates__level-index {
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 400;
+      color: $color-grey-dark;
+      position: absolute;
+      bottom: 17px;
+      left: 35%;
+    }
+  }
+}
+
+.travel-mates__level-value {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  position: relative;
+  color: $color-white;
+  top: 14px;
+  left: 30%;
+  //transform: translateX(-50%);
+  z-index: 1;
+}
+
+.travel-mates__level-index {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  //color: rgba(68, 68, 68, 0.4);
+  color: $color-white;
+  position: absolute;
+  bottom: 5px;
+  left: 30%;
+}
+
+.travel-mates__level-value::after {
+  content: "";
+  width: 31px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: -5px;
+  background-color: $color-pale-grey-6;
+}

@@ -9,29 +9,11 @@
   color: $color-dark-blue-1;
   font-weight: 700;
   text-transform: uppercase;
-  padding-right: 70px;
+  padding-right: 30px;
   margin-bottom: 35px;
-  position: relative;
-
-  &::before {
-    content: url("../img/contacts-location.svg");
-    display: block;
-    width: 14px;
-    height: 22px;
-    position: absolute;
-    left: 20px;
-    fill: $color-yellow-1;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 45px;
-    border-radius: 100%;
-    background-color: $color-dark-blue-3;
-  }
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -42,6 +24,25 @@
     margin-right: 145px;
     margin-bottom: 0;
     align-self: center;
+  }
+}
+
+.address__location-span {
+  position: relative;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: $color-dark-blue-3;
+  padding-right: 40px;
+  margin-right: 20px;
+
+  svg {
+    fill: $color-yellow-1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 

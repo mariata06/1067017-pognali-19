@@ -142,15 +142,16 @@
   @include blue-link-caption;
   font-size: 16px;
   line-height: 16px;
-  background-color: $color-pale-grey;
-  position: relative;
+  display: flex;
+  background-color: transparent;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     font-weight: 700;
     margin-top: 57px;
-    display: block;
+    display: flex;
+    align-items: center;
     background-color: transparent;
     padding-left: 100px;
   }
@@ -158,33 +159,34 @@
   &:hover,
   &:focus {
     color: rgba(19, 37, 118, 0.7);
-    background-color: $color-pale-grey;
+    //background-color: $color-pale-grey;
+    background-color: transparent;
 
-    &::before {
-      opacity: 70%;
+    .profile__tariff-span {
+      &::before {
+        opacity: 70%;
+      }
     }
   }
 
   &:active {
     color: rgba(19, 37, 118, 0.3);
 
-    &::before {
-      opacity: 30%;
+    .profile__tariff-span {
+      &::before {
+        opacity: 30%;
+      }
     }
   }
+}
 
-  &::after {
-    content: "";
-    display: block;
-    width: 67px;
-    height: 67px;
-    background-color: $color-pale-grey-four;
-    border-radius: 100px;
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    z-index: 10;
-  }
+.profile__tariff-span {
+  display: none;
+  width: 67px;
+  height: 67px;
+  background-color: $color-pale-grey-four;
+  border-radius: 100px;
+  position: relative;
 
   &::before {
     content: url("../img/business.svg");
@@ -192,7 +194,8 @@
     width: 19px;
     height: 21px;
     position: absolute;
-    left: 0;
-    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
