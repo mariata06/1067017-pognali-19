@@ -6,6 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -15,12 +16,22 @@
 
 
 .food-block__container-checkbox {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
+  &--close {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
   }
 
   @media (min-width: $desktop-width) {
-    display: inline;
+    display: none;
   }
 }
 
@@ -31,9 +42,24 @@
     border: none;
     background-color: transparent;
     margin-left: auto;
+    cursor: pointer;
+
+    svg {
+      &--open {
+        transform: rotate(180deg);
+      }
+
+      &--close {
+        transform: rotate(180deg);
+      }
+    }
 
     @media (min-width: $tablet-width) {
       display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
     }
   }
 }
@@ -47,6 +73,15 @@
   //display: block;
   padding-bottom: 13px;
   position: relative;
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 
   /*
   &::after {
@@ -114,4 +149,16 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.food-block__input:hover + label::before {
+  border: 1px solid $color-blue-grey;
+}
+
+.food-block__input:active + label::before {
+  background-color: $color-pale-grey-three;
+}
+
+.food-block__input:checked:active + label::after {
+  opacity: 30%;
 }

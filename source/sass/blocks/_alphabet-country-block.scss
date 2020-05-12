@@ -51,6 +51,10 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 
+  &::after {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     width: 369px;
     margin-left: 0;
@@ -62,6 +66,10 @@
     //margin-left: 0;
     //order: -1;
   }
+}
+
+.new-destinations__alphabet-country-block .new-destinations__action {
+  border: none;
 }
 
 .new-destinations .form-table {

@@ -17,6 +17,14 @@
 
 
 .music-block__container-checkbox {
+  &--show {
+    display: block;
+  }
+
+  &--close {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
   }
@@ -33,10 +41,29 @@
     border: none;
     background-color: transparent;
     margin-left: auto;
+    cursor: pointer;
+
+    svg {
+      &--open {
+        transform: rotate(180deg);
+      }
+
+      &--close {
+        transform: rotate(180deg);
+      }
+    }
 
     @media (min-width: $tablet-width) {
       display: none;
     }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  svg {
+    transform: rotate(180deg);
   }
 }
 
@@ -48,15 +75,14 @@
   color: $color-dark-blue-2;
   position: relative;
 
-  /*
-  &::after {
-    content: url("../img/dropdown.svg");
-    width: 8px;
-    height: 4px;
-    position: absolute;
-    left: 200px;
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
   }
-  */
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -104,4 +130,16 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.music-block__input:hover + label::before {
+  border: 1px solid $color-blue-grey;
+}
+
+.music-block__input:active + label::before {
+  background-color: $color-pale-grey-three;
+}
+
+.music-block__input:checked:active + label::after {
+  opacity: 30%;
 }

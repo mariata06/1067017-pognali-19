@@ -51,6 +51,10 @@
     font-size: 30px;
     line-height: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+  }
 }
 
 .filter-companions__view-button {
@@ -76,6 +80,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -96,5 +101,6 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
+    align-items: initial;
   }
 }

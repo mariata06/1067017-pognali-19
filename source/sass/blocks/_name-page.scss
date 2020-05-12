@@ -1,6 +1,6 @@
 .name-page {
   padding: 20px 20px 0 20px;
-  background-color: $color-medium-blue;
+  background-color: $color-blue-black-2;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
@@ -28,7 +28,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 175.5px;
+    height: 250px;
     padding: 0 129px 64.5px 129px;
   }
 

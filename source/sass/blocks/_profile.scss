@@ -5,18 +5,36 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
+  overflow: hidden;
   z-index: 7;
   margin-top: -15px;
 
   @media (min-width: $tablet-width) {
-    background-size: 15%;
-    background-position: bottom 50px right 90px;
+    background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px,
+      url("../img/light-blue-back-tablet.svg") no-repeat top 150px right 40px,
+      $color-pale-grey;
+    background-size: 100px, 198px;
+    //background-size: 100%, 15%;
+    //background-position: bottom 50px right 90px;
     padding: 70px 40px 80px;
   }
 
   @media (min-width: $desktop-width) {
+    background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px $color-pale-grey;
+    background-size: 198px;
     padding: 104px 131px 162px;
-    background-position: top 284px right 132px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100px;
+      right: 100px;
+      width: 285px;
+      height: 198px;
+      background: url("../img/light-blue-back-tablet.svg") no-repeat 0 0;
+      transform: rotate(90deg);
+      z-index: -1;
+    }
   }
 }
 
@@ -197,5 +215,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }

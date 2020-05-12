@@ -8,6 +8,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-top: none;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,12 +18,22 @@
 }
 
 .hobby-block__container-checkbox {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
+  &--close {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
   }
 
   @media (min-width: $desktop-width) {
-    display: inline;
+    display: none;
   }
 }
 
@@ -33,9 +45,24 @@
     border: none;
     background-color: transparent;
     margin-left: auto;
+    cursor: pointer;
+
+    svg {
+      &--open {
+        transform: rotate(180deg);
+      }
+
+      &--close {
+        transform: rotate(180deg);
+      }
+    }
 
     @media (min-width: $tablet-width) {
       display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
     }
   }
 }
@@ -50,6 +77,15 @@
   padding-top: 13px;
   padding-bottom: 13px;
   position: relative;
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 
   /*
   &::after {
@@ -116,4 +152,16 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.hobby-block__input:hover + label::before {
+  border: 1px solid $color-blue-grey;
+}
+
+.hobby-block__input:active + label::before {
+  background-color: $color-pale-grey-three;
+}
+
+.hobby-block__input:checked:active + label::after {
+  opacity: 30%;
 }

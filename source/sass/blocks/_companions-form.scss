@@ -92,6 +92,10 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
     display: block;
   }
 }
@@ -227,6 +231,14 @@
 
   &:active {
     color: $color-grey-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 

@@ -139,6 +139,7 @@
   line-height: 20px;
   font-weight: 700;
   color: $color-dark-blue-2;
+  position: relative;
 
   &:hover {
     color: rgba(29, 46, 91, 0.6);
@@ -156,6 +157,34 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 45px;
+  }
+
+  &--offline {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 10px;
+      display: block;
+      top: 10px;
+      right: 0;
+      background-color: $color-pink-2;
+    }
+  }
+
+  &--online {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 10px;
+      display: block;
+      top: 10px;
+      right: 0;
+      background-color: $color-green-1;
+    }
   }
 }
 
@@ -175,15 +204,53 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70px;
+  width: 90px;
 
-  span {
+  /*
+  &::before {
+    content: url("../heart-active.svg");
     display: block;
-    width: 31px;
-    height: 31px;
-    border-radius: 100%;
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    left: -10px;
+    //fill: $color-tomato;
+  }
+*/
+  @media (min-width: $tablet-width) {
+    //order: 4; отодвигает к правому краю лайк
+    align-self: flex-end;
+    margin-left: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.companions-catalog__likes-span {
+  display: block;
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+    //margin-right: 5px;
+  }
+
+  &--active {
     background-color: $color-very-light-pink-two;
-    position: relative;
+
+    svg {
+      fill: $color-tomato;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     &:hover {
       background-color: $color-light-tan;
@@ -196,34 +263,30 @@
     }
   }
 
-  svg {
-    fill: $color-tomato;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  &--inactive {
+    background-color: $color-pale-grey-four;
 
-  &::before {
-    content: url("../heart-active.svg");
-    display: block;
-    width: 13px;
-    height: 11px;
-    position: absolute;
-    left: -10px;
-    //fill: $color-tomato;
-  }
+    svg {
+      fill: $color-dark-blue-1;
+      opacity: 30%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-  @media (min-width: $tablet-width) {
-    //order: 4; отодвигает к правому краю лайк
-    align-self: flex-end;
-    margin-left: 80px;
-  }
+    &:hover {
+      background-color: $color-pale-grey-four;
+    }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    &:active {
+      svg {
+        opacity: 10%;
+      }
+    }
   }
 }
+
 
 .companions-catalog fieldset {
   margin: 0;
@@ -347,7 +410,7 @@
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: normal;
-    height: 50px;
+    //height: 50px;
     //display: inline;
     width: 147px;
     order: 3;
@@ -355,6 +418,7 @@
     margin-top: -80px;
     padding: 15px 20px;
     border-radius: 100px;
+    align-self: flex-start;
   }
 
   @media (min-width: $desktop-width) {

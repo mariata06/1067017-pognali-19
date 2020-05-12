@@ -661,14 +661,14 @@
                 </button>
               </h3>
               <div class="hobby-block__container-checkbox">
-                <label for="gym" class="hobby-block__label">Спортзал</label>
                 <input id="gym" type="checkbox" value="gym" class="hobby-block__input visually-hidden" checked>
+                <label for="gym" class="hobby-block__label">Спортзал</label>
 
-                <label for="chillum" class="hobby-block__label">Кальян</label>
                 <input id="chillum" type="checkbox" value="chillum" class="hobby-block__input visually-hidden">
+                <label for="chillum" class="hobby-block__label">Кальян</label>
 
-                <label for="homerest" class="hobby-block__label">Диван</label>
                 <input id="homerest" type="checkbox" value="homerest" class="hobby-block__input visually-hidden">
+                <label for="homerest" class="hobby-block__label">Диван</label>
               </div>
             </div>
 
@@ -682,14 +682,14 @@
                 </button>
               </h3>
               <div class="music-block__container-checkbox">
-                <label for="rock" class="music-block__label">Тяжелый рок</label>
                 <input id="rock" type="checkbox" value="rock" class="music-block__input visually-hidden" checked>
+                <label for="rock" class="music-block__label">Тяжелый рок</label>
 
-                <label for="rap" class="music-block__label">Русский рэп</label>
                 <input id="rap" type="checkbox" value="rap" class="music-block__input visually-hidden">
+                <label for="rap" class="music-block__label">Русский рэп</label>
 
-                <label for="eurodance" class="music-block__label">Евроденс</label>
                 <input id="eurodance" type="checkbox" value="eurodance" class="music-block__input visually-hidden">
+                <label for="eurodance" class="music-block__label">Евроденс</label>
               </div>
             </div>
 
@@ -704,23 +704,28 @@
                 </button>
               </h3>
               <div class="food-block__container-checkbox">
-                <label for="meat" class="food-block__label">Мясоед</label>
                 <input id="meat" type="checkbox" value="meat" checked class="food-block__input visually-hidden">
+                <label for="meat" class="food-block__label">Мясоед</label>
 
-                <label for="diet" class="food-block__label">Сидит на ПП</label>
                 <input id="diet" type="checkbox" value="diet" class="food-block__input visually-hidden">
+                <label for="diet" class="food-block__label">Сидит на ПП</label>
 
-                <label for="vegan" class="food-block__label">Веган-сыроед</label>
                 <input id="vegan" type="checkbox" value="vegan" class="food-block__input visually-hidden">
+                <label for="vegan" class="food-block__label">Веган-сыроед</label>
               </div>
             </div>
 
             <div class="filter-companions__transport transport-block transport-block--filter">
               <h3 class="transport-block__title">
                 <a href="#" class="transport-block__link">Транспорт:</a>
+                <button type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5" fill="#192144" width="8" height="4">
+                    <path d="M5 5L0 0h10z" />
+                  </svg>
+                </button>
               </h3>
               <div class="transport-block__content">
-                <ul class="transport-block__list">
+                <ul class="transport-block__list transport-block__list--filter">
                   <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
                   <li class="transport-block__item">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#1d2e5b" width="14" height="16" viewBox="0 0 19 21"
@@ -762,18 +767,24 @@
             <div class="filter-companions__level level-block">
               <h3 class="level-block__title">
                 <label for="level"><a href="#" class="level-block__link">Левел:</a></label>
+                <button type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5" fill="#192144" width="8" height="4">
+                    <path d="M5 5L0 0h10z" />
+                  </svg>
+                </button>
               </h3>
 
+              <div class="level-block__wrapper">
+                <div class="level-block__container">
+                  <label><input type="text" class="min-level" name="minlevel" value="30"></label>
+                  <label><input type="text" class="max-level" name="maxlevel" value="100"></label>
+                </div>
 
-              <div class="level-block__container">
-                <label><input type="text" class="min-level" name="minlevel" value="30"></label>
-                <label><input type="text" class="max-level" name="maxlevel" value="100"></label>
-              </div>
-
-              <div class="level-block__input-type-range">
-                <div class="level-block__bar"></div>
-                <div class="level-block__range-button-left"></div>
-                <div class="level-block__range-button-right"></div>
+                <div class="level-block__input-type-range">
+                  <div class="level-block__bar"></div>
+                  <div class="level-block__range-button-left"></div>
+                  <div class="level-block__range-button-right"></div>
+                </div>
               </div>
 
             </div>
@@ -797,10 +808,11 @@
                 <img src="img/firsova-mobile@1x.jpg" alt="Фирсова" class="companions-catalog__photo">
               </picture>
             </a>
-            <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Таня
+            <a href="#" class="companions-catalog__name companions-catalog__name--offline"><span
+                class="visually-hidden">имя попутчика</span>Таня
               Фирсова</a>
             <p class="companions-catalog__likes">
-              <span class="companions-catalog__likes-span">
+              <span class="companions-catalog__likes-span companions-catalog__likes-span--active">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" width="13" height="11">
                   <path
                     d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z" />
@@ -881,9 +893,9 @@
                 <div class="travel-mates__level-container">
                   <span class="travel-mates__level-value">99</span>
                   <span class="travel-mates__level-index">level</span>
-                  <svg width="100%" height="100%" viewBox="0 0 60 60" class="donut">
-                    <circle class="donut-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke="#ff8d30"
-                      stroke-width="3" stroke-dasharray="176 4" stroke-dashoffset="45"></circle>
+                  <svg width="45" height="45" viewBox="0 0 45 45" class="donut">
+                    <circle class="donut-segment" cx="22.5" cy="22.5" r="20.5" fill="transparent" stroke="#ff8d30"
+                      stroke-width="2" stroke-dasharray="127 2" stroke-dashoffset="35"></circle>
                   </svg>
                 </div>
               </div>
@@ -907,13 +919,14 @@
               </picture>
             </a>
 
-            <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Павел
+            <a href="#" class="companions-catalog__name companions-catalog__name--offline"><span
+                class="visually-hidden">имя попутчика</span>Павел
               Демин</a>
             <p class="companions-catalog__likes">
-              <span class="companions-catalog__likes-span">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" width="13" height="11">
+              <span class="companions-catalog__likes-span companions-catalog__likes-span--inactive">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" width="20" height="17">
                   <path
-                    d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z" />
+                    d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z" />
                 </svg>
               </span>
               1500
@@ -985,9 +998,9 @@
                 <div class="travel-mates__level-container">
                   <span class="travel-mates__level-value">80</span>
                   <span class="travel-mates__level-index">level</span>
-                  <svg width="100%" height="100%" viewBox="0 0 60 60" class="donut">
-                  <circle class="donut-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke="#ff8d30"
-                    stroke-width="3" stroke-dasharray="150 30" stroke-dashoffset="46"></circle>
+                  <svg width="45" height="45" viewBox="0 0 45 45" class="donut">
+                    <circle class="donut-segment" cx="22.5" cy="22.5" r="20.5" fill="transparent" stroke="#ff8d30"
+                      stroke-width="2" stroke-dasharray="96 26" stroke-dashoffset="26"></circle>
                   </svg>
                 </div>
               </div>
@@ -1008,13 +1021,14 @@
                 <img src="img/smolov-mobile@1x.jpg" alt="Смолов" class="companions-catalog__photo">
               </picture>
             </a>
-            <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Марк
+            <a href="#" class="companions-catalog__name companions-catalog__name--offline"><span
+                class="visually-hidden">имя попутчика</span>Марк
               Смолов</a>
             <p class="companions-catalog__likes">
-              <span class="companions-catalog__likes-span">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" width="13" height="11">
+              <span class="companions-catalog__likes-span companions-catalog__likes-span--inactive">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" width="20" height="17">
                   <path
-                    d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z" />
+                    d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z" />
                 </svg>
               </span>
               170
@@ -1090,9 +1104,9 @@
                 <div class="travel-mates__level-container">
                   <span class="travel-mates__level-value">25</span>
                   <span class="travel-mates__level-index">level</span>
-                  <svg width="100%" height="100%" viewBox="0 0 60 60" class="donut">
-                    <circle class="donut-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke="#ff8d30"
-                      stroke-width="3" stroke-dasharray="45 135" stroke-dashoffset="45"></circle>
+                  <svg width="45" height="45" viewBox="0 0 45 45" class="donut">
+                    <circle class="donut-segment" cx="22.5" cy="22.5" r="20.5" fill="transparent" stroke="#ff8d30"
+                      stroke-width="2" stroke-dasharray="32 96" stroke-dashoffset="40"></circle>
                   </svg>
                 </div>
               </div>
@@ -1115,13 +1129,14 @@
                 <img src="img/rogovaya-mobile@1x.jpg" alt="Роговая" class="companions-catalog__photo">
               </picture>
             </a>
-            <a href="#" class="companions-catalog__name"><span class="visually-hidden">имя попутчика</span>Лариса
+            <a href="#" class="companions-catalog__name companions-catalog__name--online"><span
+                class="visually-hidden">имя попутчика</span>Лариса
               Роговая</a>
             <p class="companions-catalog__likes">
-              <span class="companions-catalog__likes-span">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" width="13" height="11">
+              <span class="companions-catalog__likes-span companions-catalog__likes-span--inactive">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" width="20" height="17">
                   <path
-                    d="M12 1a3.32 3.32 0 00-4.7 0l-.8.7-.8-.7A3.32 3.32 0 001 1C-.3 2.3-.3 4.4 1 5.6l.8.8L6.5 11l4.7-4.6.8-.8c1.3-1.3 1.3-3.4 0-4.6z" />
+                    d="M18.5 1.5c-2-2-5.3-2-7.3 0L10 2.7 8.8 1.5c-2-2-5.3-2-7.3 0s-2 5.2 0 7.2l1.2 1.2L10 17l7.3-7.2 1.2-1.2c2-1.9 2-5.1 0-7.1zm-3.6 8.3L10 14.6 5.1 9.8 2.7 7.5C1.4 6.1 1.4 4 2.7 2.7c1.3-1.3 3.5-1.3 4.9 0L10 5.1l2.4-2.4c1.3-1.3 3.5-1.3 4.9 0 1.3 1.3 1.3 3.5 0 4.8l-2.4 2.3z" />
                 </svg>
               </span>
               23

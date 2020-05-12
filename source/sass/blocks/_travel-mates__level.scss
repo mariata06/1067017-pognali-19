@@ -19,20 +19,53 @@
   }
 
   &--card {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 45px;
+    height: 45px;
     background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+
+      svg {
+        width: 60px;
+        height: 60px;
+      }
+    }
 
     .travel-mates__level-index {
       display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 400;
+        color: rgba(68, 68, 68, 0.4);
+        position: absolute;
+        bottom: 5px;
+        left: 30%;
+      }
     }
 
     .travel-mates__level-value::after {
       display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+        background-color: rgba(68, 68, 68, 0.4);
+      }
     }
 
     .travel-mates__level-value {
+      position: absolute;
       font-size: 24px;
       line-height: 18px;
-      top: 20px;
+      top: 25%;
+      left: 30%;
     }
   }
 
@@ -44,12 +77,21 @@
     top: 0;
     left: 0;
 
+    @media (min-width: $desktop-width) {
+      margin-top: -150px;
+      margin-right: 40px;
+    }
+
     .travel-mates__level-value {
       font-size: 38px;
       line-height: 38px;
       top: 20px;
       font-weight: 700;
       color: $color-blue-black-2;
+
+      @media (min-width: $desktop-width) {
+        color: $color-white;
+      }
 
       &::after {
         content: "";
@@ -59,6 +101,10 @@
         position: absolute;
         left: -5px;
         background-color: $color-grey-light-3;
+
+        @media (min-width: $desktop-width) {
+          background-color: $color-white;
+        }
       }
     }
 
@@ -70,6 +116,10 @@
       position: absolute;
       bottom: 17px;
       left: 35%;
+
+      @media (min-width: $desktop-width) {
+        color: $color-white;
+      }
     }
   }
 }

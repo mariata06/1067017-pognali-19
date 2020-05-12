@@ -10,7 +10,18 @@
 
     @media (min-width: $desktop-width) {
       display: inline;
+      flex-wrap: wrap;
     }
+  }
+}
+
+.transport-block__content {
+  &--show {
+    display: block;
+  }
+
+  &--close {
+    display: none;
   }
 }
 
@@ -63,6 +74,10 @@
     border-bottom: none;
     padding-bottom: 0;
     justify-content: center;
+  }
+
+  &--filter {
+    padding-bottom: 0;
   }
 }
 
@@ -121,6 +136,15 @@
   text-transform: uppercase;
   color: $color-dark-blue-2;
 
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -154,4 +178,41 @@
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent $color-tooltip transparent;
+}
+
+.transport-block__title {
+  display: flex;
+  //margin-top: 0;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+
+    svg {
+      &--open {
+        transform: rotate(180deg);
+      }
+
+      &--close {
+        transform: rotate(180deg);
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  svg {
+    transform: rotate(180deg);
+  }
 }

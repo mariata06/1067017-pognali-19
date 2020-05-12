@@ -3,7 +3,7 @@
   //background-color: $color-dark-blue-1;
   background: url("../img/smolov-back-desktop@1x.png") no-repeat 150px 50px,
     url("../img/rogovaya-back-mobile@1x.png") no-repeat left 330px,
-    url("../img/blue-back-mobile.svg") no-repeat top 80px left 0 $color-dark-blue-1;
+    url("../img/blue-back-mobile2.svg") no-repeat top 80px left 0 $color-dark-blue-1;
   padding: 100px 25px 50px 25px;
   position: relative;
   z-index: 8;
@@ -13,7 +13,9 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 74px 88px 74px;
-    background: url("../img/rogovaya-back-desktop@1x.png") no-repeat top 70px right 45px, url("../img/smolov-back-desktop@1x.png") no-repeat top 425px left 45px, url("../img/blue-back-tablet.svg") no-repeat top 80px left 35px $color-dark-blue-1;
+    background: url("../img/rogovaya-back-desktop@1x.png") no-repeat top 70px right 45px,
+      url("../img/smolov-back-desktop@1x.png") no-repeat top 425px left 45px,
+      url("../img/blue-back-small-tablet.svg") no-repeat top 80px left 35px $color-dark-blue-1;
     //background-color: $color-dark-blue-1;
   }
 
@@ -23,7 +25,7 @@
     padding-right: 60px;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-position: top 386px left 190px, top 131px left 546px;
+    background-position: top 386px left 190px, top 131px left 546px, top 100px left 40px;
   }
 }
 
@@ -147,6 +149,7 @@
   display: block;
   text-align: center;
   cursor: pointer;
+  position: relative;
 
   @include blue-country-name;
 
@@ -162,6 +165,34 @@
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  &--offline {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 10px;
+      display: block;
+      top: 10px;
+      left: 20px;
+      background-color: $color-pink-2;
+    }
+  }
+
+  &--online {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 10px;
+      display: block;
+      top: 10px;
+      left: 20px;
+      background-color: $color-green-1;
+    }
   }
 }
 

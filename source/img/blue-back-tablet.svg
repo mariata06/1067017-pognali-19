@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="213" height="213"><defs><filter id="a" x="0" y="0" width="213" height="213" filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#141b3b"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><rect data-name="blue back" width="213" height="213" rx="20" ry="20" filter="url(#a)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="688" height="213" viewBox="0 0 688 213">
+  <rect width="688" height="213" rx="20" ry="20" fill="#141b3b"/>
+</svg>

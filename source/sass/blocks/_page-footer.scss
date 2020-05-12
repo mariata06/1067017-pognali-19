@@ -3,7 +3,8 @@
   margin: 0 auto;
   //background-color: $color-white;
   padding: 25px 25px 8px 25px;
-  background-color: pink;
+  //background-color: pink;
+  background-color: $color-white;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 20px;
@@ -61,12 +62,19 @@
   position: relative;
   background-color: $color-yellow-1;
 
-  svg {
-    fill: $color-dark-blue-2;
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-2;
   }
 
-  &:active svg {
-    opacity: 30%;
+  &:active {
+    svg {
+      opacity: 30%;
+    }
+  }
+
+  svg {
+    fill: $color-dark-blue-2;
   }
 }
 

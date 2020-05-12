@@ -117,8 +117,12 @@
     color: $color-white;
     background-color: $color-dark-slate-blue;
 
-    @media (min-width: $tablet-width) {
-      border: 4px solid $color-orange-3;
+    button {
+      &:hover {
+        @media (min-width: $tablet-width) {
+          border: 4px solid $color-orange-3;
+        }
+      }
     }
   }
 
