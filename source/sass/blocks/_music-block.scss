@@ -127,17 +127,19 @@
   position: absolute;
   width: 9px;
   height: 9px;
-  top: 0;
+  top: -3px;
   left: 0;
   z-index: 1;
 }
 
 .music-block__input:hover + label::before {
-  border: 1px solid $color-blue-grey;
+  background-color: $color-white;
+  opacity: 60%;
 }
 
 .music-block__input:active + label::before {
-  background-color: $color-pale-grey-three;
+  background-color: $color-white;
+  opacity: 30%;
 }
 
 .music-block__input:checked:active + label::after {

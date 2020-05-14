@@ -451,18 +451,44 @@
   }
 }
 
+
+.select-wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to left, #ffffff 20px, transparent 100px);
+    //background-image: linear-gradient(to top, transparent 10%, $color-white 40%);
+  }
+}
+
 .new-destinations__action {
-  //width: 60%;
   display: flex;
   white-space: nowrap;
   justify-content: space-between;
-  padding: 8px;
+  padding: 11px;
+  padding-left: 5px;
   border: 1px solid $color-grey-light-3;
   border-radius: 5px;
   width: 167px;
   letter-spacing: 2px;
   margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-dark-blue-2;
+  appearance: none;
+  //position: relative;
+  //overflow: hidden;
+  //background-image: linear-gradient(to left, #2588a7 100px, transparent 70%);
 
+  /*
   &--bosnia {
     position: relative;
 
@@ -473,8 +499,26 @@
       left: 0;
       width: 100%;
       height: 80%;
-      background-image: linear-gradient(to left, #ffffff 25px, transparent 50px);
+      background-image: linear-gradient(to left, #ffffff 100px, transparent 70px);
     }
+  }
+*/
+
+  &:not(:checked) {
+    //background: olive linear-gradient(olive, olive);
+    //background-image: linear-gradient(to left, #ffffff 100px, transparent 70px);
+    background-image: linear-gradient(to left, #2eaa4d 50px, transparent 70%);//url("../img/small-arrow.svg");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to left, #2588a7 100px, transparent 70%);
+    //background-image: linear-gradient(to top, transparent 10%, $color-white 40%);
   }
 
   &--czech {
@@ -544,10 +588,11 @@
 }
 
 .new-destinations__country-flag-box {
-  padding: 5px;
+  padding: 7px;
   border: 1px solid $color-grey-light-3;
   border-radius: 5px;
   width: 53px;
+  height: 42px;
   z-index: 2;
   background-color: $color-white;
   position: relative;
@@ -559,6 +604,7 @@
     margin-right: 40px;
   }
 
+  /*
   &::before {
     content: "";
     display: block;
@@ -583,6 +629,13 @@
     top: 15px;
     left: -5px;
     z-index: 1;
+  }
+*/
+
+  button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
   }
 }
 
@@ -660,8 +713,6 @@
     }
 
     @media (min-width: $tablet-width) {
-      //width: 30%;
-      //display: inline-block;
       font-size: 24px;
       font-weight: 700;
       line-height: 24px;

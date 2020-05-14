@@ -1,6 +1,7 @@
 .profile {
-  background: url("../img/rates@1x.png") no-repeat 170px 25px $color-pale-grey;
-  background-size: 40%;
+  //background: url("../img/rates@1x.png") no-repeat 170px 25px $color-pale-grey;
+  //background-size: 40%;
+  background-color: $color-pale-grey;
   padding: 70px 26px 38px 50px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -10,30 +11,73 @@
   margin-top: -15px;
 
   @media (min-width: $tablet-width) {
-    background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px,
-      url("../img/light-blue-back-tablet.svg") no-repeat top 150px right 40px,
-      $color-pale-grey;
-    background-size: 100px, 198px;
+    //background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px $color-pale-grey;
+    //background-size: 100px, 198px;
     //background-size: 100%, 15%;
     //background-position: bottom 50px right 90px;
     padding: 70px 40px 80px;
+    //z-index: 2;
   }
 
   @media (min-width: $desktop-width) {
-    background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px $color-pale-grey;
+    //background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px $color-pale-grey;
     background-size: 198px;
     padding: 104px 131px 162px;
+    //z-index: 1;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
 
-    &::before {
+.profile__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../img/rates@1x.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: 100px 100px;
+
+    @media (min-width: $tablet-width) {
+      //width: 198px;
+      //height: 285px;
+      right: 85px;
+      bottom: 0;
+      top: unset;
+      z-index: 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 200px;
+      height: 200px;
+      background-size: 200px 200px;
+      right: 0;
+      bottom: 0;
+      top: 150px;
+      z-index: 2;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
       content: "";
+      width: 198px;
+      height: 285px;
       position: absolute;
-      top: 100px;
-      right: 100px;
-      width: 285px;
-      height: 198px;
-      background: url("../img/light-blue-back-tablet.svg") no-repeat 0 0;
-      transform: rotate(90deg);
+      right: 40px;
+      top: 70px;
+      border-radius: 20px;
+      background-color: $color-pale-grey-three;
       z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 439px;
+      height: 300px;
     }
   }
 }
@@ -45,6 +89,7 @@
   font-weight: 700;
   padding-right: 100px;
   margin: 0;
+  margin-bottom: 45px;
 
   @media (min-width: $tablet-width) {
     @include orange-title-tabdesc;
@@ -68,8 +113,8 @@
 
 .profile__tariff-item {
   padding-bottom: 10px;
+  //border-top: 1px solid rgba(237, 239, 246, 0.05);
   border-top: 1px solid $color-pale-grey-5;
-  border-bottom: 1px solid $color-pale-grey-5;
   display: flex;
   justify-content: space-between;
 
@@ -78,7 +123,7 @@
     width: 100%;
     //padding-top: 25px;
     //padding-bottom: 25px;
-    border-top: 1px solid $color-pale-grey-5;
+    //border-top: 1px solid $color-pale-grey-5;
     flex-direction: row-reverse;
     padding-top: 0;
     padding-bottom: 0;
@@ -90,8 +135,10 @@
   }
 
   &:last-child {
+    border-bottom: 1px solid $color-pale-grey-5;
+
     @media (min-width: $tablet-width) {
-      border-bottom: 1px solid $color-pale-grey-5;
+      //border-bottom: 1px solid rgba(237, 239, 246, 0.05);
     }
   }
 }
