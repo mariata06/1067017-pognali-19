@@ -8,6 +8,13 @@
   <meta name="format-detection" content="telephone=no">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+
+  </script>
+  <script src="js/picturefill.min.js" async=""></script>
+  <script src="js/svg4everybody.min.js" async=""></script>
 </head>
 
 <body>
@@ -569,46 +576,21 @@
           <div class="new-destinations__selection-wrapper">
 
             <div class="new-destinations__country-selection">
-              <!--<input type="text" placeholder="Босния и Герцеговина">-->
-              <p class="select-wrapper">
+              <p class="new-destinations__select-wrapper">
                 <select class="new-destinations__action new-destinations__action--bosnia">
                   <option disabled>Выберите страну</option>
                   <option selected value="Босния и Герцеговина">Босния и Герцеговина</option>
                   <option value="Чехия">Чехия</option>
                 </select>
+
+                <button type="button" class="new-destinations__country-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
+                    <path
+                      d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
+                  </svg>
+                </button>
               </p>
 
-                <button type="button" class="new-destinations__country-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
-                    <path
-                      d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
-                  </svg>
-                </button>
-                <div class="new-destinations__country-flag-box">
-                  <img src="img/flag-bosnia.svg" alt="Босния и Герцеговина" width="35" height="24"
-                    class="new-destinations__country-flag">
-                    <button type="button" class="new-destinations__country-delete">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" width="9" height="9">
-                        <path
-                          d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z" />
-                      </svg>
-                    </button>
-                </div>
-                <button type="button" class="new-destinations__country-delete">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" width="9" height="9">
-                    <path
-                      d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z" />
-                  </svg>
-                </button>
-
-              <!--
-              <p class="new-destinations__action new-destinations__action--bosnia">Босния и Герцеговина
-                <button type="button" class="new-destinations__country-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
-                    <path
-                      d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
-                  </svg>
-                </button></p>
               <div class="new-destinations__country-flag-box">
                 <img src="img/flag-bosnia.svg" alt="Босния и Герцеговина" width="35" height="24"
                   class="new-destinations__country-flag">
@@ -619,22 +601,29 @@
                     d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z" />
                 </svg>
               </button>
-            -->
             </div>
 
             <div class="new-destinations__country-selection">
-              <p class="new-destinations__action new-destinations__action--czech">Чехия
+              <p class="new-destinations__select-wrapper">
+                <select class="new-destinations__action new-destinations__action--bosnia">
+                  <option disabled>Выберите страну</option>
+                  <option selected value="Чехия">Чехия</option>
+                  <option value="Босния и Герцеговина">Босния и Герцеговина</option>
+                </select>
+
                 <button type="button" class="new-destinations__country-button">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
                     <path
                       d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
                   </svg>
-                </button></p>
+                </button>
+              </p>
+
               <div class="new-destinations__country-flag-box">
                 <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24" class="new-destinations__country-flag">
               </div>
-              <button type="button" class="new-destinations__country-delete"><svg xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 9 9" width="9" height="9">
+              <button type="button" class="new-destinations__country-delete">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" width="9" height="9">
                   <path
                     d="M5.2 4.5L8.9.8c.1-.2.1-.5 0-.7s-.5-.1-.7 0L4.5 3.8.8.1C.6 0 .3 0 .1.1S0 .6.1.8l3.7 3.7L.1 8.2c-.1.2-.1.5 0 .7.1.1.3.1.4.1s.2 0 .3-.1l3.7-3.7 3.7 3.7c.1.1.2.1.3.1s.2 0 .3-.1c.2-.2.2-.5.1-.7L5.2 4.5z" />
                 </svg>
@@ -642,14 +631,28 @@
             </div>
 
             <div class="new-destinations__country-selection new-destinations__country-selection--select">
-              <p class="new-destinations__action new-destinations__action--select">Выберите страну
-                <button type="button" class="new-destinations__country-button new-destinations__country-button--select">
+              <p class="new-destinations__select-wrapper new-destinations__select-wrapper--select">
+                <select class="new-destinations__action new-destinations__action--select">
+                  <option selected>Выберите страну</option>
+                  <option value="Чехия">Чехия</option>
+                  <option value="Босния и Герцеговина">Босния и Герцеговина</option>
+                </select>
+
+                <button type="button" class="new-destinations__country-button">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
                     <path
                       d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
                   </svg>
                 </button>
               </p>
+
+              <!--
+              <div class="new-destinations__country-flag-box">
+                <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24"
+                  class="new-destinations__country-flag">
+              </div>
+              -->
+
               <button type="button" class="new-destinations__country-delete"><svg xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 9 9" width="9" height="9">
                   <path
@@ -724,6 +727,7 @@
           <textarea tabindex="0" id="plan2"
             class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
           </textarea>
+          <br>
 
           <button type="submit" value="Отправить"
             class="new-destinations__button new-destinations__button--submit">Отправить
@@ -731,13 +735,14 @@
               <path d="M0 14V.1l10 7z" />
             </svg>
           </button>
-
-          <a href="#" class="new-destinations__button new-destinations__button--previous-step">
+          <a href="#"
+            class="new-destinations__button new-destinations__button--previous-step new-destinations__button--last-step">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="14">
               <path d="M0 14V.1l10 7z" />
             </svg>
             На шаг назад
           </a>
+
         </div>
 
       </form>
@@ -802,8 +807,8 @@
   <div class="new-destinations__alphabet-country-block alphabet-country-block">
 
 
-    <div class="new-destinations__country-selection new-destinations__country-selection--select">
-      <p class="new-destinations__action new-destinations__action--select">Выберите страну</p>
+    <div class="new-destinations__country-selection new-destinations__country-selection--table">
+      <p class="new-destinations__action new-destinations__action--table">Выберите страну</p>
       <button type="button" class="new-destinations__country-button new-destinations__country-button--close">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" width="9" height="9">
           <path
@@ -814,39 +819,40 @@
 
     <table class="new-destinations__form-table form-table">
       <tr>
-        <td class="form-table__item--active"><a href="#" class="form-table__link form-table__link--active">А</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Б</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">В</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Г</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Д</a></td>
+        <td class="form-table__item--active"><button type="button"
+            class="form-table__button form-table__button--active">А</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Б</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">В</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Г</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Д</button></td>
       </tr>
       <tr>
-        <td class="form-table__item"><a href="#" class="form-table__link">Е</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">З</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">И</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">К</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Л</a></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Е</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">З</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">И</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">К</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Л</button></td>
       </tr>
       <tr>
-        <td class="form-table__item"><a href="#" class="form-table__link">М</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Н</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">О</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">П</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Р</a></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">М</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Н</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">О</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">П</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Р</button></td>
       </tr>
       <tr>
-        <td class="form-table__item"><a href="#" class="form-table__link">С</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Т</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">У</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Х</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Ц</a></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">С</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Т</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">У</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Ф</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Х</button></td>
       </tr>
       <tr>
-        <td class="form-table__item"><a href="#" class="form-table__link">Ч</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Ш</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Э</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Ю</a></td>
-        <td class="form-table__item"><a href="#" class="form-table__link">Я</a></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Ч</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Ш</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Щ</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Э</button></td>
+        <td class="form-table__item"><button type="button" class="form-table__button">Ю</button></td>
       </tr>
     </table>
 

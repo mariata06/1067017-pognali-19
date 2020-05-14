@@ -104,6 +104,14 @@
   @media (min-width: $desktop-width) {
     //padding: 0 60px 80px 60px;
   }
+
+  &:hover {
+    .companions-index__photo {
+      transform: scale(1.1);
+      transition: 1s;
+      height: 285px;
+    }
+  }
 }
 
 .companions-index__photo {
@@ -169,6 +177,9 @@
 .companions-index__content {
   background-color: $color-white;
   padding: 25px;
+  height: 168px;
+  z-index: 1;
+  position: relative;
 }
 
 .companions-index__name {
@@ -314,6 +325,7 @@
   padding-left: 0;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .companions-index__countries-item {
@@ -323,6 +335,37 @@
   color: $color-dark-blue-2;
   text-transform: uppercase;
   margin-right: 19px;
+  position: relative;
+
+  &:hover .companions-index__countries-tooltip {
+    visibility: visible;
+  }
+}
+
+.companions-index__countries-item .companions-index__countries-tooltip {
+  visibility: hidden;
+  //width: 120px;
+  background-color: $color-tooltip;
+  color: $color-white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  right: -50%;
+  top: 30px;
+}
+
+.companions-index__countries-item .companions-index__countries-tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $color-tooltip transparent;
 }
 
 .companions-index__likes {

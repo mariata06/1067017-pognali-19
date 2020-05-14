@@ -1,8 +1,13 @@
 .new-destinations__alphabet-country-block {
   width: 220px;
   margin: 0 auto;
-  position: relative;
+  //position: relative;
   //bottom: 120px;
+  position: absolute;
+  top: 2665px;
+  left: 50px;
+  z-index: 1;
+  display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;

@@ -37,10 +37,10 @@
     display: block;
     background-color: $color-orange-1;
     height: 5px;
-    width: 175px;
+    width: 214px;
     border-radius: 2px;
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 30px;
 
     @media (min-width: $tablet-width) {

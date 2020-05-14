@@ -5,8 +5,17 @@
   margin: 0 auto;
   //padding: 25px;
   border-radius: 20px;
-  overflow: hidden;
+  //overflow: hidden;
   box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
+  position: absolute;
+  left: 25px;
+  top: 4300px;
+  z-index: 1000;
+  display: none;
+
+  &--modal-show {
+    display: block;
+  }
 
   @media (min-width: $tablet-width) {
     width: 688px;

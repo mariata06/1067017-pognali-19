@@ -25,6 +25,7 @@
   width: 44px;
   height: 40px;
   border: 1px solid $color-greyborder;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     width: 52px;
@@ -36,6 +37,10 @@
     width: 58px;
     height: 68px;
     border: 1px solid $color-greyborder;
+  }
+
+  &:hover {
+    border: 1px solid $color-blue-grey;
   }
 }
 
@@ -49,18 +54,32 @@
   }
 }
 
-.form-table__link {
+.form-table__button {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   color: $color-dark-blue-1;
   text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     font-weight: 500;
     line-height: 18px;
     color: $color-dark-blue-2;
+  }
+
+  &:hover {
+    border: 1px solid $color-blue-grey;
+  }
+
+  &:active {
+    background-color: $color-dark-blue-1;
+    color: $color-white;
   }
 
   &--active {

@@ -8,6 +8,13 @@
   <meta name="format-detection" content="telephone=no">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+
+  </script>
+  <script src="js/picturefill.min.js" async=""></script>
+  <script src="js/svg4everybody.min.js" async=""></script>
 </head>
 
 <body>
@@ -329,12 +336,15 @@
           <ul class="companions-index__countries-list">
             <li class="companions-index__countries-item">
               <img src="img/flag-sri-lanka.svg" alt="Шри-ланка" width="35" height="24">
+              <span class="companions-index__countries-tooltip">Шри&nbsp;-&nbsp;Ланка</span>
             </li>
             <li class="companions-index__countries-item">
               <img src="img/flag-thailand.svg" alt="Таиланд" width="35" height="24">
+              <span class="companions-index__countries-tooltip">Таиланд</span>
             </li>
             <li class="companions-index__countries-item">
               <img src="img/flag-seychelles.svg" alt="Сейшелы" width="35" height="24">
+              <span class="companions-index__countries-tooltip">Сейшелы</span>
             </li>
           </ul>
           <!--<a href="#">-->
@@ -407,9 +417,11 @@
           <ul class="companions-index__countries-list">
             <li class="companions-index__countries-item">
               <img src="img/flag-germany.svg" alt="Германия" width="35" height="24">
+              <span class="companions-index__countries-tooltip">Германия</span>
             </li>
             <li class="companions-index__countries-item">
               <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24">
+              <span class="companions-index__countries-tooltip">Чехия</span>
             </li>
           </ul>
           <a href="#">
@@ -427,7 +439,6 @@
               <li class="companions-index__hashtag-item">#крафт</li>
             </ul>
             <ul class="transport-block__list transport-block__list--index-card">
-              <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
               <li class="transport-block__item">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#1d2e5b" width="19" height="21" viewBox="0 0 19 21"
                   class="transport-block__item-icon">
@@ -492,9 +503,9 @@
             <span class="profile__tariff-number profile__tariff-number--third">3</span>
           </li>
         </ul>
-        <a href="#" class="profile__tariff-button button">
+        <button type="button" class="profile__tariff-button button">
           <span class="profile__tariff-span"></span>
-          Показать тарифы для бизнеса</a>
+          Показать тарифы для бизнеса</button>
       </div>
     </section>
 
@@ -664,6 +675,7 @@
     <button class="business-tariff__button" type="button">Закрыть окно</button>
   </section>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>

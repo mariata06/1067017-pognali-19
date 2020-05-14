@@ -38,6 +38,10 @@
     background-color: transparent;
     border: 4px solid $color-white;
   }
+
+  &:invalid {
+    border-color: $color-blush;
+  }
 }
 
 .login-form__button {
