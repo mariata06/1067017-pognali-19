@@ -13,7 +13,6 @@ button.addEventListener("click", function (evt) {
   buttonSvg.classList.remove("hobby-block__open-svg--open");
   hobbyCheckbox.classList.remove("hobby-block__container-checkbox--show");
 });
-
 /*
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
