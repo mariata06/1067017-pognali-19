@@ -29,7 +29,7 @@
 
   @media (min-width: $desktop-width) {
     height: 250px;
-    padding: 0 129px 64.5px 129px;
+    padding: 0 129px 64.5px 45px;
   }
 
   &::after {
@@ -49,12 +49,30 @@
       border-radius: 4px;
       position: absolute;
       left: 30px;
-      bottom: 0;
+      bottom: -4px;
     }
 
     @media (min-width: $desktop-width) {
       left: 130px;
       bottom: 0;
+    }
+  }
+
+  &--form {
+    position: relative;
+
+    &::after {
+      @media (min-width: $tablet-width) {
+        content: "";
+        display: block;
+        background-color: $color-orange-1;
+        height: 8px;
+        width: 356px;
+        border-radius: 4px;
+        position: absolute;
+        left: 30px;
+        bottom: -4px;
+      }
     }
   }
 }

@@ -169,6 +169,13 @@
     display: block;
     padding-top: 0;
     cursor: pointer;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      padding-left: 15px;
+    }
   }
 }
 

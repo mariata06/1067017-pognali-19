@@ -3,7 +3,7 @@
   color: $color-grey-dark;
   padding: 0 25px;
   list-style: none;
-  background-color: $color-white;
+  background-color: $color-pale-grey-four;
 
   @media (min-width: $tablet-width) {
     //position: absolute;
@@ -16,6 +16,8 @@
   }
 
   &--form {
+    background-color: $color-white;
+
     @media (min-width: $desktop-width) {
       margin-left: auto;
     }

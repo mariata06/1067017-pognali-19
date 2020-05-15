@@ -4,27 +4,44 @@
   //position: relative;
   //bottom: 120px;
   position: absolute;
-  top: 2665px;
+  top: 2663px;
   left: 50px;
   z-index: 1;
   display: none;
 
+  &--modal-show {
+    display: block;
+  }
+
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     width: 575px;
     padding-bottom: 30px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
+    top: 3320px;
+    left: 122px;
+
+    //background-color: $color-white;
+    &--modal-show {
+      display: block;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     width: 730px;
     justify-content: space-between;
     box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
+    padding-bottom: 0;
+
+    &--modal-show {
+      display: flex;
+      top: 2850px;
+      left: 500px;
+    }
   }
 }
 
@@ -33,10 +50,12 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top: none;
-  margin-top: 0;
+  margin-top: 1px;
   padding-top: 20px;
   padding-bottom: 20px;
   font-weight: 400;
+  margin-bottom: 0;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     width: 206px;
@@ -45,6 +64,7 @@
     margin-left: auto;
     margin-top: 34px;
     border: none;
+    background-color: $color-white;
   }
 }
 
@@ -79,9 +99,11 @@
 
 .new-destinations .form-table {
   margin: 0;
+  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
     margin-left: 26px;
+    background-color: $color-white;
   }
 
   @media (min-width: $desktop-width) {
@@ -92,5 +114,20 @@
 .new-destinations .country-a {
   @media (min-width: $desktop-width) {
     //margin-right: auto;
+  }
+}
+
+.new-destinations__alphabet-country-block .table-country-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $color-white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }

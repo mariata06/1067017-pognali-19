@@ -41,13 +41,13 @@
   display: flex;
   margin-top: 0;
 
-  button {
+  .hobby-block__open {
     border: none;
     background-color: transparent;
     margin-left: auto;
     cursor: pointer;
 
-    svg {
+    .hobby-block__open-svg {
       &--open {
         transform: rotate(180deg);
       }

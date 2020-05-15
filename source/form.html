@@ -161,7 +161,7 @@
   <main class="page-main form-main">
 
     <section class="section-destinations name-page">
-      <div class="name-page__content">
+      <div class="name-page__content name-page__content--form">
         <h1 class="name-page__title">Направления</h1>
         <!--<a href="index.html" class="name-page__link">На главную</a>-->
       </div>
@@ -303,7 +303,13 @@
 
 
     <section class="new-destinations">
-      <h2 class="new-destinations__title">Добавить план:</h2>
+      <h2 class="new-destinations__title">Добавить план:
+        <div class="new-destinations__step-button-box">
+          <button type="button" class="new-destinations__step-button new-destinations__step-button--active"></button>
+          <button type="button" class="new-destinations__step-button"></button>
+          <button type="button" class="new-destinations__step-button"></button>
+        </div>
+      </h2>
 
       <form action="https://echo.htmlacademy.ru" method="post">
 
@@ -638,7 +644,7 @@
                   <option value="Босния и Герцеговина">Босния и Герцеговина</option>
                 </select>
 
-                <button type="button" class="new-destinations__country-button">
+                <button type="button" class="new-destinations__country-button new-destinations__country-button--open">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="12" height="7">
                     <path
                       d="M8.5 7.2L1.3.2C1-.1.5-.1.2.2c-.3.3-.3.8 0 1L8 8.8c.3.3.8.3 1.1 0l7.7-7.5c.1-.2.2-.4.2-.6s-.1-.4-.2-.5c-.3-.3-.8-.3-1.1 0l-7.2 7z" />
@@ -711,22 +717,25 @@
             </ul>
           </div>
 
-          <label for="plan" class="new-destinations__label-country new-destinations__label-country--bosnia">Босния и
-            Герцеговина
-            <img src="img/flag-bosnia.svg" alt="Босния и Герцеговина" width="35" height="24"
-              class="new-destinations__country-flag">
-          </label>
-          <textarea tabindex="0" id="plan"
-            class="new-destinations__textarea-plan new-destinations__textarea-plan--empty"
-            name="action">План действий</textarea>
+          <div class="new-destinations__plans-wrapper">
+
+            <label for="plan" class="new-destinations__label-country new-destinations__label-country--bosnia">Босния и
+              Герцеговина
+              <img src="img/flag-bosnia.svg" alt="Босния и Герцеговина" width="35" height="24"
+                class="new-destinations__country-flag">
+            </label>
+            <textarea tabindex="0" id="plan"
+              class="new-destinations__textarea-plan new-destinations__textarea-plan--empty"
+              name="action">План действий</textarea>
 
 
-          <label for="plan2" class="new-destinations__label-country">Чехия
-            <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24" class="new-destinations__country-flag">
-          </label>
-          <textarea tabindex="0" id="plan2"
-            class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+            <label for="plan2" class="new-destinations__label-country">Чехия
+              <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24" class="new-destinations__country-flag">
+            </label>
+            <textarea tabindex="0" id="plan2"
+              class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
           </textarea>
+          </div>
           <br>
 
           <button type="submit" value="Отправить"
@@ -806,7 +815,6 @@
 
   <div class="new-destinations__alphabet-country-block alphabet-country-block">
 
-
     <div class="new-destinations__country-selection new-destinations__country-selection--table">
       <p class="new-destinations__action new-destinations__action--table">Выберите страну</p>
       <button type="button" class="new-destinations__country-button new-destinations__country-button--close">
@@ -817,59 +825,65 @@
       </button>
     </div>
 
-    <table class="new-destinations__form-table form-table">
-      <tr>
-        <td class="form-table__item--active"><button type="button"
-            class="form-table__button form-table__button--active">А</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Б</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">В</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Г</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Д</button></td>
-      </tr>
-      <tr>
-        <td class="form-table__item"><button type="button" class="form-table__button">Е</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">З</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">И</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">К</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Л</button></td>
-      </tr>
-      <tr>
-        <td class="form-table__item"><button type="button" class="form-table__button">М</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Н</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">О</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">П</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Р</button></td>
-      </tr>
-      <tr>
-        <td class="form-table__item"><button type="button" class="form-table__button">С</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Т</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">У</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Ф</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Х</button></td>
-      </tr>
-      <tr>
-        <td class="form-table__item"><button type="button" class="form-table__button">Ч</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Ш</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Щ</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Э</button></td>
-        <td class="form-table__item"><button type="button" class="form-table__button">Ю</button></td>
-      </tr>
-    </table>
+    <div class="table-country-wrapper">
 
-    <ul class="new-destinations__country-a country-a">
-      <li class="country-a-item">Австралия</li>
-      <li class="country-a-item">Австрия</li>
-      <li class="country-a-item">Азербайджан</li>
-      <li class="country-a-item">Албания</li>
-      <li class="country-a-item">Алжир</li>
-      <li class="country-a-item">Ангола</li>
-      <li class="country-a-item">Андорра</li>
-      <li class="country-a-item">Антигуа и Барбуда</li>
-      <li class="country-a-item">Аргентина</li>
-      <li class="country-a-item">Армения</li>
-      <li class="country-a-item">Афганистан</li>
-    </ul>
+      <table class="new-destinations__form-table form-table">
+        <tr>
+          <td class="form-table__item--active"><button type="button"
+              class="form-table__button form-table__button--active">А</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Б</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">В</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Г</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Д</button></td>
+        </tr>
+        <tr>
+          <td class="form-table__item"><button type="button" class="form-table__button">Е</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">З</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">И</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">К</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Л</button></td>
+        </tr>
+        <tr>
+          <td class="form-table__item"><button type="button" class="form-table__button">М</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Н</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">О</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">П</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Р</button></td>
+        </tr>
+        <tr>
+          <td class="form-table__item"><button type="button" class="form-table__button">С</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Т</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">У</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Ф</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Х</button></td>
+        </tr>
+        <tr>
+          <td class="form-table__item"><button type="button" class="form-table__button">Ч</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Ш</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Щ</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Э</button></td>
+          <td class="form-table__item"><button type="button" class="form-table__button">Ю</button></td>
+        </tr>
+      </table>
+
+      <ul class="new-destinations__country-a country-a">
+        <li class="country-a-item">Австралия</li>
+        <li class="country-a-item">Австрия</li>
+        <li class="country-a-item">Азербайджан</li>
+        <li class="country-a-item">Албания</li>
+        <li class="country-a-item">Алжир</li>
+        <li class="country-a-item">Ангола</li>
+        <li class="country-a-item">Андорра</li>
+        <li class="country-a-item">Антигуа и Барбуда</li>
+        <li class="country-a-item">Аргентина</li>
+        <li class="country-a-item">Армения</li>
+        <li class="country-a-item">Афганистан</li>
+      </ul>
+
+    </div>
   </div>
+
+  <script src="js/country-modal.js"></script>
 
 </body>
 

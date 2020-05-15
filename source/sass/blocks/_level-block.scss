@@ -175,13 +175,14 @@
     height: 1px;
     width: 19px;
     right: 97px;
-    top: 21px;
+    top: 16px;
     background-color: $color-greyborder;
     box-shadow: 0 0 0 6px $color-white;
     z-index: 2;
 
     @media (min-width: $tablet-width) {
       right: 64px;
+      top: 21px;
     }
   }
 }

@@ -132,8 +132,9 @@
     }
 
     @media (min-width: $tablet-width) {
-      display: flex;
+      //display: flex;
       align-items: center;
+      display: none;
     }
   }
 
@@ -245,20 +246,6 @@
   border: none;
   background-color: transparent;
 }
-
-/*
-.filter-country__container {
-  overflow: visible;
-  display: block;
-  padding: 0 25px 27px 25px;
-
-  @media (min-width: $tablet-width) {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-*/
 
 .filter-country__continent {
   background-color: $color-pale-grey-four;

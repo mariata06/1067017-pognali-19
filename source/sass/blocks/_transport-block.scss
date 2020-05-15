@@ -119,6 +119,10 @@
 
   &--profile {
     background-color: $color-pale-grey;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+    }
   }
 }
 
