@@ -48,6 +48,11 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    //order: -1;
+  }
 }
 
 .filter-country__button {
@@ -249,7 +254,13 @@
 
 .filter-country__continent {
   background-color: $color-pale-grey-four;
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
 }
+
+/*
 
 .filter-country__continent-all-wrapper {
   @media (min-width: $tablet-width) {
@@ -266,3 +277,4 @@
     margin-top: -60px;
   }
 }
+*/

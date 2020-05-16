@@ -180,6 +180,7 @@
 
   button {
     display: flex;
+    outline: none;
   }
 
   svg {
@@ -246,6 +247,10 @@
       align-self: stretch;
       order: 2;
     }
+  }
+
+  input {
+    outline: none;
   }
 }
 
@@ -955,8 +960,10 @@
   }
 
   &--empty {
-    color: rgba(68, 68, 68, 0.302);
-    //position: relative;
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.302);
+      //position: relative;
+    }
   }
 }
 

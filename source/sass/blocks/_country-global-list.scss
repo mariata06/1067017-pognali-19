@@ -6,8 +6,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    //padding: 0 95px;
-    display: flex;
+    display: none;
+    //display: flex;
     flex-wrap: wrap;
   }
 }

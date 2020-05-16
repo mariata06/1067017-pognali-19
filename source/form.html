@@ -190,13 +190,16 @@
               <source srcset="img/photo-account-tablet@1x.jpg" media="(min-width: 768px)">
               <img src="img/photo-account-mobile@1x.jpg" alt="Фото попутчика" class="companions-form__photo">
             </picture>
-            <input type="file" name="file" id="file" class="companions-form__inputfile" />
-            <label for="file">Фото</label>
           </a>
+
+          <input type="file" name="file" id="file" class="companions-form__inputfile" />
+          <label for="file">Фото</label>
         </div>
 
-        <label class="companions-form__change-photo">Сменить фото</label>
+        <!--
+<label class="companions-form__change-photo">Сменить фото</label>
         <input name="changephoto" type="file" class="visually-hidden">
+        -->
 
         <!--<div class="companions-form__hashtag-transport__wrapper">-->
         <fieldset class="companions-form__hashtag">
@@ -725,16 +728,15 @@
                 class="new-destinations__country-flag">
             </label>
             <textarea tabindex="0" id="plan"
-              class="new-destinations__textarea-plan new-destinations__textarea-plan--empty"
-              name="action">План действий</textarea>
-
+              class="new-destinations__textarea-plan new-destinations__textarea-plan--empty" name="action"
+              placeholder="План действий"></textarea>
 
             <label for="plan2" class="new-destinations__label-country">Чехия
               <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24" class="new-destinations__country-flag">
             </label>
             <textarea tabindex="0" id="plan2"
-              class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-          </textarea>
+              class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action"
+              placeholder="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все."></textarea>
           </div>
           <br>
 
