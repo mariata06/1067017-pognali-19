@@ -1073,3 +1073,10 @@
 .new-destinations__plans-wrapper {
   width: 100%;
 }
+
+.new-destinations__step-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}

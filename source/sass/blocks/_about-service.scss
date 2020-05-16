@@ -22,18 +22,30 @@
   margin-bottom: 0;
   background: url("../img/about-mobile@1x.png") bottom 0 right 10px no-repeat;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
+
   @media (min-width: $tablet-width) {
     background: url("../img/about-tablet@1x.png") right 5% top 60% no-repeat;
     //background-color: $color-dark-blue-1;
     //padding: 0 40px 70px;
     //min-height: 780px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 660px;
-    background: url("../img/about-desktop@1x.png") no-repeat right 50px bottom 0,
+    background: url("../img/about-desktop@1x.png") no-repeat right 50px bottom 0;
     //background-color: $color-dark-blue-1;
     //padding: 60px 0 110px 90px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
   }
 
   &::before {
