@@ -22,12 +22,15 @@
   font-weight: 700;
   line-height: 24px;
   color: $color-dark-blue-2;
+  //color: red;
   margin: 0;
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 50px;
+    //color: green;
+    //color: red;
   }
 
   @media (min-width: $desktop-width) {
