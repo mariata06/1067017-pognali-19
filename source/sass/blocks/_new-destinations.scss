@@ -527,6 +527,7 @@
 }
 
 .new-destinations__action {
+  font-family: "BloggerSans", "Arial", sans-serif;
   display: flex;
   white-space: nowrap;
   justify-content: space-between;
@@ -543,6 +544,10 @@
   text-transform: uppercase;
   color: $color-dark-blue-2;
   appearance: none;
+
+  option {
+    font-family: "BloggerSans", "Arial", sans-serif;
+  }
 
   &--plus {
     border: none;
@@ -1046,10 +1051,12 @@
 
 .new-destinations__step-button-box {
   width: 47px;
-  display: flex;
+  //display: flex;
   justify-content: space-between;
+  display: none;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     width: 73px;
   }
 }
@@ -1075,7 +1082,7 @@
 }
 
 .new-destinations__step-wrapper {
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
   }

@@ -89,7 +89,8 @@ gulp.task("copy", function () {
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
       "source/js/**",
-      "source/*.ico"
+      "source/*.ico",
+      "source/preview/*.{png, jpg}" //нужно только для работы с пиксель гласс
     ], {
       base: "source"
     })

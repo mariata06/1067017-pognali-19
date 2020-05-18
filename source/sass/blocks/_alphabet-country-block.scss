@@ -4,9 +4,9 @@
   //position: relative;
   //bottom: 120px;
   position: absolute;
-  top: 2663px;
-  left: 50px;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  z-index: 100;
   display: none;
 
   &--modal-show {
@@ -20,8 +20,8 @@
     padding-bottom: 30px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    top: 3320px;
-    left: 122px;
+    top: 0;
+    left: 0;
 
     //background-color: $color-white;
     &--modal-show {
@@ -39,8 +39,8 @@
 
     &--modal-show {
       display: flex;
-      top: 2850px;
-      left: 500px;
+      top: 0;
+      left: 0;
     }
   }
 }
@@ -62,7 +62,7 @@
     padding: 0;
     border-radius: 0;
     margin-left: auto;
-    margin-top: 34px;
+    //margin-top: 34px;
     border: none;
     background-color: $color-white;
   }
@@ -102,7 +102,7 @@
   background-color: $color-white;
 
   @media (min-width: $tablet-width) {
-    margin-left: 26px;
+    //margin-left: 26px;
     background-color: $color-white;
   }
 
@@ -125,9 +125,15 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    //width: 100%;
+    //width: 575px;
+    padding: 30px 25px 30px 27px;
     background-color: $color-white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
   }
 }
