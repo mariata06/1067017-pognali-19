@@ -8,13 +8,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 70px;
   }
 
-  /*
   @media (min-width: $desktop-width) {
-    display: block;
+    padding-top: 25px;
   }
-  */
 }
 
 .companions-form__level-photo-wrapper {
@@ -51,6 +50,7 @@
     width: 370px;
     margin-left: auto;
     padding-bottom: 0;
+    margin-bottom: 50px;
   }
 }
 
@@ -121,7 +121,7 @@
     display: block;
     align-self: flex-end;
     width: 100%;
-    margin-bottom: -50px;
+    margin-bottom: -70px;
     margin-top: 20px;
     text-align: center;
     border-radius: 10px;
@@ -134,6 +134,7 @@
     border-top-right-radius: 0;
     order: initial;
     margin-top: 0;
+    margin-bottom: -50px;
 
     span {
       display: none;
@@ -224,18 +225,43 @@
   text-align: center;
   padding-left: 15px;
   padding-right: 15px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color-pale-grey;
 
   @media (min-width: $tablet-width) {
-    //transform: rotate(180deg);
+    font-size: 20px;
+    bottom: -10px;
+    top: unset;
   }
 }
 
+.companions-form__hashtag-title {
+  @media (min-width: $desktop-width) {
+    left: 60px;
+  }
+}
+/*
+.companions-form__hashtag-title {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color-pale-grey;
+}
+*/
 .companions-form__hashtag {
   color: $color-grey-dark;
   border: 1px solid $color-grey-light-3;
   border-radius: 10px;
   margin-top: 25px;
   padding: 0;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
 
   &:hover {
     border: 1px solid $color-grey-input-hvr;
@@ -266,6 +292,10 @@
   background-color: $color-pale-grey;
   text-align: left;
   padding: 20px 24px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
 
   &::placeholder {
     color: $color-grey-input;
@@ -277,6 +307,8 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -289,11 +321,18 @@
   color: $color-grey-dark;
   border: 1px solid $color-grey-light-3;
   border-radius: 10px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;
     margin: 0 auto;
     margin-top: -170px;
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {

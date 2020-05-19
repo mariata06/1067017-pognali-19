@@ -3,6 +3,7 @@
   //background-color: $color-dark-blue-1;
   background: url("../img/smolov-back-desktop@1x.png") no-repeat top 100px right 25px,
     url("../img/rogovaya-back-mobile@1x.png") no-repeat left 330px;
+  background-size: 145px, 61px;
   padding: 100px 25px 50px 25px;
   position: relative;
   z-index: 8;
@@ -20,6 +21,7 @@
     padding: 0 74px 88px 74px;
     background: url("../img/smolov-back-desktop@1x.png") no-repeat top 420px left 40px,
       url("../img/rogovaya-back-desktop@1x.png") no-repeat top 80px right 75px;
+    background-size: 145px, 285px;
     background-color: $color-dark-blue-1;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -35,6 +37,7 @@
     justify-content: space-between;
     background: url("../img/smolov-back-desktop@1x.png") no-repeat top 133px left 547px,
       url("../img/rogovaya-back-desktop@1x.png") no-repeat bottom 75px left 150px;
+    background-size: 145px, 285px;
     background-color: $color-dark-blue-1;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

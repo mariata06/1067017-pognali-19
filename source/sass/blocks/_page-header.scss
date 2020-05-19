@@ -46,6 +46,11 @@
 
   @media (min-width: $tablet-width) {
     //display: none;
+    display: block;
+
+    &--show {
+      display: block;
+    }
   }
 
   @media (min-width: $desktop-width) {

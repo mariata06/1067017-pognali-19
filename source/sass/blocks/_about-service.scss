@@ -21,6 +21,7 @@
 .about-service__container {
   margin-bottom: 0;
   background: url("../img/about-mobile@1x.png") bottom 0 right 10px no-repeat;
+  background-size: 320px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/about-mobile@2x.png");
@@ -31,6 +32,7 @@
     //background-color: $color-dark-blue-1;
     //padding: 0 40px 70px;
     //min-height: 780px;
+    background-size: 420px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-tablet@2x.png");
@@ -42,6 +44,7 @@
     background: url("../img/about-desktop@1x.png") no-repeat right 50px bottom 0;
     //background-color: $color-dark-blue-1;
     //padding: 60px 0 110px 90px;
+    background-size: 620px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-desktop@2x.png");

@@ -163,8 +163,8 @@
     &::before {
       content: "";
       position: absolute;
-      width: 5px;
-      height: 5px;
+      width: 6px;
+      height: 6px;
       border-radius: 10px;
       display: block;
       top: 10px;
@@ -172,6 +172,8 @@
       background-color: $color-pink-2;
 
       @media (min-width: $tablet-width) {
+        width: 7px;
+        height: 7px;
         right: -100px;
       }
     }
@@ -181,8 +183,8 @@
     &::before {
       content: "";
       position: absolute;
-      width: 5px;
-      height: 5px;
+      width: 6px;
+      height: 6px;
       border-radius: 10px;
       display: block;
       top: 10px;
@@ -190,6 +192,8 @@
       background-color: $color-green-1;
 
       @media (min-width: $tablet-width) {
+        width: 7px;
+        height: 7px;
         right: -100px;
       }
     }
@@ -258,6 +262,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      @media (min-width: $tablet-width) {
+        width: 20px;
+        height: 17px;
+      }
     }
 
     &:hover {
@@ -281,6 +290,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      @media (min-width: $tablet-width) {
+        width: 20px;
+        height: 17px;
+      }
     }
 
     &:hover {
@@ -498,6 +512,10 @@
     text-align: center;
     display: block;
     margin-bottom: 27px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
 
     &:hover,
     &:focus {

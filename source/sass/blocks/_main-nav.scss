@@ -34,7 +34,7 @@
   line-height: 22px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #192144;
+  color: $color-dark-blue-1;
   display: flex;
   align-items: center;
 
@@ -51,4 +51,14 @@
   left: 50%;
   display: block;
   transform: translate(-50%, -50%) scale(0.5);
+  fill: $color-yellow-1;
+
+  &:hover {
+    fill: $color-yellow-2;
+  }
+
+  &:active {
+    fill: $color-yellow-2;
+    opacity: 30%;
+  }
 }
