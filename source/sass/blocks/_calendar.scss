@@ -115,12 +115,16 @@
 
   .calendar__active-day {
     color: $color-white;
-    background-color: $color-dark-slate-blue;
+    //background-color: $color-dark-slate-blue;
 
     button {
       border: 4px solid transparent;
+      background-color: $color-tooltip;
 
       &:hover {
+        border: 2px solid $color-orange-3;
+        background-color: $color-dark-slate-blue;
+
         @media (min-width: $tablet-width) {
           border: 4px solid $color-orange-3;
         }
@@ -199,6 +203,7 @@
   top: 0;
   left: 0;
 }
+
 /*
 .calendar__input:checked + label::before {
   background-color: blue;
@@ -215,7 +220,8 @@
     border: 1px solid $color-orange-3;
   }
 }
-*/
+
 .calendar__active-day button {
   background-color: $color-dark-slate-blue;
 }
+*/

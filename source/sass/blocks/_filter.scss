@@ -1,11 +1,16 @@
 .filter {
-  display: flex;
+  //display: flex;
   flex-wrap: wrap;
   background-color: $color-pale-grey-four;
   margin-top: -20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 25px;
+  display: none;
+
+  &--show {
+    display: flex;
+  }
 
   @media (min-width: $tablet-width) {
     flex-wrap: wrap;

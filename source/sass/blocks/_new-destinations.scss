@@ -612,6 +612,7 @@
   z-index: 1;
   background-color: transparent;
   top: 10px;
+  outline: none;
 
   svg {
     opacity: 30%;
@@ -639,6 +640,7 @@
     &:active {
       svg {
         opacity: 10%;
+        outline: none;
       }
     }
   }
@@ -661,6 +663,7 @@
   top: -5px;
   right: -10px;
   z-index: 2;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     top: 20px;
