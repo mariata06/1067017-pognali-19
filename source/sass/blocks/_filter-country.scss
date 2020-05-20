@@ -24,19 +24,37 @@
   }
 }
 
+.filter-country__filter-all {
+  //display: none;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
+}
+
 .filter-country {
   background-color: $color-pale-grey-four;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     //display: none;
+    flex-wrap: nowrap;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0 auto;
     display: flex;
+    width: 100%;
   }
 }
 
@@ -52,6 +70,8 @@
   @media (min-width: $desktop-width) {
     display: flex;
     //order: -1;
+    justify-content: end;
+    width: auto;
   }
 }
 
@@ -271,6 +291,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    order: 1;
   }
 
   @media (min-width: $desktop-width) {

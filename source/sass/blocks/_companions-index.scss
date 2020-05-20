@@ -354,13 +354,15 @@
   position: relative;
 
   &:hover .companions-index__countries-tooltip {
-    visibility: visible;
+    //visibility: visible;
+    display: block;
   }
 }
 
 .companions-index__countries-item .companions-index__countries-tooltip {
-  visibility: hidden;
+  //visibility: hidden;
   //width: 120px;
+  display: none;
   background-color: $color-tooltip;
   color: $color-white;
   text-align: center;
@@ -368,8 +370,9 @@
   border-radius: 6px;
   position: absolute;
   z-index: 1;
-  right: -50%;
   top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .companions-index__countries-item .companions-index__countries-tooltip::after {

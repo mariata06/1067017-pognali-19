@@ -342,13 +342,18 @@
   @media (min-width: $tablet-width) {
     //order: 4;
     //width: 100%;
+    order: 4;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
     order: 1;
     width: 30%;
-    margin-left: auto;
+    //margin-left: auto;
     align-self: baseline;
+    padding: 0;
+    //order: 1;
+    margin-left: auto;
   }
 }
 
@@ -362,6 +367,7 @@
   }
 }
 
+/*
 .country {
   //border: 2px solid blueviolet;
 
@@ -383,7 +389,7 @@
     //margin-bottom: 111px;
   }
 }
-
+*/
 .companions-catalog__item-wrapper {
   display: flex;
   justify-content: space-between;

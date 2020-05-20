@@ -144,6 +144,11 @@
   left: -5px;
 }
 
+.hobby-block__input:disabled + label::before {
+  background-color: $color-grey-light-7;
+  //opacity: 50%;
+}
+
 .hobby-block__input:checked + label::after {
   content: url("../img/tick.svg");
   position: absolute;
@@ -152,6 +157,10 @@
   top: -3px;
   left: 0;
   z-index: 1;
+}
+
+.hobby-block__input:disabled + label::after {
+  opacity: 50%;
 }
 
 .hobby-block__input:hover + label::before {

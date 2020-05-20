@@ -1,11 +1,3 @@
-.filter-country__filter-all {
-  //display: none;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-  }
-}
 
 .filter-all__box-button {
   @media (min-width: $tablet-width) {

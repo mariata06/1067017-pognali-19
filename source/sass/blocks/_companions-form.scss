@@ -61,8 +61,7 @@
 
   @media (min-width: $desktop-width) {
     order: 3;
-    margin-top: -201px;
-    margin-bottom: 40px;
+    margin-top: -240px;
   }
 }
 
@@ -133,8 +132,8 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     order: initial;
-    margin-top: 0;
-    margin-bottom: -50px;
+    margin-top: -10px;
+    margin-bottom: 0;
 
     span {
       display: none;
