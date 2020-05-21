@@ -1,15 +1,15 @@
 //***********************COMPANIONS CATALOG**********************//
 .companions-index {
   //background-color: $color-dark-blue-1;
-  background: url("../img/smolov-back-desktop@1x.png") no-repeat top 100px right 25px,
-    url("../img/rogovaya-back-mobile@1x.png") no-repeat left 330px;
-  background-size: 145px, 61px;
-  padding: 100px 25px 50px 25px;
+  background: url("../img/smolov-back-desktop@1x.png") no-repeat top 80px right 25px,
+    url("../img/rogovaya-back-mobile@1x.png") no-repeat left -10px top 350px;
+  background-size: 145px, 72px;
+  padding: 110px 25px 28px 25px;
   position: relative;
   z-index: 8;
   margin-top: -40px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-color: $color-dark-blue-1;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -19,10 +19,12 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 74px 88px 74px;
-    background: url("../img/smolov-back-desktop@1x.png") no-repeat top 420px left 40px,
-      url("../img/rogovaya-back-desktop@1x.png") no-repeat top 80px right 75px;
+    background: url("../img/smolov-back-desktop@1x.png") no-repeat top 470px left 40px,
+      url("../img/rogovaya-back-desktop@1x.png") no-repeat top 120px right 75px;
     background-size: 145px, 285px;
     background-color: $color-dark-blue-1;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
@@ -31,12 +33,14 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding: 134px;
+    padding: 132px;
     padding-right: 60px;
+    padding-top: 164px;
+    padding-bottom: 125px;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: url("../img/smolov-back-desktop@1x.png") no-repeat top 133px left 547px,
-      url("../img/rogovaya-back-desktop@1x.png") no-repeat bottom 75px left 150px;
+    background: url("../img/smolov-back-desktop@1x.png") no-repeat top 170px left 547px,
+      url("../img/rogovaya-back-desktop@1x.png") no-repeat bottom 170px left 190px;
     background-size: 145px, 285px;
     background-color: $color-dark-blue-1;
 
@@ -75,20 +79,25 @@
 .companions-index__list {
   padding-left: 0;
   list-style: none;
-  padding-top: 50px;
+  padding-top: 35px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    padding-top: 38px;
   }
 
   @media (min-width: $desktop-width) {
     margin-left: auto;
-    width: 50%;
+    width: 630px;
     //display: flex;
     //justify-content: space-between;
     //background-color: lightgreen;
+    margin-top: 0;
+    padding-top: 10px;
+    margin-bottom: 0;
   }
 }
 
@@ -107,7 +116,7 @@
 }
 
 .companions-index__item {
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
   margin-bottom: 10px;
   overflow: hidden;
@@ -115,6 +124,7 @@
   @media (min-width: $tablet-width) {
     width: 285px;
     //background-color: pink;
+    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -142,9 +152,11 @@
 
 .companions-index__title {
   margin: 0;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 75px;
+    padding-top: 177px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -153,8 +165,6 @@
 }
 
 .companions-index__title a {
-  margin: 0;
-
   @include orange-title;
 
   @media (min-width: $tablet-width) {
@@ -164,6 +174,9 @@
 }
 
 .companions-index__description {
+  //margin-top: 18px;
+  margin-bottom: 22px;
+
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 33px;
@@ -180,8 +193,8 @@
     @media (min-width: $tablet-width) {
       font-size: 21px;
       line-height: 25px;
-      margin-top: 50px;
-      padding-right: 360px;
+      margin-top: 40px;
+      padding-right: 368px;
     }
 
     @media (min-width: $desktop-width) {
@@ -193,9 +206,14 @@
 .companions-index__content {
   background-color: $color-white;
   padding: 25px;
-  height: 168px;
+  padding-bottom: 17px;
   z-index: 1;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 28px;
+    padding-bottom: 23px;
+  }
 }
 
 .companions-index__name {
@@ -229,9 +247,13 @@
       height: 5px;
       border-radius: 10px;
       display: block;
-      top: 10px;
-      left: 20px;
+      top: 8px;
+      left: 27px;
       background-color: $color-pink-2;
+
+      @media (min-width: $tablet-width) {
+        left: 23px;
+      }
     }
   }
 
@@ -243,9 +265,13 @@
       height: 5px;
       border-radius: 10px;
       display: block;
-      top: 10px;
-      left: 20px;
+      top: 8px;
+      left: 36px;
       background-color: $color-green-1;
+
+      @media (min-width: $tablet-width) {
+        left: 30px;
+      }
     }
   }
 }
@@ -264,13 +290,15 @@
 .companions-index__button {
   @include blue-link-caption;
   background-color: $color-yellow-1;
-  padding: 30px;
-  display: block;
+  padding: 23px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   svg {
     fill: $color-dark-blue-2;
-    margin-left: 50px;
+    //margin-left: 94px;
   }
 
   &:active svg {
@@ -283,18 +311,23 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: block;
     width: 100%;
     border-radius: 15px;
     font-size: 24px;
     line-height: 24px;
+    padding-left: 35px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-right: 36px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 280px;
     align-self: flex-end;
-    flex-direction: column-reverse;
-    margin-top: -80px;
+    //flex-direction: column-reverse;
+    margin-top: -110px;
+    border-radius: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -320,13 +353,22 @@
 }
 
 .companions-index__hashtag-list {
+  width: 100%;
   text-align: center;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 15px;
+  padding-left: 19px;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &--demin {
+    padding-left: 33px;
+  }
 
   @media (min-width: $tablet-width) {
-    padding-right: 5px;
+    padding-top: 21px;
+    padding-right: 0;
     padding-left: 5px;
   }
 }
@@ -338,10 +380,18 @@
   width: 100%;
   top: 258px;
   //left: 63px;
-  padding-left: 0;
+  //padding-left: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 62px;
+  padding-right: 62px;
   z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 69px;
+    padding-right: 69px;
+    top: 272px;
+  }
 }
 
 .companions-index__countries-item {
@@ -350,7 +400,7 @@
   line-height: 18px;
   color: $color-dark-blue-2;
   text-transform: uppercase;
-  margin-right: 19px;
+  //margin-right: 19px;
   position: relative;
 
   &:hover .companions-index__countries-tooltip {

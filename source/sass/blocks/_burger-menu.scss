@@ -23,6 +23,10 @@
   border: none;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
   @media (min-width: $desktop-width) {
     display: none;
   }

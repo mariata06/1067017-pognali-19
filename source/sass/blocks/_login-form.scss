@@ -13,25 +13,16 @@
   text-transform: uppercase;
 }
 
-.login-form input {
+.login-form__input {
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: rgba(68, 68, 68, 0.3);//$color-white;
-  width: 100%;
   padding: 16px 0 16px 24px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: none;
-
-  &::placeholder {
-    color: rgba(68, 68, 68, 0.3);
-  }
-
-  &:hover {
-    color: rgba(68, 68, 68, 0.5);
-    background-color: $color-pale-grey;
-  }
+  width: 100%;
 
   &:focus {
     color: $color-white;
@@ -41,6 +32,23 @@
 
   &:invalid {
     border-color: $color-blush;
+  }
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:hover {
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.5);
+      background-color: $color-pale-grey;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 26px 26px 36px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 }
 
@@ -55,6 +63,9 @@
   margin-left: -15px;
 
   @media (min-width: $tablet-width) {
+    min-width: 80px;
+    height: 80px;
+    border-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -74,9 +85,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 325px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 425px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    padding-left: 40px;
+    padding-right: 35px;
   }
 }
 
@@ -85,5 +101,7 @@
 
   @media (min-width: $desktop-width) {
     display: inline;
+    font-size: 24px;
+    line-height: 24px;
   }
 }

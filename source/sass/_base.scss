@@ -74,11 +74,12 @@ a {
 }
 
 .button {
+  font-family: "BloggerSans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: $color-dark-blue-2;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: $color-yellow-1;
 
   &:hover {
