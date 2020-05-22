@@ -4,7 +4,7 @@
   background-color: $color-pale-grey;
   position: relative;
   margin-top: -15px;
-  padding: 35px 25px;
+  padding: 39px 25px;
   margin-bottom: 100px;
 
   @media (min-width: $desktop-width) {
@@ -30,6 +30,8 @@
   border-radius: 20px;
   background-color: $color-yellow-1;
   padding: 26px;
+  padding-top: 24px;
+  padding-bottom: 22px;
 
   @media (min-width: $desktop-width) {
     width: 286px;
@@ -42,7 +44,7 @@
   font-weight: 700;
   line-height: 22.49px;
   color: $color-dark-blue-2;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -67,6 +69,9 @@
   width: 100%;
   border: none;
   border-radius: 20px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   &:hover,
   &:focus {

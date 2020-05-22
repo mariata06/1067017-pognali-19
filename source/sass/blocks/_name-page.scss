@@ -1,5 +1,5 @@
 .name-page {
-  padding: 20px 20px 0 20px;
+  padding: 15px 20px 13px 20px;
   //background-color: $color-blue-black-2;
   background-color: $color-medium-blue;
   border-bottom-left-radius: 20px;
@@ -15,34 +15,17 @@
   @media (min-width: $desktop-width) {
     position: relative;
   }
-}
-
-.name-page__content {
-  height: 71.7px;
-  display: flex;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    height: 175.5px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 250px;
-    padding: 0 129px 64.5px 45px;
-  }
 
   &::after {
     content: "";
     display: block;
     background-color: $color-orange-1;
     height: 5px;
-    width: 214px;
+    width: 172px;
     border-radius: 2px;
     position: absolute;
     bottom: -2px;
-    left: 30px;
+    left: 26px;
 
     @media (min-width: $tablet-width) {
       height: 8px;
@@ -78,15 +61,35 @@
   }
 }
 
+.name-page__content {
+  //height: 71.7px;
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  //padding-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    height: 175.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 250px;
+    padding: 0 129px 64.5px 45px;
+  }
+}
+
 .name-page__title {
   color: $color-white;
-  padding-left: 27px;
+  padding-left: 5px;
   align-self: flex-end;
-  padding-bottom: 12px;
+  //padding-bottom: 0;
   margin-bottom: 0;
   font-size: 36px;
   line-height: 40px;
   font-weight: 700;
+  //margin-top: 18px;
+  margin-top: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
