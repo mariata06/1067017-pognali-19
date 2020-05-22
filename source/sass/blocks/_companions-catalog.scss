@@ -4,8 +4,8 @@
 
 .companions-catalog {
   color: $color-grey-dark;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  //padding-top: 25px;
+  //padding-bottom: 25px;
   background-color: $color-pale-grey;
 
   @media (min-width: $desktop-width) {
@@ -21,8 +21,13 @@
   flex-direction: column;
   background-color: $color-white;
   border-radius: 20px;
-  padding: 15px 20px 22px 18px;
+  padding: 14px 20px 22px 18px;
   margin-bottom: 10px;
+
+  &--rogova {
+    padding-top: 12px;
+    margin-bottom: 16px;
+  }
 
   @media (min-width: $tablet-width) {
     //width: 688px;
@@ -62,10 +67,10 @@
   flex-wrap: wrap;
   margin-top: 0;
   margin-bottom: 0;
-  //padding-left: 8px;
   padding-left: 8px;
+  padding-bottom: 13px;
+  padding-right: 50px;
 
-  @include list-style;
   //width: 160px;
   //border: 2px solid lightgreen;
 
@@ -108,6 +113,10 @@
   display: flex;
   align-items: center;
 
+  img {
+    margin-right: 14px;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     font-size: 20px;
@@ -138,7 +147,7 @@
 
 .companions-catalog__name {
   margin: 0;
-  width: 110px;
+  width: 106px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
@@ -172,7 +181,7 @@
       border-radius: 10px;
       display: block;
       top: 10px;
-      right: -20px;
+      right: -35px;
       background-color: $color-pink-2;
 
       @media (min-width: $tablet-width) {
@@ -192,7 +201,7 @@
       border-radius: 10px;
       display: block;
       top: 10px;
-      right: 0;
+      right: -35px;
       background-color: $color-green-1;
 
       @media (min-width: $tablet-width) {
@@ -215,12 +224,13 @@
   font-weight: 700;
   color: $color-blue-black-2;
   margin-left: 50px;
-  margin-top: -34px;
+  margin-top: -35px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70px;
+  //width: 70px;
+  margin-bottom: 12px;
 
   /*
   &::before {
@@ -250,6 +260,7 @@
   height: 31px;
   border-radius: 100%;
   position: relative;
+  margin-right: 6px;
 
   @media (min-width: $tablet-width) {
     width: 50px;
@@ -317,7 +328,7 @@
 .companions-catalog fieldset {
   margin: 0;
   border: none;
-  border-top: 1px solid $color-pale-grey;
+  //border-top: 1px solid $color-pale-grey;
 
   @media (min-width: $desktop-width) {
     border-top: none;
@@ -325,7 +336,20 @@
 }
 
 .companions-catalog__countries-list {
+  margin-top: 13px;
+  margin-bottom: 0;
+
+  &--demin {
+    margin-bottom: 7px;
+  }
+
+  &--smolov {
+    margin-bottom: 4px;
+  }
+
   @include list-style;
+
+  //padding-left: 14px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -342,6 +366,9 @@
 
 .companions-catalog__countries-fieldset {
   //border: 2px solid lightblue;
+  padding-top: 4px;
+  padding-left: 7px;
+  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
     //order: 4;
@@ -362,6 +389,33 @@
 }
 
 .companions-catalog__countries-to-visit {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 1px;
+    position: absolute;
+    background-color: $color-pale-grey;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 138px;
+    height: 1px;
+    position: absolute;
+    background-color: $color-pale-grey;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 110px;
+  }
+
+
   @media (min-width: $tablet-width) {
     text-align: left;
   }
@@ -466,7 +520,7 @@
     order: 2;
     margin-left: 350px;
     margin-top: -100px;
-    align-self: end;
+    align-self: flex-end;
   }
 }
 
@@ -477,6 +531,7 @@
 
 .companions-catalog__level-fieldset {
   position: relative;
+  padding-right: 0;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -503,6 +558,7 @@
   font-weight: 400;
   line-height: 18px;
   color: $color-grey-dark;
+  //padding-top: 2px;
 }
 
 .companions-catalog__transport-type,
@@ -513,6 +569,22 @@
 }
 
 .companions-catalog__button {
+  &--tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    margin-right: 12px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
   &--more {
     font-size: 17px;
     line-height: 30px;
@@ -521,7 +593,7 @@
     color: $color-dark-slate-blue;
     text-align: center;
     display: block;
-    margin-bottom: 27px;
+    margin-bottom: 21px;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
@@ -540,4 +612,6 @@
 
 .companions-catalog__transport-fieldset {
   border: none;
+  padding-left: 6px;
+  padding-top: 4px;
 }

@@ -2,16 +2,20 @@
   min-width: 320px;
   margin: 0 auto;
   //background-color: $color-white;
-  padding: 25px 25px 20px 25px;
+  padding: 25px 25px 18px 25px;
   //background-color: pink;
   background-color: $color-white;
   display: flex;
   flex-direction: column;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   z-index: 5;
   position: relative;
   margin-top: -75px;
+
+  &--catalog {
+    margin-top: -8px;
+  }
 
   @media (min-width: $tablet-width) {
     flex-direction: row;

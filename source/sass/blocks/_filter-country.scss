@@ -73,7 +73,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     //order: -1;
-    justify-content: end;
+    justify-content: flex-end;
     width: auto;
   }
 }

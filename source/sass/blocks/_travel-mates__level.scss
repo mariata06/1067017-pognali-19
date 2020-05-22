@@ -17,7 +17,7 @@
 
   svg {
     position: absolute;
-    top: 0;
+    top: 4px;
     left: 0;
     z-index: 2;
     opacity: 100%;
@@ -69,8 +69,9 @@
       position: absolute;
       font-size: 24px;
       line-height: 18px;
-      top: 25%;
-      left: 30%;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
