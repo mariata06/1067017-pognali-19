@@ -14,10 +14,15 @@
   //flex-direction: row;
   //width: 100%;
   @media (min-width: $tablet-width) {
-    flex-direction: row-reverse;
+    //flex-direction: row-reverse;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 55px 25px;
+    //justify-content: space-around;
+    padding: 93px 74px;
+    padding-bottom: 38px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-top: -50px;
+    padding-top: 92px;
   }
 
   @media (min-width: $desktop-width) {
@@ -163,13 +168,14 @@
     }
 
     svg {
-      margin-left: 20px;
+      margin-left: 30px;
     }
 
     @media (min-width: $tablet-width) {
       //display: flex;
       align-items: center;
       display: flex;
+      font-family: "BloggerSans", "Arial", sans-serif;
 
       &--hide {
         display: none;
@@ -218,6 +224,7 @@
     display: flex;
     flex-direction: row;
     order: -1;
+    padding-left: 0;
   }
 }
 

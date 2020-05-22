@@ -8,7 +8,11 @@
   z-index: 10;
 
   @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
     padding: 5px 75px 0 75px;
+    padding-top: 80px;
+    padding-bottom: 66px;
     position: relative;
   }
 
@@ -32,7 +36,7 @@
       width: 287px;
       border-radius: 4px;
       position: absolute;
-      left: 30px;
+      left: 75px;
       bottom: -4px;
     }
 
@@ -66,11 +70,13 @@
   display: flex;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  position: relative;
+  //position: relative;
   //padding-bottom: 12px;
+  align-items: center;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    height: 175.5px;
+    //height: 175.5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -94,6 +100,7 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 70px;
+    padding-left: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -104,11 +111,6 @@
 
 .name-page__link {
   display: none;
-  align-self: flex-end;
-  justify-self: end;
-  color: $color-white;
-  text-transform: uppercase;
-  position: relative;
 
   &:hover,
   &:focus {
@@ -129,8 +131,17 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding-bottom: 30px;
-    margin-left: 150px;
+    padding-top: 8px;
+    color: $color-white;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+
+    svg {
+      margin-left: 22px;
+    }
   }
 
   @media (min-width: $desktop-width) {

@@ -8,6 +8,12 @@
   //margin-bottom: 100px;
   padding-bottom: 61px;
   margin-bottom: -20px;
+  //padding-top: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 39px 40px;
+    padding-top: 60px;
+  }
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
@@ -36,6 +42,14 @@
   padding-bottom: 22px;
   margin-bottom: 27px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 39px;
+    margin-bottom: 39px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 286px;
   }
@@ -52,9 +66,10 @@
   @media (min-width: $tablet-width) {
     display: block;
     border-bottom: 1px solid $color-macaroni-and-cheese;
-    padding-bottom: 44px;
+    padding-bottom: 39px;
     font-size: 30px;
     line-height: 30px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -88,7 +103,9 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 36px;
+    padding-top: 10px;
+    padding-bottom: 9px;
   }
 }
 
