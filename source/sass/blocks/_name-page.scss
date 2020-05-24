@@ -51,6 +51,16 @@
     position: relative;
 
     &::after {
+      content: "";
+      display: block;
+      background-color: $color-orange-1;
+      height: 5px;
+      width: 212px;
+      border-radius: 2px;
+      position: absolute;
+      bottom: -2px;
+      left: 26px;
+
       @media (min-width: $tablet-width) {
         content: "";
         display: block;
@@ -59,8 +69,12 @@
         width: 356px;
         border-radius: 4px;
         position: absolute;
-        left: 30px;
+        left: 77px;
         bottom: -4px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 125px;
       }
     }
   }

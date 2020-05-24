@@ -88,8 +88,15 @@
     top: 0;
     left: 0;
 
+    svg {
+      @media (min-width: $tablet-width) {
+        width: 94px;
+        height: 94px;
+      }
+    }
+
     @media (min-width: $desktop-width) {
-      margin-top: -150px;
+      margin-top: -162px;
       margin-right: 40px;
     }
 
@@ -120,8 +127,8 @@
     }
 
     .travel-mates__level-index {
-      font-size: 14px;
-      line-height: 14px;
+      font-size: 18px;
+      line-height: 20px;
       font-weight: 400;
       color: $color-grey-dark;
       position: absolute;

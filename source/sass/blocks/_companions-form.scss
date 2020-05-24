@@ -2,17 +2,23 @@
 ***************************************COMPANIONS FORM*********************************
 ***************************************************************************************/
 .companions-form {
-  padding: 25px 25px 33px 25px;
+  padding: 38px 25px 33px 25px;
   margin-top: -15px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 70px;
+    padding-top: 80px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 25px;
+    padding-bottom: 65px;
+    padding-left: 126px;
+    padding-right: 60px;
   }
 }
 
@@ -23,22 +29,26 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin-right: 60px;
+    margin-right: 80px;
     z-index: 100;
+    padding-left: 126px;
+    padding-right: 14px;
   }
 }
 
 .companions-form__level-photo-box {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   //padding-left: 19px;
   //padding-right: 19px;
-  margin-bottom: 20px;
+  margin-bottom: 33px;
   flex-wrap: wrap;
   width: 100%;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    justify-content: space-between;
     padding-bottom: 50px;
   }
 
@@ -50,7 +60,7 @@
     width: 370px;
     margin-left: auto;
     padding-bottom: 0;
-    margin-bottom: 50px;
+    margin-bottom: 21px;
   }
 }
 
@@ -61,16 +71,19 @@
 
   @media (min-width: $desktop-width) {
     order: 3;
-    margin-top: -240px;
+    margin-top: -241px;
   }
 }
 
 .companions-form__photo {
   //width: 200px;
   height: 100px;
+  width: 100px;
   border-radius: 100%;
 
   @media (min-width: $tablet-width) {
+    height: 94px;
+    width: 94px;
     display: block;
     border-radius: 5px;
   }
@@ -93,18 +106,19 @@
 }
 
 .companions-form__inputfile + label {
-  font-size: 20px;
-  line-height: 18px;
-  font-weight: 500;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
   color: $color-dark-blue-2;
   background-color: $color-grey-light-2;
-  padding: 15px 40px;
+  padding: 5px 40px;
   cursor: pointer;
   display: block;
   width: 100%;
   border-radius: 50px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 13px;
 
   &:hover,
   &:focus {
@@ -117,14 +131,22 @@
   }
 
   @media (min-width: $tablet-width) {
+    letter-spacing: 2px;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 500;
+    padding: 15px 40px;
     display: block;
     align-self: flex-end;
     width: 100%;
-    margin-bottom: -70px;
+    //margin-bottom: -70px;
     margin-top: 20px;
     text-align: center;
     border-radius: 10px;
     order: 3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: -105px;
   }
 
   @media (min-width: $desktop-width) {
@@ -134,6 +156,8 @@
     order: initial;
     margin-top: -10px;
     margin-bottom: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     span {
       display: none;
@@ -234,6 +258,7 @@
     font-size: 20px;
     bottom: -10px;
     top: unset;
+    letter-spacing: 1.2px;
   }
 }
 
@@ -256,11 +281,11 @@
   border: 1px solid $color-grey-light-3;
   border-radius: 10px;
   margin-top: 25px;
-  padding: 0;
   position: relative;
-  padding-top: 5px;
-  padding-bottom: 5px;
   margin-bottom: 25px;
+  padding-top: 20px;
+  padding-left: 23px;
+  padding-bottom: 13px;
 
   &:hover {
     border: 1px solid $color-grey-input-hvr;
@@ -274,27 +299,34 @@
     order: 5;
     width: 100%;
     text-align: center;
+    margin-top: 87px;
+    padding-top: 30px;
+    padding-left: 36px;
+    padding-bottom: 4px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto;
     order: unset;
     width: auto;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .companions-form__hashtag-textarea {
-  width: 268px;
-  height: 87px;
+  //width: 268px;
+  //height: 87px;
   border: none;
   resize: none;
   background-color: $color-pale-grey;
   text-align: left;
-  padding: 20px 24px;
+  //padding: 15px 24px 12px;
   font-family: "BloggerSans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
+  width: 100%;
+  height: 100%;
 
   &::placeholder {
     color: $color-grey-input;
@@ -313,6 +345,8 @@
   @media (min-width: $desktop-width) {
     display: block;
     width: 730px;
+    padding-top: 35px;
+    padding-left: 35px;
   }
 }
 
@@ -321,22 +355,22 @@
   border: 1px solid $color-grey-light-3;
   border-radius: 10px;
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;
     margin: 0 auto;
     margin-top: -170px;
-    padding-left: 85px;
-    padding-right: 85px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-left: 68px;
+    padding-right: 68px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
-    margin-right: auto;
+    margin: 0;
+    margin-left: auto;
     width: 383px;
   }
 }

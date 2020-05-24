@@ -2,13 +2,18 @@
   background-color: $color-white;
   margin: 0 auto;
   display: table;
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
     display: table;
-    margin-bottom: 20px;
     margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -21,8 +26,8 @@
   border-top: 1px solid $color-greyborder;
   border-bottom: 1px solid $color-greyborder;
   margin: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 4px;
+  padding-top: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,16 +37,30 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin-top: 52px;
     font-size: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
   }
 }
 
 .calendar__previous-month,
 .calendar__next-month {
+  display: flex;
+
   svg {
     opacity: 30%;
+    transform: scale(0.5);
+
+    @media (min-width: $tablet-width) {
+      transform: scale(1);
+    }
   }
 
   &:hover {
@@ -64,10 +83,11 @@
   color: $color-grey-light-5;
   text-align: center;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 20px;
     font-weight: 500;
   }
@@ -75,12 +95,14 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     font-weight: 400;
+    margin-top: 10px;
   }
 
   td {
     width: 32px;
     height: 32px;
     border: 1px solid $color-greyborder;
+    padding: 0;
 
     @media (min-width: $tablet-width) {
       width: 75px;
@@ -101,11 +123,18 @@
 
   th {
     color: $color-grey-dark;
+    padding-bottom: 7px;
 
     @media (min-width: $tablet-width) {
       font-size: 18px;
       line-height: 30px;
       font-weight: 400;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+      padding-left: 13px;
+      padding-bottom: 15px;
     }
   }
 
@@ -135,6 +164,10 @@
   .calendar__free-day button {
     color: $color-grey-dark;
     background-color: $color-pale-grey;
+
+    @media (min-width: $tablet-width) {
+      color: $color-dark-slate-blue;
+    }
   }
 
   .calendar-table__span {
@@ -175,6 +208,13 @@
     display: block;
     padding-top: 0;
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      font-family: "BloggerSans", "Arial", sans-serif;
+      font-size: 20px;
+      line-height: 18px;
+      font-weight: 500;
+    }
 
     @media (min-width: $desktop-width) {
       display: flex;

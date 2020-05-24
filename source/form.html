@@ -175,7 +175,7 @@
 
   <main class="page-main form-main">
 
-    <section class="section-destinations name-page">
+    <section class="section-destinations name-page name-page--form">
       <div class="name-page__content name-page__content--form">
         <h1 class="name-page__title">Направления</h1>
         <!--<a href="index.html" class="name-page__link">На главную</a>-->
@@ -232,7 +232,7 @@
           <ul class="transport-block__list transport-block__list--form">
             <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
             <li class="transport-block__item">
-              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="plane">
+              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="plane" checked>
               <label for="plane">
                 <svg width="14" height="16" viewBox="0 0 19 21" class="transport-block__item-icon">
                   <use xlink:href="img/sprite.svg#icon-plane"></use>
@@ -241,7 +241,7 @@
               <span class="transport-block__item-tooltip">Авиаперелет</span>
             </li>
             <li class="transport-block__item">
-              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="bus">
+              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="bus" checked>
               <label for="bus">
                 <svg width="13" height="16" viewBox="0 0 17 21" class="transport-block__item-icon">
                   <use xlink:href="img/sprite.svg#icon-bus"></use>
@@ -250,7 +250,7 @@
               </label>
             </li>
             <li class="transport-block__item">
-              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="bike" checked>
+              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="bike">
               <label for="bike">
                 <svg width="19" height="17" viewBox="0 0 24 21" class="transport-block__item-icon">
                   <use xlink:href="img/sprite.svg#icon-bike"></use>
@@ -259,7 +259,7 @@
               </label>
             </li>
             <li class="transport-block__item">
-              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="run">
+              <input name="transport" type="radio" class="visually-hidden transport-block__button" id="run" checked>
               <label for="run">
                 <svg width="17" height="15" viewBox="0 0 20 21" class="transport-block__item-icon">
                   <use xlink:href="img/sprite.svg#icon-run"></use>
@@ -307,13 +307,13 @@
 
       <form action="https://echo.htmlacademy.ru" method="post">
 
-        <div class="new-destinations__dates">
+        <div class="new-destinations__dates" id="stepone">
 
           <div class="new-destinations__step-definition-wrapper">
             <div class="new-destinations__step-number-box">
               <h3 class="new-destinations__dates-title">Шаг 1.</h3>
               <h3 class="new-destinations__dates-title">Даты пребывания</h3>
-              <p class="new-destinations__description">Укажите предпочтительное количество попутчиков, которых вы хотели
+              <p class="new-destinations__description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели
                 бы
                 позвать в поездку и ее предполагаемую длительность.</p>
             </div>
@@ -539,7 +539,7 @@
             </table>
           </div>
 
-          <a href="#direction" class="new-destinations__button new-destinations__button--next-step">Следующий шаг
+          <a href="#steptwo" class="new-destinations__button new-destinations__button--next-step">Следующий шаг
             <svg viewBox="0 0 10 14" width="10" height="14">
               <use xlink:href="img/sprite.svg#icon-triangle-arrow-right"></use>
             </svg>
@@ -547,15 +547,14 @@
 
         </div>
 
-        <div class="new-destinations__direction" id="direction">
+        <div class="new-destinations__direction" id="steptwo">
 
           <div class="new-destinations__step-definition-wrapper">
             <div class="new-destinations__step-number-box">
               <h3 class="new-destinations__steps-title">Шаг 2.</h3>
               <h3 class="new-destinations__steps-title">Маршрут</h3>
-              <p class="new-destinations__description">Укажите страны, которые вы хотели посетить. Это может быть одна
-                или
-                сразу</p>
+              <p class="new-destinations__description new-destinations__description--route">Укажите страны, которые вы хотели посетить. Это может быть одна
+                или сразу несколько.</p>
             </div>
 
             <ul class="new-destinations__steps-list">
@@ -625,6 +624,7 @@
             </div>
 
             <div class="new-destinations__country-selection new-destinations__country-selection--select">
+
               <p class="new-destinations__select-wrapper new-destinations__select-wrapper--select">
                 <select class="new-destinations__action new-destinations__action--select">
                   <option selected>Выберите страну</option>
@@ -727,12 +727,12 @@
             </div>
           </div>
 
-          <a href="#" class="new-destinations__button new-destinations__button--next-step">Следующий шаг
+          <a href="#stepthree" class="new-destinations__button new-destinations__button--next-step">Следующий шаг
             <svg viewBox="0 0 10 14" width="10" height="14">
               <use xlink:href="img/sprite.svg#icon-triangle-arrow-right"></use>
             </svg>
           </a>
-          <a href="#" class="new-destinations__button new-destinations__button--previous-step">
+          <a href="#stepone" class="new-destinations__button new-destinations__button--previous-step">
             <svg viewBox="0 0 10 14" width="10" height="14">
               <use xlink:href="img/sprite.svg#icon-triangle-arrow-right"></use>
             </svg>
@@ -741,13 +741,14 @@
 
         </div>
 
-        <div class="new-destinations__intertainment" id="intertainment">
+        <div class="new-destinations__intertainment" id="stepthree">
 
           <div
             class="new-destinations__step-definition-wrapper new-destinations__step-definition-wrapper--intertainment">
             <div class="new-destinations__step-number-box">
-              <h3 class="new-destinations__title">Шаг 3. Развлечения</h3>
-              <p class="new-destinations__description">
+              <h3 class="new-destinations__steps-title">Шаг 3.</h3>
+              <h3 class="new-destinations__steps-title">Развлечения</h3>
+              <p class="new-destinations__description new-destinations__description--plan">
                 Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.
               </p>
@@ -780,13 +781,13 @@
               <span class="new-destinations__textarea-error">Это поле должно быть заполнено</span>
             </div>
 
-            <label for="plan2" class="new-destinations__label-country">Чехия
+            <label for="plan2" class="new-destinations__label-country new-destinations__label-country--czech">Чехия
               <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24" class="new-destinations__country-flag">
             </label>
-            <div class="new-destinations__textarea-wrapper">
+            <div class="new-destinations__textarea-wrapper new-destinations__textarea-wrapper--czech">
               <textarea tabindex="0" id="plan2"
                 class="new-destinations__textarea-plan new-destinations__textarea-plan--filled" name="action"
-                placeholder="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все."></textarea>
+                placeholder="Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и&nbsp;вот это все."></textarea>
               <span class="new-destinations__textarea-error">Это поле должно быть заполнено</span>
             </div>
           </div>
@@ -798,7 +799,7 @@
               <use xlink:href="img/sprite.svg#icon-triangle-arrow-right"></use>
             </svg>
           </button>
-          <a href="#"
+          <a href="#steptwo"
             class="new-destinations__button new-destinations__button--previous-step new-destinations__button--last-step">
             <svg viewBox="0 0 10 14" width="10" height="14">
               <use xlink:href="img/sprite.svg#icon-triangle-arrow-right"></use>
@@ -813,7 +814,7 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--form">
     <div class="page-footer__logo">
 
       <picture>
@@ -834,14 +835,14 @@
       </li>
       <li class="page-footer__social-item">
         <a href="https://vk.com/" aria-label="vkontakte" class="page-footer__social-link">
-          <svg viewBox="0 0 30 15.8" width="30" height="15.8" class="page-footer__social-icon">
+          <svg viewBox="0 0 30 15.8" width="23" height="12" class="page-footer__social-icon">
             <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
           </svg>
         </a>
       </li>
       <li class="page-footer__social-item">
         <a href="https://instagram.com/" aria-label="instagram" class="page-footer__social-link">
-          <svg viewBox="0 0 23 23" width="23" height="23" class="page-footer__social-icon">
+          <svg viewBox="0 0 23 23" width="18" height="18" class="page-footer__social-icon">
             <use xlink:href="img/sprite.svg#icon-instagram"></use>
           </svg>
         </a>
@@ -859,6 +860,7 @@
 
   <script src="js/country-modal.js"></script>
   <script src="js/svgxuse.js" defer></script>
+
 </body>
 
 </html>
