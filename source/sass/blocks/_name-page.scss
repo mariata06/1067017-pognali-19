@@ -18,6 +18,7 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
+    padding-bottom: 5px;
   }
 
   &::after {
@@ -80,8 +81,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 250px;
+    //height: 250px;
     padding: 0 129px 64.5px 45px;
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 48px;
   }
 }
 

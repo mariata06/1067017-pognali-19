@@ -22,6 +22,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    padding-left: 28px;
   }
 }
 
@@ -104,6 +105,10 @@
       @media (min-width: $tablet-width) {
         left: 90%;
       }
+
+      @media (min-width: $desktop-width) {
+        left: 97%;
+      }
     }
 
     @media (min-width: $tablet-width) {
@@ -118,9 +123,12 @@
     margin-left: 1px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    display: block;
+    //display: block;
     height: 50px;
-    position: relative;
+    //position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover,
     &:focus {
@@ -136,16 +144,29 @@
     }
 
     svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      //position: absolute;
+      //top: 50%;
+      //left: 50%;
+      //transform: translate(-50%, -50%);
       fill: $color-dark-blue-1;
+
+      @media (min-width: $tablet-width) {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 18px;
+      }
     }
 
     @media (min-width: $tablet-width) {
       width: 10%;
       height: 100px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 }

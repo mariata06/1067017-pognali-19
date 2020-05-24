@@ -12,6 +12,11 @@
   @media (min-width: $desktop-width) {
     //display: none;
   }
+
+  &--catalog {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .alphabet-table td {
@@ -20,9 +25,11 @@
   border: 1px solid $color-greyborder;
 
   @media (min-width: $tablet-width) {
-    width: 71px;
-    height: 76px;
     border: none;
+    text-align: left;
+    padding: 0;
+    width: 76px;
+    height: 83px;
   }
 }
 

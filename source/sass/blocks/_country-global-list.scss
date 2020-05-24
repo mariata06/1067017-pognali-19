@@ -1,4 +1,4 @@
-.country-global-list {
+.country-global-list__wrapper {
   display: none;
 
   @media (min-width: $tablet-width) {
@@ -9,6 +9,8 @@
     //display: none;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 35px;
+    padding-top: 60px;
 
     &--show {
       display: flex;
@@ -16,11 +18,12 @@
   }
 }
 
-.country-global-list .country-list {
+.country-global-list__wrapper .country-list {
   @media (min-width: $desktop-width) {
-    padding: 5px 0 50px 0;
+    padding: 5px 0 62px 0;
     width: 240px;
-    max-height: 600px;
+    //min-height: 650px;
+    margin-right: 12px;
   }
 
   a:not(.country-global-list__lit-link) {
@@ -37,5 +40,37 @@
     line-height: 24px;
     font-weight: 700;
     color: $color-dark-blue-1;
+    display: block;
+    margin-bottom: 50px;
+  }
+}
+
+.country-global-list__ch-lit .country-global-list__lit-link,
+.country-global-list__sh-lit .country-global-list__lit-link,
+.country-global-list__eh-lit .country-global-list__lit-link,
+.country-global-list__ju-lit .country-global-list__lit-link,
+.country-global-list__ja-lit .country-global-list__lit-link {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.country-global-list .country-global-list__m-list,
+.country-global-list .country-global-list__n-list,
+.country-global-list .country-global-list__o-list,
+.country-global-list .country-global-list__p-list,
+.country-global-list .country-global-list__r-list {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 102px;
+  }
+}
+
+.country-global-list .country-global-list__s-list,
+.country-global-list .country-global-list__t-list,
+.country-global-list .country-global-list__u-list,
+.country-global-list .country-global-list__f-list,
+.country-global-list .country-global-list__h-list {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 50px;
   }
 }

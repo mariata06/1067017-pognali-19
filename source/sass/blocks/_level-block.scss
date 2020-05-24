@@ -1,5 +1,5 @@
 .level-block {
-  padding-bottom: 27px;
+  padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -12,6 +12,8 @@
   @media (min-width: $desktop-width) {
     display: inline;
     border-bottom: none;
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 }
 
@@ -78,6 +80,7 @@
   @media (min-width: $desktop-width) {
     order: 3;
     margin-right: 0;
+    width: 190px;
   }
 }
 
@@ -90,6 +93,11 @@
   @media (min-width: $tablet-width) {
     width: 72%;
     transform: translateX(37%);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 63%;
+    transform: translateX(62%);
   }
 }
 
@@ -111,6 +119,10 @@
     width: 13px;
     height: 13px;
     //left: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 60px;
   }
 }
 
@@ -149,6 +161,10 @@
     width: 13px;
     height: 13px;
     left: 265px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 180px;
   }
 }
 
@@ -189,7 +205,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 38px;
     order: 2;
     //justify-content: center;
     //display: block;
@@ -243,6 +259,10 @@
     width: 74px;
     height: 44px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 95px;
+  }
 }
 
 .level-block__max-level {
@@ -273,6 +293,10 @@
     width: 73px;
     height: 44px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 95px;
+  }
 }
 
 .level-block__title {
@@ -280,6 +304,10 @@
   //margin-top: 0;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
+  }
 
   button {
     border: none;

@@ -55,6 +55,8 @@
     @media (min-width: $tablet-width) {
       flex-direction: column;
       align-items: flex-end;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     @media (min-width: $desktop-width) {
@@ -98,6 +100,10 @@
       padding-left: 15px;
       padding-top: 0;
       padding-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
     }
   }
 }
@@ -148,6 +154,8 @@
 
     @media (min-width: $tablet-width) {
       background-color: transparent;
+      width: 32px;
+      height: 32px;
     }
   }
 }
@@ -231,6 +239,8 @@
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
+    width: 100%;
+    padding-bottom: 17px;
   }
 
   button {

@@ -4,11 +4,15 @@
   padding: 0 25px;
   list-style: none;
   background-color: $color-pale-grey-four;
+  padding-left: 0;
 
   @media (min-width: $tablet-width) {
     //position: absolute;
     //top: 50px;
     //right: 50px;
+    margin-top: 0;
+    padding-right: 0;
+    margin-right: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,7 +29,7 @@
   }
 }
 
-.country-a-item {
+.country-a__item {
   color: $color-grey-dark;
   cursor: pointer;
 

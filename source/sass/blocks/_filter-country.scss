@@ -10,6 +10,7 @@
   padding-bottom: 14px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  //padding-bottom: 25px;
 
   //flex-direction: row;
   //width: 100%;
@@ -18,16 +19,23 @@
     flex-wrap: wrap;
     //justify-content: space-around;
     padding: 93px 74px;
-    padding-bottom: 38px;
+    //padding-bottom: 38px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     margin-top: -50px;
+    //padding-top: 92px;
     padding-top: 92px;
+    //padding-bottom: 75px;
+    padding-bottom: 38px;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
-    padding: 55px 92px;
+    padding: 55px 60px 110px;
+    padding-top: 82px;
+    background-color: $color-pale-grey;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -40,8 +48,9 @@
     flex-direction: row;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     order: 3;
+    margin-left: auto;
   }
 }
 
@@ -62,6 +71,9 @@
     margin: 0 auto;
     display: flex;
     width: 100%;
+    padding-left: 18px;
+    padding-right: 70px;
+    justify-content: flex-start;
   }
 }
 
@@ -80,6 +92,7 @@
     //order: -1;
     justify-content: flex-end;
     width: auto;
+    margin-right: 20px;
   }
 }
 
@@ -93,6 +106,17 @@
   &--left {
     padding: 0;
     align-self: center;
+
+    @media (min-width: $desktop-width) {
+      margin-right: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      svg {
+        width: 23px;
+        height: 15px;
+      }
+    }
   }
 
   &--right {
@@ -100,6 +124,10 @@
     display: flex;
     align-items: center;
     margin-right: 3px;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   &--close {
@@ -139,6 +167,11 @@
     @media (min-width: $tablet-width) {
       //display: flex;
       align-items: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      //display: block;
+      display: none;
     }
   }
 
@@ -181,6 +214,10 @@
         display: none;
       }
     }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   &--collapse {
@@ -194,6 +231,8 @@
     border-radius: 20px;
     padding: 6px 0 5px 0;
     background-color: $color-pale-grey-2;
+    display: none;
+    //display: block;
 
     &:hover,
     &:focus {
@@ -211,7 +250,16 @@
     }
 
     @media (min-width: $desktop-width) {
-      display: none;
+      //display: none;
+      display: block;
+      background-color: transparent;
+      font-family: "BloggerSans", "Arial", sans-serif;
+      align-self: flex-end;
+      margin-left: auto;
+
+      svg {
+        margin-left: 58px;
+      }
     }
   }
 }
@@ -225,6 +273,16 @@
     flex-direction: row;
     order: -1;
     padding-left: 0;
+    width: 370px;
+    justify-content: space-between;
+  }
+}
+
+.filter-country__continent-item {
+  padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -249,11 +307,12 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
-    padding-right: 25px;
+    //padding-right: 25px;
+    padding-right: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 25px;
+    margin-right: 3px;
   }
 }
 
@@ -300,18 +359,25 @@
   background-color: $color-pale-grey-four;
   //display: block;
   display: none;
+  //display: block;
+  padding-top: 15px;
 
   &--show {
     display: block;
   }
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     order: 1;
+    width: 365px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
     order: 2;
+    display: flex;
+    align-items: center;
   }
 }
 
