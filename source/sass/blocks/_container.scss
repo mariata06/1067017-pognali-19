@@ -1,18 +1,30 @@
 .container {
   min-width: 320px;
-  padding: 27px 25px 23px 25px;
+  padding: 27px 25px 23px;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: pink;
+  //background-color: pink;
   //background-color: $color-blue-black-2;
+  //background-color: $color-blue-black-3;
+  //background-color: $color-medium-blue;
+  background-color: $color-white;
+
+  &--form,
+  &--catalog {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 43px 40px;
+    padding: 43px 40px 42px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 0 60px;
+    background-color: $color-blue-black-2;
+    //background-color: $color-blue-black-3;
+    //background-color: $color-medium-blue;
   }
 }

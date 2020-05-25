@@ -2,15 +2,16 @@
   min-width: 320px;
   margin: 0 auto;
   //background-color: $color-white;
-  padding: 25px 25px 8px 25px;
-  background-color: pink;
+  padding: 25px 25px 18px 25px;
+  //background-color: pink;
+  background-color: $color-white;
   display: flex;
   flex-direction: column;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   z-index: 5;
   position: relative;
-  margin-top: -115px;
+  margin-top: -75px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -18,11 +19,33 @@
     justify-content: space-between;
     width: 768px;
     padding: 48px 40px;
+    margin-top: -85px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 48px 60px;
+    margin-top: -145px;
+  }
+
+  &--catalog {
+    margin-top: 33px;
+    //padding-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -148px;
+    }
+  }
+
+  &--form {
+    z-index: 10;
+    margin-top: -48px;
   }
 }
 
@@ -31,7 +54,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 52px;
+  margin-top: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .page-footer__caption {
@@ -40,6 +67,7 @@
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
+    margin-top: 15px;
   }
 }
 
@@ -51,6 +79,14 @@
   justify-content: center;
 
   @include list-style;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 42px;
+  }
 }
 
 .page-footer__social-link {
@@ -60,6 +96,26 @@
   border-radius: 50px;
   position: relative;
   background-color: $color-yellow-1;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-2;
+  }
+
+  &:active {
+    svg {
+      opacity: 30%;
+    }
+  }
+
+  svg {
+    fill: $color-dark-blue-2;
+  }
 }
 
 .page-footer__social-icon {
@@ -67,14 +123,34 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
 }
 
 .page-footer__logo {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+}
+
+.page-footer__link {
+  svg {
+    fill: $color-dark-blue-1;
+    margin-top: 5px;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }

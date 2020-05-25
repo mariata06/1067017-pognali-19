@@ -4,10 +4,22 @@
   background-color: $color-pale-grey;
   position: relative;
   margin-top: -15px;
-  padding: 35px 25px;
+  padding: 39px 25px;
+  //margin-bottom: 100px;
+  padding-bottom: 46px;
+  margin-bottom: -20px;
+  //padding-top: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 39px 40px;
+    padding-top: 60px;
+  }
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 105px;
   }
 }
 
@@ -29,9 +41,24 @@
   border-radius: 20px;
   background-color: $color-yellow-1;
   padding: 26px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 39px;
+    margin-bottom: 39px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 286px;
+    padding-top: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 47px;
   }
 }
 
@@ -41,13 +68,21 @@
   font-weight: 700;
   line-height: 22.49px;
   color: $color-dark-blue-2;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     display: block;
     border-bottom: 1px solid $color-macaroni-and-cheese;
-    padding-bottom: 44px;
+    padding-bottom: 39px;
     font-size: 30px;
     line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 16px;
   }
 }
 
@@ -61,9 +96,30 @@
   width: 100%;
   border: none;
   border-radius: 20px;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+    background-color: $color-yellow-4;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    //margin-top: 12px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    margin-top: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 24px;
   }
 }
 
@@ -84,5 +140,6 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
+    align-items: initial;
   }
 }

@@ -27,9 +27,19 @@
     font-weight: 700;
     text-transform: uppercase;
     display: block;
-    background-color: #ffd74b;
+    background-color: $color-yellow-1;
     padding: 10px 28px;
     border-radius: 50px;
+    color: $color-blue-black-2;
+
+    &:hover,
+    &:focus {
+      background-color: $color-yellow-2;
+    }
+
+    &:active {
+      color: rgba(22, 28, 53, 0.3);
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -56,14 +66,41 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: #ffbd30;
     border-radius: 100px;
   }
 }
 
 .user-nav__phone-link {
   @media (min-width: $desktop-width) {
-    background-color: #ff8d30;
+    background-color: $color-orange-1;
+
+    &:hover,
+    &:focus {
+      background-color: $color-orange-2;
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
+  }
+}
+
+.user-nav__email-link {
+  @media (min-width: $desktop-width) {
+    background-color: $color-yellow-2;
+
+    &:hover,
+    &:focus {
+      background-color: $color-orange-1;
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
   }
 }
 

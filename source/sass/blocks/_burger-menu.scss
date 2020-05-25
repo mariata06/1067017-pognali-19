@@ -7,7 +7,21 @@
 .burger-menu__close {
   border: none;
   background-color: transparent;
-  display: none;
+  display: block;
+
+  &--hide {
+    display: none;
+  }
+
+  svg {
+    fill: $pinkish-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--hide {
+      display: none;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -22,9 +36,27 @@
   background-color: transparent;
   border: none;
   position: relative;
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    display: none;
+
+    &--show {
+      display: block;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     display: none;
+
+    &--show {
+      display: block;
+    }
   }
 
   svg {

@@ -4,8 +4,8 @@
 
 .companions-catalog {
   color: $color-grey-dark;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  //padding-top: 25px;
+  //padding-bottom: 25px;
   background-color: $color-pale-grey;
 
   @media (min-width: $desktop-width) {
@@ -21,21 +21,37 @@
   flex-direction: column;
   background-color: $color-white;
   border-radius: 20px;
-  padding: 15px 20px 22px 18px;
+  padding: 14px 20px 22px 18px;
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     //width: 688px;
     //position: relative;
     flex-direction: row;
-    padding: 36px 25px 25px 36px;
-    margin-bottom: 40px;
+    padding: 36px 25px 22px 36px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: $desktop-width) {
     width: 950px;
     height: 285px;
     padding: 0;
+    margin-bottom: 30px;
+  }
+
+  &--rogova {
+    padding-top: 12px;
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 36px;
+      margin-bottom: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 46px;
+      padding-top: 0;
+    }
   }
 }
 
@@ -60,24 +76,35 @@
 .companions-catalog__hashtag-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-right: 50px;
 
-  @include list-style;
   //width: 160px;
   //border: 2px solid lightgreen;
 
   @media (min-width: $tablet-width) {
-    width: 220px;
+    //width: 220px;
     flex-wrap: wrap;
     align-self: flex-start;
-    margin-left: 250px;
-    margin-top: -150px;
-    padding-left: 0;
+    //margin-left: 250px;
+    //margin-top: -150px;
+    padding-left: 8px;
     //margin-top: 30px;
+    width: 340px;
+    margin-left: 218px;
+    margin-top: -158px;
+    padding-right: 30px;
+    padding-bottom: 13px;
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 350px;
-    margin-top: -200px;
+    padding-left: 0;
+    padding-right: 50px;
+    margin-top: -193px;
   }
 }
 
@@ -94,14 +121,53 @@
 }
 
 .companions-catalog__countries-item {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $color-dark-blue-2;
+  text-transform: uppercase;
+  //padding-left: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 14px;
+
+    @media (min-width: $tablet-width) {
+      width: 35px;
+      height: 24px;
+      margin-right: 11px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 17px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    display: inline;
+    display: flex;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 500;
-    color: $color-dark-blue-2;
-    text-transform: uppercase;
-    margin-right: 70px;
+    margin-right: 27px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 7px;
+  }
+
+  .companions-catalog__country-flag {
+    &--rogova {
+      @media (min-width: $tablet-width) {
+        height: 35px;
+        width: 45px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 10px;
+      }
+    }
   }
 }
 
@@ -127,20 +193,85 @@
 
 .companions-catalog__name {
   margin: 0;
-  //width: 110px;
+  width: 106px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   color: $color-dark-blue-2;
+  position: relative;
+
+  &:hover {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 
   @media (min-width: $tablet-width) {
-    //width: 200px;
+    width: auto;
     align-self: baseline;
-    margin-left: 50px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: -5px;
+    margin-left: 32px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 45px;
+    margin-left: 59px;
+  }
+
+  &--offline {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 10px;
+      display: block;
+      top: 10px;
+      right: -35px;
+      background-color: $color-pink-2;
+
+      @media (min-width: $tablet-width) {
+        width: 7px;
+        height: 7px;
+        top: 12px;
+        right: -30px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: unset;
+        left: -25px;
+      }
+    }
+  }
+
+  &--online {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 10px;
+      display: block;
+      top: 10px;
+      right: -35px;
+      background-color: $color-green-1;
+
+      @media (min-width: $tablet-width) {
+        width: 7px;
+        height: 7px;
+        top: 12px;
+        right: -30px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: unset;
+        left: -25px;
+      }
+    }
   }
 }
 
@@ -154,28 +285,138 @@
   line-height: 21px;
   font-weight: 700;
   color: $color-blue-black-2;
-  //margin-left: 100px;
-  //margin-top: -30px;
+  margin-left: 50px;
+  margin-top: -35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //width: 70px;
+  margin-bottom: 12px;
 
+  /*
+  &::before {
+    content: url("../heart-active.svg");
+    display: block;
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    left: -10px;
+    //fill: $color-tomato;
+  }
+*/
   @media (min-width: $tablet-width) {
     //order: 4; отодвигает к правому краю лайк
     align-self: flex-end;
-    margin-left: 80px;
+    margin-left: 367px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: -50px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-top: -133px;
+    margin-left: 490px;
+    align-self: center;
   }
 }
+
+.companions-catalog__likes-span {
+  display: block;
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  position: relative;
+  margin-right: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+    //margin-right: 5px;
+  }
+
+  &--active {
+    background-color: $color-very-light-pink-two;
+
+    svg {
+      fill: $color-tomato;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: $tablet-width) {
+        width: 20px;
+        height: 17px;
+      }
+    }
+
+    &:hover {
+      background-color: $color-light-tan;
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
+  }
+
+  &--inactive {
+    background-color: $color-pale-grey-four;
+
+    svg {
+      fill: $color-dark-blue-1;
+      opacity: 30%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: $tablet-width) {
+        width: 20px;
+        height: 17px;
+      }
+    }
+
+    &:hover {
+      background-color: $color-pale-grey-four;
+    }
+
+    &:active {
+      svg {
+        opacity: 10%;
+      }
+    }
+  }
+}
+
 
 .companions-catalog fieldset {
   margin: 0;
   border: none;
-  border-top: 1px solid $color-pale-grey;
+  //border-top: 1px solid $color-pale-grey;
+
+  @media (min-width: $desktop-width) {
+    border-top: none;
+  }
 }
 
 .companions-catalog__countries-list {
+  margin-top: 13px;
+  margin-bottom: 0;
+
+  &--demin {
+    margin-bottom: 7px;
+  }
+
+  &--smolov {
+    margin-bottom: 4px;
+  }
+
   @include list-style;
+
+  //padding-left: 14px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -186,29 +427,77 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
-    padding-top: 49px;
+    padding-top: 45px;
+    padding-left: 10px;
+  }
+
+  &--rogova {
+    //margin-bottom: 7px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
 .companions-catalog__countries-fieldset {
   //border: 2px solid lightblue;
+  padding-top: 4px;
+  padding-left: 7px;
+  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
     //order: 4;
     //width: 100%;
+    order: 4;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 33px;
   }
 
   @media (min-width: $desktop-width) {
     order: 1;
     width: 30%;
-    margin-left: auto;
+    //margin-left: auto;
     align-self: baseline;
+    padding: 0;
+    //order: 1;
+    margin-left: auto;
   }
 }
 
 .companions-catalog__countries-to-visit {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 1px;
+    position: absolute;
+    background-color: $color-pale-grey;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 138px;
+    height: 1px;
+    position: absolute;
+    background-color: $color-pale-grey;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 110px;
+  }
+
+
   @media (min-width: $tablet-width) {
-    text-align: right;
+    text-align: left;
+    top: -15px;
+    left: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -216,6 +505,7 @@
   }
 }
 
+/*
 .country {
   //border: 2px solid blueviolet;
 
@@ -237,11 +527,12 @@
     //margin-bottom: 111px;
   }
 }
-
+*/
 .companions-catalog__item-wrapper {
   display: flex;
   justify-content: space-between;
   //border: 2px solid aqua;
+  margin-bottom: 11px;
 
   @media (min-width: $tablet-width) {
     width: 20%;
@@ -249,6 +540,12 @@
     margin-left: auto;
     flex-direction: column;
     align-items: flex-end;
+    //height: 194px;
+    margin-bottom: 0;
+
+    fieldset {
+      border: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -257,8 +554,8 @@
     margin-left: auto;
     flex-direction: row;
     margin-top: -170px;
-    padding-bottom: 40px;
     padding-right: 44px;
+    padding-bottom: 98px;
   }
 }
 
@@ -276,26 +573,39 @@
   text-align: center;
   padding: 5px 0;
 
+  &:hover,
+  &:focus {
+    background-color: $color-yellow-2;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
+
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: normal;
-    height: 50px;
+    //height: 50px;
     //display: inline;
     width: 147px;
     order: 3;
-    margin-left: 240px;
-    margin-top: -80px;
-    padding: 15px 20px;
+    margin-left: 220px;
+    margin-top: -52px;
+    padding: 11px 20px;
     border-radius: 100px;
+    align-self: flex-start;
   }
 
   @media (min-width: $desktop-width) {
     display: inline;
     order: 2;
-    margin-left: 350px;
+    //margin-left: 350px;
     margin-top: -100px;
-    align-self: end;
+    align-self: flex-end;
+    margin-bottom: 100px;
+    margin-left: 340px;
   }
 }
 
@@ -305,12 +615,18 @@
 }
 
 .companions-catalog__level-fieldset {
+  position: relative;
+  padding-right: 0;
+
   @media (min-width: $tablet-width) {
     display: flex;
     border-bottom: 1px solid $color-pale-grey;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
   }
 }
-
+/*
 .companions-catalog__level-fieldset span {
   font-size: 24px;
   line-height: 18px;
@@ -322,6 +638,7 @@
     text-align: right;
   }
 }
+*/
 
 .companions-catalog__countries-to-visit,
 .companions-catalog__transport-type,
@@ -330,6 +647,7 @@
   font-weight: 400;
   line-height: 18px;
   color: $color-grey-dark;
+  //padding-top: 2px;
 }
 
 .companions-catalog__transport-type,
@@ -340,6 +658,27 @@
 }
 
 .companions-catalog__button {
+  &--tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      margin-right: 25px;
+
+      svg {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &--mobile {
+    margin-right: 12px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
   &--more {
     font-size: 17px;
     line-height: 30px;
@@ -348,10 +687,51 @@
     color: $color-dark-slate-blue;
     text-align: center;
     display: block;
-    margin-bottom: 27px;
+    margin-bottom: 21px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      justify-content: flex-end;
+      margin-top: 18px;
+      margin-right: 420px;
+      margin-bottom: 68px;
+
+      svg {
+        margin-right: 20px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 }
 
 .companions-catalog__transport-fieldset {
   border: none;
+  padding-left: 6px;
+  padding-top: 0;
+
+  @media (min-width: $tablet-width) {
+    //padding-bottom: 40px;
+    padding: 0;
+    padding-right: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 10px;
+    padding-left: 2px;
+  }
 }

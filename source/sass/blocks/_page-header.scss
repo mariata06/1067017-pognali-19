@@ -42,17 +42,28 @@
 
 .page-header__main-nav {
   //display: none;
+  display: block;
   margin-top: 62px;
+  margin-bottom: 12px;
+
+  &--hide {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
+    display: block;
     //display: none;
+
+    &--hide {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
-    margin-left: 80px;
-    margin-top: 60px;
+    margin-left: 72px;
+    margin-top: 47px;
   }
 }
 

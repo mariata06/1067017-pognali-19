@@ -1,0 +1,177 @@
+.travel-mates__level {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(00, 00, 00, 0.6);
+  //opacity: 60%;
+  display: block;
+  top: 16px;
+  left: 16px;
+  border-radius: 100%;
+  z-index: 100;
+
+  @media (min-width: $tablet-width) {
+    top: 18px;
+    left: 20px;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 100%;
+  }
+
+  &--card {
+    top: 8px;
+    left: 0;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      top: 2px;
+      width: 60px;
+      height: 60px;
+
+      svg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .travel-mates__level-index {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 400;
+        color: rgba(68, 68, 68, 0.4);
+        position: absolute;
+        bottom: 5px;
+        left: 30%;
+      }
+    }
+
+    .travel-mates__level-value::after {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+        background-color: rgba(68, 68, 68, 0.4);
+      }
+    }
+
+    .travel-mates__level-value {
+      color: $color-dark-blue-2;
+      position: absolute;
+      font-size: 24px;
+      line-height: 18px;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (min-width: $tablet-width) {
+        top: 30%;
+      }
+    }
+  }
+
+  &--form {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+
+    svg {
+      @media (min-width: $tablet-width) {
+        width: 94px;
+        height: 94px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -157px;
+      margin-right: 40px;
+    }
+
+    .travel-mates__level-value {
+      font-size: 38px;
+      line-height: 38px;
+      top: 20px;
+      font-weight: 700;
+      color: $color-blue-black-2;
+
+      @media (min-width: $desktop-width) {
+        color: $color-white;
+      }
+
+      &::after {
+        content: "";
+        width: 49px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        left: -5px;
+        background-color: $color-grey-light-3;
+
+        @media (min-width: $desktop-width) {
+          background-color: $color-white;
+        }
+      }
+    }
+
+    .travel-mates__level-index {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 400;
+      color: $color-grey-dark;
+      position: absolute;
+      bottom: 17px;
+      left: 35%;
+
+      @media (min-width: $desktop-width) {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.travel-mates__level-value {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  position: relative;
+  color: $color-white;
+  top: 14px;
+  left: 30%;
+  //transform: translateX(-50%);
+  z-index: 1;
+}
+
+.travel-mates__level-index {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  //color: rgba(68, 68, 68, 0.4);
+  color: $color-white;
+  position: absolute;
+  bottom: 5px;
+  left: 30%;
+}
+
+.travel-mates__level-value::after {
+  content: "";
+  width: 31px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: -5px;
+  background-color: $color-pale-grey-6;
+}

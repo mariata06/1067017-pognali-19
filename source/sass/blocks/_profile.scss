@@ -1,22 +1,88 @@
 .profile {
-  background: url("../img/rates@1x.png") no-repeat 170px 25px $color-pale-grey;
-  background-size: 40%;
-  padding: 70px 26px 38px 50px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  //background: url("../img/rates@1x.png") no-repeat 170px 25px $color-pale-grey;
+  //background-size: 40%;
+  background-color: $color-pale-grey;
+  padding: 65px 26px 39px 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   position: relative;
+  overflow: hidden;
   z-index: 7;
   margin-top: -15px;
 
   @media (min-width: $tablet-width) {
-    background-size: 15%;
-    background-position: bottom 50px right 90px;
-    padding: 70px 40px 80px;
+    //background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px $color-pale-grey;
+    //background-size: 100px, 198px;
+    //background-size: 100%, 15%;
+    //background-position: bottom 50px right 90px;
+    padding: 87px 75px 65px 40px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    //z-index: 2;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 104px 131px 162px;
-    background-position: top 284px right 132px;
+    //background: url("../img/rates@1x.png") no-repeat bottom 70px right 85px $color-pale-grey;
+    background-size: 198px;
+    padding: 120px 131px 165px;
+    //z-index: 1;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+.profile__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../img/rates@1x.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: -12px;
+    background-size: 100px 100px;
+
+    @media (min-width: $tablet-width) {
+      //width: 198px;
+      //height: 285px;
+      right: 10px;
+      bottom: -20px;
+      top: unset;
+      z-index: 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 200px;
+      height: 200px;
+      background-size: 200px 200px;
+      right: 0;
+      bottom: 0;
+      top: 180px;
+      z-index: 2;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      width: 198px;
+      height: 285px;
+      position: absolute;
+      right: -35px;
+      top: 80px;
+      border-radius: 20px;
+      background-color: $color-pale-grey-three;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 439px;
+      height: 300px;
+      top: 125px;
+      right: 120px;
+    }
   }
 }
 
@@ -27,16 +93,24 @@
   font-weight: 700;
   padding-right: 100px;
   margin: 0;
+  margin-bottom: 45px;
 
   @media (min-width: $tablet-width) {
     @include orange-title-tabdesc;
     text-align: center;
+    padding-right: 0;
+    padding-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    margin-bottom: 133px;
   }
 }
 
 .profile__tariff-list {
   @include list-style;
-  margin-right: 44px;
+  //margin-right: 44px;
 
   @media (min-width: $tablet-width) {
     margin-top: 75px;
@@ -48,16 +122,22 @@
 }
 
 .profile__tariff-item {
-  padding-bottom: 10px;
-  border-top: 1px solid $color-pale-grey;
-  border-bottom: 1px solid $color-pale-grey;
+  padding-top: 4px;
+  padding-bottom: 11px;
+  //border-top: 1px solid rgba(237, 239, 246, 0.05);
+  border-top: 1px solid $color-pale-grey-5;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
     display: flex;
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-top: 1px solid $color-pale-grey-5;
+    //padding-top: 25px;
+    //padding-bottom: 25px;
+    //border-top: 1px solid $color-pale-grey-5;
+    flex-direction: row-reverse;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -66,16 +146,19 @@
   }
 
   &:last-child {
+    border-bottom: 1px solid $color-pale-grey-5;
+
     @media (min-width: $tablet-width) {
-      border-bottom: 1px solid $color-pale-grey-5;
+      //border-bottom: 1px solid rgba(237, 239, 246, 0.05);
     }
   }
 }
 
 .profile__tariff-description {
   color: $color-grey-dark;
-  width: 100%;
+  //width: 100%;
   margin: 0;
+  padding-top: 6px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -83,11 +166,17 @@
     font-size: 28px;
     line-height: 33px;
     font-weight: 300;
+    justify-content: space-between;
+    align-self: center;
+    padding-top: 0;
+    padding-left: 30px;
+    padding-bottom: 9px;
   }
 }
 
 .profile__tariff-cost {
   color: $color-grey-dark;
+  display: block;
 
   @media (min-width: $tablet-width) {
     min-width: 140px;
@@ -100,18 +189,103 @@
   }
 }
 
+.profile__tariff-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  background-color: $color-yellow-3;
+  text-align: center;
+  padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 67px;
+    height: 67px;
+    font-size: 28px;
+    line-height: 28px;
+    padding-top: 20px;
+    //padding-left: 2px;
+  }
+
+  &--first {
+    background-color: $color-yellow-3;
+  }
+
+  &--second {
+    background-color: $color-yellow-2;
+  }
+
+  &--third {
+    background-color: $color-yellow-1;
+  }
+}
+
 .profile__tariff-button {
+  margin-top: 30px;
+
   @include blue-link-caption;
   font-size: 16px;
   line-height: 16px;
-  background-color: $color-pale-grey;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     font-weight: 700;
-    margin-top: 57px;
-    display: block;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
     background-color: transparent;
+    padding-left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(19, 37, 118, 0.7);
+    //background-color: $color-pale-grey;
+    background-color: transparent;
+
+    .profile__tariff-span {
+      &::before {
+        opacity: 70%;
+      }
+    }
+  }
+
+  &:active {
+    color: rgba(19, 37, 118, 0.3);
+
+    .profile__tariff-span {
+      &::before {
+        opacity: 30%;
+      }
+    }
+  }
+}
+
+.profile__tariff-span {
+  display: none;
+  width: 67px;
+  height: 67px;
+  background-color: $color-pale-grey-four;
+  border-radius: 100px;
+  position: relative;
+
+  &::before {
+    content: url("../img/business.svg");
+    display: block;
+    width: 19px;
+    height: 21px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-right: 20px;
   }
 }

@@ -1,22 +1,31 @@
 .travel-destinations {
   background-color: $color-pale-grey;
-  padding: 70px 25px 30px 25px;
+  padding: 90px 25px 30px 25px;
   position: relative;
   z-index: 9;
   margin-top: -20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   @media (min-width: $tablet-width) {
     padding: 0 40px 80px 40px;
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position: right 40px top 70px;
+    background-size: 290px;
+    background-position: right 40px top 100px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
+    background-position: right 60px top 105px;
+    border-bottom-left-radius: 60px;
     display: flex;
-    padding: 163px 90px 163px 132px;
+    padding: 180px 90px 140px 132px;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -25,11 +34,17 @@
 .travel-destination__text-box {
   padding-left: 25px;
   padding-right: 45px;
-  padding-bottom: 40px;
+  padding-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+    padding-bottom: 78px;
+  }
 
   @media (min-width: $desktop-width) {
-    //width: 447px;
+    width: 447px;
     align-self: start;
+    margin-right: 75px;
   }
 }
 
@@ -61,7 +76,19 @@
   &--czech {
     z-index: 1;
     //margin-top: -15px;
-    top: 25px;
+    //top: 25px;
+    //position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to top, $color-pale-grey 25px, transparent 70px);
+      z-index: 10;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -70,6 +97,7 @@
     height: 140px;
     margin: 0 auto;
     margin-bottom: 10px;
+    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -85,13 +113,18 @@
   display: flex;
   justify-content: space-between;
   z-index: 2;
-  margin-top: -15px;
+  margin-top: -17px;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 6px;
 
   @media (min-width: $tablet-width) {
-    padding: 25px;
+    padding: 48px;
+    padding-bottom: 56px;
+    padding-left: 30px;
     //width: 100%;
     width: 432px;
-    height: 140px;
+    //height: 140px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 20px;
@@ -102,6 +135,23 @@
   @media (min-width: $desktop-width) {
     display: inline;
     width: 374px;
+    padding-top: 40px;
+  }
+}
+
+.travel-destinations__country-flag {
+  position: absolute;
+  top: -10px;
+
+  @media (min-width: $tablet-width) {
+    top: 35px;
+    right: -35px;
+    width: 70px;
+    height: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 42px;
   }
 }
 
@@ -118,7 +168,7 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 75px;
+    padding-top: 90px;
   }
 
   @media (min-width: $desktop-width) {
@@ -139,13 +189,20 @@
 
 .travel-destinations__description {
   color: $color-grey-dark;
+  margin-top: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
     line-height: 33px;
-    margin-top: 60px;
-    width: 447px;
+    margin-top: 58px;
+    //width: 447px;
+    padding-right: 260px;
     display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 25px;
+    margin-top: 60px;
   }
 }
 
@@ -157,6 +214,7 @@
     height: 140px;
     border-top-left-radius: 0;
     border-bottom-right-radius: 20px;
+    margin-top: 15px;
   }
 }
 
@@ -178,32 +236,85 @@
 
 .travel-destinations__slogan {
   @include light-grey-text;
+  margin-top: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .travel-destinations__companions-number {
   @include light-grey-text;
   line-height: 30px;
+  position: relative;
+  //display: inline;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+  }
+
+  &::before {
+    content: url("../img/user.svg");
+    fill: $color-dark-blue-1;
+    width: 11px;
+    height: 11px;
+    opacity: 10%;
+    position: absolute;
+    left: -15px;
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+    }
+  }
 }
 
 .travel-destinations__button {
   @include blue-link-caption;
-  padding: 30px 0 30px 30px;
-  margin-top: 30px;
-  display: block;
+  padding: 23px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //position: relative;
+  width: 100%;
+
+  svg {
+    fill: $color-dark-blue-2;
+    //margin-left: 103px;
+  }
+
+  &:active svg {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
-    width: 100%;
     border-radius: 15px;
     font-size: 24px;
     line-height: 24px;
+    margin-left: 32px;
+    margin-right: 32px;
+    width: auto;
+    margin-top: 48px;
+    padding-left: 36px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-right: 37px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 270px;
+    width: 274px;
     border-radius: 15px;
     align-self: flex-end;
     margin-left: auto;
-    margin-right: 213px;
+    margin-right: 217px;
     margin-top: -100px;
   }
 }

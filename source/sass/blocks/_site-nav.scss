@@ -9,6 +9,9 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    margin-top: 86px;
+    padding-left: 57px;
+    margin-bottom: 135px;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,10 +19,11 @@
     margin-right: auto;
     background-color: #161c34;
     margin-bottom: 0;
+    padding-left: 0;
   }
 }
 
-.site-nav a {
+.site-nav__link {
   font-size: 30px;
   line-height: 36px;
   font-weight: 500;
@@ -27,6 +31,15 @@
   text-transform: uppercase;
   color: $color-dark-blue-1;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow-1;
+  }
+
+  &:active {
+    color: rgba(255, 215, 75, 0.3);
+  }
 
   @media (min-width: $tablet-width) {
     display: inline-block;
@@ -42,8 +55,35 @@
     line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-right: 20px;
+    margin-right: 34px;
     color: $color-white;
+    //color: red;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+
+    span {
+      position: relative;
+      display: inline-block;
+      //color: green;
+      //-webkit-transition: -webkit-transform 0.3s;
+      //-moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
+    }
+
+    span::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      //color: red;
+      //font-weight: 700;
+      //-webkit-transform: translate3d(0, 0, 0);
+      //-moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:hover span {
+      transform: translateY(-100%);
+    }
   }
 }
 

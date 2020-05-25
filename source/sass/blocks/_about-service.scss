@@ -1,42 +1,104 @@
 .about-service {
-  background: url("../img/about-mobile@1x.png") no-repeat;
-  background-color: $color-dark-blue-1;
-  background-position: 20px 270px;
-  padding: 70px 25px 50px 25px;
+  //padding: 70px 25px 100px 25px;
+  //padding-top: 50px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding-top: 300px;
+  padding-top: 260px;
   position: relative;
   z-index: 10;
+  background-color: $color-dark-blue-1;
+  //height: 632px;
 
   @media (min-width: $tablet-width) {
-    min-height: 780px;
-    background: $color-dark-blue-1 url("../img/about-tablet@1x.png") no-repeat
-      right 5% top 60%;
-    padding: 0 40px 70px;
+    padding-top: 100px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+    //padding-bottom: 30px;
+  }
+}
+
+.about-service__container {
+  margin-bottom: 0;
+  background: url("../img/about-mobile@1x.png") bottom 0 right 7px no-repeat;
+  background-size: 295px;
+  padding: 60px 49px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    background: url("../img/about-tablet@1x.png") right 5px top 120px no-repeat;
+    //background-color: $color-dark-blue-1;
+    //padding: 0 40px 70px;
+    //min-height: 780px;
+    background-size: 376px;
+    padding-bottom: 88px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 660px;
-    background: $color-dark-blue-1 url("../img/about-desktop@1x.png") no-repeat
-      right 50px top 100px;
-    padding: 60px 0 110px 90px;
-  }
-}
+    background: url("../img/about-desktop@1x.png") no-repeat right 60px bottom 0;
+    //background-color: $color-dark-blue-1;
+    //padding: 60px 0 110px 90px;
+    background-size: 630px;
+    padding-left: 105px;
+    padding-top: 0;
+    padding-bottom: 165px;
 
-.about-service__title,
-.about-service__description {
-  margin: 0;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 113px;
+    height: 132px;
+    position: absolute;
+    left: 0;
+    top: 300px;
+    z-index: -1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $color-blue-figure;
+
+    @media (min-width: $tablet-width) {
+      width: 688px;
+      height: 213px;
+      left: 40px;
+      top: 175px;
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 213px;
+      left: 60px;
+      top: 100px;
+    }
+  }
 }
 
 .about-service__title {
   @include orange-title;
-  padding-bottom: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-bottom: 21px;
+  //padding-left: 30px;
+  //padding-right: 30px;
+  //padding-top: 50px;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 170px;
+    padding-top: 52px;
+    padding-left: 25px;
 
     @include orange-title-tabdesc;
   }
@@ -47,56 +109,81 @@
 }
 
 .about-service__description {
-  padding-bottom: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-bottom: 19px;
+  //padding-left: 30px;
+  //padding-right: 30px;
+  margin: 0;
 
   &:last-of-type {
     font-weight: 700;
+    padding-bottom: 22px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 30px;
+      padding-top: 13px;
       max-width: 300px;
       font-size: 21px;
       line-height: 25px;
+      padding-left: 25px;
+      padding-right: 18px;
     }
 
     @media (min-width: $desktop-width) {
-      max-width: 415px;
+      padding-top: 20px;
+      max-width: 455px;
     }
   }
 
   &:first-of-type {
     @media (min-width: $tablet-width) {
-      padding-top: 50px;
+      padding-top: 20px;
       max-width: 360px;
       font-size: 28px;
       line-height: 33px;
+      padding-left: 25px;
+      padding-right: 35px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 50px;
-      max-width: 620px;
+      padding-top: 38px;
+      max-width: 650px;
       font-size: 28px;
       line-height: 33px;
+      padding-right: 5px;
     }
   }
 }
 
 .about-service__button {
   display: none;
+  position: relative;
 
   @media (min-width: $tablet-width) {
-    display: block;
-    margin-top: 55px;
-    padding: 30px 120px 30px 30px;
+    display: flex;
+    padding: 29px 36px 29px 32px;
     background-color: $color-yellow-1;
     color: $color-dark-blue-2;
     font-size: 24px;
     font-weight: 700;
     line-height: 24px;
     max-width: 275px;
-    border-radius: 15px;
-    margin-left: 30px;
+    border-radius: 20px;
+    margin-left: 26px;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 60px;
+  }
+
+  svg {
+    //position: absolute;
+    fill: $color-dark-blue-2;
+    //margin-left: 50px;
+  }
+
+  &:active svg {
+    opacity: 30%;
   }
 }

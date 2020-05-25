@@ -22,6 +22,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    padding-left: 28px;
   }
 }
 
@@ -52,18 +53,22 @@
       transform: translate(-50%, -50%);
     }
   }
-}
 
-.pager-item a {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-    color: $color-blue-black-2;
+  a {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700;
+      color: $color-blue-black-2;
+    }
+  }
+
+  a:hover {
+    color: rgba(22, 28, 53, 0.6);
   }
 }
 
@@ -75,6 +80,36 @@
     border-bottom-left-radius: 20px;
     display: block;
     height: 50px;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      svg {
+        opacity: 60%;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: $color-dark-blue-1;
+
+      @media (min-width: $tablet-width) {
+        left: 90%;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 97%;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       width: 90%;
@@ -88,12 +123,50 @@
     margin-left: 1px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    display: block;
+    //display: block;
     height: 50px;
+    //position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      svg {
+        opacity: 60%;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 30%;
+      }
+    }
+
+    svg {
+      //position: absolute;
+      //top: 50%;
+      //left: 50%;
+      //transform: translate(-50%, -50%);
+      fill: $color-dark-blue-1;
+
+      @media (min-width: $tablet-width) {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 18px;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       width: 10%;
       height: 100px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 }

@@ -1,35 +1,25 @@
 .name-page {
-  padding: 20px 20px 0 20px;
+  padding: 15px 20px 13px 20px;
+  //background-color: $color-blue-black-2;
   background-color: $color-medium-blue;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
-  z-index: 10;
+  z-index: 110;
 
   @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
     padding: 5px 75px 0 75px;
+    padding-top: 80px;
+    padding-bottom: 66px;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
-  }
-}
-
-.name-page__content {
-  height: 71.7px;
-  display: flex;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    height: 175.5px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 175.5px;
-    padding: 0 129px 64.5px 129px;
+    padding-bottom: 5px;
+    background-color: $color-blue-black-2;
   }
 
   &::after {
@@ -37,19 +27,19 @@
     display: block;
     background-color: $color-orange-1;
     height: 5px;
-    width: 175px;
+    width: 172px;
     border-radius: 2px;
     position: absolute;
-    bottom: 0;
-    left: 30px;
+    bottom: -2px;
+    left: 26px;
 
     @media (min-width: $tablet-width) {
       height: 8px;
       width: 287px;
       border-radius: 4px;
       position: absolute;
-      left: 30px;
-      bottom: 0;
+      left: 75px;
+      bottom: -4px;
     }
 
     @media (min-width: $desktop-width) {
@@ -57,21 +47,79 @@
       bottom: 0;
     }
   }
+
+  &--form {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: $color-orange-1;
+      height: 5px;
+      width: 212px;
+      border-radius: 2px;
+      position: absolute;
+      bottom: -2px;
+      left: 26px;
+
+      @media (min-width: $tablet-width) {
+        content: "";
+        display: block;
+        background-color: $color-orange-1;
+        height: 8px;
+        width: 356px;
+        border-radius: 4px;
+        position: absolute;
+        left: 77px;
+        bottom: -4px;
+      }
+
+      @media (min-width: $desktop-width) {
+        left: 125px;
+      }
+    }
+  }
+}
+
+.name-page__content {
+  //height: 71.7px;
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  //position: relative;
+  //padding-bottom: 12px;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    //height: 175.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    //height: 250px;
+    padding: 0 129px 64.5px 45px;
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 48px;
+  }
 }
 
 .name-page__title {
   color: $color-white;
-  padding-left: 27px;
+  padding-left: 5px;
   align-self: flex-end;
-  padding-bottom: 12px;
+  //padding-bottom: 0;
   margin-bottom: 0;
   font-size: 36px;
   line-height: 40px;
   font-weight: 700;
+  //margin-top: 18px;
+  margin-top: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 70px;
+    padding-left: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -82,15 +130,37 @@
 
 .name-page__link {
   display: none;
-  align-self: flex-end;
-  justify-self: end;
-  color: $color-white;
-  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 0.6);
+
+    svg {
+      opacity: 60%;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    svg {
+      opacity: 30%;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding-bottom: 30px;
-    margin-left: 150px;
+    padding-top: 8px;
+    color: $color-white;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+
+    svg {
+      margin-left: 22px;
+    }
   }
 
   @media (min-width: $desktop-width) {

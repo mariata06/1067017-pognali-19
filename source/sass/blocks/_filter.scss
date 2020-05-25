@@ -1,39 +1,117 @@
 .filter {
-  display: flex;
+  //display: flex;
   flex-wrap: wrap;
   background-color: $color-pale-grey-four;
   margin-top: -20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 25px;
+  padding-top: 19px;
+  padding-bottom: 14px;
+  //display: none;
+  display: flex;
+
+  &--hide {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
+    //display: none;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 60px;
+    padding-bottom: 45px;
+
+    &--show {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
-.filter__button-close {
-  display: none;
+.filter__button-collapse {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-dark-blue-2;
+  background-color: $color-pale-grey-2;
+  width: 100%;
+  padding: 6px 0 5px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  align-items: center;
+  justify-content: center;
+  //display: flex;
+  //display: none;
 
-  @media (min-width: $desktop-width) {
+  svg {
+    margin-right: 15px;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
     color: $color-dark-blue-2;
     display: block;
+    //display: none;
     background-color: $color-pale-grey-2;
     width: 100%;
     padding: 35px 0;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+
+    svg {
+      fill: $color-dark-blue-1;
+
+      @media (min-width: $desktop-width) {
+        width: 18px;
+        height: 18px;
+        margin-right: 21px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-light-blue-grey-four;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    svg {
+      opacity: 30%;
+    }
   }
 }
 
 .filter__alphabet {
+  display: block;
+
   @media (min-width: $desktop-width) {
     display: none;
   }
