@@ -45,10 +45,11 @@
 
     @media (min-width: $tablet-width) {
       padding-top: 36px;
-      margin-bottom: 46px;
+      margin-bottom: 42px;
     }
 
     @media (min-width: $desktop-width) {
+      margin-bottom: 46px;
       padding-top: 0;
     }
   }
@@ -431,7 +432,7 @@
   }
 
   &--rogova {
-    margin-bottom: 7px;
+    //margin-bottom: 7px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
@@ -700,7 +701,7 @@
       justify-content: flex-end;
       margin-top: 18px;
       margin-right: 420px;
-      margin-bottom: 65px;
+      margin-bottom: 68px;
 
       svg {
         margin-right: 20px;

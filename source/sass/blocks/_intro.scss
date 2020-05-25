@@ -215,9 +215,10 @@
     line-height: 25px;
     margin-bottom: 215px;
     margin-top: 44px;
+    padding-right: 10px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-right: 40px;
   }
 }

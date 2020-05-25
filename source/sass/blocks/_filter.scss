@@ -8,19 +8,19 @@
   padding: 25px;
   padding-top: 19px;
   padding-bottom: 14px;
-  display: none;
-  //display: flex;
+  //display: none;
+  display: flex;
 
-  &--show {
-    display: flex;
+  &--hide {
+    display: none;
   }
 
   @media (min-width: $tablet-width) {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
-    display: none;
-    //display: flex;
+    //display: none;
+    display: flex;
     padding-left: 0;
     padding-right: 0;
     padding-top: 60px;
@@ -32,7 +32,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    //display: none;
+    display: none;
   }
 }
 
@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: center;
   //display: flex;
-  display: none;
+  //display: none;
 
   svg {
     margin-right: 15px;
@@ -69,8 +69,8 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $color-dark-blue-2;
-    //display: block;
-    display: none;
+    display: block;
+    //display: none;
     background-color: $color-pale-grey-2;
     width: 100%;
     padding: 35px 0;

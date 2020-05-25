@@ -13,10 +13,6 @@
   position: relative;
   margin-top: -75px;
 
-  &--catalog {
-    margin-top: -8px;
-  }
-
   @media (min-width: $tablet-width) {
     flex-direction: row;
     align-items: center;
@@ -34,8 +30,22 @@
     margin-top: -145px;
   }
 
+  &--catalog {
+    margin-top: 33px;
+    //padding-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -148px;
+    }
+  }
+
   &--form {
     z-index: 10;
+    margin-top: -48px;
   }
 }
 

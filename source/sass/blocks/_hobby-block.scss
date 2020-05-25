@@ -18,13 +18,10 @@
 }
 
 .hobby-block__container-checkbox {
-  display: none;
+  //display: none;
   padding-top: 7px;
   padding-bottom: 5px;
-
-  &--show {
-    display: block;
-  }
+  display: block;
 
   &--close {
     display: none;
@@ -32,11 +29,19 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+
+    &--close {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    display: none;
-    //display: inline;
+    //display: none;
+    display: inline;
+
+    &--close {
+      display: none;
+    }
   }
 }
 
@@ -178,6 +183,12 @@
 
   @media (min-width: $desktop-width) {
     left: 5px;
+  }
+
+  &:last-of-type {
+    @media (min-width: $tablet-width) {
+      left: 18px;
+    }
   }
 }
 

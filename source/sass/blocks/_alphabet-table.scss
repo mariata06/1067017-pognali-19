@@ -2,7 +2,7 @@
   text-align: center;
   margin: 0 auto;
   border-collapse: collapse;
-  background-color: $color-white;
+  //background-color: $color-white;
 
   @media (min-width: $tablet-width) {
     margin-left: 0;
@@ -16,6 +16,11 @@
   &--catalog {
     margin-left: 0;
     margin-right: 0;
+    background-color: $color-white;
+
+    @media (min-width: $tablet-width) {
+      background-color: $color-pale-grey-four;
+    }
   }
 }
 

@@ -39,14 +39,19 @@
   }
 
   &:hover {
+    background-color: $color-pale-grey;
+    color: rgba(68, 68, 68, 0.5);
+  }
+
+  /*
     &::placeholder {
       color: rgba(68, 68, 68, 0.5);
       background-color: $color-pale-grey;
     }
-  }
+    */
 
   @media (min-width: $tablet-width) {
-    padding: 26px 26px 26px 36px;
+    //padding: 26px 26px 26px 36px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }

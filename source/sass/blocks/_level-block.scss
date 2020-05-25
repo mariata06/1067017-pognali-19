@@ -129,10 +129,11 @@
 .level-block__range-button-left {
   &:hover {
     &::before {
-      width: 19px;
-      height: 19px;
+      transform: scale(1.2);
+      //width: 19px;
+      //@include: 19px;
       top: -8px;
-      left: 48px;
+      left: 60px;
     }
   }
 
@@ -171,10 +172,11 @@
 .level-block__range-button-right {
   &:hover {
     &::before {
-      width: 19px;
-      height: 19px;
+      transform: scale(1.2);
+      //width: 19px;
+      //height: 19px;
       top: -8px;
-      left: 210px;
+      left: 180px;
     }
   }
 

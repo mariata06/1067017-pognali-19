@@ -10,7 +10,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 4300px;
+  top: 3695px;
   z-index: 1000;
   display: none;
 
@@ -20,23 +20,32 @@
 
   @media (min-width: $tablet-width) {
     width: 688px;
-    top: 4500px;
+    top: 4260px;
+    border-radius: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 3100px;
+    top: 3110px;
     width: 752px;
   }
 }
 
 .business-tariff__content {
-  padding: 30px 25px 20px;
+  padding: 33px 25px 20px;
   background-color: $color-white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 50px;
+  }
+
   @media (min-width: $desktop-width) {
     padding: 60px;
+    padding-top: 48px;
+    border-radius: 20px;
   }
 }
 
@@ -53,11 +62,20 @@
 
 .business-tariff__list {
   @include list-style;
+  margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 46px;
+  }
 }
 
 .business-tariff__item {
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 6px;
   border-top: 1px solid $color-pale-grey-4;
   display: flex;
   flex-wrap: wrap;
@@ -66,17 +84,32 @@
     font-size: 22px;
     line-height: 28px;
     justify-content: space-between;
-    padding-left: 85px;
-    padding-right: 85px;
+    padding-left: 64px;
+    padding-right: 70px;
+    padding-bottom: 11px;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 12px;
+  }
+
+  &:nth-child(3) {
+    padding-right: 30px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 0;
+    }
   }
 }
 
 .business-tariff__button {
+  font-family: "BloggerSans", "Arial", sans-serif;
   border: none;
   width: 100%;
   font-size: 16px;
@@ -88,6 +121,7 @@
   background-color: #f3f4f8;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  padding-top: 20px;
 
   &:hover,
   &:focus {
@@ -99,9 +133,19 @@
   }
 
   @media (min-width: $tablet-width) {
+    text-transform: none;
     font-size: 24px;
-    padding-top: 38px;
-    padding-bottom: 38px;
+    padding-top: 60px;
+    padding-bottom: 47px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 }
 

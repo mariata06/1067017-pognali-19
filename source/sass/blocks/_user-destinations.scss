@@ -133,6 +133,18 @@
   }
 }
 
+.user-destinations__mates {
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    //padding-right: 14px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
 .user-destinations__dates {
   margin-top: 0;
   margin-bottom: 20px;

@@ -2,7 +2,7 @@
   background-color: $color-grey-light-5;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  padding: 28px 25px 50px;
+  padding: 28px 25px 36px;
   position: relative;
   z-index: 1;
   margin-top: -25px;
@@ -13,7 +13,7 @@
     padding-right: 75px;
     padding-top: 43px;
     margin-bottom: 40px;
-    padding-bottom: 66px;
+    padding-bottom: 28px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,6 +21,8 @@
     padding-right: 60px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
   }
 }
 
@@ -150,12 +152,20 @@
     padding-right: 230px;
     border-bottom: 1px solid $color-grey-light-5;
     padding-bottom: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
+
+  /*
+  &--dates {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 5px;
+    }
+  }
+  */
 
   &--route {
     @media (min-width: $tablet-width) {
-      padding-right: 120px;
+      padding-right: 130px;
       border-bottom: 1px solid #d6d9e6;
       padding-bottom: 35px;
       margin-bottom: 41px;
@@ -164,7 +174,7 @@
     @media (min-width: $desktop-width) {
       padding-right: 430px;
       padding-bottom: 60px;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
   }
 
@@ -241,6 +251,10 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -344,12 +358,14 @@
     }
 
     @media (min-width: $desktop-width) {
-      //width: 250px;
+      width: 248px;
       align-self: stretch;
       order: 2;
       margin-top: 0;
       //padding-top: 40px;
       //padding-left: 72px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -411,8 +427,9 @@
     @media (min-width: $desktop-width) {
       padding: 0;
       text-align: right;
-      margin-top: 45px;
-      padding-left: 10px;
+      margin-top: 10px;
+      padding-left: 58px;
+      width: 100%;
     }
 
     &::before {
@@ -434,7 +451,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        left: -50px;
+        left: 0;
       }
     }
 
@@ -478,6 +495,10 @@
     top: -5px;
     left: -5px;
     transform: scale(1.5);
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 15px;
   }
 }
 

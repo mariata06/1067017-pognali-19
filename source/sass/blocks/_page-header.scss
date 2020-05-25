@@ -41,16 +41,21 @@
 }
 
 .page-header__main-nav {
-  display: none;
-  //display: block;
+  //display: none;
+  display: block;
   margin-top: 62px;
+  margin-bottom: 12px;
+
+  &--hide {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
-    display: none;
-    //display: block;
+    display: block;
+    //display: none;
 
-    &--show {
-      display: block;
+    &--hide {
+      display: none;
     }
   }
 

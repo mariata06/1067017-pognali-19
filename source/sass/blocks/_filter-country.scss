@@ -1,35 +1,28 @@
 .filter-country__wrapper {
+  width: 320px;
   display: flex;
   flex-direction: column;
   background-color: $color-pale-grey-four;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 100;
+  margin: 0 auto;
   margin-top: -15px;
-  padding: 20px 25px;
-  padding-top: 31px;
-  padding-bottom: 14px;
+  padding: 31px 25px 27px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  //padding-bottom: 25px;
 
-  //flex-direction: row;
-  //width: 100%;
   @media (min-width: $tablet-width) {
-    //flex-direction: row-reverse;
+    width: 768px;
     flex-wrap: wrap;
-    //justify-content: space-around;
-    padding: 93px 74px;
-    //padding-bottom: 38px;
+    padding: 92px 74px 38px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     margin-top: -50px;
-    //padding-top: 92px;
-    padding-top: 92px;
-    //padding-bottom: 75px;
-    padding-bottom: 38px;
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
+    width: 1440px;
     justify-content: space-between;
     padding: 55px 60px 110px;
     padding-top: 82px;
@@ -74,6 +67,7 @@
     padding-left: 18px;
     padding-right: 70px;
     justify-content: flex-start;
+    background-color: $color-pale-grey;
   }
 }
 
@@ -357,14 +351,8 @@
 
 .filter-country__continent {
   background-color: $color-pale-grey-four;
-  //display: block;
-  display: none;
-  //display: block;
   padding-top: 15px;
-
-  &--show {
-    display: block;
-  }
+  //display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -378,8 +366,10 @@
     order: 2;
     display: flex;
     align-items: center;
+    background-color: $color-pale-grey;
   }
 }
+
 
 /*
 

@@ -20,12 +20,25 @@
 .main-nav__icon-phone,
 .main-nav__icon-email {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 100px;
   background-color: #121936;
   position: relative;
   margin-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+  }
+}
+
+.main-nav__phone-box,
+.main-nav__email-box {
+  @media (min-width: $tablet-width) {
+    margin-left: 55px;
+  }
 }
 
 .main-nav__phone-link,
@@ -52,6 +65,10 @@
   display: block;
   transform: translate(-50%, -50%) scale(0.5);
   fill: $color-yellow-1;
+
+  @media (min-width: $tablet-width) {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
 
   &:hover {
     fill: $color-yellow-2;

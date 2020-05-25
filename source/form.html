@@ -6,7 +6,7 @@
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="/node_modules/node-normalize-scss/_normalize.scss" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
   <!-- Pixel Glass -->
   <style>
@@ -14,14 +14,14 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("preview/pognali-form-mobile.png");
+      background-image: url("preview/pognali-form-mobile1.png");
     }
 
     /* Tablet */
     @media (min-width: 768px) {
       html {
         /* Tablet layout */
-        background-image: url("preview/pognali-form-tablet.png");
+        background-image: url("preview/pognali-form-tablet1.png");
       }
     }
 
@@ -29,7 +29,7 @@
     @media (min-width: 1440px) {
       html {
         /* Desktop layout */
-        background-image: url("preview/pognali-form-desktop.png");
+        background-image: url("preview/pognali-form-desktop1.png");
       }
     }
 
@@ -55,7 +55,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-header container">
+  <header class="page-header container container--form">
 
     <div class="page-header__wrapper">
 
@@ -63,8 +63,8 @@
         <picture>
           <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x"
             media="(min-width: 1440px)">
-          <source srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" media="(min-width: 768px)">
-          <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Лого Погнали">
+          <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
+          <img src="img/logo-mobile-blue@1x.png 1x" srcset="img/logo-mobile-blue@2x.png 2x" alt="Лого Погнали">
         </picture>
       </a>
 
@@ -76,7 +76,7 @@
         </button>
         <button class="burger-menu__close" type="button"><span class="visually-hidden">Закрыть меню</span>
           <svg fill="cccccc" width="18" height="18" viewBox="0 0 18 18">
-            <use xlink:href="img/sprite.svg#icon-close-burger-menu"></use>
+            <use xlink:href="img/sprite.svg#icon-menu-close"></use>
           </svg>
         </button>
       </div>
@@ -135,7 +135,7 @@
         <a class="main-nav__email-link" href="mailto:mail@htmlacademy.ru">
           <div class="main-nav__icon-email">
             <svg fill="#ffd74b" width="36" height="26" viewBox="0 0 36 26">
-              <use xlink:href="img/sprite.svg#icon-contacts-email"></use>
+              <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
             </svg>
           </div>mail@htmlacademy.ru
         </a>
@@ -154,7 +154,7 @@
           <li class="header-social__item">
             <a class="header-social__link header-social__link--vkontakte" aria-label="vkontakte"
               href="https://vk.com/htmlacademy">
-              <svg viewBox="0 0 30 15.8" width="30" height="15.8">
+              <svg viewBox="0 0 30 15.8" width="23" height="12">
                 <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
               </svg>
             </a>
@@ -162,7 +162,7 @@
           <li class="header-social__item">
             <a class="header-social__link header-social__link--instagram" aria-label="instagram"
               href="https://www.instagram.com/htmlacademy">
-              <svg viewBox="0 0 23 23" width="23" height="23">
+              <svg viewBox="0 0 23 23" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
@@ -313,7 +313,8 @@
             <div class="new-destinations__step-number-box">
               <h3 class="new-destinations__dates-title">Шаг 1.</h3>
               <h3 class="new-destinations__dates-title">Даты пребывания</h3>
-              <p class="new-destinations__description">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели
+              <p class="new-destinations__description new-destinations__description--dates">Укажите предпочтительное
+                количество попутчиков, которых вы&nbsp;хотели
                 бы
                 позвать в поездку и ее предполагаемую длительность.</p>
             </div>
@@ -553,7 +554,8 @@
             <div class="new-destinations__step-number-box">
               <h3 class="new-destinations__steps-title">Шаг 2.</h3>
               <h3 class="new-destinations__steps-title">Маршрут</h3>
-              <p class="new-destinations__description new-destinations__description--route">Укажите страны, которые вы хотели посетить. Это может быть одна
+              <p class="new-destinations__description new-destinations__description--route">Укажите страны, которые вы
+                хотели посетить. Это может быть одна
                 или сразу несколько.</p>
             </div>
 

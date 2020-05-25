@@ -18,12 +18,8 @@
 .food-block__container-checkbox {
   padding-top: 7px;
   padding-bottom: 5px;
-
-  display: none;
-
-  &--show {
-    display: block;
-  }
+  //display: none;
+  display: block;
 
   &--close {
     display: none;
@@ -31,11 +27,18 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+
+    &--close {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    display: none;
-    //display: inline;
+    display: inline;
+
+    &--close {
+      display: none;
+    }
   }
 }
 

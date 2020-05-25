@@ -9,6 +9,9 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    margin-top: 86px;
+    padding-left: 57px;
+    margin-bottom: 135px;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,6 +19,7 @@
     margin-right: auto;
     background-color: #161c34;
     margin-bottom: 0;
+    padding-left: 0;
   }
 }
 
