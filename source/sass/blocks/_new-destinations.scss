@@ -23,6 +23,7 @@
     border-top-right-radius: 60px;
     padding-bottom: 5px;
     margin-bottom: 5px;
+    margin-top: -50px;
   }
 }
 
@@ -294,6 +295,16 @@
   button {
     display: flex;
     outline: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
+
+  .new-destinations__minus {
+    @media (min-width: $desktop-width) {
+      padding-bottom: 10px;
+    }
   }
 
   svg {

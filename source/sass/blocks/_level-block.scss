@@ -211,6 +211,7 @@
     order: 2;
     //justify-content: center;
     //display: block;
+    width: 100%;
   }
 
   &::before {
@@ -309,6 +310,7 @@
 
   @media (min-width: $desktop-width) {
     padding-bottom: 5px;
+    width: 100%;
   }
 
   button {

@@ -6,6 +6,8 @@
   border-bottom-right-radius: 20px;
   position: relative;
   z-index: 110;
+  width: 320px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     border-bottom-left-radius: 60px;
@@ -14,12 +16,14 @@
     padding-top: 80px;
     padding-bottom: 66px;
     position: relative;
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
     padding-bottom: 5px;
     background-color: $color-blue-black-2;
+    width: 1440px;
   }
 
   &::after {
@@ -32,6 +36,7 @@
     position: absolute;
     bottom: -2px;
     left: 26px;
+    //transform: translateY(-50%);
 
     @media (min-width: $tablet-width) {
       height: 8px;
@@ -40,11 +45,13 @@
       position: absolute;
       left: 75px;
       bottom: -4px;
+      //transform: translateY(-50%);
     }
 
     @media (min-width: $desktop-width) {
       left: 130px;
-      bottom: 0;
+      bottom: -4px;
+      //@function: translateY(-50%);
     }
   }
 

@@ -150,6 +150,10 @@
       border: 4px solid transparent;
       background-color: $color-tooltip;
 
+      @media (min-width: $desktop-width) {
+        padding-bottom: 5px;
+      }
+
       &:hover {
         border: 2px solid $color-orange-3;
         background-color: $color-dark-slate-blue;
@@ -217,10 +221,12 @@
     }
 
     @media (min-width: $desktop-width) {
-      display: flex;
-      flex-direction: column;
-      padding-top: 10px;
+      //display: flex;
+      //flex-direction: column;
+      text-align: left;
+      //padding-top: 10px;
       padding-left: 15px;
+      padding-bottom: 20px;
     }
   }
 }
@@ -243,25 +249,3 @@
   top: 0;
   left: 0;
 }
-
-/*
-.calendar__input:checked + label::before {
-  background-color: blue;
-}
-
-.calendar__free-day button {
-  background-color: $color-pale-grey;
-}
-
-
-  border: 1px solid transparent;
-
-  &:hover {
-    border: 1px solid $color-orange-3;
-  }
-}
-
-.calendar__active-day button {
-  background-color: $color-dark-slate-blue;
-}
-*/

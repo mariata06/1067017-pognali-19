@@ -7,34 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <link href="/node_modules/node-normalize-scss/_normalize.scss" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- Pixel Glass -->
-  <style>
-    html {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("preview/pognali-index-mobile.png");
-    }
-    /* Tablet */
-    @media (min-width: 768px) {
-      html {
-        /* Tablet layout */
-        background-image: url("preview/pognali-index-tablet.png");
-      }
-    }
-    /* Desktop */
-    @media (min-width: 1440px) {
-      html {
-        /* Desktop layout */
-        background-image: url("preview/pognali-index-desktop.png");
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-  <!--<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>-->
-  <!-- // Pixel Glass -->
+  
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
@@ -51,7 +24,7 @@
       <picture>
         <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" media="(min-width: 1440px)">
         <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
-        <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png" alt="Лого Погнали">
+        <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Лого Погнали">
       </picture>
       <div class="page-header__burger-menu burger-menu">
         <button type="button" class="burger-menu__button">
@@ -147,6 +120,7 @@
     </nav>
   </header>
   <main class="page-main">
+    <div class="container">
     <section class="intro">
       <div class="intro__container">
         <h1 class="intro__title">
@@ -218,7 +192,7 @@
                 media="(min-width: 1440px)">
               <source srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x"
                 media="(min-width: 768px)">
-              <img class="travel-destinations__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg"
+              <img class="travel-destinations__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x"
                 alt="Таиланд">
             </picture>
           </div>
@@ -293,7 +267,7 @@
               <span class="travel-mates__level-value">99</span>
               <span class="travel-mates__level-index">level</span>
               <svg width="100%" height="100%" viewBox="0 0 60 60" class="donut">
-                <circle class="donut-hole" cx="30" cy="30" r="31.5" fill="#a" opacity="10%"></circle>
+                <circle class="donut-hole" cx="30" cy="30" r="31.5" fill="transparent" opacity="10%"></circle>
                 <circle class="donut-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke="#ff8d30"
                   stroke-width="3" stroke-dasharray="130 10" stroke-dashoffset="5"></circle>
               </svg>
@@ -363,7 +337,7 @@
             <span class="travel-mates__level-value">80</span>
             <span class="travel-mates__level-index">level</span>
             <svg width="100%" height="100%" viewBox="0 0 60 60" class="donut">
-              <circle class="donut-hole" cx="30" cy="30" r="31.5" fill="#a" opacity="10%"></circle>
+              <circle class="donut-hole" cx="30" cy="30" r="31.5" fill="transparent" opacity="10%"></circle>
               <circle class="donut-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke="#ff8d30"
                 stroke-width="3" stroke-dasharray="150 30" stroke-dashoffset="46"></circle>
             </svg>
@@ -521,6 +495,7 @@
         </iframe>
       </div>
     </section>
+  </div>
   </main>
   <footer class="page-footer">
     <div class="page-footer__logo">

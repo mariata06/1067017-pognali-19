@@ -133,10 +133,10 @@
 
   img {
     margin-right: 14px;
+    width: 35px;
+    height: 24px;
 
     @media (min-width: $tablet-width) {
-      width: 35px;
-      height: 24px;
       margin-right: 11px;
     }
 

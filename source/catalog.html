@@ -7,34 +7,6 @@
   <meta name="format-detection" content="telephone=no">
   <link href="/node_modules/node-normalize-scss/_normalize.scss" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- Pixel Glass -->
-  <style>
-    html {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("preview/pognali-catalog-mobile.png");
-    }
-    /* Tablet */
-    @media (min-width: 768px) {
-      html {
-        /* Tablet layout */
-        background-image: url("preview/pognali-catalog-tablet.png");
-      }
-    }
-    /* Desktop */
-    @media (min-width: 1440px) {
-      html {
-        /* Desktop layout */
-        background-image: url("preview/pognali-catalog-desktop.png");
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-  <!--<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>-->
-  <!-- // Pixel Glass -->
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
@@ -46,13 +18,13 @@
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <header class="page-header container container--catalog">
+  <header class="page-header container header-container--catalog">
     <div class="page-header__wrapper">
       <a href="index.html" class="page-header__logo" aria-label="Главная страница">
         <picture>
           <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" media="(min-width: 1440px)">
           <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
-          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png" alt="Лого Погнали">
+          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Лого Погнали">
         </picture>
       </a>
       <div class="page-header__burger-menu burger-menu">
@@ -149,6 +121,7 @@
     </nav>
   </header>
   <main class="page-main">
+    <div class="container">
     <section class="section-companions name-page">
       <div class="name-page__content">
         <h1 class="name-page__title">Попутчики</h1>
@@ -714,7 +687,7 @@
                 <source srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
                   media="(min-width: 1440px)">
                 <source srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x" media="(min-width: 768px)">
-                <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg" alt="Фирсова"
+                <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Фирсова"
                   class="companions-catalog__photo">
               </picture>
             </a>
@@ -745,7 +718,7 @@
                 <img src="img/flag-sri-lanka.svg" alt="Шри-ланка" width="26" height="18">
                 Шри-Ланка</li>
               <li class="companions-catalog__countries-item">
-                <img src="img/flag-thailand.svg" alt="Таиланд" width="26" height="18">
+                <img src="img/flag-thailand.svg" alt="Таиланд">
                 Таиланд</li>
               <li class="companions-catalog__countries-item">
                 <img src="img/flag-seychelles.svg" alt="Сейшелы" width="26" height="18">
@@ -807,7 +780,7 @@
               <picture>
                 <source srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x" media="(min-width: 1440px)">
                 <source srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x" media="(min-width: 768px)">
-                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg" alt="Демин"
+                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Демин"
                   class="companions-catalog__photo">
               </picture>
             </a>
@@ -894,7 +867,7 @@
               <picture>
                 <source srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x" media="(min-width: 1440px)">
                 <source srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x" media="(min-width: 768px)">
-                <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg" alt="Смолов"
+                <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Смолов"
                   class="companions-catalog__photo">
               </picture>
             </a>
@@ -987,7 +960,7 @@
                   media="(min-width: 1440px)">
                 <source srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x"
                   media="(min-width: 768px)">
-                <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg" alt="Роговая"
+                <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Роговая"
                   class="companions-catalog__photo">
               </picture>
             </a>
@@ -1104,13 +1077,14 @@
         </div>
       </section>
     </div>
+  </div>
   </main>
   <footer class="page-footer  page-footer--catalog">
     <div class="page-footer__logo">
       <picture>
         <source srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" media="(min-width: 1440px)">
         <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
-        <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png" alt="Лого Погнали">
+        <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Лого Погнали">
       </picture>
     </div>
     <ul class="page-footer__social-list">
