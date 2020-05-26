@@ -1,4 +1,4 @@
-.filter-companions__wrapper {
+.filter-companions {
   display: flex;
   flex-wrap: wrap;
   background-color: $color-pale-grey;
@@ -23,7 +23,7 @@
   }
 }
 
-.filter-companions {
+.filter-companions__wrapper {
   //padding: 24px 25px;
 
   @media (min-width: $tablet-width) {

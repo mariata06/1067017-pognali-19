@@ -1,4 +1,4 @@
-.filter-country__wrapper {
+.filter-country {
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
   }
 }
 
-.filter-country {
+.filter-country__wrapper {
   background-color: $color-pale-grey-four;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -87,6 +87,79 @@
     justify-content: flex-end;
     width: auto;
     margin-right: 20px;
+  }
+}
+
+.filter-country__button-collapse {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-dark-blue-2;
+  background-color: $color-pale-grey-2;
+  width: 100%;
+  padding: 6px 0 5px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  align-items: center;
+  justify-content: center;
+  //display: flex;
+  //display: none;
+
+  svg {
+    margin-right: 15px;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-dark-blue-2;
+    display: block;
+    //display: none;
+    background-color: $color-pale-grey-2;
+    width: 100%;
+    padding: 35px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    svg {
+      fill: $color-dark-blue-1;
+
+      @media (min-width: $desktop-width) {
+        width: 18px;
+        height: 18px;
+        margin-right: 21px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-light-blue-grey-four;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    svg {
+      opacity: 30%;
+    }
   }
 }
 
@@ -310,7 +383,7 @@
   }
 }
 
-.filter-country .country-a-item {
+.filter-country___wrapper .country-a-item {
   color: $color-grey-dark;
 }
 
@@ -369,23 +442,3 @@
     background-color: $color-pale-grey;
   }
 }
-
-
-/*
-
-.filter-country__continent-all-wrapper {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    order: -1;
-    margin-left: auto;
-    margin-top: -60px;
-  }
-}
-*/
