@@ -1,4 +1,4 @@
-.transport-block {
+.filter-companions__transport {
   &--filter {
     @media (min-width: $tablet-width) {
       display: flex;
@@ -32,7 +32,7 @@
   }
 }
 
-.transport-block__list {
+.transport-block {
   margin: 0;
   border-bottom: 1px solid $color-macaroni-and-cheese;
   padding-bottom: 20px;
