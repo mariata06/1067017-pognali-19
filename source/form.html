@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
@@ -16,7 +15,6 @@
       /* Mobile layout by default */
       background-image: url("preview/pognali-form-mobile1.png");
     }
-
     /* Tablet */
     @media (min-width: 768px) {
       html {
@@ -24,7 +22,6 @@
         background-image: url("preview/pognali-form-tablet1.png");
       }
     }
-
     /* Desktop */
     @media (min-width: 1440px) {
       html {
@@ -32,7 +29,6 @@
         background-image: url("preview/pognali-form-desktop1.png");
       }
     }
-
   </style>
   <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
   <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
@@ -42,32 +38,24 @@
   <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
-
   </script>
   <script src="js/picturefill.min.js" async=""></script>
   <script src="js/svg4everybody.min.js" async=""></script>
-
 </head>
-
 <body>
-
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
   </div>
-
   <header class="page-header container container--form">
-
     <div class="page-header__wrapper">
-
       <a href="index.html" class="page-header__logo" aria-label="Главная страница">
         <picture>
           <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x"
             media="(min-width: 1440px)">
           <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
-          <img src="img/logo-mobile-blue@1x.png 1x" srcset="img/logo-mobile-blue@2x.png 2x" alt="Лого Погнали">
+          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Лого Погнали">
         </picture>
       </a>
-
       <div class="page-header__burger-menu burger-menu">
         <button type="button" class="burger-menu__button">
           <svg viewBox="0 0 25 11" width="25" height="11">
@@ -80,11 +68,8 @@
           </svg>
         </button>
       </div>
-
     </div>
-
     <nav class="page-header__main-nav">
-
       <ul class="page-header__main-nav__list user-nav">
         <li class="user-nav__item">
           <a class="user-nav__phone-link" href="tel:+78005558628">
@@ -93,7 +78,6 @@
             </svg>
           </a>
         </li>
-
         <li class="user-nav__item">
           <a class="user-nav__email-link" href="mailto:mail@htmlacademy.ru">
             <svg fill="#161c35" width="18" height="14" viewBox="0 0 18 14">
@@ -101,12 +85,10 @@
             </svg>
           </a>
         </li>
-
         <li class="user-nav__item">
           <a href="login.html" class="user-nav__login-link">Авторизация</a>
         </li>
       </ul>
-
       <ul class="page-header__main-nav site-nav">
         <li class="site-nav__item site-nav__item--active">
           <a class="site-nav__link" href="index.html"><span data-hover="О сервисе">О сервисе</span></a>
@@ -118,9 +100,7 @@
           <a class="site-nav__link" href="catalog.html"><span data-hover="Попутчики">Попутчики</span></a>
         </li>
       </ul>
-
       <a href="login.html" class="main-nav__login-link button">Авторизация</a>
-
       <div class="main-nav__phone-box">
         <a class="main-nav__phone-link" href="tel:+78005558628">
           <div class="main-nav__icon-phone">
@@ -130,7 +110,6 @@
           </div>8 800 555-86-28
         </a>
       </div>
-
       <div class="main-nav__email-box">
         <a class="main-nav__email-link" href="mailto:mail@htmlacademy.ru">
           <div class="main-nav__icon-email">
@@ -140,7 +119,6 @@
           </div>mail@htmlacademy.ru
         </a>
       </div>
-
       <div class="page-header__social header-social">
         <ul class="header-social__list">
           <li class="header-social__item">
@@ -169,27 +147,21 @@
           </li>
         </ul>
       </div>
-
     </nav>
   </header>
-
   <main class="page-main form-main">
-
     <section class="section-destinations name-page name-page--form">
       <div class="name-page__content name-page__content--form">
         <h1 class="name-page__title">Направления</h1>
         <!--<a href="index.html" class="name-page__link">На главную</a>-->
       </div>
     </section>
-
     <form action="https://echo.htmlacademy.ru" method="post">
-
       <section class="companions-form">
         <h2 class="visually-hidden">Выбор попутчика</h2>
         <div class="companions-form__level-photo-wrapper">
           <div class="companions-form__level-photo-box">
-            <div class="companions-form__travel-mates travel-mates__level travel-mates__level--form">
-
+            <div class="companions-form__travel-mates travel-mates travel-mates--form">
               <div class="travel-mates__level-container">
                 <span class="travel-mates__level-value">80</span>
                 <span class="travel-mates__level-index">level</span>
@@ -198,39 +170,28 @@
                     stroke-width="3" stroke-dasharray="295 60" stroke-dashoffset="136"></circle>
                 </svg>
               </div>
-
             </div>
             <a href="#" class="companions-form__photo-link">
               <picture>
                 <source srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x" media="(min-width: 1440px)">
                 <source srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x"
                   media="(min-width: 768px)">
-                <img src="img/photo-account-mobile@1x.jpg 1x" srcset="img/photo-account-mobile@2x.jpg 2x"
+                <img src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x"
                   alt="Фото попутчика" class="companions-form__photo">
               </picture>
             </a>
-
             <input type="file" name="file" id="file" class="companions-form__inputfile" />
             <label for="file"><span>Сменить&nbsp;</span>Фото</label>
           </div>
         </div>
-
-        <!--
-<label class="companions-form__change-photo">Сменить фото</label>
-        <input name="changephoto" type="file" class="visually-hidden">
-        -->
-
-        <!--<div class="companions-form__hashtag-transport__wrapper">-->
         <div class="companions-form__hashtag">
           <span class="companions-form__hashtag-title">ТЭГИ</span>
           <textarea tabindex="0" class="companions-form__hashtag-textarea" name="hashtag" id="hashtag"
             placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
         </div>
-
         <div class="companions-form__transport">
-          <span class="companions-form__transport-type transport-block transport-block--form">Транспорт</span>
-          <ul class="transport-block__list transport-block__list--form">
-            <!--Дублирование списка транспорта, у кот.родитель Section companions в index.html, catalog.html-->
+          <span class="companions-form__transport-type companions-form__transport-type--form">Транспорт</span>
+          <ul class="transport-block transport-block--form">
             <li class="transport-block__item">
               <input name="transport" type="radio" class="visually-hidden transport-block__button" id="plane" checked>
               <label for="plane">
@@ -269,10 +230,7 @@
             </li>
           </ul>
         </div>
-        <!--</div>-->
-
       </section>
-
       <section class="user-destinations">
         <h2 class="user-destinations__title">Мои планы:</h2>
         <div class="user-destinations__plan">
@@ -282,7 +240,6 @@
           <p class="user-destinations__dates">26 Мар - 29 Мар</p>
           <a href="#" class="user-destinations__change-plan">Изменить</a>
         </div>
-
         <div class="user-destinations__plan">
           <p class="user-destinations__country"><span class="user-destinations__plan-number">2.</span>Таиланд, Индонезия
           </p>
@@ -292,10 +249,7 @@
         </div>
       </section>
     </form>
-
-
     <section class="new-destinations">
-
       <div class="new-destinations__step-wrapper">
         <h2 class="new-destinations__title">Добавить план:</h2>
         <div class="new-destinations__step-button-box">
@@ -304,11 +258,8 @@
           <button type="button" class="new-destinations__step-button"></button>
         </div>
       </div>
-
       <form action="https://echo.htmlacademy.ru" method="post">
-
         <div class="new-destinations__dates" id="stepone">
-
           <div class="new-destinations__step-definition-wrapper">
             <div class="new-destinations__step-number-box">
               <h3 class="new-destinations__dates-title">Шаг 1.</h3>
@@ -318,7 +269,6 @@
                 бы
                 позвать в поездку и ее предполагаемую длительность.</p>
             </div>
-
             <ul class="new-destinations__steps-list">
               <li class="new-destinations__steps-item">
                 <a href="#" class="new-destinations__steps-link new-destinations__steps-link--active">Даты</a>
@@ -331,9 +281,7 @@
               </li>
             </ul>
           </div>
-
           <div class="new-destinations__search-wrapper">
-
             <div class="new-destinations__search-mates">
               <label class="new-destinations__label" for="companions">Ищу попутчиков:</label>
               <span class="new-destinations__span">чел.</span>
@@ -351,7 +299,6 @@
                 </button>
               </div>
             </div>
-
             <div class="new-destinations__duration">
               <label class="new-destinations__label new-destinations__label--duration"
                 for="duration">Длительность:</label>
@@ -370,7 +317,6 @@
                 </button>
               </div>
             </div>
-
             <div class="new-destinations__input-container new-destinations__input-container--children">
               <input type="checkbox" id="children" name="children"
                 class="new-destinations__input-checkbox new-destinations__input-checkbox--children visually-hidden"
@@ -379,9 +325,7 @@
                 детьми</label>
             </div>
           </div>
-
           <div class="new-destinations__calendar calendar">
-
             <div class="calendar__title">
               <a href="#" class="calendar__previous-month"><span class="visually-hidden">предыдущий месяц</span>
                 <svg viewBox="0 0 18 34" width="18" height="34">
@@ -395,7 +339,6 @@
                 </svg>
               </a>
             </div>
-
             <table class="calendar__table">
               <tr>
                 <th>П<span class="calendar-table__span">н</span></th>
@@ -539,17 +482,13 @@
               </tr>
             </table>
           </div>
-
           <a href="#steptwo" class="new-destinations__button new-destinations__button--next-step">Следующий шаг
             <svg viewBox="0 0 10 14" width="10" height="14">
               <use xlink:href="img/sprite.svg#icon-triangle-arrow-right"></use>
             </svg>
           </a>
-
         </div>
-
         <div class="new-destinations__direction" id="steptwo">
-
           <div class="new-destinations__step-definition-wrapper">
             <div class="new-destinations__step-number-box">
               <h3 class="new-destinations__steps-title">Шаг 2.</h3>
@@ -558,7 +497,6 @@
                 хотели посетить. Это может быть одна
                 или сразу несколько.</p>
             </div>
-
             <ul class="new-destinations__steps-list">
               <li class="new-destinations__steps-item">
                 <a href="#" class="new-destinations__steps-link">Даты</a>
@@ -571,9 +509,7 @@
               </li>
             </ul>
           </div>
-
           <div class="new-destinations__selection-wrapper">
-
             <div class="new-destinations__country-selection">
               <p class="new-destinations__select-wrapper">
                 <select class="new-destinations__action new-destinations__action--bosnia">
@@ -581,14 +517,12 @@
                   <option selected value="Босния и Герцеговина">Босния и Герцеговина</option>
                   <option value="Чехия">Чехия</option>
                 </select>
-
                 <button type="button" class="new-destinations__country-button">
                   <svg viewBox="0 0 17 9" width="12" height="7">
                     <use xlink:href="img/sprite.svg#icon-dropdown-form"></use>
                   </svg>
                 </button>
               </p>
-
               <div class="new-destinations__country-flag-box">
                 <img src="img/flag-bosnia.svg" alt="Босния и Герцеговина" width="35" height="24"
                   class="new-destinations__country-flag">
@@ -599,7 +533,6 @@
                 </svg>
               </button>
             </div>
-
             <div class="new-destinations__country-selection">
               <p class="new-destinations__select-wrapper">
                 <select class="new-destinations__action new-destinations__action--bosnia">
@@ -607,14 +540,12 @@
                   <option selected value="Чехия">Чехия</option>
                   <option value="Босния и Герцеговина">Босния и Герцеговина</option>
                 </select>
-
                 <button type="button" class="new-destinations__country-button">
                   <svg viewBox="0 0 17 9" width="12" height="7">
                     <use xlink:href="img/sprite.svg#icon-dropdown-form"></use>
                   </svg>
                 </button>
               </p>
-
               <div class="new-destinations__country-flag-box">
                 <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24" class="new-destinations__country-flag">
               </div>
@@ -624,25 +555,20 @@
                 </svg>
               </button>
             </div>
-
             <div class="new-destinations__country-selection new-destinations__country-selection--select">
-
               <p class="new-destinations__select-wrapper new-destinations__select-wrapper--select">
                 <select class="new-destinations__action new-destinations__action--select">
                   <option selected>Выберите страну</option>
                   <option value="Чехия">Чехия</option>
                   <option value="Босния и Герцеговина">Босния и Герцеговина</option>
                 </select>
-
                 <button type="button" class="new-destinations__country-button new-destinations__country-button--open">
                   <svg viewBox="0 0 17 9" width="12" height="7">
                     <use xlink:href="img/sprite.svg#icon-dropdown-form"></use>
                   </svg>
                 </button>
               </p>
-
               <div class="new-destinations__alphabet-country-block alphabet-country-block">
-
                 <div class="new-destinations__country-selection new-destinations__country-selection--table">
                   <p class="new-destinations__action new-destinations__action--table">Выберите страну</p>
                   <button type="button"
@@ -652,9 +578,7 @@
                     </svg>
                   </button>
                 </div>
-
                 <div class="new-destinations__table-country-wrapper">
-
                   <table class="new-destinations__form-table form-table">
                     <tr>
                       <td class="form-table__item--active"><button type="button"
@@ -693,7 +617,6 @@
                       <td class="form-table__item"><button type="button" class="form-table__button">Ю</button></td>
                     </tr>
                   </table>
-
                   <ul class="new-destinations__country-a country-a country-a--form">
                     <li class="country-a-item">Австралия</li>
                     <li class="country-a-item">Австрия</li>
@@ -707,17 +630,14 @@
                     <li class="country-a-item">Армения</li>
                     <li class="country-a-item">Афганистан</li>
                   </ul>
-
                 </div>
               </div>
-
               <button type="button" class="new-destinations__country-delete">
                 <svg viewBox="0 0 9 9" width="9" height="9">
                   <use xlink:href="img/sprite.svg#icon-small-cross"></use>
                 </svg>
               </button>
             </div>
-
             <div class="new-destinations__country-selection new-destinations__country-selection--plus">
               <p class="new-destinations__action new-destinations__action--plus">Добавить страну
                 <button type="button" class="new-destinations__country-button new-destinations__country-button--plus">
@@ -728,7 +648,6 @@
               </p>
             </div>
           </div>
-
           <a href="#stepthree" class="new-destinations__button new-destinations__button--next-step">Следующий шаг
             <svg viewBox="0 0 10 14" width="10" height="14">
               <use xlink:href="img/sprite.svg#icon-triangle-arrow-right"></use>
@@ -740,11 +659,8 @@
             </svg>
             На шаг назад
           </a>
-
         </div>
-
         <div class="new-destinations__intertainment" id="stepthree">
-
           <div
             class="new-destinations__step-definition-wrapper new-destinations__step-definition-wrapper--intertainment">
             <div class="new-destinations__step-number-box">
@@ -755,7 +671,6 @@
                 Можно писать в свободной форме и ставить тэги.
               </p>
             </div>
-
             <ul class="new-destinations__steps-list">
               <li class="new-destinations__steps-item">
                 <a href="#" class="new-destinations__steps-link">Даты</a>
@@ -768,9 +683,7 @@
               </li>
             </ul>
           </div>
-
           <div class="new-destinations__plans-wrapper">
-
             <label for="plan" class="new-destinations__label-country new-destinations__label-country--bosnia">Босния и
               Герцеговина
               <img src="img/flag-bosnia.svg" alt="Босния и Герцеговина" width="35" height="24"
@@ -782,7 +695,6 @@
                 placeholder="План действий"></textarea>
               <span class="new-destinations__textarea-error">Это поле должно быть заполнено</span>
             </div>
-
             <label for="plan2" class="new-destinations__label-country new-destinations__label-country--czech">Чехия
               <img src="img/flag-czech.svg" alt="Чехия" width="35" height="24" class="new-destinations__country-flag">
             </label>
@@ -794,7 +706,6 @@
             </div>
           </div>
           <br>
-
           <button type="submit" value="Отправить"
             class="new-destinations__button new-destinations__button--submit">Отправить
             <svg viewBox="0 0 10 14" width="10" height="14">
@@ -808,24 +719,18 @@
             </svg>
             На шаг назад
           </a>
-
         </div>
-
       </form>
     </section>
-
   </main>
-
   <footer class="page-footer page-footer--form">
     <div class="page-footer__logo">
-
       <picture>
         <source srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" media="(min-width: 1440px)">
         <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width: 768px)">
-        <img class="logo-image" src="img/logo-mobile-blue@1x.png 1x" srcset="img/logo-mobile-blue@2x.png 2x"
+        <img class="logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
           alt="Лого Погнали">
       </picture>
-
     </div>
     <ul class="page-footer__social-list">
       <li class="page-footer__social-item">
@@ -859,10 +764,7 @@
       </a>
     </div>
   </footer>
-
   <script src="js/country-modal.js"></script>
   <script src="js/svgxuse.js" defer></script>
-
 </body>
-
 </html>
