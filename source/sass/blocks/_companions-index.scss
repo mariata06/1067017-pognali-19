@@ -441,7 +441,14 @@
   z-index: 1;
   top: 30px;
   left: 50%;
+  text-transform: none;
+  font-weight: 400;
   transform: translateX(-50%);
+
+  &--sri-lanka {
+    //white-space: nowrap;
+    white-space: pre;
+  }
 }
 
 .companions-index__countries-item .companions-index__countries-tooltip::after {

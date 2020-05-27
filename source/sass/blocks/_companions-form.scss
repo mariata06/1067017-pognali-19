@@ -60,6 +60,7 @@
     padding-bottom: 0;
     margin-bottom: 21px;
     z-index: 120;
+    position: relative;
   }
 }
 
@@ -71,6 +72,8 @@
   @media (min-width: $desktop-width) {
     order: 3;
     margin-top: -241px;
+    position: absolute;
+    top: 40px;
   }
 }
 
@@ -259,6 +262,10 @@
     top: unset;
     letter-spacing: 1.2px;
   }
+
+  @media (min-width: $desktop-width) {
+    top: 90px;
+  }
 }
 
 .companions-form__hashtag-title {
@@ -305,10 +312,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    order: unset;
-    width: auto;
+    order: 1;
+    width: 730px;
     margin: 0;
     padding: 0;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 10px;
   }
 }
 
@@ -326,6 +336,7 @@
   font-weight: 400;
   width: 100%;
   height: 100%;
+  overflow: auto;
 
   &::placeholder {
     color: $color-grey-input;
@@ -343,9 +354,9 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-    width: 730px;
-    padding-top: 35px;
-    padding-left: 35px;
+    //width: 728px;
+    //margin-top: 35px;
+    //margin-left: 35px;
   }
 }
 
@@ -371,5 +382,6 @@
     margin: 0;
     margin-left: auto;
     width: 383px;
+    order: 2;
   }
 }

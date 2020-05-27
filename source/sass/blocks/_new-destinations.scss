@@ -7,6 +7,7 @@
   z-index: 1;
   margin-top: -25px;
   margin-bottom: 58px;
+  padding-bottom: 50px;
 
   @media (min-width: $tablet-width) {
     padding-left: 75px;
@@ -309,6 +310,8 @@
 
   svg {
     opacity: 20%;
+    fill: $color-greyborder;
+    //fill: rgba(203, 206, 217, 0.2);
   }
 
   &:hover,
@@ -400,7 +403,6 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  //border: 2px solid tomato;
   align-self: flex-start;
   margin-bottom: 10px;
   letter-spacing: 1.5px;
@@ -462,6 +464,7 @@
       }
 
       @media (min-width: $desktop-width) {
+        top: -10px;
         left: 0;
       }
     }
@@ -616,7 +619,7 @@
   }
 
   &::after {
-    content: url("../img/small-arrow_.svg");
+    content: url("../img/icon-small-arrow_.svg");
     position: absolute;
     width: 5px;
     height: 10px;
@@ -631,6 +634,10 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
   }
 
   button {
@@ -723,6 +730,14 @@
   color: $color-dark-blue-2;
   appearance: none;
 
+  &:hover {
+    border: 1px solid $color-grey-input-hvr;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
   option {
     font-family: "BloggerSans", "Arial", sans-serif;
   }
@@ -732,7 +747,14 @@
     display: flex;
     align-items: center;
 
+    svg {
+      fill: &color-button;
+      //width: 21px;
+      //height: 21px;
+    }
+
     &:hover {
+      border: none;
       background-color: $color-grey-light-3;
     }
 
@@ -741,7 +763,8 @@
       color: rgba(29, 46, 91, 0.3);
 
       svg {
-        opacity: 30%;
+        fill: $color-button;
+        //opacity: 30%;
       }
     }
   }
@@ -796,10 +819,12 @@
   outline: none;
 
   svg {
-    opacity: 30%;
+    //opacity: 30%;
+    fill: $color-greyborder;
 
     &:hover {
-      opacity: 50%;
+      fill: $color-grey-input-hvr;
+      //opacity: 50%;
     }
 
     @media (min-width: $tablet-width) {
@@ -839,6 +864,10 @@
     @media (min-width: $tablet-width) {
       margin-right: 10px;
     }
+
+    @media (min-width: $desktop-width) {
+      height: 30px;
+    }
   }
 }
 
@@ -854,6 +883,7 @@
   right: -10px;
   z-index: 2;
   outline: none;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     top: 20px;
@@ -866,21 +896,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    fill: $color-black;
-    opacity: 10%;
+    //fill: $color-black;
+    //opacity: 10%;
     z-index: 1;
+    fill: $color-cross;
+    //fill: $color-greyborder;
 
     @media (min-width: $tablet-width) {
-      transform: scale(1.7);
-      opacity: 20%;
+      //transform: scale(1.7);
+      //opacity: 20%;
+      width: 16px;
+      height: 16px;
     }
 
     &:hover {
-      opacity: 30%;
+      fill: $color-grey-input-hvr;
+      //opacity: 30%;
     }
 
     &:active {
-      opacity: 5%;
+      //fill: $color-grey-input-hvr;
+      //opacity: 5%;
+      fill: rgba(174, 180, 203, 0.3);
     }
   }
 }
@@ -903,7 +940,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 115px;
+    margin-right: 0;
+    margin-left: 86px;
   }
 
   button {
@@ -1164,6 +1202,7 @@
   padding-right: 5px;
   padding-bottom: 160px;
   border: none;
+  overflow: auto;
 
   /*
   &:hover {
@@ -1192,6 +1231,8 @@
   }
 
   &--empty {
+    overflow: auto;
+
     &::placeholder {
       color: rgba(68, 68, 68, 0.302);
       //position: relative;
@@ -1205,6 +1246,7 @@
   }
 
   &--filled {
+    overflow: auto;
     padding-top: 6px;
 
     @media (min-width: $tablet-width) {
@@ -1396,6 +1438,10 @@
     width: 73px;
     margin-right: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .new-destinations__step-button {
@@ -1403,8 +1449,9 @@
   width: 5px;
   height: 5px;
   border-radius: 100px;
-  background-color: $color-dark-blue-2;
+  //background-color: $color-grey-light-5;
   opacity: 30%;
+  background-color: $color-dark-blue-2;
   cursor: pointer;
   border: none;
   padding: 0;

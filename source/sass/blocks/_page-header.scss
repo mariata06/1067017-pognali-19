@@ -17,10 +17,19 @@
 }
 
 .page-header__logo {
-  display: block;
-  //width: 100px;
-  //height: 30px;
-  //background: lightblue;
+  &--white {
+    &--scroll {
+      display: none;
+    }
+  }
+
+  &--blue {
+    display: none;
+
+    &--scroll {
+      display: block;
+    }
+  }
 }
 
 .page-header__wrapper {
@@ -41,8 +50,8 @@
 }
 
 .page-header__main-nav {
-  //display: none;
-  display: block;
+  display: none;
+  //display: block;
   margin-top: 62px;
   margin-bottom: 12px;
 
@@ -51,8 +60,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: block;
-    //display: none;
+    //display: block;
+    display: none;
 
     &--hide {
       display: none;

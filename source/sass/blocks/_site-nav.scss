@@ -6,6 +6,7 @@
   list-style: none;
   padding-left: 0;
   margin-bottom: 52px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -20,6 +21,18 @@
     background-color: #161c34;
     margin-bottom: 0;
     padding-left: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $color-white;
+      position: absolute;
+      top: 15px;
+      left: -100px;
+    }
   }
 }
 
@@ -87,6 +100,7 @@
   }
 }
 
+/*
 .site-nav__item {
   position: relative;
   //margin-right: 25px;
@@ -107,3 +121,4 @@
     }
   }
 }
+*/

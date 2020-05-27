@@ -24,7 +24,8 @@
     background-color: $color-white;
     padding-top: 27px;
     margin-right: 0;
-    padding-left: 80px;
+    //padding-left: 80px;
+    padding-left: 16px;
 
     @media (min-width: $desktop-width) {
       margin-left: auto;

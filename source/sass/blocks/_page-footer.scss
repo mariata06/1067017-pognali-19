@@ -31,7 +31,7 @@
   }
 
   &--catalog {
-    margin-top: 33px;
+    //margin-top: 33px;
     //padding-bottom: 5px;
 
     @media (min-width: $tablet-width) {
@@ -45,7 +45,15 @@
 
   &--form {
     z-index: 10;
-    margin-top: -48px;
+    //margin-top: -48px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -50px;
+    }
   }
 }
 

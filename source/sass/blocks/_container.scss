@@ -27,4 +27,24 @@
     //background-color: $color-blue-black-3;
     //background-color: $color-medium-blue;
   }
+
+  &--scroll {
+    @media (min-width: $desktop-width) {
+      background-color: $color-white;
+      position: fixed;
+      z-index: 130;
+
+      .site-nav {
+        background-color: $color-white;
+      }
+
+      .site-nav__link {
+        color: $color-dark-blue-1;
+      }
+
+      &::before {
+        background-color: $color-dark-blue-1;
+      }
+    }
+  }
 }

@@ -172,6 +172,10 @@
     @media (min-width: $tablet-width) {
       color: $color-dark-slate-blue;
     }
+
+    @media (min-width: $desktop-width) {
+      color: $color-grey-dark;
+    }
   }
 
   .calendar-table__span {
@@ -227,6 +231,13 @@
       //padding-top: 10px;
       padding-left: 15px;
       padding-bottom: 20px;
+      border: 4px solid transparent;
+    }
+
+    &:hover {
+      @media (min-width: $desktop-width) {
+        border: 4px solid $color-orange-3;
+      }
     }
   }
 }
