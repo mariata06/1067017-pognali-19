@@ -50,8 +50,8 @@
 }
 
 .page-header__main-nav {
-  display: none;
-  //display: block;
+  //display: none;
+  display: block;
   margin-top: 62px;
   margin-bottom: 12px;
 
@@ -60,8 +60,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    //display: block;
-    display: none;
+    display: block;
+    //display: none;
 
     &--hide {
       display: none;
