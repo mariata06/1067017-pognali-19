@@ -1,5 +1,6 @@
 //"use strict";
-
+const ghPages = require('gh-pages');
+const path = require('path');
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
@@ -17,9 +18,6 @@ var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
-
-
-
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -141,3 +139,8 @@ gulp.task("start", gulp.series("build", "server"));
 //gulp.task("build", gulp.series("css"));
 //gulp.task("start", gulp.series("build", "server"));
 //gulp.task("start", gulp.series("css", "server"));
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
