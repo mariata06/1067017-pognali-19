@@ -140,6 +140,6 @@ gulp.task("start", gulp.series("build", "server"));
 //gulp.task("start", gulp.series("css", "server"));
 
 function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
+  ghPages.publish(path.join(process.cwd(), "./build"), cb);
 }
 exports.deploy = deploy;
