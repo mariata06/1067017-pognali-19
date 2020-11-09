@@ -81,19 +81,6 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("min-js", function (done) {
-  pump([
-      gulp.src("source/js/*.js"),
-      uglify(),
-      rename(function (path) {
-        path.basename += ".min";
-      }),
-      gulp.dest("build/js")
-    ],
-    done
-  );
-});
-
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
@@ -105,6 +92,19 @@ gulp.task("copy", function () {
       base: "source"
     })
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("min-js", function (done) {
+  pump([
+      gulp.src("source/js/*.js"),
+      uglify(),
+      rename(function (path) {
+        path.basename += ".min";
+      }),
+      gulp.dest("build/js")
+    ],
+    done
+  );
 });
 
 gulp.task("clean", function () {
@@ -133,7 +133,7 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "min-js", "copy_css"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "copy_css", "min-js"));
 gulp.task("start", gulp.series("build", "server"));
 
 //gulp.task("build", gulp.series("css"));
