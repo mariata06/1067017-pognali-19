@@ -94,10 +94,6 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("clean", function () {
-  return del("build");
-});
-
 gulp.task("min-js", function (done) {
   pump([
       gulp.src("source/js/*.js"),
@@ -109,6 +105,10 @@ gulp.task("min-js", function (done) {
     ],
     done
   );
+});
+
+gulp.task("clean", function () {
+  return del("build");
 });
 
 gulp.task("server", function () {
@@ -132,7 +132,7 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html", "sprite", "copy_css", "min-js"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "min-js", "copy_css"));
 gulp.task("start", gulp.series("build", "server"));
 
 //gulp.task("build", gulp.series("css"));
